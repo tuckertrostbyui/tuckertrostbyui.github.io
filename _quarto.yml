@@ -1,0 +1,187 @@
+project: 
+  type: website
+
+website:
+  title: "Your_Name - Data Science Portfolio"
+  favicon: Images/favicon.png
+  back-to-top-navigation: true
+  repo-url: https://github.com/username/username.github.io
+  #repo-actions: [issue] #if you want to allow others to report issues on your site uncomment this line
+
+  page-footer: 
+    border: true
+    left: "Your_Name 2024©"
+    right: 
+      - icon: linkedin
+        href: Your_LinkedIn_URL
+
+  navbar:
+    background: primary
+    search: true   
+    right:
+      - text: "Home"
+        file: index.qmd
+      - text: "My Resume"
+        file: resume.qmd
+      - text: "Data Cleansing"
+        file: cleansing.qmd
+      - text: "Data Exploration"
+        file: exploration.qmd
+      - text: "Story Telling"
+        file: story_telling.qmd
+      - text: "Machine Learning"
+        file: ml.qmd
+      - text: "Full Stack"
+        file: full_stack.qmd
+      - text: "Competition"
+        file: competition.qmd
+  
+  # learn more about navication here https://quarto.org/docs/websites/website-navigation.html
+  # comment out any of the sections below to turn off the sidebar
+
+  sidebar: 
+    - title: "Data Cleansing"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Data Cleansing"
+          file: cleansing.qmd
+        - text: "---"
+        - text: "Project 1"
+          file: Cleansing_Projects/project1.qmd
+        - text: "---"
+        - text: "Project 2"
+          file: Cleansing_Projects/project2.qmd
+        - text: "---"
+        - text: "Project 3"
+          file: Cleansing_Projects/project3.qmd
+        - text: "---"
+        - text: "Project 4"
+          file: Cleansing_Projects/project4.qmd
+        - text: "---"
+        - text: "Project 5"
+          file: Cleansing_Projects/project5.qmd
+        - text: "---"
+    - title: "Data Exploration"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Data Exploration"
+          file: exploration.qmd
+        - text: "---"
+        - text: "Project 1"
+          file: Exploration_Projects/project1.qmd
+        - text: "---"
+        - text: "Project 2"
+          file: Exploration_Projects/project2.qmd
+        - text: "---"
+        - text: "Project 3"
+          file: Exploration_Projects/project3.qmd
+        - text: "---"
+        - text: "Project 4"
+          file: Exploration_Projects/project4.qmd
+        - text: "---"
+        - text: "Project 5"
+          file: Exploration_Projects/project5.qmd
+        - text: "---"
+    - title: "Story Telling"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Story Telling"
+          file: story_telling.qmd
+        - text: "---"
+        - text: "Project 1"
+          file: Story_Telling/project1.qmd
+        - text: "---"
+        - text: "Project 2"
+          file: Story_Telling/project2.qmd
+        - text: "---"
+        - text: "Project 3"
+          file: Story_Telling/project3.qmd
+        - text: "---"
+        - text: "Project 4"
+          file: Story_Telling/project4.qmd
+        - text: "---"
+        - text: "Project 5"
+          file: Story_Telling/project5.qmd
+        - text: "---"
+    - title: "Machine Learning"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Machine Learning"
+          file: ml.qmd
+        - text: "---"
+        - text: "Project 1"
+          file: Machine_Learning/project1.qmd
+        - text: "---"
+        - text: "Project 2"
+          file: Machine_Learning/project2.qmd
+        - text: "---"
+        - text: "Project 3"
+          file: Machine_Learning/project3.qmd
+        - text: "---"
+        - text: "Project 4"
+          file: Machine_Learning/project4.qmd
+        - text: "---"
+        - text: "Project 5"
+          file: Machine_Learning/project5.qmd
+        - text: "---"
+    - title: "Full Stack"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Full Stack"
+          file: full_stack.qmd
+        - text: "---"
+        - text: "Project 1"
+          file: Full_Stack/project1.qmd
+        - text: "---"
+        - text: "Project 2"
+          file: Full_Stack/project2.qmd
+        - text: "---"
+        - text: "Project 3"
+          file: Full_Stack/project3.qmd
+        - text: "---"
+        - text: "Project 4"
+          file: Full_Stack/project4.qmd
+        - text: "---"
+        - text: "Project 5"
+          file: Full_Stack/project5.qmd
+        - text: "---"
+    - title: "Competition"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Competition"
+          file: competition.qmd
+        - text: "---"
+        - text: "Project 1"
+          file: Competition/project1.qmd
+        - text: "---"
+        - text: "Project 2"
+          file: Competition/project2.qmd
+        - text: "---"
+        - text: "Project 3"
+          file: Competition/project3.qmd
+        - text: "---"
+        - text: "Project 4"
+          file: Competition/project4.qmd
+        - text: "---"
+        - text: "Project 5"
+          file: Competition/project5.qmd
+        - text: "---"
+  
+format:  
+  html:
+    theme: #see this link to customize the theme with css (https://quarto.org/docs/output-formats/html-themes.html#dark-mode)
+      light: flatly # more themes can be found [here](https://quarto.org/docs/output-formats/html-themes.html)
+      dark: darkly
+      #light: cosmo
+      #dark: [cosmo, theme-dark.scss]
+    css: styles.css
+    toc: true
+
+
+
