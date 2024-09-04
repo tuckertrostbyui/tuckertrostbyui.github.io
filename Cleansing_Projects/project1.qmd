@@ -1,7 +1,7 @@
 ---
-title: "Client Report - [Insert Project Title]"
-subtitle: "Course DS 250"
-author: "[STUDENT NAME]"
+title: "Portland Crime Data Cleansing"
+subtitle: "Data Science Portfolio"
+author: "Tucker Trost"
 format:
   html:
     self-contained: true
@@ -25,4 +25,144 @@ execute:
     
 ---
 
-### Paste in a template
+## Portland Crime Data Cleaning
+
+## Elevator pitch
+
+_This project details the cleaning and preparing process of crime data from Portland, Oregon, spanning 2015-2023. By identifying the project needs, addressing missing data, and removing unnecessary columns, the data has been transformed into a more usable state for analysis._
+
+### Data Source
+_The dateset that I am using was accessed directly from [Portland Police Bureau's Open Data initiative](https://www.portland.gov/police/open-data/crime-statistics); compiled from 2015-2023. This dataset is being used under this [license](https://creativecommons.org/publicdomain/zero/1.0/)._
+
+### Data Dictionary
+
+_**Address:** Address of reported incident at the 100 block level (e.g.: 1111 SW 2nd Ave would be 1100 Block SW 2nd Ave)._
+
+_**Case Number:** The case year and number for the reported incident (YY-######)._
+
+_**Crime Against:** Crime against category (Person, Property, or Society)._
+
+_**Neighborhood:** Neighborhood where incident occurred. If the neighborhood name is missing, the incident occurred outside of the boundaries of the Portland neighborhoods or at a location that could not be assigned to a specific address in the system. (e.g., Portland, near Washington Park, on the streetcar, etc.)._
+
+_**Occur Date:** Date the incident occurred. The exact occur date is sometimes unknown. In most situations, the first possible date the crime could have occurred is used as the occur date. (For example, victims return home from a week-long vacation to find their home burglarized. The burglary could have occurred at any point during the week. The first date of their vacation would be listed as the occur date.)_
+
+_**Occur Time**: Time the incident occurred. The exact occur time is sometimes unknown. In most situations, the first possible time the crime could have occurred is used as the occur time. The time is reported in the 24-hour clock format, with the first two digits representing hour (ranges from 00 to 23) and the second two digits representing minutes (ranges from 00 to 59)._
+
+_**Offense Category:** Category of offense (for example, Assault Offenses)._
+
+_**Offense Type:** Type of offense (for example, Aggravated Assault)Note: The statistic for Homicide Offenses has been updated in the Group A Crimes report to align with the 2019 FBI NIBRS definitions. The statistic for Homicide Offenses includes (09A) Murder & Non-negligent Manslaughter and (09B) Negligent Manslaughter. As of January 1, 2019, the FBI expanded the definition of negligent manslaughter to include traffic fatalities that result in an arrest for driving under the influence, distracted driving, or reckless driving. **The change in definition impacts the 2019 homicide offenses statistic and the comparability of 2019 homicide statistics to prior year.**_
+
+_**Open Data Lat/Lon:** Generalized Latitude / Longitude of the reported incident. For offenses that occurred at a specific address, the point is mapped to the block's midpoint. Offenses that occurred at an intersection is mapped to the intersection centroid._
+
+_**Open Data X/Y:** Generalized XY point of the reported incident. For offenses that occurred at a specific address, the point is mapped to the block's midpoint. Offenses that occurred at an intersection is mapped to the intersection centroid. To protect the identity of victims and other privacy concerns, the points of certain case types are not released. XY points use the Oregon State Plane North (3601), NAD83 HARN, US International Feet coordinate system._
+
+_**Offense Count:** Number of offenses per incident. Offenses (i.e. this field) are summed for counting purposes._
+
+
+```{python}
+#| label: libraries
+#| include: false
+import pandas as pd
+import numpy as np
+import datetime as dt
+```
+
+
+## Prepare
+
+```{python}
+#| label: project-data
+#| code-summary: Read and format project data
+
+# Load in Data
+pcrime_15 = pd.read_csv('CrimeData-2015.csv')
+pcrime_16 = pd.read_csv('CrimeData-2016.csv')
+pcrime_17 = pd.read_csv('CrimeData-2017.csv')
+pcrime_18 = pd.read_csv('CrimeData-2018.csv')
+pcrime_19 = pd.read_csv('CrimeData-2019.csv')
+pcrime_20 = pd.read_csv('CrimeData-2020.csv')
+pcrime_21 = pd.read_csv('CrimeData-2021.csv')
+pcrime_22 = pd.read_csv('CrimeData-2022.csv')
+pcrime_23 = pd.read_csv('CrimeData-2023.csv')
+
+# Combine Datasets
+pcrime_combined = pd.concat([pcrime_15,pcrime_16,pcrime_17,pcrime_18,pcrime_19,pcrime_20,pcrime_21,pcrime_22,pcrime_23], ignore_index=True)
+pcrime_combined.head()
+```
+
+
+### What is our goal?
+_Thinking forward to the analysis that I want to perform with this data, I need to understand what I am looking for when it comes to cleaning. I know that I want to focus my analysis on the distribution of different offense types and categories across the various neighborhoods of Portland. Additionally, I'd like to get insight into the temporal trends that lie within the data. Based on this understanding, I get a better sense of what aspects of the data need to be cleaned._
+
+```{python}
+#| label: Prepare
+#| code-summary: Identify Missing Data
+
+pcrime_combined.isna().sum()
+```
+
+### Initial Observations
+
+1. ***A time to report column would be useful***
+    - *Convert OccurDate and ReportDate to datetime*
+    - *Create a time to report column*
+
+2. ***OpenDataX/Y don't seem necessary for our analysis***
+    - *Drop OpenDataX and OpenDataY columns*
+
+3. ***Address column seems to be redundant as most entries are just a general location***
+    - *Drop Address column*
+
+4. ***Neighborhood averages can be used to find lat/lon***
+    - *Drop rows with missing Neighborhood and OpenDataLat*
+    - *Replace all rows with neighborhood but missing Lat/Lon data with average Lat/Lon of their neighborhood*
+
+
+
+
+## Data Cleaning
+
+```{python}
+#| label: data-cleaning
+#| code-summary: Cleaning
+
+# Calculate average Lat/Lon for each neighborhood
+neighborhood_means = pcrime_combined.groupby('Neighborhood')[['OpenDataLat','OpenDataLon']].transform('mean')
+
+# Clean the data
+pcrime_cleaned = (
+  pcrime_combined
+  .drop(columns=['Address','OpenDataX','OpenDataY']) # Drop X/Y
+  .dropna(subset=['OpenDataLat','Neighborhood'], how='all') # Drop missing lat/lon and Neighborhoods
+  .assign(
+    OccurDate = pd.to_datetime(pcrime_combined['OccurDate']), # Convert dates to datetime
+    ReportDate = pd.to_datetime(pcrime_combined['ReportDate']),
+    ReportDiff = lambda x: (x['ReportDate'] - x['OccurDate']).dt.days, # Calculate time to report
+    OpenDataLat = lambda x: x['OpenDataLat'].fillna(neighborhood_means['OpenDataLat']), # Fill missing Lat/Lon with average Lat/Lon of given neighborhood
+    OpenDataLon = lambda x: x['OpenDataLon'].fillna(neighborhood_means['OpenDataLon'])
+)
+)
+
+pcrime_cleaned
+```
+
+  
+_Now we can check and see how we did filling in our missing data._
+
+```{python}
+#| label: data-cleaning-2
+#| code-summary: Check missing data
+
+pcrime_cleaned.isna().sum()
+
+```
+
+
+## Final Thoughts
+
+_We have now cleaned our data into a useable state for our analysis. We went from many missing rows from in many columns to only 7881 missing rows in the neighborhood column. Since we have all of the Latitude and Longitude data for each of these missing rows, the missing data will still be useable for our visualizations in Tableau._
+
+_Note: Further cleaning of the missing neighborhood rows could be done using a reverse geocoding API, however, that is beyond the scope of this project_
+
+_Thank you_
+

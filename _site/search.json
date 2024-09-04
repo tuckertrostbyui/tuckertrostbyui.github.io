@@ -275,30 +275,30 @@
   {
     "objectID": "resume.html",
     "href": "resume.html",
-    "title": "Isaac Newtons’s CV",
+    "title": "Tucker Trost’s CV",
     "section": "",
-    "text": "Physicist, Mathematician, Cambridge professor.\n\nisaac@applesdofall.org | My wikipedia page\n\n\n\nStanding on the shoulders of giants\n\n\nLaws of motion, gravitation, minting coins, disliking Robert Hooke\n\n\n\nCooling, power series, optics, alchemy, planetary motions, apples.\n\n\n\n\n1654-1660 The King’s School, Grantham.\nJune 1661 - now Trinity College, Cambridge\n\nSizar\n\n1667 - death Trinity College, Cambridge\n\nFellow\n\n\n\n\n2012 President, Royal Society, London, UK\nAssociate, French Academy of Science, Paris, France\n\n\n\n\n\n\n1669 Newton Sir I, De analysi per æquationes numero terminorum infinitas.\n1669 Lectiones opticæ.\netc. etc. etc.\n\n\n\n2012 Infinitesimal calculus for solutions to physics problems, SMBC patent 001\n\n\n\n\n1600 Royal Mint, London\n\nWarden\nMinted coins\n\n1600 Lucasian professor of Mathematics, Cambridge University"
+    "text": "Data Science Student\n\nTuckertrost16@gmail.com | My Linkedin page\n\n\n\nStudying to earn my Bachleor’s degree in Data Science from Brigham Young University - Idaho\n\n\nPython | SQL | Tableau | Microsoft Excel\n\n\n\nExploratory Data Analysis, Data Visualizations, Interactive Dashboards, Machine Learning\n\n\n\n\nSuperstore KPI Dashboard\n\nDeveloped dynamic KPI Dashboard built in Tableau\nUtilized complex parameters and calculated fields to present easily identifiableinformation to stakeholders\n\nPortland Crime Analysis\n\nExploratory data anlysis oin Portland, Oregon crime data\nData cleaning in Excel and SQL\nPython to analyze crime trends and gather data for visualization\nVisualized findings in a dynamic Tableau dashboard and offered recommendations for visitor safety\n\n\n\n\n2023 - Now Brigham Young University - Idaho\n\nBachelor of Science, Data Science\n\n2019-2022 Brigham Young University - Idaho\n\nAssociates of Science, General Studies\n\n\n\n\n2023 Google Data Analystics Professional Certificate\nCoursera"
   },
   {
     "objectID": "resume.html#currently",
     "href": "resume.html#currently",
-    "title": "Isaac Newtons’s CV",
+    "title": "Tucker Trost’s CV",
     "section": "",
-    "text": "Standing on the shoulders of giants\n\n\nLaws of motion, gravitation, minting coins, disliking Robert Hooke\n\n\n\nCooling, power series, optics, alchemy, planetary motions, apples."
+    "text": "Studying to earn my Bachleor’s degree in Data Science from Brigham Young University - Idaho\n\n\nPython | SQL | Tableau | Microsoft Excel\n\n\n\nExploratory Data Analysis, Data Visualizations, Interactive Dashboards, Machine Learning"
   },
   {
     "objectID": "resume.html#education",
     "href": "resume.html#education",
-    "title": "Isaac Newtons’s CV",
+    "title": "Tucker Trost’s CV",
     "section": "",
-    "text": "1654-1660 The King’s School, Grantham.\nJune 1661 - now Trinity College, Cambridge\n\nSizar\n\n1667 - death Trinity College, Cambridge\n\nFellow"
+    "text": "2023 - Now Brigham Young University - Idaho\n\nBachelor of Science, Data Science\n\n2019-2022 Brigham Young University - Idaho\n\nAssociates of Science, General Studies"
   },
   {
     "objectID": "resume.html#awards",
     "href": "resume.html#awards",
-    "title": "Isaac Newtons’s CV",
+    "title": "Tucker Trost’s CV",
     "section": "",
-    "text": "2012 President, Royal Society, London, UK\nAssociate, French Academy of Science, Paris, France"
+    "text": "2023 Google Data Analystics Professional Certificate\nCoursera"
   },
   {
     "objectID": "resume.html#publications",
@@ -483,6 +483,101 @@
     "text": "MarkDown Basics",
     "crumbs": [
       "Full Stack"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#data-source",
+    "href": "Cleansing_Projects/project1.html#data-source",
+    "title": "Portland Crime Data Cleansing",
+    "section": "Data Source",
+    "text": "Data Source\nThe dateset that I am using was accessed directly from Portland Police Bureau’s Open Data initiative; compiled from 2015-2023. This dataset is being used under this license.",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#data-dictionary",
+    "href": "Cleansing_Projects/project1.html#data-dictionary",
+    "title": "Portland Crime Data Cleansing",
+    "section": "Data Dictionary",
+    "text": "Data Dictionary\nAddress: Address of reported incident at the 100 block level (e.g.: 1111 SW 2nd Ave would be 1100 Block SW 2nd Ave).\nCase Number: The case year and number for the reported incident (YY-######).\nCrime Against: Crime against category (Person, Property, or Society).\nNeighborhood: Neighborhood where incident occurred. If the neighborhood name is missing, the incident occurred outside of the boundaries of the Portland neighborhoods or at a location that could not be assigned to a specific address in the system. (e.g., Portland, near Washington Park, on the streetcar, etc.).\nOccur Date: Date the incident occurred. The exact occur date is sometimes unknown. In most situations, the first possible date the crime could have occurred is used as the occur date. (For example, victims return home from a week-long vacation to find their home burglarized. The burglary could have occurred at any point during the week. The first date of their vacation would be listed as the occur date.)\nOccur Time: Time the incident occurred. The exact occur time is sometimes unknown. In most situations, the first possible time the crime could have occurred is used as the occur time. The time is reported in the 24-hour clock format, with the first two digits representing hour (ranges from 00 to 23) and the second two digits representing minutes (ranges from 00 to 59).\nOffense Category: Category of offense (for example, Assault Offenses).\nOffense Type: Type of offense (for example, Aggravated Assault)Note: The statistic for Homicide Offenses has been updated in the Group A Crimes report to align with the 2019 FBI NIBRS definitions. The statistic for Homicide Offenses includes (09A) Murder & Non-negligent Manslaughter and (09B) Negligent Manslaughter. As of January 1, 2019, the FBI expanded the definition of negligent manslaughter to include traffic fatalities that result in an arrest for driving under the influence, distracted driving, or reckless driving. The change in definition impacts the 2019 homicide offenses statistic and the comparability of 2019 homicide statistics to prior year.\nOpen Data Lat/Lon: Generalized Latitude / Longitude of the reported incident. For offenses that occurred at a specific address, the point is mapped to the block’s midpoint. Offenses that occurred at an intersection is mapped to the intersection centroid.\nOpen Data X/Y: Generalized XY point of the reported incident. For offenses that occurred at a specific address, the point is mapped to the block’s midpoint. Offenses that occurred at an intersection is mapped to the intersection centroid. To protect the identity of victims and other privacy concerns, the points of certain case types are not released. XY points use the Oregon State Plane North (3601), NAD83 HARN, US International Feet coordinate system.\nOffense Count: Number of offenses per incident. Offenses (i.e. this field) are summed for counting purposes.\n\nPrepare\n\n\nRead and format project data\n# Load in Data\npcrime_15 = pd.read_csv('CrimeData-2015.csv')\npcrime_16 = pd.read_csv('CrimeData-2016.csv')\npcrime_17 = pd.read_csv('CrimeData-2017.csv')\npcrime_18 = pd.read_csv('CrimeData-2018.csv')\npcrime_19 = pd.read_csv('CrimeData-2019.csv')\npcrime_20 = pd.read_csv('CrimeData-2020.csv')\npcrime_21 = pd.read_csv('CrimeData-2021.csv')\npcrime_22 = pd.read_csv('CrimeData-2022.csv')\npcrime_23 = pd.read_csv('CrimeData-2023.csv')\n\n# Combine Datasets\npcrime_combined = pd.concat([pcrime_15,pcrime_16,pcrime_17,pcrime_18,pcrime_19,pcrime_20,pcrime_21,pcrime_22,pcrime_23], ignore_index=True)\npcrime_combined.head()\n\n\n\n\n\n\n\n\n\n\nAddress\nCaseNumber\nCrimeAgainst\nNeighborhood\nOccurDate\nOccurTime\nOffenseCategory\nOffenseType\nOpenDataLat\nOpenDataLon\nOpenDataX\nOpenDataY\nReportDate\nOffenseCount\n\n\n\n\n0\nNaN\n15-X197430\nPerson\nPiedmont\n5/12/2015\n1400\nAssault Offenses\nIntimidation\nNaN\nNaN\nNaN\nNaN\n5/12/2015\n1\n\n\n1\nNaN\n15-X4282999\nPerson\nBuckman West\n5/1/2015\n2143\nAssault Offenses\nSimple Assault\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n2\nNaN\n15-X4283033\nPerson\nUniversity Park\n5/1/2015\n1625\nAssault Offenses\nSimple Assault\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n3\nNaN\n15-X4283218\nPerson\nMadison South\n5/1/2015\n1820\nAssault Offenses\nSimple Assault\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n4\nNaN\n15-X4283218\nPerson\nMadison South\n5/1/2015\n1820\nKidnapping/Abduction\nKidnapping/Abduction\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#what-is-our-goal",
+    "href": "Cleansing_Projects/project1.html#what-is-our-goal",
+    "title": "Portland Crime Data Cleansing",
+    "section": "What is our goal?",
+    "text": "What is our goal?\nThinking forward to the analysis that I want to perform with this data, I need to understand what I am looking for when it comes to cleaning. I know that I want to focus my analysis on the distribution of different offense types and categories across the various neighborhoods of Portland. Additionally, I’d like to get insight into the temporal trends that lie within the data. Based on this understanding, I get a better sense of what aspects of the data need to be cleaned.\n\n\nIdentify Missing Data\npcrime_combined.isna().sum()\n\n\nAddress            44998\nCaseNumber             0\nCrimeAgainst           0\nNeighborhood       17566\nOccurDate              0\nOccurTime              0\nOffenseCategory        0\nOffenseType            0\nOpenDataLat        56511\nOpenDataLon        56511\nOpenDataX          56511\nOpenDataY          56511\nReportDate             0\nOffenseCount           0\ndtype: int64",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#initial-observations",
+    "href": "Cleansing_Projects/project1.html#initial-observations",
+    "title": "Portland Crime Data Cleansing",
+    "section": "Initial Observations",
+    "text": "Initial Observations\n1. A time to report column would be useful * Convert OccurDate and ReportDate to datetime * Create a time to report column\n2. OpenDataX/Y don’t seem necessary for our analysis * Drop OpenDataX and OpenDataY columns\n3. Address column seems to be redundant as most entries are just a general location * Drop Address column\n4. Neighborhood averages can be used to find lat/lon * Drop rows with missing Neighborhood and OpenDataLat * Replace all rows with neighborhood but missing Lat/Lon data with average Lat/Lon of their neighborhood\n\nData Cleaning\n\n\nCleaning\n# Calculate average Lat/Lon for each neighborhood\nneighborhood_means = pcrime_combined.groupby('Neighborhood')[['OpenDataLat','OpenDataLon']].transform('mean')\n\n# Clean the data\npcrime_cleaned = (\n  pcrime_combined\n  .drop(columns=['Address','OpenDataX','OpenDataY']) # Drop X/Y\n  .dropna(subset=['OpenDataLat','Neighborhood'], how='all') # Drop missing lat/lon and Neighborhoods\n  .assign(\n    OccurDate = pd.to_datetime(pcrime_combined['OccurDate']), # Convert dates to datetime\n    ReportDate = pd.to_datetime(pcrime_combined['ReportDate']),\n    ReportDiff = lambda x: (x['ReportDate'] - x['OccurDate']).dt.days, # Calculate time to report\n    OpenDataLat = lambda x: x['OpenDataLat'].fillna(neighborhood_means['OpenDataLat']), # Fill missing Lat/Lon with average Lat/Lon of given neighborhood\n    OpenDataLon = lambda x: x['OpenDataLon'].fillna(neighborhood_means['OpenDataLon'])\n)\n)\n\npcrime_cleaned\n\n\n\n\n\n\n\n\n\n\nCaseNumber\nCrimeAgainst\nNeighborhood\nOccurDate\nOccurTime\nOffenseCategory\nOffenseType\nOpenDataLat\nOpenDataLon\nReportDate\nOffenseCount\nReportDiff\n\n\n\n\n0\n15-X197430\nPerson\nPiedmont\n2015-05-12\n1400\nAssault Offenses\nIntimidation\n45.575321\n-122.669950\n2015-05-12\n1\n0\n\n\n1\n15-X4282999\nPerson\nBuckman West\n2015-05-01\n2143\nAssault Offenses\nSimple Assault\n45.517973\n-122.659334\n2015-05-01\n1\n0\n\n\n2\n15-X4283033\nPerson\nUniversity Park\n2015-05-01\n1625\nAssault Offenses\nSimple Assault\n45.580393\n-122.727295\n2015-05-01\n1\n0\n\n\n3\n15-X4283218\nPerson\nMadison South\n2015-05-01\n1820\nAssault Offenses\nSimple Assault\n45.540839\n-122.578812\n2015-05-01\n1\n0\n\n\n4\n15-X4283218\nPerson\nMadison South\n2015-05-01\n1820\nKidnapping/Abduction\nKidnapping/Abduction\n45.540839\n-122.578812\n2015-05-01\n1\n0\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n531881\n23-225440\nSociety\nSylvan-Highlands\n2023-08-27\n1420\nWeapon Law Violations\nWeapons Law Violations\n45.508945\n-122.731195\n2023-08-27\n1\n0\n\n\n531882\n23-51637\nProperty\nArlington Heights\n2023-02-23\n330\nMotor Vehicle Theft\nMotor Vehicle Theft\n45.506744\n-122.713355\n2023-02-25\n1\n2\n\n\n531883\n23-227984\nPerson\nGoose Hollow\n2023-08-30\n920\nAssault Offenses\nAggravated Assault\n45.515555\n-122.693709\n2023-08-30\n1\n0\n\n\n531884\n23-40689\nProperty\nForest Park\n2023-02-13\n1130\nMotor Vehicle Theft\nMotor Vehicle Theft\n45.540437\n-122.736728\n2023-02-13\n1\n0\n\n\n531885\n23-137815\nProperty\nForest Park\n2023-05-23\n1300\nLarceny Offenses\nTheft From Motor Vehicle\n45.540437\n-122.736728\n2023-05-26\n1\n3\n\n\n\n\n522201 rows × 12 columns\n\n\n\n\nNow we can check and see how we did filling in our missing data.\n\n\nCheck missing data\npcrime_cleaned.isna().sum()\n\n\nCaseNumber            0\nCrimeAgainst          0\nNeighborhood       7881\nOccurDate             0\nOccurTime             0\nOffenseCategory       0\nOffenseType           0\nOpenDataLat           0\nOpenDataLon           0\nReportDate            0\nOffenseCount          0\nReportDiff            0\ndtype: int64\n\n\n\n\nFinal Thoughts\nWe have now cleaned our data into a useable state for our analysis. We went from many missing rows from in many columns to only 7881 missing rows in the neighborhood column. Since we have all of the Latitude and Longitude data for each of these missing rows, the missing data will still be useable for our visualizations in Tableau.\nNote: Further cleaning of the missing neighborhood rows could be done using a reverse geocoding API, however, that is beyond the scope of this project\nThank you",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "resume.html#projects",
+    "href": "resume.html#projects",
+    "title": "Tucker Trost’s CV",
+    "section": "",
+    "text": "Superstore KPI Dashboard\n\nDeveloped dynamic KPI Dashboard built in Tableau\nUtilized complex parameters and calculated fields to present easily identifiableinformation to stakeholders\n\nPortland Crime Analysis\n\nExploratory data anlysis oin Portland, Oregon crime data\nData cleaning in Excel and SQL\nPython to analyze crime trends and gather data for visualization\nVisualized findings in a dynamic Tableau dashboard and offered recommendations for visitor safety"
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#prepare",
+    "href": "Cleansing_Projects/project1.html#prepare",
+    "title": "Portland Crime Data Cleansing",
+    "section": "Prepare",
+    "text": "Prepare\n\n\nRead and format project data\n# Load in Data\npcrime_15 = pd.read_csv('CrimeData-2015.csv')\npcrime_16 = pd.read_csv('CrimeData-2016.csv')\npcrime_17 = pd.read_csv('CrimeData-2017.csv')\npcrime_18 = pd.read_csv('CrimeData-2018.csv')\npcrime_19 = pd.read_csv('CrimeData-2019.csv')\npcrime_20 = pd.read_csv('CrimeData-2020.csv')\npcrime_21 = pd.read_csv('CrimeData-2021.csv')\npcrime_22 = pd.read_csv('CrimeData-2022.csv')\npcrime_23 = pd.read_csv('CrimeData-2023.csv')\n\n# Combine Datasets\npcrime_combined = pd.concat([pcrime_15,pcrime_16,pcrime_17,pcrime_18,pcrime_19,pcrime_20,pcrime_21,pcrime_22,pcrime_23], ignore_index=True)\npcrime_combined.head()\n\n\n\n\n\n\n\n\n\n\nAddress\nCaseNumber\nCrimeAgainst\nNeighborhood\nOccurDate\nOccurTime\nOffenseCategory\nOffenseType\nOpenDataLat\nOpenDataLon\nOpenDataX\nOpenDataY\nReportDate\nOffenseCount\n\n\n\n\n0\nNaN\n15-X197430\nPerson\nPiedmont\n5/12/2015\n1400\nAssault Offenses\nIntimidation\nNaN\nNaN\nNaN\nNaN\n5/12/2015\n1\n\n\n1\nNaN\n15-X4282999\nPerson\nBuckman West\n5/1/2015\n2143\nAssault Offenses\nSimple Assault\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n2\nNaN\n15-X4283033\nPerson\nUniversity Park\n5/1/2015\n1625\nAssault Offenses\nSimple Assault\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n3\nNaN\n15-X4283218\nPerson\nMadison South\n5/1/2015\n1820\nAssault Offenses\nSimple Assault\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n4\nNaN\n15-X4283218\nPerson\nMadison South\n5/1/2015\n1820\nKidnapping/Abduction\nKidnapping/Abduction\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n\n\n\n\n\n\n\nWhat is our goal?\nThinking forward to the analysis that I want to perform with this data, I need to understand what I am looking for when it comes to cleaning. I know that I want to focus my analysis on the distribution of different offense types and categories across the various neighborhoods of Portland. Additionally, I’d like to get insight into the temporal trends that lie within the data. Based on this understanding, I get a better sense of what aspects of the data need to be cleaned.\n\n\nIdentify Missing Data\npcrime_combined.isna().sum()\n\n\nAddress            44998\nCaseNumber             0\nCrimeAgainst           0\nNeighborhood       17566\nOccurDate              0\nOccurTime              0\nOffenseCategory        0\nOffenseType            0\nOpenDataLat        56511\nOpenDataLon        56511\nOpenDataX          56511\nOpenDataY          56511\nReportDate             0\nOffenseCount           0\ndtype: int64\n\n\n\n\nInitial Observations\n\nA time to report column would be useful\n\nConvert OccurDate and ReportDate to datetime\nCreate a time to report column\n\nOpenDataX/Y don’t seem necessary for our analysis\n\nDrop OpenDataX and OpenDataY columns\n\nAddress column seems to be redundant as most entries are just a general location\n\nDrop Address column\n\nNeighborhood averages can be used to find lat/lon\n\nDrop rows with missing Neighborhood and OpenDataLat\nReplace all rows with neighborhood but missing Lat/Lon data with average Lat/Lon of their neighborhood",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#data-cleaning",
+    "href": "Cleansing_Projects/project1.html#data-cleaning",
+    "title": "Portland Crime Data Cleansing",
+    "section": "Data Cleaning",
+    "text": "Data Cleaning\n\n\nCleaning\n# Calculate average Lat/Lon for each neighborhood\nneighborhood_means = pcrime_combined.groupby('Neighborhood')[['OpenDataLat','OpenDataLon']].transform('mean')\n\n# Clean the data\npcrime_cleaned = (\n  pcrime_combined\n  .drop(columns=['Address','OpenDataX','OpenDataY']) # Drop X/Y\n  .dropna(subset=['OpenDataLat','Neighborhood'], how='all') # Drop missing lat/lon and Neighborhoods\n  .assign(\n    OccurDate = pd.to_datetime(pcrime_combined['OccurDate']), # Convert dates to datetime\n    ReportDate = pd.to_datetime(pcrime_combined['ReportDate']),\n    ReportDiff = lambda x: (x['ReportDate'] - x['OccurDate']).dt.days, # Calculate time to report\n    OpenDataLat = lambda x: x['OpenDataLat'].fillna(neighborhood_means['OpenDataLat']), # Fill missing Lat/Lon with average Lat/Lon of given neighborhood\n    OpenDataLon = lambda x: x['OpenDataLon'].fillna(neighborhood_means['OpenDataLon'])\n)\n)\n\npcrime_cleaned\n\n\n\n\n\n\n\n\n\n\nCaseNumber\nCrimeAgainst\nNeighborhood\nOccurDate\nOccurTime\nOffenseCategory\nOffenseType\nOpenDataLat\nOpenDataLon\nReportDate\nOffenseCount\nReportDiff\n\n\n\n\n0\n15-X197430\nPerson\nPiedmont\n2015-05-12\n1400\nAssault Offenses\nIntimidation\n45.575321\n-122.669950\n2015-05-12\n1\n0\n\n\n1\n15-X4282999\nPerson\nBuckman West\n2015-05-01\n2143\nAssault Offenses\nSimple Assault\n45.517973\n-122.659334\n2015-05-01\n1\n0\n\n\n2\n15-X4283033\nPerson\nUniversity Park\n2015-05-01\n1625\nAssault Offenses\nSimple Assault\n45.580393\n-122.727295\n2015-05-01\n1\n0\n\n\n3\n15-X4283218\nPerson\nMadison South\n2015-05-01\n1820\nAssault Offenses\nSimple Assault\n45.540839\n-122.578812\n2015-05-01\n1\n0\n\n\n4\n15-X4283218\nPerson\nMadison South\n2015-05-01\n1820\nKidnapping/Abduction\nKidnapping/Abduction\n45.540839\n-122.578812\n2015-05-01\n1\n0\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n531881\n23-225440\nSociety\nSylvan-Highlands\n2023-08-27\n1420\nWeapon Law Violations\nWeapons Law Violations\n45.508945\n-122.731195\n2023-08-27\n1\n0\n\n\n531882\n23-51637\nProperty\nArlington Heights\n2023-02-23\n330\nMotor Vehicle Theft\nMotor Vehicle Theft\n45.506744\n-122.713355\n2023-02-25\n1\n2\n\n\n531883\n23-227984\nPerson\nGoose Hollow\n2023-08-30\n920\nAssault Offenses\nAggravated Assault\n45.515555\n-122.693709\n2023-08-30\n1\n0\n\n\n531884\n23-40689\nProperty\nForest Park\n2023-02-13\n1130\nMotor Vehicle Theft\nMotor Vehicle Theft\n45.540437\n-122.736728\n2023-02-13\n1\n0\n\n\n531885\n23-137815\nProperty\nForest Park\n2023-05-23\n1300\nLarceny Offenses\nTheft From Motor Vehicle\n45.540437\n-122.736728\n2023-05-26\n1\n3\n\n\n\n\n522201 rows × 12 columns\n\n\n\n\nNow we can check and see how we did filling in our missing data.\n\n\nCheck missing data\npcrime_cleaned.isna().sum()\n\n\nCaseNumber            0\nCrimeAgainst          0\nNeighborhood       7881\nOccurDate             0\nOccurTime             0\nOffenseCategory       0\nOffenseType           0\nOpenDataLat           0\nOpenDataLon           0\nReportDate            0\nOffenseCount          0\nReportDiff            0\ndtype: int64",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#final-thoughts",
+    "href": "Cleansing_Projects/project1.html#final-thoughts",
+    "title": "Portland Crime Data Cleansing",
+    "section": "Final Thoughts",
+    "text": "Final Thoughts\nWe have now cleaned our data into a useable state for our analysis. We went from many missing rows from in many columns to only 7881 missing rows in the neighborhood column. Since we have all of the Latitude and Longitude data for each of these missing rows, the missing data will still be useable for our visualizations in Tableau.\nNote: Further cleaning of the missing neighborhood rows could be done using a reverse geocoding API, however, that is beyond the scope of this project\nThank you",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project1.html#elevator-pitch",
+    "href": "Cleansing_Projects/project1.html#elevator-pitch",
+    "title": "Portland Crime Data Cleansing",
+    "section": "Elevator pitch",
+    "text": "Elevator pitch\nThis project details the cleaning and preparing process of crime data from Portland, Oregon, spanning 2015-2023. By identifying the project needs, addressing missing data, and removing unnecessary columns, the data has been transformed into a more usable state for analysis.\n\nData Source\nThe dateset that I am using was accessed directly from Portland Police Bureau’s Open Data initiative; compiled from 2015-2023. This dataset is being used under this license.\n\n\nData Dictionary\nAddress: Address of reported incident at the 100 block level (e.g.: 1111 SW 2nd Ave would be 1100 Block SW 2nd Ave).\nCase Number: The case year and number for the reported incident (YY-######).\nCrime Against: Crime against category (Person, Property, or Society).\nNeighborhood: Neighborhood where incident occurred. If the neighborhood name is missing, the incident occurred outside of the boundaries of the Portland neighborhoods or at a location that could not be assigned to a specific address in the system. (e.g., Portland, near Washington Park, on the streetcar, etc.).\nOccur Date: Date the incident occurred. The exact occur date is sometimes unknown. In most situations, the first possible date the crime could have occurred is used as the occur date. (For example, victims return home from a week-long vacation to find their home burglarized. The burglary could have occurred at any point during the week. The first date of their vacation would be listed as the occur date.)\nOccur Time: Time the incident occurred. The exact occur time is sometimes unknown. In most situations, the first possible time the crime could have occurred is used as the occur time. The time is reported in the 24-hour clock format, with the first two digits representing hour (ranges from 00 to 23) and the second two digits representing minutes (ranges from 00 to 59).\nOffense Category: Category of offense (for example, Assault Offenses).\nOffense Type: Type of offense (for example, Aggravated Assault)Note: The statistic for Homicide Offenses has been updated in the Group A Crimes report to align with the 2019 FBI NIBRS definitions. The statistic for Homicide Offenses includes (09A) Murder & Non-negligent Manslaughter and (09B) Negligent Manslaughter. As of January 1, 2019, the FBI expanded the definition of negligent manslaughter to include traffic fatalities that result in an arrest for driving under the influence, distracted driving, or reckless driving. The change in definition impacts the 2019 homicide offenses statistic and the comparability of 2019 homicide statistics to prior year.\nOpen Data Lat/Lon: Generalized Latitude / Longitude of the reported incident. For offenses that occurred at a specific address, the point is mapped to the block’s midpoint. Offenses that occurred at an intersection is mapped to the intersection centroid.\nOpen Data X/Y: Generalized XY point of the reported incident. For offenses that occurred at a specific address, the point is mapped to the block’s midpoint. Offenses that occurred at an intersection is mapped to the intersection centroid. To protect the identity of victims and other privacy concerns, the points of certain case types are not released. XY points use the Oregon State Plane North (3601), NAD83 HARN, US International Feet coordinate system.\nOffense Count: Number of offenses per incident. Offenses (i.e. this field) are summed for counting purposes.",
+    "crumbs": [
+      "Data Cleansing",
+      "Project 1"
     ]
   }
 ]
