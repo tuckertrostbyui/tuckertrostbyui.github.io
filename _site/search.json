@@ -552,7 +552,7 @@
     "href": "Cleansing_Projects/project1.html#data-cleaning",
     "title": "Portland Crime Data Cleansing",
     "section": "Data Cleaning",
-    "text": "Data Cleaning\n\n\nCleaning\n# Calculate average Lat/Lon for each neighborhood\nneighborhood_means = pcrime_combined.groupby('Neighborhood')[['OpenDataLat','OpenDataLon']].transform('mean')\n\n# Clean the data\npcrime_cleaned = (\n  pcrime_combined\n  .drop(columns=['Address','OpenDataX','OpenDataY']) # Drop X/Y\n  .dropna(subset=['OpenDataLat','Neighborhood'], how='all') # Drop missing lat/lon and Neighborhoods\n  .assign(\n    OccurDate = pd.to_datetime(pcrime_combined['OccurDate']), # Convert dates to datetime\n    ReportDate = pd.to_datetime(pcrime_combined['ReportDate']),\n    ReportDiff = lambda x: (x['ReportDate'] - x['OccurDate']).dt.days, # Calculate time to report\n    OpenDataLat = lambda x: x['OpenDataLat'].fillna(neighborhood_means['OpenDataLat']), # Fill missing Lat/Lon with average Lat/Lon of given neighborhood\n    OpenDataLon = lambda x: x['OpenDataLon'].fillna(neighborhood_means['OpenDataLon'])\n)\n)\n\npcrime_cleaned\n\n\n\n\n\n\n\n\n\n\nCaseNumber\nCrimeAgainst\nNeighborhood\nOccurDate\nOccurTime\nOffenseCategory\nOffenseType\nOpenDataLat\nOpenDataLon\nReportDate\nOffenseCount\nReportDiff\n\n\n\n\n0\n15-X197430\nPerson\nPiedmont\n2015-05-12\n1400\nAssault Offenses\nIntimidation\n45.575321\n-122.669950\n2015-05-12\n1\n0\n\n\n1\n15-X4282999\nPerson\nBuckman West\n2015-05-01\n2143\nAssault Offenses\nSimple Assault\n45.517973\n-122.659334\n2015-05-01\n1\n0\n\n\n2\n15-X4283033\nPerson\nUniversity Park\n2015-05-01\n1625\nAssault Offenses\nSimple Assault\n45.580393\n-122.727295\n2015-05-01\n1\n0\n\n\n3\n15-X4283218\nPerson\nMadison South\n2015-05-01\n1820\nAssault Offenses\nSimple Assault\n45.540839\n-122.578812\n2015-05-01\n1\n0\n\n\n4\n15-X4283218\nPerson\nMadison South\n2015-05-01\n1820\nKidnapping/Abduction\nKidnapping/Abduction\n45.540839\n-122.578812\n2015-05-01\n1\n0\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n531881\n23-225440\nSociety\nSylvan-Highlands\n2023-08-27\n1420\nWeapon Law Violations\nWeapons Law Violations\n45.508945\n-122.731195\n2023-08-27\n1\n0\n\n\n531882\n23-51637\nProperty\nArlington Heights\n2023-02-23\n330\nMotor Vehicle Theft\nMotor Vehicle Theft\n45.506744\n-122.713355\n2023-02-25\n1\n2\n\n\n531883\n23-227984\nPerson\nGoose Hollow\n2023-08-30\n920\nAssault Offenses\nAggravated Assault\n45.515555\n-122.693709\n2023-08-30\n1\n0\n\n\n531884\n23-40689\nProperty\nForest Park\n2023-02-13\n1130\nMotor Vehicle Theft\nMotor Vehicle Theft\n45.540437\n-122.736728\n2023-02-13\n1\n0\n\n\n531885\n23-137815\nProperty\nForest Park\n2023-05-23\n1300\nLarceny Offenses\nTheft From Motor Vehicle\n45.540437\n-122.736728\n2023-05-26\n1\n3\n\n\n\n\n522201 rows × 12 columns\n\n\n\n\nNow we can check and see how we did filling in our missing data.\n\n\nCheck missing data\npcrime_cleaned.isna().sum()\n\n\nCaseNumber            0\nCrimeAgainst          0\nNeighborhood       7881\nOccurDate             0\nOccurTime             0\nOffenseCategory       0\nOffenseType           0\nOpenDataLat           0\nOpenDataLon           0\nReportDate            0\nOffenseCount          0\nReportDiff            0\ndtype: int64",
+    "text": "Data Cleaning\n\n\nCleaning\n# Calculate average Lat/Lon for each neighborhood\nneighborhood_means = pcrime_combined.groupby('Neighborhood')[['OpenDataLat','OpenDataLon']].transform('mean')\n\n# Clean the data\npcrime_cleaned = (\n    pcrime_combined\n    .drop(columns=['Address', 'OpenDataX', 'OpenDataY'])  # Drop X/Y\n    .dropna(subset=['OpenDataLat', 'Neighborhood'], how='all')  # Drop missing lat/lon and Neighborhoods\n    .assign(\n        OccurDate=pd.to_datetime(pcrime_combined['OccurDate']),  # Convert dates to datetime\n        ReportDate=pd.to_datetime(pcrime_combined['ReportDate']),\n        ReportDiff=lambda x: (x['ReportDate'] - x['OccurDate']).dt.days,  # Calculate time to report\n        OpenDataLat=lambda x: x['OpenDataLat'].fillna(neighborhood_means['OpenDataLat']),  # Fill missing Lat/Lon with average Lat/Lon of given neighborhood\n        OpenDataLon=lambda x: x['OpenDataLon'].fillna(neighborhood_means['OpenDataLon']),\n        OccurTime=lambda x: x['OccurTime'].astype(str).str.zfill(4),  # Ensure time is in HHMM format\n        OccurDateTime=lambda x: pd.to_datetime(\n            x['OccurDate'].dt.strftime('%Y-%m-%d') + ' ' + \n            x['OccurTime'].str[:2] + ':' + x['OccurTime'].str[2:]\n        )  # Combine date and formatted time into datetime\n    )\n    .loc[lambda x: x['OccurDateTime'].dt.year.between(2015, 2023)]  # Filter rows with years within 2015–2023\n)\n\npcrime_cleaned\n\n\n\n\n\n\n\n\n\n\nCaseNumber\nCrimeAgainst\nNeighborhood\nOccurDate\nOccurTime\nOffenseCategory\nOffenseType\nOpenDataLat\nOpenDataLon\nReportDate\nOffenseCount\nReportDiff\nOccurDateTime\n\n\n\n\n0\n15-X197430\nPerson\nPiedmont\n2015-05-12\n1400\nAssault Offenses\nIntimidation\n45.575321\n-122.669950\n2015-05-12\n1\n0\n2015-05-12 14:00:00\n\n\n1\n15-X4282999\nPerson\nBuckman West\n2015-05-01\n2143\nAssault Offenses\nSimple Assault\n45.517973\n-122.659334\n2015-05-01\n1\n0\n2015-05-01 21:43:00\n\n\n2\n15-X4283033\nPerson\nUniversity Park\n2015-05-01\n1625\nAssault Offenses\nSimple Assault\n45.580393\n-122.727295\n2015-05-01\n1\n0\n2015-05-01 16:25:00\n\n\n3\n15-X4283218\nPerson\nMadison South\n2015-05-01\n1820\nAssault Offenses\nSimple Assault\n45.540839\n-122.578812\n2015-05-01\n1\n0\n2015-05-01 18:20:00\n\n\n4\n15-X4283218\nPerson\nMadison South\n2015-05-01\n1820\nKidnapping/Abduction\nKidnapping/Abduction\n45.540839\n-122.578812\n2015-05-01\n1\n0\n2015-05-01 18:20:00\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n531881\n23-225440\nSociety\nSylvan-Highlands\n2023-08-27\n1420\nWeapon Law Violations\nWeapons Law Violations\n45.508945\n-122.731195\n2023-08-27\n1\n0\n2023-08-27 14:20:00\n\n\n531882\n23-51637\nProperty\nArlington Heights\n2023-02-23\n0330\nMotor Vehicle Theft\nMotor Vehicle Theft\n45.506744\n-122.713355\n2023-02-25\n1\n2\n2023-02-23 03:30:00\n\n\n531883\n23-227984\nPerson\nGoose Hollow\n2023-08-30\n0920\nAssault Offenses\nAggravated Assault\n45.515555\n-122.693709\n2023-08-30\n1\n0\n2023-08-30 09:20:00\n\n\n531884\n23-40689\nProperty\nForest Park\n2023-02-13\n1130\nMotor Vehicle Theft\nMotor Vehicle Theft\n45.540437\n-122.736728\n2023-02-13\n1\n0\n2023-02-13 11:30:00\n\n\n531885\n23-137815\nProperty\nForest Park\n2023-05-23\n1300\nLarceny Offenses\nTheft From Motor Vehicle\n45.540437\n-122.736728\n2023-05-26\n1\n3\n2023-05-23 13:00:00\n\n\n\n\n521247 rows × 13 columns\n\n\n\n\nNow we can check and see how we did filling in our missing data.\n\n\nCheck missing data\npcrime_cleaned.isna().sum()\n\n\nCaseNumber            0\nCrimeAgainst          0\nNeighborhood       7870\nOccurDate             0\nOccurTime             0\nOffenseCategory       0\nOffenseType           0\nOpenDataLat           0\nOpenDataLon           0\nReportDate            0\nOffenseCount          0\nReportDiff            0\nOccurDateTime         0\ndtype: int64",
     "crumbs": [
       "Data Cleansing",
       "Project 1"
@@ -588,6 +588,36 @@
     "text": "My Tableau Dashboard\nBelow is an embedded Tableau dashboard:",
     "crumbs": [
       "Data Cleansing",
+      "Project 1"
+    ]
+  },
+  {
+    "objectID": "sql.html",
+    "href": "sql.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "SQL"
+    ]
+  },
+  {
+    "objectID": "sql.html#title-2-header",
+    "href": "sql.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "SQL"
+    ]
+  },
+  {
+    "objectID": "SQL/project1.html",
+    "href": "SQL/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top",
+    "crumbs": [
       "Project 1"
     ]
   }

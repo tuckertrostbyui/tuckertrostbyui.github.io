@@ -131,16 +131,22 @@ neighborhood_means = pcrime_combined.groupby('Neighborhood')[['OpenDataLat','Ope
 
 # Clean the data
 pcrime_cleaned = (
-  pcrime_combined
-  .drop(columns=['Address','OpenDataX','OpenDataY']) # Drop X/Y
-  .dropna(subset=['OpenDataLat','Neighborhood'], how='all') # Drop missing lat/lon and Neighborhoods
-  .assign(
-    OccurDate = pd.to_datetime(pcrime_combined['OccurDate']), # Convert dates to datetime
-    ReportDate = pd.to_datetime(pcrime_combined['ReportDate']),
-    ReportDiff = lambda x: (x['ReportDate'] - x['OccurDate']).dt.days, # Calculate time to report
-    OpenDataLat = lambda x: x['OpenDataLat'].fillna(neighborhood_means['OpenDataLat']), # Fill missing Lat/Lon with average Lat/Lon of given neighborhood
-    OpenDataLon = lambda x: x['OpenDataLon'].fillna(neighborhood_means['OpenDataLon'])
-)
+    pcrime_combined
+    .drop(columns=['Address', 'OpenDataX', 'OpenDataY'])  # Drop X/Y
+    .dropna(subset=['OpenDataLat', 'Neighborhood'], how='all')  # Drop missing lat/lon and Neighborhoods
+    .assign(
+        OccurDate=pd.to_datetime(pcrime_combined['OccurDate']),  # Convert dates to datetime
+        ReportDate=pd.to_datetime(pcrime_combined['ReportDate']),
+        ReportDiff=lambda x: (x['ReportDate'] - x['OccurDate']).dt.days,  # Calculate time to report
+        OpenDataLat=lambda x: x['OpenDataLat'].fillna(neighborhood_means['OpenDataLat']),  # Fill missing Lat/Lon with average Lat/Lon of given neighborhood
+        OpenDataLon=lambda x: x['OpenDataLon'].fillna(neighborhood_means['OpenDataLon']),
+        OccurTime=lambda x: x['OccurTime'].astype(str).str.zfill(4),  # Ensure time is in HHMM format
+        OccurDateTime=lambda x: pd.to_datetime(
+            x['OccurDate'].dt.strftime('%Y-%m-%d') + ' ' + 
+            x['OccurTime'].str[:2] + ':' + x['OccurTime'].str[2:]
+        )  # Combine date and formatted time into datetime
+    )
+    .loc[lambda x: x['OccurDateTime'].dt.year.between(2015, 2023)]  # Filter rows with years within 2015–2023
 )
 
 pcrime_cleaned
