@@ -29,6 +29,8 @@ website:
         file: exploration.qmd
       - text: "Story Telling"
         file: story_telling.qmd
+      - text: "SQL"
+        file: sql.qmd
       # - text: "Machine Learning"
       #   file: ml.qmd
       # - text: "Full Stack"
