@@ -6,7 +6,7 @@ website:
   favicon: Images/favicon.png
   back-to-top-navigation: true
   repo-url: https://github.com/tuckertrostbyui/tuckertrostbyui.github.io
-  #repo-actions: [issue] #if you want to allow others to report issues on your site uncomment this line
+  #repo-actions: [issue] #if you want to allow others to report issues on your site uncomment this line.
 
   page-footer: 
     border: true
