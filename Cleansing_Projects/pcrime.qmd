@@ -1,0 +1,537 @@
+---
+title: "Portland Crime Analysis"
+subtitle: "Data Science Portfolio"
+author: "Tucker Trost"
+format:
+  html:
+    self-contained: true
+    page-layout: full
+    title-block-banner: true
+    toc: true
+    toc-depth: 3
+    toc-location: body
+    number-sections: false
+    html-math-method: katex
+    code-fold: true
+    code-summary: "Show the code"
+    code-overflow: wrap
+    code-copy: hover
+    code-tools:
+        source: false
+        toggle: true
+        caption: See code
+execute: 
+  warning: false
+    
+---
+
+## Portland Crime Analysis
+
+## Elevator pitch
+
+_This project involves cleaning and exploring crime data from Portland, Oregon (2016-2023). After addressing missing data and unnecessary columns, we uncovered key trends in offense types, report times, and their relationship to neighborhood, day, and time. These insights help provide a clearer picture of crime patterns in the city._
+
+### Data Source
+_The dateset that I am using was accessed directly from [Portland Police Bureau's Open Data initiative](https://www.portland.gov/police/open-data/crime-statistics); compiled from 2015-2023. This dataset is being used under this [license](https://creativecommons.org/publicdomain/zero/1.0/)._
+
+### Data Dictionary
+
+_**Address:** Address of reported incident at the 100 block level (e.g.: 1111 SW 2nd Ave would be 1100 Block SW 2nd Ave)._
+
+_**Case Number:** The case year and number for the reported incident (YY-######)._
+
+_**Crime Against:** Crime against category (Person, Property, or Society)._
+
+_**Neighborhood:** Neighborhood where incident occurred. If the neighborhood name is missing, the incident occurred outside of the boundaries of the Portland neighborhoods or at a location that could not be assigned to a specific address in the system. (e.g., Portland, near Washington Park, on the streetcar, etc.)._
+
+_**Occur Date:** Date the incident occurred. The exact occur date is sometimes unknown. In most situations, the first possible date the crime could have occurred is used as the occur date. (For example, victims return home from a week-long vacation to find their home burglarized. The burglary could have occurred at any point during the week. The first date of their vacation would be listed as the occur date.)_
+
+_**Occur Time**: Time the incident occurred. The exact occur time is sometimes unknown. In most situations, the first possible time the crime could have occurred is used as the occur time. The time is reported in the 24-hour clock format, with the first two digits representing hour (ranges from 00 to 23) and the second two digits representing minutes (ranges from 00 to 59)._
+
+_**Offense Category:** Category of offense (for example, Assault Offenses)._
+
+_**Offense Type:** Type of offense (for example, Aggravated Assault)Note: The statistic for Homicide Offenses has been updated in the Group A Crimes report to align with the 2019 FBI NIBRS definitions. The statistic for Homicide Offenses includes (09A) Murder & Non-negligent Manslaughter and (09B) Negligent Manslaughter. As of January 1, 2019, the FBI expanded the definition of negligent manslaughter to include traffic fatalities that result in an arrest for driving under the influence, distracted driving, or reckless driving. **The change in definition impacts the 2019 homicide offenses statistic and the comparability of 2019 homicide statistics to prior year.**_
+
+_**Open Data Lat/Lon:** Generalized Latitude / Longitude of the reported incident. For offenses that occurred at a specific address, the point is mapped to the block's midpoint. Offenses that occurred at an intersection is mapped to the intersection centroid._
+
+_**Open Data X/Y:** Generalized XY point of the reported incident. For offenses that occurred at a specific address, the point is mapped to the block's midpoint. Offenses that occurred at an intersection is mapped to the intersection centroid. To protect the identity of victims and other privacy concerns, the points of certain case types are not released. XY points use the Oregon State Plane North (3601), NAD83 HARN, US International Feet coordinate system._
+
+_**Offense Count:** Number of offenses per incident. Offenses (i.e. this field) are summed for counting purposes._
+
+
+```{python}
+#| label: libraries
+#| include: false
+import pandas as pd
+import numpy as np
+import datetime as dt
+from lets_plot import *
+
+LetsPlot.setup_html()
+```
+
+
+## Prepare
+
+```{python}
+#| label: project-data
+#| code-summary: Read and format project data
+
+# Load in Data
+pcrime_15 = pd.read_csv('CrimeData-2015.csv')
+pcrime_16 = pd.read_csv('CrimeData-2016.csv')
+pcrime_17 = pd.read_csv('CrimeData-2017.csv')
+pcrime_18 = pd.read_csv('CrimeData-2018.csv')
+pcrime_19 = pd.read_csv('CrimeData-2019.csv')
+pcrime_20 = pd.read_csv('CrimeData-2020.csv')
+pcrime_21 = pd.read_csv('CrimeData-2021.csv')
+pcrime_22 = pd.read_csv('CrimeData-2022.csv')
+pcrime_23 = pd.read_csv('CrimeData-2023.csv')
+
+# Combine Datasets
+pcrime_combined = pd.concat([pcrime_15,pcrime_16,pcrime_17,pcrime_18,pcrime_19,pcrime_20,pcrime_21,pcrime_22,pcrime_23], ignore_index=True)
+pcrime_combined.head()
+```
+
+
+### What is our goal?
+_Thinking forward to the analysis that I want to perform with this data, I need to understand what I am looking for when it comes to cleaning. I know that I want to focus my analysis on the distribution of different offense types and categories across the various neighborhoods of Portland. Additionally, I'd like to get insight into the temporal trends that lie within the data. Based on this understanding, I get a better sense of what aspects of the data need to be cleaned._
+
+```{python}
+#| label: Prepare
+#| code-summary: Identify Missing Data
+
+pcrime_combined.isna().sum()
+```
+
+### Initial Observations
+
+1. ***A time to report column would be useful***
+    - *Convert OccurDate and ReportDate to datetime*
+    - *Create a time to report column*
+
+2. ***OpenDataX/Y don't seem necessary for our analysis***
+    - *Drop OpenDataX and OpenDataY columns*
+
+3. ***Address column seems to be redundant as most entries are just a general location***
+    - *Drop Address column*
+
+4. ***Neighborhood averages can be used to find lat/lon***
+    - *Drop rows with missing Neighborhood and OpenDataLat*
+    - *Replace all rows with neighborhood but missing Lat/Lon data with average Lat/Lon of their neighborhood*
+
+
+
+
+## Data Cleaning
+
+```{python}
+#| label: data-cleaning
+#| code-summary: Cleaning
+
+# Calculate average Lat/Lon for each neighborhood
+neighborhood_means = pcrime_combined.groupby('Neighborhood')[['OpenDataLat','OpenDataLon']].transform('mean')
+
+# Clean the data
+pcrime_cleaned = (
+    pcrime_combined
+    .drop(columns=['Address', 'OpenDataX', 'OpenDataY'])  # Drop X/Y
+    .dropna(subset=['OpenDataLat', 'Neighborhood'], how='all')  # Drop missing lat/lon and Neighborhoods
+    .assign(
+        OccurDate=pd.to_datetime(pcrime_combined['OccurDate']),  # Convert dates to datetime
+        ReportDate=pd.to_datetime(pcrime_combined['ReportDate']),
+        ReportDiff=lambda x: (x['ReportDate'] - x['OccurDate']).dt.days,  # Calculate time to report
+        OpenDataLat=lambda x: x['OpenDataLat'].fillna(neighborhood_means['OpenDataLat']),  # Fill missing Lat/Lon with average Lat/Lon of given neighborhood
+        OpenDataLon=lambda x: x['OpenDataLon'].fillna(neighborhood_means['OpenDataLon']),
+        OccurTime=lambda x: x['OccurTime'].astype(str).str.zfill(4),  # Ensure time is in HHMM format
+        OccurDateTime=lambda x: pd.to_datetime(
+            x['OccurDate'].dt.strftime('%Y-%m-%d') + ' ' + 
+            x['OccurTime'].str[:2] + ':' + x['OccurTime'].str[2:]
+        )  # Combine date and formatted time into datetime
+    )
+    .loc[lambda x: x['OccurDateTime'].dt.year.between(2015, 2023)]  # Filter rows with years within 2015–2023
+)
+
+pcrime_cleaned
+```
+
+  
+_Now we can check and see how we did filling in our missing data._
+
+```{python}
+#| label: data-cleaning-2
+#| code-summary: Check missing data
+
+pcrime_cleaned.isna().sum()
+
+```
+
+
+### Final Cleaning Thoughts
+
+_We have now cleaned our data into a useable state for our analysis. We went from many missing rows from in many columns to only 7881 missing rows in the neighborhood column. Since we have all of the Latitude and Longitude data for each of these missing rows, the missing data will still be useable for our visualizations in Tableau._
+
+_Note: Further cleaning of the missing neighborhood rows could be done using a reverse geocoding API, however, that is beyond the scope of this project_
+
+## Data Exploration
+
+### Thoughts
+
+* Temporal Trends
+    - hour/Day/month/year trends
+* Crime distributions
+    - categories/types/crimeagainst
+    - reportdiff by offense type
+* Neighborhood
+    - type/category distributions
+    - reportdiff by neighborhood
+    - offense count by neighborhood
+
+#### Temporal Trends
+
+```{python}
+#| label: data-explore-1
+#| code-summary: year-count
+
+pcrime_test = pcrime_cleaned.copy()
+
+# Year Count
+pcrime_test['OccurDateTime'] = pd.to_datetime(pcrime_test['OccurDateTime'])
+
+year_count = pcrime_test.groupby(pcrime_test['OccurDateTime'].dt.year)['OffenseCount'].sum().reset_index()
+
+year_count.rename(columns={year_count.columns[0]: 'Year'}, inplace=True)
+
+year_count_fig = ggplot(year_count, aes(x='Year', y='OffenseCount')) + \
+    geom_line(color='#2e6f40', size=1.5) + \
+    geom_point(color='#2e6f40', size=3) + \
+    labs(title='Offense Counts by Year', x='Year', y='Offense Count') + \
+    theme_minimal2() + \
+    theme(
+        plot_title=element_text(size=16, face='bold'),
+        axis_title_x=element_text(size=12, face='bold'),
+        axis_title_y=element_text(size=12, face='bold'),
+        axis_text_x=element_text(size=10, angle=45), 
+        axis_text_y=element_text(size=10),
+        panel_grid_minor=element_blank()
+    )
+
+year_count_fig
+```
+
+##### Observations
+This chart shows that offense counts remained relatively stable until the pandemic. Starting in 2020, offenses per year surged dramatically through 2022, followed by a sharp decline heading into 2023. This trend underscores the potential impact of the pandemic and lockdowns on crime rates. As the world has gradually returned to normal, it appears crime may be starting to stabilize again.
+
+
+```{python}
+#| label: data-explore-2
+#| code-summary: month-count
+
+# Month Count
+
+month_count = pcrime_test.groupby(pcrime_test['OccurDateTime'].dt.month)['OffenseCount'].sum().reset_index()
+
+month_count.rename(columns={month_count.columns[0]: 'Month'}, inplace=True)
+
+month_count_fig = ggplot(month_count, aes(x="Month", y="OffenseCount")) + \
+    geom_line(color='#2e6f40', size=1.5) + \
+    geom_point(color='#2e6f40', size=3) + \
+    labs(title='Offense Counts by Month', x='Month', y='Offense Count') + \
+    scale_x_continuous(breaks=list(range(1, 13))) + \
+    theme_minimal2() + \
+    theme(
+        plot_title=element_text(size=16, face='bold'),
+        axis_title_x=element_text(size=12, face='bold'),
+        axis_title_y=element_text(size=12, face='bold'),
+        axis_text_x=element_text(size=10), 
+        axis_text_y=element_text(size=10),
+        panel_grid_minor=element_blank()
+    )
+
+month_count_fig
+```
+
+##### Observations
+When examining the number of offenses per month, it’s clear that crime tends to slow down during the winter months and gradually rises through the summer and into the rest of the year. This pattern could be influenced by colder weather during winter, however, maybe bringing in data on weather patterns could shed more light on this trend.
+
+```{python}
+#| label: data-explore-3
+#| code-summary: weekday_count
+
+# Weekday Count
+weekday_count = pcrime_test.groupby(pcrime_test['OccurDateTime'].dt.weekday)['OffenseCount'].sum().reset_index()
+
+weekday_count.rename(columns={weekday_count.columns[0]: 'Weekday'}, inplace=True)
+
+weekday_count_fig = ggplot(weekday_count, aes(x="Weekday", y="OffenseCount")) + \
+    geom_line(color='#2e6f40', size=1.5) + \
+    geom_point(color='#2e6f40', size=3) + \
+    labs(title='Offense Counts by Weekday', x='Weekday', y='Offense Count') + \
+    theme_minimal2() + \
+    theme(
+        plot_title=element_text(size=16, face='bold'),
+        axis_title_x=element_text(size=12, face='bold'),
+        axis_title_y=element_text(size=12, face='bold'),
+        axis_text_x=element_text(size=10), 
+        axis_text_y=element_text(size=10),
+        panel_grid_minor=element_blank()
+    )
+
+weekday_count_fig
+```
+
+##### Observations
+Friday stands out as the day with the most criminal activity. As the start of the weekend, it’s when many people go out, and with more people out, it’s likely that more opportunities for crime arise.
+
+```{python}
+#| label: data-explore-4
+#| code-summary: hour_count
+
+# Hour Count
+hour_count = pcrime_test.groupby(pcrime_test['OccurDateTime'].dt.hour)['OffenseCount'].sum().reset_index()
+
+hour_count.rename(columns={hour_count.columns[0]: 'Hour'}, inplace=True)
+
+hour_count_fig = ggplot(hour_count, aes(x="Hour", y="OffenseCount")) + \
+    geom_line(color='#2e6f40', size=1.5) + \
+    geom_point(color='#2e6f40', size=3) + \
+    labs(title='Offense Counts by Hour', x='Hour', y='Offense Count') + \
+    scale_x_continuous(breaks=list(range(0, 25))) + \
+    theme_minimal2() + \
+    theme(
+        plot_title=element_text(size=16, face='bold'),
+        axis_title_x=element_text(size=12, face='bold'),
+        axis_title_y=element_text(size=12, face='bold'),
+        axis_text_x=element_text(size=10), 
+        axis_text_y=element_text(size=10),
+        panel_grid_minor=element_blank()
+    )
+
+hour_count_fig
+
+```
+
+##### Observations
+The trend in offenses by time of day suggests that crime rates may be reactive to human activity. From 1 AM to 7 AM, when most people are asleep, crime rates dip. As the day begins, crime increases, peaking around noon—possibly corresponding with lunch breaks—before dropping again when people return to work. Another spike occurs at 5 PM, when many people get off work. Crime rates remain relatively stable throughout the evening, only to surge again at midnight when most people are asleep.
+
+#### Crime Distribution Trends
+
+```{python}
+#| label: data-explore-5
+#| code-summary: crime_against_count
+
+# Crime Against Count
+crime_against = pcrime_test.groupby('CrimeAgainst',as_index=False)['OffenseCount'].sum()
+crime_against_fig = ggplot(crime_against, aes(x='CrimeAgainst', y='OffenseCount')) + \
+    geom_bar(stat='identity', fill='#2e6f40', color='black') + \
+    labs(title='Offense Counts by Crime Type', x='Crime Against', y='Offense Count') + \
+    theme_minimal2() + \
+    theme(
+        plot_title=element_text(size=16, face='bold'),
+        axis_title_x=element_text(size=12, face='bold'),
+        axis_title_y=element_text(size=12, face='bold'),
+        axis_text_x=element_text(size=10), 
+        axis_text_y=element_text(size=10),
+        panel_grid_minor=element_blank()
+    )
+
+crime_against_fig
+```
+
+##### Observations
+
+It’s evident that crimes against property are much more common than other categories. My initial thought is that property crimes may be more frequent because they’re often easier to commit, both physically and morally. Property doesn’t involve direct harm to individuals, which could make it feel less risky or less severe to potential offenders.
+
+```{python}
+#| label: data-explore-6
+#| code-summary: crime_against_report
+
+# Crime Against Report Time
+crime_against_report = pcrime_test.groupby('CrimeAgainst',as_index=False)['ReportDiff'].mean()
+crime_against_report_fig = ggplot(crime_against_report, aes(x='CrimeAgainst', y='ReportDiff')) + \
+    geom_bar(stat='identity', fill='#2e6f40', color='black') + \
+    labs(title='Average Report Time by Crime Type', x='Crime Against', y='ReportDiff') + \
+    theme_minimal2() + \
+    theme(
+        plot_title=element_text(size=16, face='bold'),
+        axis_title_x=element_text(size=12, face='bold'),
+        axis_title_y=element_text(size=12, face='bold'),
+        axis_text_x=element_text(size=10), 
+        axis_text_y=element_text(size=10),
+        panel_grid_minor=element_blank()
+    )
+
+crime_against_report_fig
+
+```
+
+##### Observations
+
+The differences in report time are the most intriguing insight to me. Both crimes against a person and property have an average reporting time of over 6 days after the incident. I’d love to explore this further to understand the factors that might contribute to this delay and whether there are specific circumstances or patterns influencing the reporting process.
+
+```{python}
+#| label: data-explore-7
+#| code-summary: crime_category_count
+
+# Crime Category Count
+crime_cat = pcrime_test.groupby('OffenseCategory',as_index=False)['OffenseCount'].sum().sort_values(by='OffenseCount', ascending=False).head(10)
+crime_cat_fig = ggplot(crime_cat, aes(x='OffenseCount', y='OffenseCategory')) + \
+    geom_bar(stat='identity', fill='#2e6f40', color='black') + \
+    labs(title='Offense Counts by Category', x='Offense COunt', y='Offense Category') + \
+    theme_minimal2() + \
+    theme(
+        plot_title=element_text(size=16, face='bold'),
+        axis_title_x=element_text(size=12, face='bold'),
+        axis_title_y=element_text(size=12, face='bold'),
+        axis_text_x=element_text(size=10), 
+        axis_text_y=element_text(size=10),
+        panel_grid_minor=element_blank()
+    )
+
+crime_cat_fig
+
+```
+
+##### Observations
+When examining the most common offenses by category, larceny far outweighs the others, further reinforcing our findings about the prevalence of property crimes. This aligns with the broader trend of property crimes being more frequent compared to other categories.
+
+```{python}
+#| label: data-explore-8
+#| code-summary: crime_category_report
+
+# Crime Category Report Time
+crime_cat_report = pcrime_test.groupby('OffenseCategory',as_index=False)['ReportDiff'].mean().sort_values(by='ReportDiff', ascending=False).head(10)
+crime_cat_report_fig = ggplot(crime_cat_report, aes(x='ReportDiff', y='OffenseCategory')) + \
+    geom_bar(stat='identity', fill='#2e6f40', color='black') + \
+    labs(title='Average Report Time by Category', x='Average Time to Report (Days)', y='Offense Category') + \
+    theme_minimal2() + \
+    theme(
+        plot_title=element_text(size=16, face='bold'),
+        axis_title_x=element_text(size=12, face='bold'),
+        axis_title_y=element_text(size=12, face='bold'),
+        axis_text_x=element_text(size=10), 
+        axis_text_y=element_text(size=10),
+        panel_grid_minor=element_blank()
+    )
+
+crime_cat_report_fig
+
+```
+
+##### Observation
+
+Once again, report time reveals some intriguing insights. The categories with the longest average reporting times tend to be more serious crimes, such as embezzlement, compared to simpler offenses like robbery. This could be due to several factors, including the time it takes for these cases to develop before they are reported. Additionally, there may be a strong emotional aspect, especially in sexual or violent crimes, which could delay the decision to report.
+
+```{python}
+#| label: data-explore-9
+#| code-summary: crime_type_report
+
+# Crime Type Report Time
+crime_type_report = pcrime_test.groupby('OffenseType',as_index=False)['ReportDiff'].mean().sort_values(by='ReportDiff', ascending=False).head(10)
+crime_type_report_fig = ggplot(crime_type_report, aes(x='ReportDiff', y='OffenseType')) + \
+    geom_bar(stat='identity', fill='#2e6f40', color='black') + \
+    labs(title='Average Report Time by Type', x='Average Time to Report (Days)', y='Offense Type') + \
+    theme_minimal2() + \
+    theme(
+        plot_title=element_text(size=16, face='bold'),
+        axis_title_x=element_text(size=12, face='bold'),
+        axis_title_y=element_text(size=12, face='bold'),
+        axis_text_x=element_text(size=10), 
+        axis_text_y=element_text(size=10),
+        panel_grid_minor=element_blank()
+    )
+
+crime_type_report_fig
+
+```
+
+#### Observations
+
+This chart seems to further confirm my earlier thoughts about report times. It’s clear that the offense types with the longest average report times are indeed very serious crimes, with almost all of them being sexual in nature. This suggests that the complexity and emotional weight of these crimes could contribute to the delay in reporting.
+
+```{python}
+#| label: data-explore-10
+#| code-summary: crime_type_count
+
+# Crime Type Count
+crime_type = pcrime_test.groupby('OffenseType',as_index=False)['OffenseCount'].sum().sort_values(by='OffenseCount', ascending=False).head(10)
+crime_type_fig = ggplot(crime_type, aes(x='OffenseCount', y='OffenseType')) + \
+    geom_bar(stat='identity', fill='#2e6f40', color='black') + \
+    labs(title='Offense Counts by Type', x='Offense COunt', y='Offense Type') + \
+    theme_minimal2() + \
+    theme(
+        plot_title=element_text(size=16, face='bold'),
+        axis_title_x=element_text(size=12, face='bold'),
+        axis_title_y=element_text(size=12, face='bold'),
+        axis_text_x=element_text(size=10), 
+        axis_text_y=element_text(size=10),
+        panel_grid_minor=element_blank()
+    )
+
+crime_type_fig
+
+```
+
+##### Observations
+
+As seen earlier, larceny offenses dominate the most common crime types. This could be due to the fact that larceny crimes tend to be quick and opportunistic, making them more likely to occur compared to more serious offenses, which often require more time, planning, and emotional involvement.
+
+#### Neighborhood Trends
+
+```{python}
+#| label: data-explore-11
+#| code-summary: neigh_count
+
+# Neighborhood Count
+neigh_count = pcrime_test.groupby('Neighborhood',as_index=False)['OffenseCount'].sum().sort_values(by='OffenseCount', ascending=False).head(10)
+neigh_count_fig = ggplot(neigh_count,aes(y=neigh_count["Neighborhood"],x=neigh_count["OffenseCount"]))+ \
+    geom_bar(stat='identity',fill='#2e6f40', color='black')+ \
+    labs(title='Offense Count by Neighborhood', x='Offense Count', y='Neighborhood') + \
+    theme_minimal2() + \
+    theme(
+        plot_title=element_text(size=16, face='bold'),
+        axis_title_x=element_text(size=12, face='bold'),
+        axis_title_y=element_text(size=12, face='bold'),
+        axis_text_x=element_text(size=10), 
+        axis_text_y=element_text(size=10),
+        panel_grid_minor=element_blank()
+    )
+neigh_count_fig
+
+```
+
+##### Observations
+
+Exploring neighborhood trends reveals that Downtown and Hazelwood have disproportionately higher numbers of offenses compared to other areas. However, incorporating data on the size, population, and popularity of these neighborhoods could provide valuable context and help explain these counts more effectively.
+
+```{python}
+#| label: data-explore-12
+#| code-summary: neigh_report
+
+# Neighborhood Report Time
+neigh_report = pcrime_test.groupby('Neighborhood',as_index=False)['ReportDiff'].mean().sort_values(by='ReportDiff', ascending=False).head(10)
+neigh_report_fig = ggplot(neigh_report, aes(x='ReportDiff', y='Neighborhood')) + \
+    geom_bar(stat='identity', fill='#2e6f40', color='black') + \
+    labs(title='Average Report Time by Neighborhood', x='Average Report Time (Days)', y='Neighborhood') + \
+    theme_minimal2() + \
+    theme(
+        plot_title=element_text(size=16, face='bold'),
+        axis_title_x=element_text(size=12, face='bold'),
+        axis_title_y=element_text(size=12, face='bold'),
+        axis_text_x=element_text(size=10), 
+        axis_text_y=element_text(size=10),
+        panel_grid_minor=element_blank()
+    )
+
+neigh_report_fig
+
+```
+
+##### Observations
+
+This is an area where I feel more exploration is needed. By diving deeper into the most common offenses in each neighborhood, I suspect it could shed light on why some neighborhoods experience longer reporting times than others.
+
+
+## Current Final Observations
+
+This project is still a work in progress, and there’s plenty more to explore and visualize to better address some of the questions raised during my analysis. That said, the work completed so far has revealed some fascinating insights into crime patterns in Portland, Oregon. Thank you for taking the time to check out my project—I hope you’ll return to see the updates as it continues to develop!
