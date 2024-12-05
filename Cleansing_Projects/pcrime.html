@@ -8,7 +8,7 @@
 
 <meta name="author" content="Tucker Trost">
 
-<title>Portland Crime Data Cleansing – Tucker Trost - Data Science Portfolio</title>
+<title>Portland Crime Analysis – Tucker Trost - Data Science Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -4756,7 +4756,7 @@ vertical-align: -.125em;
 </style>
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -4782,7 +4782,7 @@ vertical-align: -.125em;
 <span class="menu-text">My Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../cleansing.html" aria-current="page"> 
+    <a class="nav-link" href="../cleansing.html"> 
 <span class="menu-text">Data Cleansing</span></a>
   </li>  
   <li class="nav-item">
@@ -4793,6 +4793,10 @@ vertical-align: -.125em;
     <a class="nav-link" href="../story_telling.html"> 
 <span class="menu-text">Story Telling</span></a>
   </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../sql.html"> 
+<span class="menu-text">SQL</span></a>
+  </li>  
 </ul>
           </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
@@ -4800,28 +4804,18 @@ vertical-align: -.125em;
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Cleansing_Projects/project1.html">Project 1</a></li></ol></nav>
-        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-right">
-      <div class="quarto-title-block"><div><h1 class="title">Portland Crime Data Cleansing</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> See code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
+    <div class="quarto-title column-page">
+      <div class="quarto-title-block"><div><h1 class="title">Portland Crime Analysis</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> See code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
             <p class="subtitle lead">Data Science Portfolio</p>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page-right">
+  <div class="quarto-title-meta column-page">
 
       <div>
       <div class="quarto-title-meta-heading">Author</div>
@@ -4837,60 +4831,11 @@ vertical-align: -.125em;
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../cleansing.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Data Cleansing</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Cleansing_Projects/project1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Project 1</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Cleansing_Projects/project2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project 2</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Cleansing_Projects/project3.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project 3</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Cleansing_Projects/project4.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project 4</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Cleansing_Projects/project5.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Project 5</span></a>
-  </div>
-</li>
-        <li class="px-0"><hr class="sidebar-divider hi "></li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-right" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
 
 
 
@@ -4899,7 +4844,7 @@ vertical-align: -.125em;
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#portland-crime-data-cleaning" id="toc-portland-crime-data-cleaning">Portland Crime Data Cleaning</a></li>
+  <li><a href="#portland-crime-analysis" id="toc-portland-crime-analysis">Portland Crime Analysis</a></li>
   <li><a href="#elevator-pitch" id="toc-elevator-pitch">Elevator pitch</a>
   <ul>
   <li><a href="#data-source" id="toc-data-source">Data Source</a></li>
@@ -4910,16 +4855,23 @@ vertical-align: -.125em;
   <li><a href="#what-is-our-goal" id="toc-what-is-our-goal">What is our goal?</a></li>
   <li><a href="#initial-observations" id="toc-initial-observations">Initial Observations</a></li>
   </ul></li>
-  <li><a href="#data-cleaning" id="toc-data-cleaning">Data Cleaning</a></li>
-  <li><a href="#final-thoughts" id="toc-final-thoughts">Final Thoughts</a></li>
+  <li><a href="#data-cleaning" id="toc-data-cleaning">Data Cleaning</a>
+  <ul>
+  <li><a href="#final-cleaning-thoughts" id="toc-final-cleaning-thoughts">Final Cleaning Thoughts</a></li>
+  </ul></li>
+  <li><a href="#data-exploration" id="toc-data-exploration">Data Exploration</a>
+  <ul>
+  <li><a href="#thoughts" id="toc-thoughts">Thoughts</a></li>
+  </ul></li>
+  <li><a href="#current-final-observations" id="toc-current-final-observations">Current Final Observations</a></li>
   </ul>
 </nav>
-<section id="portland-crime-data-cleaning" class="level2">
-<h2 class="anchored" data-anchor-id="portland-crime-data-cleaning">Portland Crime Data Cleaning</h2>
+<section id="portland-crime-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="portland-crime-analysis">Portland Crime Analysis</h2>
 </section>
 <section id="elevator-pitch" class="level2">
 <h2 class="anchored" data-anchor-id="elevator-pitch">Elevator pitch</h2>
-<p><em>This project details the cleaning and preparing process of crime data from Portland, Oregon, spanning 2015-2023. By identifying the project needs, addressing missing data, and removing unnecessary columns, the data has been transformed into a more usable state for analysis.</em></p>
+<p><em>This project involves cleaning and exploring crime data from Portland, Oregon (2016-2023). After addressing missing data and unnecessary columns, we uncovered key trends in offense types, report times, and their relationship to neighborhood, day, and time. These insights help provide a clearer picture of crime patterns in the city.</em></p>
 <section id="data-source" class="level3">
 <h3 class="anchored" data-anchor-id="data-source">Data Source</h3>
 <p><em>The dateset that I am using was accessed directly from <a href="https://www.portland.gov/police/open-data/crime-statistics">Portland Police Bureau’s Open Data initiative</a>; compiled from 2015-2023. This dataset is being used under this <a href="https://creativecommons.org/publicdomain/zero/1.0/">license</a>.</em></p>
@@ -5386,12 +5338,1906 @@ OccurDateTime         0
 dtype: int64</code></pre>
 </div>
 </div>
-</section>
-<section id="final-thoughts" class="level2">
-<h2 class="anchored" data-anchor-id="final-thoughts">Final Thoughts</h2>
+<section id="final-cleaning-thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="final-cleaning-thoughts">Final Cleaning Thoughts</h3>
 <p><em>We have now cleaned our data into a useable state for our analysis. We went from many missing rows from in many columns to only 7881 missing rows in the neighborhood column. Since we have all of the Latitude and Longitude data for each of these missing rows, the missing data will still be useable for our visualizations in Tableau.</em></p>
 <p><em>Note: Further cleaning of the missing neighborhood rows could be done using a reverse geocoding API, however, that is beyond the scope of this project</em></p>
-<p><em>Thank you</em></p>
+</section>
+</section>
+<section id="data-exploration" class="level2">
+<h2 class="anchored" data-anchor-id="data-exploration">Data Exploration</h2>
+<section id="thoughts" class="level3">
+<h3 class="anchored" data-anchor-id="thoughts">Thoughts</h3>
+<ul>
+<li>Temporal Trends
+<ul>
+<li>hour/Day/month/year trends</li>
+</ul></li>
+<li>Crime distributions
+<ul>
+<li>categories/types/crimeagainst</li>
+<li>reportdiff by offense type</li>
+</ul></li>
+<li>Neighborhood
+<ul>
+<li>type/category distributions</li>
+<li>reportdiff by neighborhood</li>
+<li>offense count by neighborhood</li>
+</ul></li>
+</ul>
+<section id="temporal-trends" class="level4">
+<h4 class="anchored" data-anchor-id="temporal-trends">Temporal Trends</h4>
+<div id="cell-data-explore-1" class="cell" data-execution_count="6">
+<details class="code-fold">
+<summary>year-count</summary>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>pcrime_test <span class="op">=</span> pcrime_cleaned.copy()</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Year Count</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>pcrime_test[<span class="st">&#39;OccurDateTime&#39;</span>] <span class="op">=</span> pd.to_datetime(pcrime_test[<span class="st">&#39;OccurDateTime&#39;</span>])</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>year_count <span class="op">=</span> pcrime_test.groupby(pcrime_test[<span class="st">&#39;OccurDateTime&#39;</span>].dt.year)[<span class="st">&#39;OffenseCount&#39;</span>].<span class="bu">sum</span>().reset_index()</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>year_count.rename(columns<span class="op">=</span>{year_count.columns[<span class="dv">0</span>]: <span class="st">&#39;Year&#39;</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>year_count_fig <span class="op">=</span> ggplot(year_count, aes(x<span class="op">=</span><span class="st">&#39;Year&#39;</span>, y<span class="op">=</span><span class="st">&#39;OffenseCount&#39;</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    geom_line(color<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, size<span class="op">=</span><span class="fl">1.5</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    geom_point(color<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, size<span class="op">=</span><span class="dv">3</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    labs(title<span class="op">=</span><span class="st">&#39;Offense Counts by Year&#39;</span>, x<span class="op">=</span><span class="st">&#39;Year&#39;</span>, y<span class="op">=</span><span class="st">&#39;Offense Count&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    theme_minimal2() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    theme(</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">16</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>        axis_title_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        axis_title_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>        axis_text_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>, angle<span class="op">=</span><span class="dv">45</span>), </span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>        axis_text_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>),</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>        panel_grid_minor<span class="op">=</span>element_blank()</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>year_count_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="data-explore-1" class="cell-output cell-output-display" data-execution_count="6">
+   <div id="dfsiGo"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+   
+   (function() {
+   // ----------
+   
+   var containerDiv = document.getElementById("dfsiGo");
+   var observer = new ResizeObserver(function(entries) {
+       for (let entry of entries) {
+           var width = containerDiv.clientWidth
+           if (entry.contentBoxSize && width > 0) {
+           
+               // Render plot
+               if (observer) {
+                   observer.disconnect();
+                   observer = null;
+               }
+
+               var plotSpec={
+"data":{
+"Year":[2015.0,2016.0,2017.0,2018.0,2019.0,2020.0,2021.0,2022.0,2023.0],
+"OffenseCount":[38123.0,56604.0,59471.0,60106.0,58897.0,59403.0,64749.0,70262.0,62152.0]
+},
+"mapping":{
+"x":"Year",
+"y":"OffenseCount"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Year"
+},{
+"type":"int",
+"column":"OffenseCount"
+}]
+},
+"ggtitle":{
+"text":"Offense Counts by Year"
+},
+"guides":{
+"x":{
+"title":"Year"
+},
+"y":{
+"title":"Offense Count"
+}
+},
+"theme":{
+"name":"minimal2",
+"axis_title_x":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_title_y":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_text_x":{
+"size":10.0,
+"angle":45.0,
+"blank":false
+},
+"axis_text_y":{
+"size":10.0,
+"blank":false
+},
+"panel_grid_minor":{
+"blank":true
+},
+"plot_title":{
+"face":"bold",
+"size":16.0,
+"blank":false
+}
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"line",
+"mapping":{
+},
+"data_meta":{
+},
+"color":"#2e6f40",
+"size":1.5,
+"data":{
+}
+},{
+"geom":"point",
+"mapping":{
+},
+"data_meta":{
+},
+"color":"#2e6f40",
+"size":3.0,
+"data":{
+}
+}],
+"metainfo_list":[],
+"spec_id":"1"
+};
+               window.letsPlotCall(function() {
+       
+               var toolbar = null;
+               var plotContainer = containerDiv;               
+               
+                   var options = {
+                       sizing: {
+                           width_mode: "min",
+                           height_mode: "scaled",
+                           width: width
+                       }
+                   };
+                   var fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer, options);
+                   if (toolbar) {
+                     toolbar.bind(fig);
+                   }
+               });
+               
+               break;
+           }
+       }
+   });
+   
+   observer.observe(containerDiv);
+   
+   // ----------
+   })();
+   
+   </script>
+</div>
+</div>
+<section id="observations" class="level5">
+<h5 class="anchored" data-anchor-id="observations">Observations</h5>
+<p>This chart shows that offense counts remained relatively stable until the pandemic. Starting in 2020, offenses per year surged dramatically through 2022, followed by a sharp decline heading into 2023. This trend underscores the potential impact of the pandemic and lockdowns on crime rates. As the world has gradually returned to normal, it appears crime may be starting to stabilize again.</p>
+<div id="cell-data-explore-2" class="cell" data-execution_count="7">
+<details class="code-fold">
+<summary>month-count</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Month Count</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>month_count <span class="op">=</span> pcrime_test.groupby(pcrime_test[<span class="st">&#39;OccurDateTime&#39;</span>].dt.month)[<span class="st">&#39;OffenseCount&#39;</span>].<span class="bu">sum</span>().reset_index()</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>month_count.rename(columns<span class="op">=</span>{month_count.columns[<span class="dv">0</span>]: <span class="st">&#39;Month&#39;</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>month_count_fig <span class="op">=</span> ggplot(month_count, aes(x<span class="op">=</span><span class="st">&quot;Month&quot;</span>, y<span class="op">=</span><span class="st">&quot;OffenseCount&quot;</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    geom_line(color<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, size<span class="op">=</span><span class="fl">1.5</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    geom_point(color<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, size<span class="op">=</span><span class="dv">3</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>    labs(title<span class="op">=</span><span class="st">&#39;Offense Counts by Month&#39;</span>, x<span class="op">=</span><span class="st">&#39;Month&#39;</span>, y<span class="op">=</span><span class="st">&#39;Offense Count&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    scale_x_continuous(breaks<span class="op">=</span><span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">13</span>))) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    theme_minimal2() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    theme(</span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>        plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">16</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>        axis_title_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>        axis_title_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a>        axis_text_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>), </span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>        axis_text_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>),</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>        panel_grid_minor<span class="op">=</span>element_blank()</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>month_count_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="data-explore-2" class="cell-output cell-output-display" data-execution_count="7">
+   <div id="xA2dUN"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+   
+   (function() {
+   // ----------
+   
+   var containerDiv = document.getElementById("xA2dUN");
+   var observer = new ResizeObserver(function(entries) {
+       for (let entry of entries) {
+           var width = containerDiv.clientWidth
+           if (entry.contentBoxSize && width > 0) {
+           
+               // Render plot
+               if (observer) {
+                   observer.disconnect();
+                   observer = null;
+               }
+
+               var plotSpec={
+"data":{
+"Month":[1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0],
+"OffenseCount":[41317.0,37142.0,41159.0,39911.0,45446.0,43779.0,46370.0,47099.0,46235.0,48982.0,46373.0,45954.0]
+},
+"mapping":{
+"x":"Month",
+"y":"OffenseCount"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Month"
+},{
+"type":"int",
+"column":"OffenseCount"
+}]
+},
+"ggtitle":{
+"text":"Offense Counts by Month"
+},
+"guides":{
+"x":{
+"title":"Month"
+},
+"y":{
+"title":"Offense Count"
+}
+},
+"theme":{
+"name":"minimal2",
+"axis_title_x":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_title_y":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_text_x":{
+"size":10.0,
+"blank":false
+},
+"axis_text_y":{
+"size":10.0,
+"blank":false
+},
+"panel_grid_minor":{
+"blank":true
+},
+"plot_title":{
+"face":"bold",
+"size":16.0,
+"blank":false
+}
+},
+"kind":"plot",
+"scales":[{
+"aesthetic":"x",
+"breaks":[1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0]
+}],
+"layers":[{
+"geom":"line",
+"mapping":{
+},
+"data_meta":{
+},
+"color":"#2e6f40",
+"size":1.5,
+"data":{
+}
+},{
+"geom":"point",
+"mapping":{
+},
+"data_meta":{
+},
+"color":"#2e6f40",
+"size":3.0,
+"data":{
+}
+}],
+"metainfo_list":[],
+"spec_id":"2"
+};
+               window.letsPlotCall(function() {
+       
+               var toolbar = null;
+               var plotContainer = containerDiv;               
+               
+                   var options = {
+                       sizing: {
+                           width_mode: "min",
+                           height_mode: "scaled",
+                           width: width
+                       }
+                   };
+                   var fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer, options);
+                   if (toolbar) {
+                     toolbar.bind(fig);
+                   }
+               });
+               
+               break;
+           }
+       }
+   });
+   
+   observer.observe(containerDiv);
+   
+   // ----------
+   })();
+   
+   </script>
+</div>
+</div>
+</section>
+<section id="observations-1" class="level5">
+<h5 class="anchored" data-anchor-id="observations-1">Observations</h5>
+<p>When examining the number of offenses per month, it’s clear that crime tends to slow down during the winter months and gradually rises through the summer and into the rest of the year. This pattern could be influenced by colder weather during winter, however, maybe bringing in data on weather patterns could shed more light on this trend.</p>
+<div id="cell-data-explore-3" class="cell" data-execution_count="8">
+<details class="code-fold">
+<summary>weekday_count</summary>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Weekday Count</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>weekday_count <span class="op">=</span> pcrime_test.groupby(pcrime_test[<span class="st">&#39;OccurDateTime&#39;</span>].dt.weekday)[<span class="st">&#39;OffenseCount&#39;</span>].<span class="bu">sum</span>().reset_index()</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>weekday_count.rename(columns<span class="op">=</span>{weekday_count.columns[<span class="dv">0</span>]: <span class="st">&#39;Weekday&#39;</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>weekday_count_fig <span class="op">=</span> ggplot(weekday_count, aes(x<span class="op">=</span><span class="st">&quot;Weekday&quot;</span>, y<span class="op">=</span><span class="st">&quot;OffenseCount&quot;</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    geom_line(color<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, size<span class="op">=</span><span class="fl">1.5</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    geom_point(color<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, size<span class="op">=</span><span class="dv">3</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>    labs(title<span class="op">=</span><span class="st">&#39;Offense Counts by Weekday&#39;</span>, x<span class="op">=</span><span class="st">&#39;Weekday&#39;</span>, y<span class="op">=</span><span class="st">&#39;Offense Count&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    theme_minimal2() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>    theme(</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>        plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">16</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>        axis_title_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>        axis_title_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>        axis_text_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>), </span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>        axis_text_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>),</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>        panel_grid_minor<span class="op">=</span>element_blank()</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>weekday_count_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="data-explore-3" class="cell-output cell-output-display" data-execution_count="8">
+   <div id="4UC77v"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+   
+   (function() {
+   // ----------
+   
+   var containerDiv = document.getElementById("4UC77v");
+   var observer = new ResizeObserver(function(entries) {
+       for (let entry of entries) {
+           var width = containerDiv.clientWidth
+           if (entry.contentBoxSize && width > 0) {
+           
+               // Render plot
+               if (observer) {
+                   observer.disconnect();
+                   observer = null;
+               }
+
+               var plotSpec={
+"data":{
+"Weekday":[0.0,1.0,2.0,3.0,4.0,5.0,6.0],
+"OffenseCount":[75962.0,74641.0,75448.0,74961.0,80119.0,76738.0,71898.0]
+},
+"mapping":{
+"x":"Weekday",
+"y":"OffenseCount"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Weekday"
+},{
+"type":"int",
+"column":"OffenseCount"
+}]
+},
+"ggtitle":{
+"text":"Offense Counts by Weekday"
+},
+"guides":{
+"x":{
+"title":"Weekday"
+},
+"y":{
+"title":"Offense Count"
+}
+},
+"theme":{
+"name":"minimal2",
+"axis_title_x":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_title_y":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_text_x":{
+"size":10.0,
+"blank":false
+},
+"axis_text_y":{
+"size":10.0,
+"blank":false
+},
+"panel_grid_minor":{
+"blank":true
+},
+"plot_title":{
+"face":"bold",
+"size":16.0,
+"blank":false
+}
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"line",
+"mapping":{
+},
+"data_meta":{
+},
+"color":"#2e6f40",
+"size":1.5,
+"data":{
+}
+},{
+"geom":"point",
+"mapping":{
+},
+"data_meta":{
+},
+"color":"#2e6f40",
+"size":3.0,
+"data":{
+}
+}],
+"metainfo_list":[],
+"spec_id":"3"
+};
+               window.letsPlotCall(function() {
+       
+               var toolbar = null;
+               var plotContainer = containerDiv;               
+               
+                   var options = {
+                       sizing: {
+                           width_mode: "min",
+                           height_mode: "scaled",
+                           width: width
+                       }
+                   };
+                   var fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer, options);
+                   if (toolbar) {
+                     toolbar.bind(fig);
+                   }
+               });
+               
+               break;
+           }
+       }
+   });
+   
+   observer.observe(containerDiv);
+   
+   // ----------
+   })();
+   
+   </script>
+</div>
+</div>
+</section>
+<section id="observations-2" class="level5">
+<h5 class="anchored" data-anchor-id="observations-2">Observations</h5>
+<p>Friday stands out as the day with the most criminal activity. As the start of the weekend, it’s when many people go out, and with more people out, it’s likely that more opportunities for crime arise.</p>
+<div id="cell-data-explore-4" class="cell" data-execution_count="9">
+<details class="code-fold">
+<summary>hour_count</summary>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hour Count</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>hour_count <span class="op">=</span> pcrime_test.groupby(pcrime_test[<span class="st">&#39;OccurDateTime&#39;</span>].dt.hour)[<span class="st">&#39;OffenseCount&#39;</span>].<span class="bu">sum</span>().reset_index()</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>hour_count.rename(columns<span class="op">=</span>{hour_count.columns[<span class="dv">0</span>]: <span class="st">&#39;Hour&#39;</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>hour_count_fig <span class="op">=</span> ggplot(hour_count, aes(x<span class="op">=</span><span class="st">&quot;Hour&quot;</span>, y<span class="op">=</span><span class="st">&quot;OffenseCount&quot;</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    geom_line(color<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, size<span class="op">=</span><span class="fl">1.5</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>    geom_point(color<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, size<span class="op">=</span><span class="dv">3</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    labs(title<span class="op">=</span><span class="st">&#39;Offense Counts by Hour&#39;</span>, x<span class="op">=</span><span class="st">&#39;Hour&#39;</span>, y<span class="op">=</span><span class="st">&#39;Offense Count&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    scale_x_continuous(breaks<span class="op">=</span><span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">0</span>, <span class="dv">25</span>))) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>    theme_minimal2() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    theme(</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>        plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">16</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>        axis_title_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>        axis_title_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>        axis_text_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>), </span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>        axis_text_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>),</span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>        panel_grid_minor<span class="op">=</span>element_blank()</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>hour_count_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="data-explore-4" class="cell-output cell-output-display" data-execution_count="9">
+   <div id="OihKNg"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+   
+   (function() {
+   // ----------
+   
+   var containerDiv = document.getElementById("OihKNg");
+   var observer = new ResizeObserver(function(entries) {
+       for (let entry of entries) {
+           var width = containerDiv.clientWidth
+           if (entry.contentBoxSize && width > 0) {
+           
+               // Render plot
+               if (observer) {
+                   observer.disconnect();
+                   observer = null;
+               }
+
+               var plotSpec={
+"data":{
+"Hour":[0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0],
+"OffenseCount":[32878.0,17779.0,15418.0,13734.0,11910.0,11157.0,11759.0,14466.0,19835.0,18842.0,20569.0,20732.0,29813.0,22163.0,22840.0,24583.0,25915.0,30172.0,29694.0,27365.0,27740.0,26665.0,29325.0,24413.0]
+},
+"mapping":{
+"x":"Hour",
+"y":"OffenseCount"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"int",
+"column":"Hour"
+},{
+"type":"int",
+"column":"OffenseCount"
+}]
+},
+"ggtitle":{
+"text":"Offense Counts by Hour"
+},
+"guides":{
+"x":{
+"title":"Hour"
+},
+"y":{
+"title":"Offense Count"
+}
+},
+"theme":{
+"name":"minimal2",
+"axis_title_x":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_title_y":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_text_x":{
+"size":10.0,
+"blank":false
+},
+"axis_text_y":{
+"size":10.0,
+"blank":false
+},
+"panel_grid_minor":{
+"blank":true
+},
+"plot_title":{
+"face":"bold",
+"size":16.0,
+"blank":false
+}
+},
+"kind":"plot",
+"scales":[{
+"aesthetic":"x",
+"breaks":[0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0,10.0,11.0,12.0,13.0,14.0,15.0,16.0,17.0,18.0,19.0,20.0,21.0,22.0,23.0,24.0]
+}],
+"layers":[{
+"geom":"line",
+"mapping":{
+},
+"data_meta":{
+},
+"color":"#2e6f40",
+"size":1.5,
+"data":{
+}
+},{
+"geom":"point",
+"mapping":{
+},
+"data_meta":{
+},
+"color":"#2e6f40",
+"size":3.0,
+"data":{
+}
+}],
+"metainfo_list":[],
+"spec_id":"4"
+};
+               window.letsPlotCall(function() {
+       
+               var toolbar = null;
+               var plotContainer = containerDiv;               
+               
+                   var options = {
+                       sizing: {
+                           width_mode: "min",
+                           height_mode: "scaled",
+                           width: width
+                       }
+                   };
+                   var fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer, options);
+                   if (toolbar) {
+                     toolbar.bind(fig);
+                   }
+               });
+               
+               break;
+           }
+       }
+   });
+   
+   observer.observe(containerDiv);
+   
+   // ----------
+   })();
+   
+   </script>
+</div>
+</div>
+</section>
+<section id="observations-3" class="level5">
+<h5 class="anchored" data-anchor-id="observations-3">Observations</h5>
+<p>The trend in offenses by time of day suggests that crime rates may be reactive to human activity. From 1 AM to 7 AM, when most people are asleep, crime rates dip. As the day begins, crime increases, peaking around noon—possibly corresponding with lunch breaks—before dropping again when people return to work. Another spike occurs at 5 PM, when many people get off work. Crime rates remain relatively stable throughout the evening, only to surge again at midnight when most people are asleep.</p>
+</section>
+</section>
+<section id="crime-distribution-trends" class="level4">
+<h4 class="anchored" data-anchor-id="crime-distribution-trends">Crime Distribution Trends</h4>
+<div id="cell-data-explore-5" class="cell" data-execution_count="10">
+<details class="code-fold">
+<summary>crime_against_count</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crime Against Count</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>crime_against <span class="op">=</span> pcrime_test.groupby(<span class="st">&#39;CrimeAgainst&#39;</span>,as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">&#39;OffenseCount&#39;</span>].<span class="bu">sum</span>()</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>crime_against_fig <span class="op">=</span> ggplot(crime_against, aes(x<span class="op">=</span><span class="st">&#39;CrimeAgainst&#39;</span>, y<span class="op">=</span><span class="st">&#39;OffenseCount&#39;</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    geom_bar(stat<span class="op">=</span><span class="st">&#39;identity&#39;</span>, fill<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, color<span class="op">=</span><span class="st">&#39;black&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    labs(title<span class="op">=</span><span class="st">&#39;Offense Counts by Crime Type&#39;</span>, x<span class="op">=</span><span class="st">&#39;Crime Against&#39;</span>, y<span class="op">=</span><span class="st">&#39;Offense Count&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    theme_minimal2() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    theme(</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>        plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">16</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>        axis_title_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>        axis_title_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        axis_text_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>), </span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        axis_text_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>),</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>        panel_grid_minor<span class="op">=</span>element_blank()</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>crime_against_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="data-explore-5" class="cell-output cell-output-display" data-execution_count="10">
+   <div id="NY2iH0"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+   
+   (function() {
+   // ----------
+   
+   var containerDiv = document.getElementById("NY2iH0");
+   var observer = new ResizeObserver(function(entries) {
+       for (let entry of entries) {
+           var width = containerDiv.clientWidth
+           if (entry.contentBoxSize && width > 0) {
+           
+               // Render plot
+               if (observer) {
+                   observer.disconnect();
+                   observer = null;
+               }
+
+               var plotSpec={
+"data":{
+"CrimeAgainst":["Person","Property","Society"],
+"OffenseCount":[80059.0,431314.0,18394.0]
+},
+"mapping":{
+"x":"CrimeAgainst",
+"y":"OffenseCount"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"CrimeAgainst"
+},{
+"type":"int",
+"column":"OffenseCount"
+}]
+},
+"ggtitle":{
+"text":"Offense Counts by Crime Type"
+},
+"guides":{
+"x":{
+"title":"Crime Against"
+},
+"y":{
+"title":"Offense Count"
+}
+},
+"theme":{
+"name":"minimal2",
+"axis_title_x":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_title_y":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_text_x":{
+"size":10.0,
+"blank":false
+},
+"axis_text_y":{
+"size":10.0,
+"blank":false
+},
+"panel_grid_minor":{
+"blank":true
+},
+"plot_title":{
+"face":"bold",
+"size":16.0,
+"blank":false
+}
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"stat":"identity",
+"mapping":{
+},
+"data_meta":{
+},
+"fill":"#2e6f40",
+"color":"black",
+"data":{
+}
+}],
+"metainfo_list":[],
+"spec_id":"5"
+};
+               window.letsPlotCall(function() {
+       
+               var toolbar = null;
+               var plotContainer = containerDiv;               
+               
+                   var options = {
+                       sizing: {
+                           width_mode: "min",
+                           height_mode: "scaled",
+                           width: width
+                       }
+                   };
+                   var fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer, options);
+                   if (toolbar) {
+                     toolbar.bind(fig);
+                   }
+               });
+               
+               break;
+           }
+       }
+   });
+   
+   observer.observe(containerDiv);
+   
+   // ----------
+   })();
+   
+   </script>
+</div>
+</div>
+<section id="observations-4" class="level5">
+<h5 class="anchored" data-anchor-id="observations-4">Observations</h5>
+<p>It’s evident that crimes against property are much more common than other categories. My initial thought is that property crimes may be more frequent because they’re often easier to commit, both physically and morally. Property doesn’t involve direct harm to individuals, which could make it feel less risky or less severe to potential offenders.</p>
+<div id="cell-data-explore-6" class="cell" data-execution_count="11">
+<details class="code-fold">
+<summary>crime_against_report</summary>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crime Against Report Time</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>crime_against_report <span class="op">=</span> pcrime_test.groupby(<span class="st">&#39;CrimeAgainst&#39;</span>,as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">&#39;ReportDiff&#39;</span>].mean()</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>crime_against_report_fig <span class="op">=</span> ggplot(crime_against_report, aes(x<span class="op">=</span><span class="st">&#39;CrimeAgainst&#39;</span>, y<span class="op">=</span><span class="st">&#39;ReportDiff&#39;</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    geom_bar(stat<span class="op">=</span><span class="st">&#39;identity&#39;</span>, fill<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, color<span class="op">=</span><span class="st">&#39;black&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    labs(title<span class="op">=</span><span class="st">&#39;Average Report Time by Crime Type&#39;</span>, x<span class="op">=</span><span class="st">&#39;Crime Against&#39;</span>, y<span class="op">=</span><span class="st">&#39;ReportDiff&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    theme_minimal2() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    theme(</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>        plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">16</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>        axis_title_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>        axis_title_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>        axis_text_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>), </span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>        axis_text_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>),</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>        panel_grid_minor<span class="op">=</span>element_blank()</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>crime_against_report_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="data-explore-6" class="cell-output cell-output-display" data-execution_count="11">
+   <div id="QqZAAR"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+   
+   (function() {
+   // ----------
+   
+   var containerDiv = document.getElementById("QqZAAR");
+   var observer = new ResizeObserver(function(entries) {
+       for (let entry of entries) {
+           var width = containerDiv.clientWidth
+           if (entry.contentBoxSize && width > 0) {
+           
+               // Render plot
+               if (observer) {
+                   observer.disconnect();
+                   observer = null;
+               }
+
+               var plotSpec={
+"data":{
+"CrimeAgainst":["Person","Property","Society"],
+"ReportDiff":[7.585708750761056,6.542991511548243,2.1943024899423724]
+},
+"mapping":{
+"x":"CrimeAgainst",
+"y":"ReportDiff"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"CrimeAgainst"
+},{
+"type":"float",
+"column":"ReportDiff"
+}]
+},
+"ggtitle":{
+"text":"Average Report Time by Crime Type"
+},
+"guides":{
+"x":{
+"title":"Crime Against"
+},
+"y":{
+"title":"ReportDiff"
+}
+},
+"theme":{
+"name":"minimal2",
+"axis_title_x":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_title_y":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_text_x":{
+"size":10.0,
+"blank":false
+},
+"axis_text_y":{
+"size":10.0,
+"blank":false
+},
+"panel_grid_minor":{
+"blank":true
+},
+"plot_title":{
+"face":"bold",
+"size":16.0,
+"blank":false
+}
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"stat":"identity",
+"mapping":{
+},
+"data_meta":{
+},
+"fill":"#2e6f40",
+"color":"black",
+"data":{
+}
+}],
+"metainfo_list":[],
+"spec_id":"6"
+};
+               window.letsPlotCall(function() {
+       
+               var toolbar = null;
+               var plotContainer = containerDiv;               
+               
+                   var options = {
+                       sizing: {
+                           width_mode: "min",
+                           height_mode: "scaled",
+                           width: width
+                       }
+                   };
+                   var fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer, options);
+                   if (toolbar) {
+                     toolbar.bind(fig);
+                   }
+               });
+               
+               break;
+           }
+       }
+   });
+   
+   observer.observe(containerDiv);
+   
+   // ----------
+   })();
+   
+   </script>
+</div>
+</div>
+</section>
+<section id="observations-5" class="level5">
+<h5 class="anchored" data-anchor-id="observations-5">Observations</h5>
+<p>The differences in report time are the most intriguing insight to me. Both crimes against a person and property have an average reporting time of over 6 days after the incident. I’d love to explore this further to understand the factors that might contribute to this delay and whether there are specific circumstances or patterns influencing the reporting process.</p>
+<div id="cell-data-explore-7" class="cell" data-execution_count="12">
+<details class="code-fold">
+<summary>crime_category_count</summary>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crime Category Count</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>crime_cat <span class="op">=</span> pcrime_test.groupby(<span class="st">&#39;OffenseCategory&#39;</span>,as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">&#39;OffenseCount&#39;</span>].<span class="bu">sum</span>().sort_values(by<span class="op">=</span><span class="st">&#39;OffenseCount&#39;</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">10</span>)</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>crime_cat_fig <span class="op">=</span> ggplot(crime_cat, aes(x<span class="op">=</span><span class="st">&#39;OffenseCount&#39;</span>, y<span class="op">=</span><span class="st">&#39;OffenseCategory&#39;</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    geom_bar(stat<span class="op">=</span><span class="st">&#39;identity&#39;</span>, fill<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, color<span class="op">=</span><span class="st">&#39;black&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    labs(title<span class="op">=</span><span class="st">&#39;Offense Counts by Category&#39;</span>, x<span class="op">=</span><span class="st">&#39;Offense COunt&#39;</span>, y<span class="op">=</span><span class="st">&#39;Offense Category&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    theme_minimal2() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>    theme(</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>        plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">16</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>        axis_title_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>        axis_title_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>        axis_text_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>), </span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>        axis_text_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>),</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>        panel_grid_minor<span class="op">=</span>element_blank()</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>crime_cat_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="data-explore-7" class="cell-output cell-output-display" data-execution_count="12">
+   <div id="qDUzfE"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+   
+   (function() {
+   // ----------
+   
+   var containerDiv = document.getElementById("qDUzfE");
+   var observer = new ResizeObserver(function(entries) {
+       for (let entry of entries) {
+           var width = containerDiv.clientWidth
+           if (entry.contentBoxSize && width > 0) {
+           
+               // Render plot
+               if (observer) {
+                   observer.disconnect();
+                   observer = null;
+               }
+
+               var plotSpec={
+"data":{
+"OffenseCategory":["Larceny Offenses","Assault Offenses","Vandalism","Motor Vehicle Theft","Burglary","Fraud Offenses","Drug/Narcotic Offenses","Robbery","Weapon Law Violations","Counterfeiting/Forgery"],
+"OffenseCount":[208879.0,74459.0,68230.0,64191.0,40662.0,30282.0,10443.0,9566.0,6069.0,4850.0]
+},
+"mapping":{
+"x":"OffenseCount",
+"y":"OffenseCategory"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"OffenseCategory"
+},{
+"type":"int",
+"column":"OffenseCount"
+}]
+},
+"ggtitle":{
+"text":"Offense Counts by Category"
+},
+"guides":{
+"x":{
+"title":"Offense COunt"
+},
+"y":{
+"title":"Offense Category"
+}
+},
+"theme":{
+"name":"minimal2",
+"axis_title_x":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_title_y":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_text_x":{
+"size":10.0,
+"blank":false
+},
+"axis_text_y":{
+"size":10.0,
+"blank":false
+},
+"panel_grid_minor":{
+"blank":true
+},
+"plot_title":{
+"face":"bold",
+"size":16.0,
+"blank":false
+}
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"stat":"identity",
+"mapping":{
+},
+"data_meta":{
+},
+"fill":"#2e6f40",
+"color":"black",
+"orientation":"y",
+"data":{
+}
+}],
+"metainfo_list":[],
+"spec_id":"7"
+};
+               window.letsPlotCall(function() {
+       
+               var toolbar = null;
+               var plotContainer = containerDiv;               
+               
+                   var options = {
+                       sizing: {
+                           width_mode: "min",
+                           height_mode: "scaled",
+                           width: width
+                       }
+                   };
+                   var fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer, options);
+                   if (toolbar) {
+                     toolbar.bind(fig);
+                   }
+               });
+               
+               break;
+           }
+       }
+   });
+   
+   observer.observe(containerDiv);
+   
+   // ----------
+   })();
+   
+   </script>
+</div>
+</div>
+</section>
+<section id="observations-6" class="level5">
+<h5 class="anchored" data-anchor-id="observations-6">Observations</h5>
+<p>When examining the most common offenses by category, larceny far outweighs the others, further reinforcing our findings about the prevalence of property crimes. This aligns with the broader trend of property crimes being more frequent compared to other categories.</p>
+<div id="cell-data-explore-8" class="cell" data-execution_count="13">
+<details class="code-fold">
+<summary>crime_category_report</summary>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crime Category Report Time</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>crime_cat_report <span class="op">=</span> pcrime_test.groupby(<span class="st">&#39;OffenseCategory&#39;</span>,as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">&#39;ReportDiff&#39;</span>].mean().sort_values(by<span class="op">=</span><span class="st">&#39;ReportDiff&#39;</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">10</span>)</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>crime_cat_report_fig <span class="op">=</span> ggplot(crime_cat_report, aes(x<span class="op">=</span><span class="st">&#39;ReportDiff&#39;</span>, y<span class="op">=</span><span class="st">&#39;OffenseCategory&#39;</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    geom_bar(stat<span class="op">=</span><span class="st">&#39;identity&#39;</span>, fill<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, color<span class="op">=</span><span class="st">&#39;black&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>    labs(title<span class="op">=</span><span class="st">&#39;Average Report Time by Category&#39;</span>, x<span class="op">=</span><span class="st">&#39;Average Time to Report (Days)&#39;</span>, y<span class="op">=</span><span class="st">&#39;Offense Category&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>    theme_minimal2() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    theme(</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>        plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">16</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>        axis_title_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>        axis_title_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>        axis_text_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>), </span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>        axis_text_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>),</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>        panel_grid_minor<span class="op">=</span>element_blank()</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>crime_cat_report_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="data-explore-8" class="cell-output cell-output-display" data-execution_count="13">
+   <div id="4Bydoz"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+   
+   (function() {
+   // ----------
+   
+   var containerDiv = document.getElementById("4Bydoz");
+   var observer = new ResizeObserver(function(entries) {
+       for (let entry of entries) {
+           var width = containerDiv.clientWidth
+           if (entry.contentBoxSize && width > 0) {
+           
+               // Render plot
+               if (observer) {
+                   observer.disconnect();
+                   observer = null;
+               }
+
+               var plotSpec={
+"data":{
+"OffenseCategory":["Embezzlement","Sex Offenses","Pornography/Obscene Material","Human Trafficking Offenses","Fraud Offenses","Counterfeiting/Forgery","Kidnapping/Abduction","Extortion/Blackmail","Larceny Offenses","Burglary"],
+"ReportDiff":[98.76337693222354,76.0670055452865,67.68618266978923,48.33576642335766,31.873026880655175,17.450721649484535,14.51858407079646,7.359832635983263,5.189339282551142,4.655378486055777]
+},
+"mapping":{
+"x":"ReportDiff",
+"y":"OffenseCategory"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"OffenseCategory"
+},{
+"type":"float",
+"column":"ReportDiff"
+}]
+},
+"ggtitle":{
+"text":"Average Report Time by Category"
+},
+"guides":{
+"x":{
+"title":"Average Time to Report (Days)"
+},
+"y":{
+"title":"Offense Category"
+}
+},
+"theme":{
+"name":"minimal2",
+"axis_title_x":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_title_y":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_text_x":{
+"size":10.0,
+"blank":false
+},
+"axis_text_y":{
+"size":10.0,
+"blank":false
+},
+"panel_grid_minor":{
+"blank":true
+},
+"plot_title":{
+"face":"bold",
+"size":16.0,
+"blank":false
+}
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"stat":"identity",
+"mapping":{
+},
+"data_meta":{
+},
+"fill":"#2e6f40",
+"color":"black",
+"orientation":"y",
+"data":{
+}
+}],
+"metainfo_list":[],
+"spec_id":"8"
+};
+               window.letsPlotCall(function() {
+       
+               var toolbar = null;
+               var plotContainer = containerDiv;               
+               
+                   var options = {
+                       sizing: {
+                           width_mode: "min",
+                           height_mode: "scaled",
+                           width: width
+                       }
+                   };
+                   var fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer, options);
+                   if (toolbar) {
+                     toolbar.bind(fig);
+                   }
+               });
+               
+               break;
+           }
+       }
+   });
+   
+   observer.observe(containerDiv);
+   
+   // ----------
+   })();
+   
+   </script>
+</div>
+</div>
+</section>
+<section id="observation" class="level5">
+<h5 class="anchored" data-anchor-id="observation">Observation</h5>
+<p>Once again, report time reveals some intriguing insights. The categories with the longest average reporting times tend to be more serious crimes, such as embezzlement, compared to simpler offenses like robbery. This could be due to several factors, including the time it takes for these cases to develop before they are reported. Additionally, there may be a strong emotional aspect, especially in sexual or violent crimes, which could delay the decision to report.</p>
+<div id="cell-data-explore-9" class="cell" data-execution_count="14">
+<details class="code-fold">
+<summary>crime_type_report</summary>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crime Type Report Time</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>crime_type_report <span class="op">=</span> pcrime_test.groupby(<span class="st">&#39;OffenseType&#39;</span>,as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">&#39;ReportDiff&#39;</span>].mean().sort_values(by<span class="op">=</span><span class="st">&#39;ReportDiff&#39;</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">10</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>crime_type_report_fig <span class="op">=</span> ggplot(crime_type_report, aes(x<span class="op">=</span><span class="st">&#39;ReportDiff&#39;</span>, y<span class="op">=</span><span class="st">&#39;OffenseType&#39;</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    geom_bar(stat<span class="op">=</span><span class="st">&#39;identity&#39;</span>, fill<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, color<span class="op">=</span><span class="st">&#39;black&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    labs(title<span class="op">=</span><span class="st">&#39;Average Report Time by Type&#39;</span>, x<span class="op">=</span><span class="st">&#39;Average Time to Report (Days)&#39;</span>, y<span class="op">=</span><span class="st">&#39;Offense Type&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    theme_minimal2() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>    theme(</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>        plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">16</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>        axis_title_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>        axis_title_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>        axis_text_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>), </span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>        axis_text_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>),</span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>        panel_grid_minor<span class="op">=</span>element_blank()</span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>crime_type_report_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="data-explore-9" class="cell-output cell-output-display" data-execution_count="14">
+   <div id="5Rzw3v"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+   
+   (function() {
+   // ----------
+   
+   var containerDiv = document.getElementById("5Rzw3v");
+   var observer = new ResizeObserver(function(entries) {
+       for (let entry of entries) {
+           var width = containerDiv.clientWidth
+           if (entry.contentBoxSize && width > 0) {
+           
+               // Render plot
+               if (observer) {
+                   observer.disconnect();
+                   observer = null;
+               }
+
+               var plotSpec={
+"data":{
+"OffenseType":["Statutory Rape","Welfare Fraud","Sexual Assault With An Object","Sodomy","Embezzlement","Fondling","Incest","Pornography/Obscene Material","Rape","Commercial Sex Acts"],
+"ReportDiff":[147.89102564102564,120.19354838709677,106.22162162162162,101.08118811881188,98.76337693222354,79.62029808374734,77.9375,67.68618266978923,59.3184248906174,50.54961832061068]
+},
+"mapping":{
+"x":"ReportDiff",
+"y":"OffenseType"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"OffenseType"
+},{
+"type":"float",
+"column":"ReportDiff"
+}]
+},
+"ggtitle":{
+"text":"Average Report Time by Type"
+},
+"guides":{
+"x":{
+"title":"Average Time to Report (Days)"
+},
+"y":{
+"title":"Offense Type"
+}
+},
+"theme":{
+"name":"minimal2",
+"axis_title_x":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_title_y":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_text_x":{
+"size":10.0,
+"blank":false
+},
+"axis_text_y":{
+"size":10.0,
+"blank":false
+},
+"panel_grid_minor":{
+"blank":true
+},
+"plot_title":{
+"face":"bold",
+"size":16.0,
+"blank":false
+}
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"stat":"identity",
+"mapping":{
+},
+"data_meta":{
+},
+"fill":"#2e6f40",
+"color":"black",
+"orientation":"y",
+"data":{
+}
+}],
+"metainfo_list":[],
+"spec_id":"9"
+};
+               window.letsPlotCall(function() {
+       
+               var toolbar = null;
+               var plotContainer = containerDiv;               
+               
+                   var options = {
+                       sizing: {
+                           width_mode: "min",
+                           height_mode: "scaled",
+                           width: width
+                       }
+                   };
+                   var fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer, options);
+                   if (toolbar) {
+                     toolbar.bind(fig);
+                   }
+               });
+               
+               break;
+           }
+       }
+   });
+   
+   observer.observe(containerDiv);
+   
+   // ----------
+   })();
+   
+   </script>
+</div>
+</div>
+</section>
+</section>
+<section id="observations-7" class="level4">
+<h4 class="anchored" data-anchor-id="observations-7">Observations</h4>
+<p>This chart seems to further confirm my earlier thoughts about report times. It’s clear that the offense types with the longest average report times are indeed very serious crimes, with almost all of them being sexual in nature. This suggests that the complexity and emotional weight of these crimes could contribute to the delay in reporting.</p>
+<div id="cell-data-explore-10" class="cell" data-execution_count="15">
+<details class="code-fold">
+<summary>crime_type_count</summary>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Crime Type Count</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>crime_type <span class="op">=</span> pcrime_test.groupby(<span class="st">&#39;OffenseType&#39;</span>,as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">&#39;OffenseCount&#39;</span>].<span class="bu">sum</span>().sort_values(by<span class="op">=</span><span class="st">&#39;OffenseCount&#39;</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">10</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>crime_type_fig <span class="op">=</span> ggplot(crime_type, aes(x<span class="op">=</span><span class="st">&#39;OffenseCount&#39;</span>, y<span class="op">=</span><span class="st">&#39;OffenseType&#39;</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    geom_bar(stat<span class="op">=</span><span class="st">&#39;identity&#39;</span>, fill<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, color<span class="op">=</span><span class="st">&#39;black&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    labs(title<span class="op">=</span><span class="st">&#39;Offense Counts by Type&#39;</span>, x<span class="op">=</span><span class="st">&#39;Offense COunt&#39;</span>, y<span class="op">=</span><span class="st">&#39;Offense Type&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>    theme_minimal2() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a>    theme(</span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>        plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">16</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>        axis_title_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>        axis_title_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a>        axis_text_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>), </span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>        axis_text_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>),</span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>        panel_grid_minor<span class="op">=</span>element_blank()</span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>crime_type_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="data-explore-10" class="cell-output cell-output-display" data-execution_count="15">
+   <div id="HtN9nL"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+   
+   (function() {
+   // ----------
+   
+   var containerDiv = document.getElementById("HtN9nL");
+   var observer = new ResizeObserver(function(entries) {
+       for (let entry of entries) {
+           var width = containerDiv.clientWidth
+           if (entry.contentBoxSize && width > 0) {
+           
+               // Render plot
+               if (observer) {
+                   observer.disconnect();
+                   observer = null;
+               }
+
+               var plotSpec={
+"data":{
+"OffenseType":["Theft From Motor Vehicle","Vandalism","Motor Vehicle Theft","All Other Larceny","Simple Assault","Burglary","Shoplifting","Aggravated Assault","Theft of Motor Vehicle Parts or Accessories","Theft From Building"],
+"OffenseCount":[82201.0,68230.0,64191.0,55830.0,42292.0,40662.0,33371.0,21246.0,20999.0,14112.0]
+},
+"mapping":{
+"x":"OffenseCount",
+"y":"OffenseType"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"OffenseType"
+},{
+"type":"int",
+"column":"OffenseCount"
+}]
+},
+"ggtitle":{
+"text":"Offense Counts by Type"
+},
+"guides":{
+"x":{
+"title":"Offense COunt"
+},
+"y":{
+"title":"Offense Type"
+}
+},
+"theme":{
+"name":"minimal2",
+"axis_title_x":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_title_y":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_text_x":{
+"size":10.0,
+"blank":false
+},
+"axis_text_y":{
+"size":10.0,
+"blank":false
+},
+"panel_grid_minor":{
+"blank":true
+},
+"plot_title":{
+"face":"bold",
+"size":16.0,
+"blank":false
+}
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"stat":"identity",
+"mapping":{
+},
+"data_meta":{
+},
+"fill":"#2e6f40",
+"color":"black",
+"orientation":"y",
+"data":{
+}
+}],
+"metainfo_list":[],
+"spec_id":"10"
+};
+               window.letsPlotCall(function() {
+       
+               var toolbar = null;
+               var plotContainer = containerDiv;               
+               
+                   var options = {
+                       sizing: {
+                           width_mode: "min",
+                           height_mode: "scaled",
+                           width: width
+                       }
+                   };
+                   var fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer, options);
+                   if (toolbar) {
+                     toolbar.bind(fig);
+                   }
+               });
+               
+               break;
+           }
+       }
+   });
+   
+   observer.observe(containerDiv);
+   
+   // ----------
+   })();
+   
+   </script>
+</div>
+</div>
+<section id="observations-8" class="level5">
+<h5 class="anchored" data-anchor-id="observations-8">Observations</h5>
+<p>As seen earlier, larceny offenses dominate the most common crime types. This could be due to the fact that larceny crimes tend to be quick and opportunistic, making them more likely to occur compared to more serious offenses, which often require more time, planning, and emotional involvement.</p>
+</section>
+</section>
+<section id="neighborhood-trends" class="level4">
+<h4 class="anchored" data-anchor-id="neighborhood-trends">Neighborhood Trends</h4>
+<div id="cell-data-explore-11" class="cell" data-execution_count="16">
+<details class="code-fold">
+<summary>neigh_count</summary>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Neighborhood Count</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>neigh_count <span class="op">=</span> pcrime_test.groupby(<span class="st">&#39;Neighborhood&#39;</span>,as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">&#39;OffenseCount&#39;</span>].<span class="bu">sum</span>().sort_values(by<span class="op">=</span><span class="st">&#39;OffenseCount&#39;</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">10</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>neigh_count_fig <span class="op">=</span> ggplot(neigh_count,aes(y<span class="op">=</span>neigh_count[<span class="st">&quot;Neighborhood&quot;</span>],x<span class="op">=</span>neigh_count[<span class="st">&quot;OffenseCount&quot;</span>]))<span class="op">+</span> <span class="op">\</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    geom_bar(stat<span class="op">=</span><span class="st">&#39;identity&#39;</span>,fill<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, color<span class="op">=</span><span class="st">&#39;black&#39;</span>)<span class="op">+</span> <span class="op">\</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    labs(title<span class="op">=</span><span class="st">&#39;Offense Count by Neighborhood&#39;</span>, x<span class="op">=</span><span class="st">&#39;Offense Count&#39;</span>, y<span class="op">=</span><span class="st">&#39;Neighborhood&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    theme_minimal2() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    theme(</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>        plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">16</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>        axis_title_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>        axis_title_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>        axis_text_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>), </span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>        axis_text_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>),</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>        panel_grid_minor<span class="op">=</span>element_blank()</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>neigh_count_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="data-explore-11" class="cell-output cell-output-display" data-execution_count="16">
+   <div id="sYfvv1"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+   
+   (function() {
+   // ----------
+   
+   var containerDiv = document.getElementById("sYfvv1");
+   var observer = new ResizeObserver(function(entries) {
+       for (let entry of entries) {
+           var width = containerDiv.clientWidth
+           if (entry.contentBoxSize && width > 0) {
+           
+               // Render plot
+               if (observer) {
+                   observer.disconnect();
+                   observer = null;
+               }
+
+               var plotSpec={
+"data":{
+"x":[38923.0,32744.0,19530.0,18724.0,18353.0,16347.0,15776.0,14355.0,13183.0,12105.0],
+"y":["Downtown","Hazelwood","Northwest","Lents","Powellhurst-Gilbert","Centennial","Pearl","Old Town/Chinatown","Montavilla","Lloyd"]
+},
+"mapping":{
+"x":"x",
+"y":"y"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"Neighborhood"
+},{
+"type":"int",
+"column":"OffenseCount"
+}]
+},
+"ggtitle":{
+"text":"Offense Count by Neighborhood"
+},
+"guides":{
+"x":{
+"title":"Offense Count"
+},
+"y":{
+"title":"Neighborhood"
+}
+},
+"theme":{
+"name":"minimal2",
+"axis_title_x":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_title_y":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_text_x":{
+"size":10.0,
+"blank":false
+},
+"axis_text_y":{
+"size":10.0,
+"blank":false
+},
+"panel_grid_minor":{
+"blank":true
+},
+"plot_title":{
+"face":"bold",
+"size":16.0,
+"blank":false
+}
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"stat":"identity",
+"mapping":{
+},
+"data_meta":{
+},
+"fill":"#2e6f40",
+"color":"black",
+"orientation":"y",
+"data":{
+}
+}],
+"metainfo_list":[],
+"spec_id":"11"
+};
+               window.letsPlotCall(function() {
+       
+               var toolbar = null;
+               var plotContainer = containerDiv;               
+               
+                   var options = {
+                       sizing: {
+                           width_mode: "min",
+                           height_mode: "scaled",
+                           width: width
+                       }
+                   };
+                   var fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer, options);
+                   if (toolbar) {
+                     toolbar.bind(fig);
+                   }
+               });
+               
+               break;
+           }
+       }
+   });
+   
+   observer.observe(containerDiv);
+   
+   // ----------
+   })();
+   
+   </script>
+</div>
+</div>
+<section id="observations-9" class="level5">
+<h5 class="anchored" data-anchor-id="observations-9">Observations</h5>
+<p>Exploring neighborhood trends reveals that Downtown and Hazelwood have disproportionately higher numbers of offenses compared to other areas. However, incorporating data on the size, population, and popularity of these neighborhoods could provide valuable context and help explain these counts more effectively.</p>
+<div id="cell-data-explore-12" class="cell" data-execution_count="17">
+<details class="code-fold">
+<summary>neigh_report</summary>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Neighborhood Report Time</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>neigh_report <span class="op">=</span> pcrime_test.groupby(<span class="st">&#39;Neighborhood&#39;</span>,as_index<span class="op">=</span><span class="va">False</span>)[<span class="st">&#39;ReportDiff&#39;</span>].mean().sort_values(by<span class="op">=</span><span class="st">&#39;ReportDiff&#39;</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">10</span>)</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>neigh_report_fig <span class="op">=</span> ggplot(neigh_report, aes(x<span class="op">=</span><span class="st">&#39;ReportDiff&#39;</span>, y<span class="op">=</span><span class="st">&#39;Neighborhood&#39;</span>)) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    geom_bar(stat<span class="op">=</span><span class="st">&#39;identity&#39;</span>, fill<span class="op">=</span><span class="st">&#39;#2e6f40&#39;</span>, color<span class="op">=</span><span class="st">&#39;black&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    labs(title<span class="op">=</span><span class="st">&#39;Average Report Time by Neighborhood&#39;</span>, x<span class="op">=</span><span class="st">&#39;Average Report Time (Days)&#39;</span>, y<span class="op">=</span><span class="st">&#39;Neighborhood&#39;</span>) <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    theme_minimal2() <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    theme(</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>        plot_title<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">16</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>        axis_title_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>        axis_title_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">12</span>, face<span class="op">=</span><span class="st">&#39;bold&#39;</span>),</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>        axis_text_x<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>), </span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>        axis_text_y<span class="op">=</span>element_text(size<span class="op">=</span><span class="dv">10</span>),</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>        panel_grid_minor<span class="op">=</span>element_blank()</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>neigh_report_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div id="data-explore-12" class="cell-output cell-output-display" data-execution_count="17">
+   <div id="evPu68"></div>
+   <script type="text/javascript" data-lets-plot-script="plot">
+   
+   (function() {
+   // ----------
+   
+   var containerDiv = document.getElementById("evPu68");
+   var observer = new ResizeObserver(function(entries) {
+       for (let entry of entries) {
+           var width = containerDiv.clientWidth
+           if (entry.contentBoxSize && width > 0) {
+           
+               // Render plot
+               if (observer) {
+                   observer.disconnect();
+                   observer = null;
+               }
+
+               var plotSpec={
+"data":{
+"Neighborhood":["Arnold Creek","Marshall Park","South Burlingame","Bridlemile","Northwest Heights","Sunderland","Collins View","Markham","Far Southwest","Eastmoreland"],
+"ReportDiff":[25.88,19.16,18.09722222222222,14.298319327731093,13.403333333333334,12.021806853582554,11.83448275862069,11.253768844221106,11.139344262295081,10.048158640226628]
+},
+"mapping":{
+"x":"ReportDiff",
+"y":"Neighborhood"
+},
+"data_meta":{
+"series_annotations":[{
+"type":"str",
+"column":"Neighborhood"
+},{
+"type":"float",
+"column":"ReportDiff"
+}]
+},
+"ggtitle":{
+"text":"Average Report Time by Neighborhood"
+},
+"guides":{
+"x":{
+"title":"Average Report Time (Days)"
+},
+"y":{
+"title":"Neighborhood"
+}
+},
+"theme":{
+"name":"minimal2",
+"axis_title_x":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_title_y":{
+"face":"bold",
+"size":12.0,
+"blank":false
+},
+"axis_text_x":{
+"size":10.0,
+"blank":false
+},
+"axis_text_y":{
+"size":10.0,
+"blank":false
+},
+"panel_grid_minor":{
+"blank":true
+},
+"plot_title":{
+"face":"bold",
+"size":16.0,
+"blank":false
+}
+},
+"kind":"plot",
+"scales":[],
+"layers":[{
+"geom":"bar",
+"stat":"identity",
+"mapping":{
+},
+"data_meta":{
+},
+"fill":"#2e6f40",
+"color":"black",
+"orientation":"y",
+"data":{
+}
+}],
+"metainfo_list":[],
+"spec_id":"12"
+};
+               window.letsPlotCall(function() {
+       
+               var toolbar = null;
+               var plotContainer = containerDiv;               
+               
+                   var options = {
+                       sizing: {
+                           width_mode: "min",
+                           height_mode: "scaled",
+                           width: width
+                       }
+                   };
+                   var fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer, options);
+                   if (toolbar) {
+                     toolbar.bind(fig);
+                   }
+               });
+               
+               break;
+           }
+       }
+   });
+   
+   observer.observe(containerDiv);
+   
+   // ----------
+   })();
+   
+   </script>
+</div>
+</div>
+</section>
+<section id="observations-10" class="level5">
+<h5 class="anchored" data-anchor-id="observations-10">Observations</h5>
+<p>This is an area where I feel more exploration is needed. By diving deeper into the most common offenses in each neighborhood, I suspect it could shed light on why some neighborhoods experience longer reporting times than others.</p>
+</section>
+</section>
+</section>
+</section>
+<section id="current-final-observations" class="level2">
+<h2 class="anchored" data-anchor-id="current-final-observations">Current Final Observations</h2>
+<p>This project is still a work in progress, and there’s plenty more to explore and visualize to better address some of the questions raised during my analysis. That said, the work completed so far has revealed some fascinating insights into crime patterns in Portland, Oregon. Thank you for taking the time to check out my project—I hope you’ll return to see the updates as it continues to develop!</p>
 
 
 </section>
