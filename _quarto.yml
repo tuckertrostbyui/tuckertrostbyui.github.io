@@ -10,7 +10,7 @@ website:
 
   page-footer: 
     border: true
-    left: "Tucker Trost 2024©"
+    left: "Tucker Trost 2025©"
     right: 
       - icon: linkedin
         href: https://www.linkedin.com/in/tuckertrost/
@@ -21,16 +21,16 @@ website:
     right:
       - text: "Home"
         file: index.qmd
-      - text: "My Resume"
+      - text: "Resume"
         file: resume.qmd
-      - text: "Data Cleansing"
+      - text: "Projects"
         file: cleansing.qmd
-      - text: "Data Exploration"
-        file: exploration.qmd
-      - text: "Story Telling"
-        file: story_telling.qmd
-      - text: "SQL"
-        file: sql.qmd
+      #- text: "Data Exploration"
+      #  file: exploration.qmd
+      #- text: "Story Telling"
+      #  file: story_telling.qmd
+      #- text: "SQL"
+      #  file: sql.qmd
       # - text: "Machine Learning"
       #   file: ml.qmd
       # - text: "Full Stack"
@@ -41,16 +41,16 @@ website:
   # learn more about navication here https://quarto.org/docs/websites/website-navigation.html
   # comment out any of the sections below to turn off the sidebar
 
-  sidebar: 
-    - title: "SQL"
-      style: "docked"
-      background: light
-      contents:
-        - text: "SQL"
-          file: sql.qmd
-        - text: "---"
-        - text: "Project 1"
-          file: SQL/project1.qmd
+  # sidebar: 
+  #   - title: "SQL"
+  #     style: "docked"
+  #     background: light
+  #     contents:
+  #       - text: "SQL"
+  #         file: sql.qmd
+  #       - text: "---"
+  #       - text: "Project 1"
+  #         file: SQL/project1.qmd
         # - text: "---"
         # - text: "Project 2"
         #   file: Cleansing_Projects/project2.qmd
@@ -64,72 +64,72 @@ website:
         # - text: "Project 5"
         #   file: Cleansing_Projects/project5.qmd
         # - text: "---"
-    - title: "Data Cleansing"
+    - title: "Projects"
       style: "docked"
       background: light
       contents:
-        - text: "Data Cleansing"
+        - text: "Projects"
           file: cleansing.qmd
         - text: "---"
-        - text: "Project 1"
-          file: Cleansing_Projects/project1.qmd
-        - text: "---"
-        - text: "Project 2"
-          file: Cleansing_Projects/project2.qmd
-        - text: "---"
-        - text: "Project 3"
-          file: Cleansing_Projects/project3.qmd
-        - text: "---"
-        - text: "Project 4"
-          file: Cleansing_Projects/project4.qmd
-        - text: "---"
-        - text: "Project 5"
-          file: Cleansing_Projects/project5.qmd
-        - text: "---"
-    - title: "Data Exploration"
-      style: "docked"
-      background: light
-      contents:
-        - text: "Data Exploration"
-          file: exploration.qmd
-        - text: "---"
-        - text: "Project 1"
-          file: Exploration_Projects/project1.qmd
-        - text: "---"
-        - text: "Project 2"
-          file: Exploration_Projects/project2.qmd
-        - text: "---"
-        - text: "Project 3"
-          file: Exploration_Projects/project3.qmd
-        - text: "---"
-        - text: "Project 4"
-          file: Exploration_Projects/project4.qmd
-        - text: "---"
-        - text: "Project 5"
-          file: Exploration_Projects/project5.qmd
-        - text: "---"
-    - title: "Story Telling"
-      style: "docked"
-      background: light
-      contents:
-        - text: "Story Telling"
-          file: story_telling.qmd
-        - text: "---"
-        - text: "Project 1"
-          file: Story_Telling/project1.qmd
-        - text: "---"
-        - text: "Project 2"
-          file: Story_Telling/project2.qmd
-        - text: "---"
-        - text: "Project 3"
-          file: Story_Telling/project3.qmd
-        - text: "---"
-        - text: "Project 4"
-          file: Story_Telling/project4.qmd
-        - text: "---"
-        - text: "Project 5"
-          file: Story_Telling/project5.qmd
-        - text: "---"
+        - text: "Portland Crime Analysis"
+          file: Cleansing_Projects/pcrime.qmd
+        # - text: "---"
+        # - text: "Project 2"
+        #   file: Cleansing_Projects/project2.qmd
+        # - text: "---"
+        # - text: "Project 3"
+        #   file: Cleansing_Projects/project3.qmd
+        # - text: "---"
+        # - text: "Project 4"
+        #   file: Cleansing_Projects/project4.qmd
+        # - text: "---"
+        # - text: "Project 5"
+        #   file: Cleansing_Projects/project5.qmd
+        # - text: "---"
+    # - title: "Data Exploration"
+    #   style: "docked"
+    #   background: light
+    #   contents:
+    #     - text: "Data Exploration"
+    #       file: exploration.qmd
+    #     - text: "---"
+    #     - text: "Project 1"
+    #       file: Exploration_Projects/project1.qmd
+    #     - text: "---"
+    #     - text: "Project 2"
+    #       file: Exploration_Projects/project2.qmd
+    #     - text: "---"
+    #     - text: "Project 3"
+    #       file: Exploration_Projects/project3.qmd
+    #     - text: "---"
+    #     - text: "Project 4"
+    #       file: Exploration_Projects/project4.qmd
+    #     - text: "---"
+    #     - text: "Project 5"
+    #       file: Exploration_Projects/project5.qmd
+    #     - text: "---"
+    # - title: "Story Telling"
+    #   style: "docked"
+    #   background: light
+    #   contents:
+    #     - text: "Story Telling"
+    #       file: story_telling.qmd
+    #     - text: "---"
+    #     - text: "Project 1"
+    #       file: Story_Telling/project1.qmd
+    #     - text: "---"
+    #     - text: "Project 2"
+    #       file: Story_Telling/project2.qmd
+    #     - text: "---"
+    #     - text: "Project 3"
+    #       file: Story_Telling/project3.qmd
+    #     - text: "---"
+    #     - text: "Project 4"
+    #       file: Story_Telling/project4.qmd
+    #     - text: "---"
+    #     - text: "Project 5"
+    #       file: Story_Telling/project5.qmd
+    #     - text: "---"
     # - title: "Machine Learning"
     #   style: "docked"
     #   background: light
