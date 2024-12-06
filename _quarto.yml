@@ -41,7 +41,7 @@ website:
   # learn more about navication here https://quarto.org/docs/websites/website-navigation.html
   # comment out any of the sections below to turn off the sidebar
 
-  # sidebar: 
+  sidebar: 
   #   - title: "SQL"
   #     style: "docked"
   #     background: light
