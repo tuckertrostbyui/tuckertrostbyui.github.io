@@ -4756,7 +4756,7 @@ vertical-align: -.125em;
 </style>
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top quarto-banner">
@@ -4779,23 +4779,11 @@ vertical-align: -.125em;
   </li>  
   <li class="nav-item">
     <a class="nav-link" href="../resume.html"> 
-<span class="menu-text">My Resume</span></a>
+<span class="menu-text">Resume</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../cleansing.html"> 
-<span class="menu-text">Data Cleansing</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../exploration.html"> 
-<span class="menu-text">Data Exploration</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../story_telling.html"> 
-<span class="menu-text">Story Telling</span></a>
-  </li>  
-  <li class="nav-item">
-    <a class="nav-link" href="../sql.html"> 
-<span class="menu-text">SQL</span></a>
+    <a class="nav-link active" href="../cleansing.html" aria-current="page"> 
+<span class="menu-text">Projects</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
@@ -4804,18 +4792,28 @@ vertical-align: -.125em;
 </div>
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Cleansing_Projects/pcrime.html">Portland Crime Analysis</a></li></ol></nav>
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page">
+    <div class="quarto-title column-page-right">
       <div class="quarto-title-block"><div><h1 class="title">Portland Crime Analysis</h1><button type="button" class="btn code-tools-button dropdown-toggle" id="quarto-code-tools-menu" data-bs-toggle="dropdown" aria-expanded="false"><i class="bi"></i> See code</button><ul class="dropdown-menu dropdown-menu-end" aria-labelelledby="quarto-code-tools-menu"><li><a id="quarto-show-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Show All Code</a></li><li><a id="quarto-hide-all-code" class="dropdown-item" href="javascript:void(0)" role="button">Hide All Code</a></li></ul></div></div>
             <p class="subtitle lead">Data Science Portfolio</p>
                       </div>
   </div>
     
   
-  <div class="quarto-title-meta column-page">
+  <div class="quarto-title-meta column-page-right">
 
       <div>
       <div class="quarto-title-meta-heading">Author</div>
@@ -4831,11 +4829,31 @@ vertical-align: -.125em;
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../cleansing.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Projects</span></a>
+  </div>
+</li>
+        <li class="px-0"><hr class="sidebar-divider hi "></li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Cleansing_Projects/pcrime.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Portland Crime Analysis</span></a>
+  </div>
+</li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-page-right" id="quarto-document-content">
 
 
 
@@ -5396,13 +5414,13 @@ dtype: int64</code></pre>
 <span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>year_count_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="data-explore-1" class="cell-output cell-output-display" data-execution_count="6">
-   <div id="dfsiGo"></div>
+   <div id="wk7rAj"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("dfsiGo");
+   var containerDiv = document.getElementById("wk7rAj");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -5560,13 +5578,13 @@ dtype: int64</code></pre>
 <span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a>month_count_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="data-explore-2" class="cell-output cell-output-display" data-execution_count="7">
-   <div id="xA2dUN"></div>
+   <div id="c048b5"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("xA2dUN");
+   var containerDiv = document.getElementById("c048b5");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -5725,13 +5743,13 @@ dtype: int64</code></pre>
 <span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>weekday_count_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="data-explore-3" class="cell-output cell-output-display" data-execution_count="8">
-   <div id="4UC77v"></div>
+   <div id="8Dptko"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("4UC77v");
+   var containerDiv = document.getElementById("8Dptko");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -5888,13 +5906,13 @@ dtype: int64</code></pre>
 <span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>hour_count_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="data-explore-4" class="cell-output cell-output-display" data-execution_count="9">
-   <div id="OihKNg"></div>
+   <div id="DOXaAS"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("OihKNg");
+   var containerDiv = document.getElementById("DOXaAS");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -6053,13 +6071,13 @@ dtype: int64</code></pre>
 <span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>crime_against_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="data-explore-5" class="cell-output cell-output-display" data-execution_count="10">
-   <div id="NY2iH0"></div>
+   <div id="rz2pl5"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("NY2iH0");
+   var containerDiv = document.getElementById("rz2pl5");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -6201,13 +6219,13 @@ dtype: int64</code></pre>
 <span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>crime_against_report_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="data-explore-6" class="cell-output cell-output-display" data-execution_count="11">
-   <div id="QqZAAR"></div>
+   <div id="bba4tg"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("QqZAAR");
+   var containerDiv = document.getElementById("bba4tg");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -6350,13 +6368,13 @@ dtype: int64</code></pre>
 <span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>crime_cat_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="data-explore-7" class="cell-output cell-output-display" data-execution_count="12">
-   <div id="qDUzfE"></div>
+   <div id="Qx6QBZ"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("qDUzfE");
+   var containerDiv = document.getElementById("Qx6QBZ");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -6500,13 +6518,13 @@ dtype: int64</code></pre>
 <span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>crime_cat_report_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="data-explore-8" class="cell-output cell-output-display" data-execution_count="13">
-   <div id="4Bydoz"></div>
+   <div id="074mKw"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("4Bydoz");
+   var containerDiv = document.getElementById("074mKw");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -6650,13 +6668,13 @@ dtype: int64</code></pre>
 <span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>crime_type_report_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="data-explore-9" class="cell-output cell-output-display" data-execution_count="14">
-   <div id="5Rzw3v"></div>
+   <div id="hlea7V"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("5Rzw3v");
+   var containerDiv = document.getElementById("hlea7V");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -6801,13 +6819,13 @@ dtype: int64</code></pre>
 <span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a>crime_type_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="data-explore-10" class="cell-output cell-output-display" data-execution_count="15">
-   <div id="HtN9nL"></div>
+   <div id="B2dtXO"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("HtN9nL");
+   var containerDiv = document.getElementById("B2dtXO");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -6953,13 +6971,13 @@ dtype: int64</code></pre>
 <span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>neigh_count_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="data-explore-11" class="cell-output cell-output-display" data-execution_count="16">
-   <div id="sYfvv1"></div>
+   <div id="dZzP0C"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("sYfvv1");
+   var containerDiv = document.getElementById("dZzP0C");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -7102,13 +7120,13 @@ dtype: int64</code></pre>
 <span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>neigh_report_fig</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div id="data-explore-12" class="cell-output cell-output-display" data-execution_count="17">
-   <div id="evPu68"></div>
+   <div id="CkshxA"></div>
    <script type="text/javascript" data-lets-plot-script="plot">
    
    (function() {
    // ----------
    
-   var containerDiv = document.getElementById("evPu68");
+   var containerDiv = document.getElementById("CkshxA");
    var observer = new ResizeObserver(function(entries) {
        for (let entry of entries) {
            var width = containerDiv.clientWidth
@@ -7859,7 +7877,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Tucker Trost 2024©</p>
+<p>Tucker Trost 2025©</p>
 </div>   
     <div class="nav-footer-center">
        
