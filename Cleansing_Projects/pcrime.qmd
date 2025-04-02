@@ -597,7 +597,7 @@ pcrime_ml_daily.head()
 #| label: ml-4
 #| code-summary: Load ML Libraries
 
-
+!pip3 install xgboost
 from sklearn.model_selection import train_test_split
 from xgboost import XGBRegressor
 from sklearn.metrics import mean_squared_error, r2_score, root_mean_squared_error
