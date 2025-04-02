@@ -1,62 +1,77 @@
 ---
 layout: cv
-title: Tucker Trost's CV
+title: Tucker Trost
 ---
-# Tucker Trost
-Data Science Student
-
-<div id="webaddress">
-<a href="tuckertrost16@gmail.com">Tuckertrost16@gmail.com</a>
-| <a href="https://www.linkedin.com/in/tuckertrost/">My Linkedin page</a>
-</div>
+### Data Scientist
+**Phone:** (971) 420-5397  
+**Email:** Tuckertrost16@gmail.com  
+**LinkedIn:** [linkedin.com/in/tuckertrost](https://linkedin.com/in/tuckertrost)
 
 
-## Currently
+## Education
 
-Studying to earn my Bachleor's degree in Data Science from Brigham Young University - Idaho
+**Brigham Young University–Idaho, Rexburg, ID**  
+**Bachelor of Science in Data Science, Minor in Statistics** — *Expected Fall 2025*  
+Relevant Courses: Machine Learning, Data Visualization, Data Wrangling, Statistics, SQL, Python, R, Pyspark
 
-### Specialized in
+**Google Advanced Data Analytics Professional Certificate** — *Winter 2023*  
+Skills: Python, SQL, Machine Learning, Statistics
 
-Python | SQL | Tableau | Microsoft Excel
+**Google Data Analytics Professional Certificate** — *Summer 2023*  
+Skills: Microsoft Excel, SQL, Tableau, R, Data Cleaning, Data Integrity
 
 
-### Research interests
+## Skills
 
-Exploratory Data Analysis, Data Visualizations, Interactive Dashboards, Machine Learning
+**Analysis & Visualization:** Python (Pandas, lets-plot, Plotly, Pyspark), R (ggplot2, tidyverse), Power BI (DAX), Tableau  
+**Machine Learning:** Scikit-learn, TensorFlow, Random Forest, CNNs, XGBoost  
+**Database Management & Design:** MySQL, SQLite, Databricks, DAX Studio, Microsoft SQL Server
+
+
+## Experience
+
+**Data Visualization Specialist** — *Brigham Young University–Idaho*  
+*Student Records and Registration | Oct 2024 – Present* 
+
+- Took ownership of a high-impact records retention dashboard project, stepping in midstream with no formal handoff and quickly becoming the subject matter expert.
+
+- Collaborated closely with department leadership, presenting biweekly progress updates and implementing their feedback to align the final solution with organizational needs and AACRAO standards.
+
+**Project Manager** — *Data Science Society*  
+
+- Led a team of student data scientists to scope, gather, and analyze data for an ongoing project, ensuring alignment with stakeholder objectives.
+
+- Facilitated regular stakeholder meetings to refine problem statements, define deliverables, and provide progress updates, driving actionable insights.
+
+**Data Science Tutor** — *Data Science Tutoring Lab*  
+
+- Guided students of all skill levels in Python and R, breaking down data wrangling and visualization concepts to enhance comprehension beyond assignments.
+
+- Adapted explanations to diverse learning styles, fostering problem-solving skills and confidence in data analysis.
+
+**Teacher’s Assistant** — *Data Insight and Intuition* 
+
+- Graded assignments and projects, providing constructive feedback to help students improve.
+
+- Guided students in developing clear, compelling data stories through personalized critiques and support.
+
 
 ## Projects
 
-*Superstore KPI Dashboard*
+### Portland Crime Forecasting with XGBoost
 
-- Developed dynamic KPI Dashboard built in Tableau
-- Utilized complex parameters and calculated fields to present easily identifiableinformation to stakeholders
- 
-*Portland Crime Analysis*
+- Built an XGBoost regression model with Scikit-Learn to predict daily offense counts by Portland neighborhood using temporal and spatial features.
 
-- Exploratory data anlysis oin Portland, Oregon crime data
-- Data cleaning in Excel and SQL
-- Python to analyze crime trends and gather data for visualization
-- Visualized findings in a dynamic Tableau dashboard and offered recommendations for visitor safety
- 
-## Education
+- Applied feature engineering, hyperparameter tuning, and model evaluation with Python to improve prediction accuracy and reveal crime patterns.
 
-`2023 - Now`
-__Brigham Young University - Idaho__
+### Student Records Retention Compliance Dashboard
 
-- Bachelor of Science, Data Science
+- Designed and built a Power BI model that identified over 200,000 student records ready for disposal, streamlining compliance with AACRAO retention guidelines.
 
-`2019-2022`
-__Brigham Young University - Idaho__
-
-- Associates of Science, General Studies 
+- Wrangled data from multiple sources using Python before integrating it into the Power BI model, ensuring accuracy and consistency in record retention tracking.
 
 
-## Awards
 
-`2023`
-Google Data Analystics Professional Certificate
-
- *Coursera*
 
 
 <!-- ### Footer
