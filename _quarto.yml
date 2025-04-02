@@ -71,7 +71,7 @@ website:
         - text: "Projects"
           file: cleansing.qmd
         - text: "---"
-        - text: "Portland Crime Analysis"
+        - text: "Portland Crime Forecasting with XGBoost"
           file: Cleansing_Projects/pcrime.qmd
         # - text: "---"
         # - text: "Project 2"

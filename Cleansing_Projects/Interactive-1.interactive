@@ -1,0 +1,2389 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "metadata": {},
+   "source": [
+    "Connected to Python 3.12.6"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "abd04c1a-df85-4d78-9cf3-55ea3d7f99e9",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "from plotnine import *"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c37200d9-d2d8-412c-8bd4-1a5a39ad21fb",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "ImportError",
+     "evalue": "dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mImportError\u001b[0m                               Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:17\u001b[0m\n\u001b[1;32m     15\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mexport\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mmapping\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/__init__.py:6\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m# Copyright (c) 2019. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[39m# Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[0;32m----> 6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_configuration\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      8\u001b[0m __all__ \u001b[39m=\u001b[39m _configuration\u001b[39m.\u001b[39m__all__\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_configuration.py:8\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict, Any\n\u001b[1;32m      7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_html_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_html_frontend_context, _use_isolated_frame, _create_wb_html_frontend_context\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_json_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_json_frontend_context, _is_Intellij_Python_Lets_Plot_Plugin\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_mime_types\u001b[39;00m \u001b[39mimport\u001b[39;00m TEXT_HTML, LETS_PLOT_JSON\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_html_contexts.py:7\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mos\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_jupyter_notebook_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m JupyterNotebookContext\n\u001b[1;32m      8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_static_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m StaticHtmlPageContext\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_webbr_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m WebBrHtmlPageContext\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_jupyter_notebook_ctx.py:17\u001b[0m\n\u001b[1;32m     14\u001b[0m     display_html \u001b[39m=\u001b[39m \u001b[39mNone\u001b[39;00m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m _kbridge \u001b[39mas\u001b[39;00m kbr\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m JS_BASE_URL, JS_NAME\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/_kbridge.py:7\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#  Copyright (c) 2020. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m#  Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \n\u001b[1;32m      4\u001b[0m \u001b[39m# noinspection PyUnresolvedReferences\u001b[39;00m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict\n\u001b[0;32m----> 7\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mlets_plot_kotlin_bridge\u001b[39;00m\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_type_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m standardize_dict\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n",
+      "\u001b[0;31mImportError\u001b[0m: dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "02090681-6a17-4198-b066-8ceb77e5baef",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "ImportError",
+     "evalue": "dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mImportError\u001b[0m                               Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:17\u001b[0m\n\u001b[1;32m     15\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mexport\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mmapping\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/__init__.py:6\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m# Copyright (c) 2019. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[39m# Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[0;32m----> 6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_configuration\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      8\u001b[0m __all__ \u001b[39m=\u001b[39m _configuration\u001b[39m.\u001b[39m__all__\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_configuration.py:8\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict, Any\n\u001b[1;32m      7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_html_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_html_frontend_context, _use_isolated_frame, _create_wb_html_frontend_context\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_json_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_json_frontend_context, _is_Intellij_Python_Lets_Plot_Plugin\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_mime_types\u001b[39;00m \u001b[39mimport\u001b[39;00m TEXT_HTML, LETS_PLOT_JSON\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_html_contexts.py:7\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mos\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_jupyter_notebook_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m JupyterNotebookContext\n\u001b[1;32m      8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_static_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m StaticHtmlPageContext\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_webbr_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m WebBrHtmlPageContext\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_jupyter_notebook_ctx.py:17\u001b[0m\n\u001b[1;32m     14\u001b[0m     display_html \u001b[39m=\u001b[39m \u001b[39mNone\u001b[39;00m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m _kbridge \u001b[39mas\u001b[39;00m kbr\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m JS_BASE_URL, JS_NAME\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/_kbridge.py:7\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#  Copyright (c) 2020. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m#  Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \n\u001b[1;32m      4\u001b[0m \u001b[39m# noinspection PyUnresolvedReferences\u001b[39;00m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict\n\u001b[0;32m----> 7\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mlets_plot_kotlin_bridge\u001b[39;00m\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_type_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m standardize_dict\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n",
+      "\u001b[0;31mImportError\u001b[0m: dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "15d5e909-eb5f-4f31-9029-c27f4f41e77e",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "ImportError",
+     "evalue": "dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mImportError\u001b[0m                               Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:17\u001b[0m\n\u001b[1;32m     15\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mexport\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mmapping\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/__init__.py:6\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m# Copyright (c) 2019. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[39m# Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[0;32m----> 6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_configuration\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      8\u001b[0m __all__ \u001b[39m=\u001b[39m _configuration\u001b[39m.\u001b[39m__all__\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_configuration.py:8\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict, Any\n\u001b[1;32m      7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_html_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_html_frontend_context, _use_isolated_frame, _create_wb_html_frontend_context\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_json_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_json_frontend_context, _is_Intellij_Python_Lets_Plot_Plugin\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_mime_types\u001b[39;00m \u001b[39mimport\u001b[39;00m TEXT_HTML, LETS_PLOT_JSON\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_html_contexts.py:7\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mos\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_jupyter_notebook_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m JupyterNotebookContext\n\u001b[1;32m      8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_static_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m StaticHtmlPageContext\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_webbr_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m WebBrHtmlPageContext\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_jupyter_notebook_ctx.py:17\u001b[0m\n\u001b[1;32m     14\u001b[0m     display_html \u001b[39m=\u001b[39m \u001b[39mNone\u001b[39;00m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m _kbridge \u001b[39mas\u001b[39;00m kbr\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m JS_BASE_URL, JS_NAME\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/_kbridge.py:7\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#  Copyright (c) 2020. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m#  Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \n\u001b[1;32m      4\u001b[0m \u001b[39m# noinspection PyUnresolvedReferences\u001b[39;00m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict\n\u001b[0;32m----> 7\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mlets_plot_kotlin_bridge\u001b[39;00m\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_type_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m standardize_dict\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n",
+      "\u001b[0;31mImportError\u001b[0m: dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "aea5330b-6acd-4f35-bf01-7be385ff0a80",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "ImportError",
+     "evalue": "dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mImportError\u001b[0m                               Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:17\u001b[0m\n\u001b[1;32m     15\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mexport\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mmapping\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/__init__.py:6\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m# Copyright (c) 2019. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[39m# Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[0;32m----> 6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_configuration\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      8\u001b[0m __all__ \u001b[39m=\u001b[39m _configuration\u001b[39m.\u001b[39m__all__\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_configuration.py:8\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict, Any\n\u001b[1;32m      7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_html_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_html_frontend_context, _use_isolated_frame, _create_wb_html_frontend_context\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_json_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_json_frontend_context, _is_Intellij_Python_Lets_Plot_Plugin\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_mime_types\u001b[39;00m \u001b[39mimport\u001b[39;00m TEXT_HTML, LETS_PLOT_JSON\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_html_contexts.py:7\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mos\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_jupyter_notebook_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m JupyterNotebookContext\n\u001b[1;32m      8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_static_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m StaticHtmlPageContext\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_webbr_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m WebBrHtmlPageContext\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_jupyter_notebook_ctx.py:17\u001b[0m\n\u001b[1;32m     14\u001b[0m     display_html \u001b[39m=\u001b[39m \u001b[39mNone\u001b[39;00m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m _kbridge \u001b[39mas\u001b[39;00m kbr\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m JS_BASE_URL, JS_NAME\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/_kbridge.py:7\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#  Copyright (c) 2020. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m#  Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \n\u001b[1;32m      4\u001b[0m \u001b[39m# noinspection PyUnresolvedReferences\u001b[39;00m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict\n\u001b[0;32m----> 7\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mlets_plot_kotlin_bridge\u001b[39;00m\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_type_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m standardize_dict\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n",
+      "\u001b[0;31mImportError\u001b[0m: dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "6e318887-537b-4722-90f5-c49d9ca043fd",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "ImportError",
+     "evalue": "dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mImportError\u001b[0m                               Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:17\u001b[0m\n\u001b[1;32m     15\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mexport\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mmapping\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/__init__.py:6\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m# Copyright (c) 2019. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[39m# Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[0;32m----> 6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_configuration\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      8\u001b[0m __all__ \u001b[39m=\u001b[39m _configuration\u001b[39m.\u001b[39m__all__\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_configuration.py:8\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict, Any\n\u001b[1;32m      7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_html_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_html_frontend_context, _use_isolated_frame, _create_wb_html_frontend_context\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_json_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_json_frontend_context, _is_Intellij_Python_Lets_Plot_Plugin\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_mime_types\u001b[39;00m \u001b[39mimport\u001b[39;00m TEXT_HTML, LETS_PLOT_JSON\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_html_contexts.py:7\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mos\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_jupyter_notebook_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m JupyterNotebookContext\n\u001b[1;32m      8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_static_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m StaticHtmlPageContext\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_webbr_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m WebBrHtmlPageContext\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_jupyter_notebook_ctx.py:17\u001b[0m\n\u001b[1;32m     14\u001b[0m     display_html \u001b[39m=\u001b[39m \u001b[39mNone\u001b[39;00m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m _kbridge \u001b[39mas\u001b[39;00m kbr\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m JS_BASE_URL, JS_NAME\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/_kbridge.py:7\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#  Copyright (c) 2020. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m#  Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \n\u001b[1;32m      4\u001b[0m \u001b[39m# noinspection PyUnresolvedReferences\u001b[39;00m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict\n\u001b[0;32m----> 7\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mlets_plot_kotlin_bridge\u001b[39;00m\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_type_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m standardize_dict\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n",
+      "\u001b[0;31mImportError\u001b[0m: dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "22557a37-7fdc-47cc-ac00-531020a9a214",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "ImportError",
+     "evalue": "dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mImportError\u001b[0m                               Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:17\u001b[0m\n\u001b[1;32m     15\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mexport\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mmapping\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/__init__.py:6\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m# Copyright (c) 2019. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[39m# Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[0;32m----> 6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_configuration\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      8\u001b[0m __all__ \u001b[39m=\u001b[39m _configuration\u001b[39m.\u001b[39m__all__\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_configuration.py:8\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict, Any\n\u001b[1;32m      7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_html_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_html_frontend_context, _use_isolated_frame, _create_wb_html_frontend_context\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_json_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_json_frontend_context, _is_Intellij_Python_Lets_Plot_Plugin\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_mime_types\u001b[39;00m \u001b[39mimport\u001b[39;00m TEXT_HTML, LETS_PLOT_JSON\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_html_contexts.py:7\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mos\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_jupyter_notebook_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m JupyterNotebookContext\n\u001b[1;32m      8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_static_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m StaticHtmlPageContext\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_webbr_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m WebBrHtmlPageContext\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_jupyter_notebook_ctx.py:17\u001b[0m\n\u001b[1;32m     14\u001b[0m     display_html \u001b[39m=\u001b[39m \u001b[39mNone\u001b[39;00m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m _kbridge \u001b[39mas\u001b[39;00m kbr\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m JS_BASE_URL, JS_NAME\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/_kbridge.py:7\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#  Copyright (c) 2020. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m#  Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \n\u001b[1;32m      4\u001b[0m \u001b[39m# noinspection PyUnresolvedReferences\u001b[39;00m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict\n\u001b[0;32m----> 7\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mlets_plot_kotlin_bridge\u001b[39;00m\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_type_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m standardize_dict\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n",
+      "\u001b[0;31mImportError\u001b[0m: dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a261b7d6-70e6-409e-943b-d7a8edaff494",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "ImportError",
+     "evalue": "dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mImportError\u001b[0m                               Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:17\u001b[0m\n\u001b[1;32m     15\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mexport\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mmapping\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/__init__.py:6\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m# Copyright (c) 2019. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[39m# Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[0;32m----> 6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_configuration\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      8\u001b[0m __all__ \u001b[39m=\u001b[39m _configuration\u001b[39m.\u001b[39m__all__\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_configuration.py:8\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict, Any\n\u001b[1;32m      7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_html_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_html_frontend_context, _use_isolated_frame, _create_wb_html_frontend_context\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_json_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_json_frontend_context, _is_Intellij_Python_Lets_Plot_Plugin\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_mime_types\u001b[39;00m \u001b[39mimport\u001b[39;00m TEXT_HTML, LETS_PLOT_JSON\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_html_contexts.py:7\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mos\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_jupyter_notebook_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m JupyterNotebookContext\n\u001b[1;32m      8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_static_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m StaticHtmlPageContext\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_webbr_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m WebBrHtmlPageContext\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_jupyter_notebook_ctx.py:17\u001b[0m\n\u001b[1;32m     14\u001b[0m     display_html \u001b[39m=\u001b[39m \u001b[39mNone\u001b[39;00m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m _kbridge \u001b[39mas\u001b[39;00m kbr\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m JS_BASE_URL, JS_NAME\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/_kbridge.py:7\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#  Copyright (c) 2020. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m#  Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \n\u001b[1;32m      4\u001b[0m \u001b[39m# noinspection PyUnresolvedReferences\u001b[39;00m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict\n\u001b[0;32m----> 7\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mlets_plot_kotlin_bridge\u001b[39;00m\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_type_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m standardize_dict\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n",
+      "\u001b[0;31mImportError\u001b[0m: dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a083ebc7-3458-4e5e-b4ba-5e5f63464fed",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "ImportError",
+     "evalue": "dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mImportError\u001b[0m                               Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:17\u001b[0m\n\u001b[1;32m     15\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mexport\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mmapping\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/__init__.py:6\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m# Copyright (c) 2019. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[39m# Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[0;32m----> 6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_configuration\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      8\u001b[0m __all__ \u001b[39m=\u001b[39m _configuration\u001b[39m.\u001b[39m__all__\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_configuration.py:8\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict, Any\n\u001b[1;32m      7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_html_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_html_frontend_context, _use_isolated_frame, _create_wb_html_frontend_context\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_json_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_json_frontend_context, _is_Intellij_Python_Lets_Plot_Plugin\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_mime_types\u001b[39;00m \u001b[39mimport\u001b[39;00m TEXT_HTML, LETS_PLOT_JSON\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_html_contexts.py:7\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mos\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_jupyter_notebook_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m JupyterNotebookContext\n\u001b[1;32m      8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_static_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m StaticHtmlPageContext\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_webbr_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m WebBrHtmlPageContext\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_jupyter_notebook_ctx.py:17\u001b[0m\n\u001b[1;32m     14\u001b[0m     display_html \u001b[39m=\u001b[39m \u001b[39mNone\u001b[39;00m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m _kbridge \u001b[39mas\u001b[39;00m kbr\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m JS_BASE_URL, JS_NAME\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/_kbridge.py:7\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#  Copyright (c) 2020. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m#  Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \n\u001b[1;32m      4\u001b[0m \u001b[39m# noinspection PyUnresolvedReferences\u001b[39;00m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict\n\u001b[0;32m----> 7\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mlets_plot_kotlin_bridge\u001b[39;00m\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_type_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m standardize_dict\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n",
+      "\u001b[0;31mImportError\u001b[0m: dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "d49b1376-95e5-4bca-a255-8fafc9d30a18",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "ImportError",
+     "evalue": "dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mImportError\u001b[0m                               Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:17\u001b[0m\n\u001b[1;32m     15\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mexport\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mmapping\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/__init__.py:6\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m# Copyright (c) 2019. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[39m# Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[0;32m----> 6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_configuration\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      8\u001b[0m __all__ \u001b[39m=\u001b[39m _configuration\u001b[39m.\u001b[39m__all__\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_configuration.py:8\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict, Any\n\u001b[1;32m      7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_html_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_html_frontend_context, _use_isolated_frame, _create_wb_html_frontend_context\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_json_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_json_frontend_context, _is_Intellij_Python_Lets_Plot_Plugin\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_mime_types\u001b[39;00m \u001b[39mimport\u001b[39;00m TEXT_HTML, LETS_PLOT_JSON\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_html_contexts.py:7\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mos\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_jupyter_notebook_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m JupyterNotebookContext\n\u001b[1;32m      8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_static_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m StaticHtmlPageContext\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_webbr_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m WebBrHtmlPageContext\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_jupyter_notebook_ctx.py:17\u001b[0m\n\u001b[1;32m     14\u001b[0m     display_html \u001b[39m=\u001b[39m \u001b[39mNone\u001b[39;00m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m _kbridge \u001b[39mas\u001b[39;00m kbr\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m JS_BASE_URL, JS_NAME\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/_kbridge.py:7\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#  Copyright (c) 2020. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m#  Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \n\u001b[1;32m      4\u001b[0m \u001b[39m# noinspection PyUnresolvedReferences\u001b[39;00m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict\n\u001b[0;32m----> 7\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mlets_plot_kotlin_bridge\u001b[39;00m\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_type_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m standardize_dict\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n",
+      "\u001b[0;31mImportError\u001b[0m: dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5c5da467-9893-4d0d-924e-4a274170b4c5",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "ImportError",
+     "evalue": "dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mImportError\u001b[0m                               Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:17\u001b[0m\n\u001b[1;32m     15\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mexport\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mmapping\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/__init__.py:6\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m# Copyright (c) 2019. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[39m# Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[0;32m----> 6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_configuration\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      8\u001b[0m __all__ \u001b[39m=\u001b[39m _configuration\u001b[39m.\u001b[39m__all__\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_configuration.py:8\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict, Any\n\u001b[1;32m      7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_html_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_html_frontend_context, _use_isolated_frame, _create_wb_html_frontend_context\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_json_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_json_frontend_context, _is_Intellij_Python_Lets_Plot_Plugin\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_mime_types\u001b[39;00m \u001b[39mimport\u001b[39;00m TEXT_HTML, LETS_PLOT_JSON\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_html_contexts.py:7\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mos\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_jupyter_notebook_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m JupyterNotebookContext\n\u001b[1;32m      8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_static_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m StaticHtmlPageContext\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_webbr_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m WebBrHtmlPageContext\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_jupyter_notebook_ctx.py:17\u001b[0m\n\u001b[1;32m     14\u001b[0m     display_html \u001b[39m=\u001b[39m \u001b[39mNone\u001b[39;00m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m _kbridge \u001b[39mas\u001b[39;00m kbr\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m JS_BASE_URL, JS_NAME\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/_kbridge.py:7\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#  Copyright (c) 2020. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m#  Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \n\u001b[1;32m      4\u001b[0m \u001b[39m# noinspection PyUnresolvedReferences\u001b[39;00m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict\n\u001b[0;32m----> 7\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mlets_plot_kotlin_bridge\u001b[39;00m\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_type_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m standardize_dict\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n",
+      "\u001b[0;31mImportError\u001b[0m: dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "94d83559-d92e-4617-893f-f0b4ba961e8f",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "ImportError",
+     "evalue": "dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mImportError\u001b[0m                               Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:17\u001b[0m\n\u001b[1;32m     15\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mexport\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mmapping\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/__init__.py:6\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m# Copyright (c) 2019. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \u001b[39m# Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m#\u001b[39;00m\n\u001b[0;32m----> 6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_configuration\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      8\u001b[0m __all__ \u001b[39m=\u001b[39m _configuration\u001b[39m.\u001b[39m__all__\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_configuration.py:8\u001b[0m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict, Any\n\u001b[1;32m      7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_html_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_html_frontend_context, _use_isolated_frame, _create_wb_html_frontend_context\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_json_contexts\u001b[39;00m \u001b[39mimport\u001b[39;00m _create_json_frontend_context, _is_Intellij_Python_Lets_Plot_Plugin\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_mime_types\u001b[39;00m \u001b[39mimport\u001b[39;00m TEXT_HTML, LETS_PLOT_JSON\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_html_contexts.py:7\u001b[0m\n\u001b[1;32m      4\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mos\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m----> 7\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_jupyter_notebook_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m JupyterNotebookContext\n\u001b[1;32m      8\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_static_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m StaticHtmlPageContext\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_webbr_html_page_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m WebBrHtmlPageContext\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/frontend_context/_jupyter_notebook_ctx.py:17\u001b[0m\n\u001b[1;32m     14\u001b[0m     display_html \u001b[39m=\u001b[39m \u001b[39mNone\u001b[39;00m\n\u001b[1;32m     16\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_frontend_ctx\u001b[39;00m \u001b[39mimport\u001b[39;00m FrontendContext\n\u001b[0;32m---> 17\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m _kbridge \u001b[39mas\u001b[39;00m kbr\n\u001b[1;32m     18\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m JS_BASE_URL, JS_NAME\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/_kbridge.py:7\u001b[0m\n\u001b[1;32m      1\u001b[0m \u001b[39m#  Copyright (c) 2020. JetBrains s.r.o.\u001b[39;00m\n\u001b[1;32m      2\u001b[0m \u001b[39m#  Use of this source code is governed by the MIT license that can be found in the LICENSE file.\u001b[39;00m\n\u001b[1;32m      3\u001b[0m \n\u001b[1;32m      4\u001b[0m \u001b[39m# noinspection PyUnresolvedReferences\u001b[39;00m\n\u001b[1;32m      5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mtyping\u001b[39;00m \u001b[39mimport\u001b[39;00m Dict\n\u001b[0;32m----> 7\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mlets_plot_kotlin_bridge\u001b[39;00m\n\u001b[1;32m      9\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_type_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m standardize_dict\n\u001b[1;32m     10\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39m_global_settings\u001b[39;00m \u001b[39mimport\u001b[39;00m get_js_cdn_url\n",
+      "\u001b[0;31mImportError\u001b[0m: dlopen(/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so, 0x0002): Library not loaded: @rpath/libc++.1.dylib\n  Referenced from: <C73BD5C1-9BE6-3DC6-8C81-759A39C12D94> /Users/tuckertrost/Library/Python/3.12/lib/python/site-packages/lets_plot_kotlin_bridge.cpython-312-darwin.so\n  Reason: tried: '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file), '/System/Volumes/Preboot/Cryptexes/OS/Users/vdovidaytis/Applications/miniconda3/envs/py312-arm/lib/libc++.1.dylib' (no such file)"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "dd2a5c9d-d8cb-4234-bbde-589ad6057628",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'plot' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:22\u001b[0m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     20\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_theme\u001b[39;00m \u001b[39mimport\u001b[39;00m _set_global_theme\n\u001b[0;32m---> 22\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     23\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     24\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     26\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     29\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     32\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'plot' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "18e10db2-3651-4747-bd29-1e9a66c16ea3",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "['/Library/Frameworks/Python.framework/Versions/3.12/lib/python312.zip', '/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12', '/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/lib-dynload', '', '/Users/tuckertrost/Library/Python/3.12/lib/python/site-packages', '/Library/Frameworks/Python.framework/Versions/3.12/lib/python3.12/site-packages']\n"
+     ]
+    }
+   ],
+   "source": [
+    "import sys\n",
+    "print(sys.path)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7f9fa22c-4cb8-4ca0-84f0-06b236309f3e",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'plot' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:22\u001b[0m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     20\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_theme\u001b[39;00m \u001b[39mimport\u001b[39;00m _set_global_theme\n\u001b[0;32m---> 22\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     23\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     24\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     26\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     29\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     32\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'plot' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "e3c60ebf-bcd6-41f3-a065-ddd757c9e167",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'plot' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:22\u001b[0m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     20\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_theme\u001b[39;00m \u001b[39mimport\u001b[39;00m _set_global_theme\n\u001b[0;32m---> 22\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     23\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     24\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     26\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     29\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     32\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'plot' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "5cc374fa-584e-4d7d-a5f1-ff57103bac31",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'plot' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:22\u001b[0m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     20\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_theme\u001b[39;00m \u001b[39mimport\u001b[39;00m _set_global_theme\n\u001b[0;32m---> 22\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     23\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     24\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     26\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     29\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     32\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'plot' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "0cbc00a1-032e-43e2-8ba9-a6b9dc278c21",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'plot' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:22\u001b[0m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     20\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_theme\u001b[39;00m \u001b[39mimport\u001b[39;00m _set_global_theme\n\u001b[0;32m---> 22\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     23\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     24\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     26\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     29\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     32\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'plot' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "77914218-c457-41b7-8a4d-c5e31779c456",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'plot' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:22\u001b[0m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     20\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_theme\u001b[39;00m \u001b[39mimport\u001b[39;00m _set_global_theme\n\u001b[0;32m---> 22\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     23\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     24\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     26\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     29\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     32\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'plot' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2fc96103-8660-4545-b63c-34eacc436814",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'plot' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:22\u001b[0m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     20\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_theme\u001b[39;00m \u001b[39mimport\u001b[39;00m _set_global_theme\n\u001b[0;32m---> 22\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     23\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     24\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     26\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     29\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     32\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'plot' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c4852711-451c-4522-b123-26061020e040",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'plot' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:22\u001b[0m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     20\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_theme\u001b[39;00m \u001b[39mimport\u001b[39;00m _set_global_theme\n\u001b[0;32m---> 22\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     23\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     24\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     26\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     29\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     32\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'plot' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2103bcc4-ce69-4ec6-a5e8-d045710f8c1f",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'plot' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m \u001b[39mimport\u001b[39;00m ggplot\n\u001b[1;32m      7\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:22\u001b[0m\n\u001b[1;32m     19\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39msettings_utils\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     20\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_theme\u001b[39;00m \u001b[39mimport\u001b[39;00m _set_global_theme\n\u001b[0;32m---> 22\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     23\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     24\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     26\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     29\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     32\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'plot' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "import lets_plot\n",
+    "from lets_plot.plot import ggplot\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "21a84299-1c13-4db1-a5e7-3a523548b6d7",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'frontend_context' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m\n\u001b[1;32m      6\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m \u001b[39mimport\u001b[39;00m ggplot\n\u001b[1;32m      7\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:23\u001b[0m\n\u001b[1;32m     20\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_theme\u001b[39;00m \u001b[39mimport\u001b[39;00m _set_global_theme\n\u001b[1;32m     21\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m plot\n\u001b[1;32m     22\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[0;32m---> 23\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     24\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     26\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     29\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     32\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'frontend_context' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "import lets_plot\n",
+    "from lets_plot.plot import ggplot\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "da54a651-03b0-4ae4-a084-28cd5a1346bb",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'frontend_context' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:23\u001b[0m\n\u001b[1;32m     20\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mplot\u001b[39;00m\u001b[39m.\u001b[39;00m\u001b[39m_global_theme\u001b[39;00m \u001b[39mimport\u001b[39;00m _set_global_theme\n\u001b[1;32m     21\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m plot\n\u001b[1;32m     22\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[0;32m---> 23\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     24\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     26\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     29\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     32\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'frontend_context' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "50c7de5b-407b-49ac-b35b-50828872d985",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (__init__.py, line 23)",
+     "output_type": "error",
+     "traceback": [
+      "Traceback \u001b[0;36m(most recent call last)\u001b[0m:\n",
+      "\u001b[0m  File \u001b[1;32m~/Library/Python/3.12/lib/python/site-packages/IPython/core/interactiveshell.py:3577\u001b[0m in \u001b[1;35mrun_code\u001b[0m\n    exec(code_obj, self.user_global_ns, self.user_ns)\u001b[0m\n",
+      "\u001b[0;36m  Cell \u001b[0;32mIn[25], line 5\u001b[0;36m\n\u001b[0;31m    from lets_plot import *\u001b[0;36m\n",
+      "\u001b[0;36m  File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:23\u001b[0;36m\u001b[0m\n\u001b[0;31m    from . import frontend_context\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3d331c01-0248-436c-b427-28ca6448c368",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "SyntaxError",
+     "evalue": "invalid syntax (__init__.py, line 23)",
+     "output_type": "error",
+     "traceback": [
+      "Traceback \u001b[0;36m(most recent call last)\u001b[0m:\n",
+      "\u001b[0m  File \u001b[1;32m~/Library/Python/3.12/lib/python/site-packages/IPython/core/interactiveshell.py:3577\u001b[0m in \u001b[1;35mrun_code\u001b[0m\n    exec(code_obj, self.user_global_ns, self.user_ns)\u001b[0m\n",
+      "\u001b[0;36m  Cell \u001b[0;32mIn[26], line 5\u001b[0;36m\n\u001b[0;31m    from lets_plot import *\u001b[0;36m\n",
+      "\u001b[0;36m  File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:23\u001b[0;36m\u001b[0m\n\u001b[0;31m    from . import frontend_context\u001b[0m\n\u001b[0m    ^\u001b[0m\n\u001b[0;31mSyntaxError\u001b[0m\u001b[0;31m:\u001b[0m invalid syntax\n"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "965102c5-6a90-4ff8-b8f9-2e6e9b457805",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'mapping' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:25\u001b[0m\n\u001b[1;32m     21\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m plot\n\u001b[1;32m     22\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m frontend_context\n\u001b[1;32m     23\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     24\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[0;32m---> 25\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     26\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     28\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     30\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     33\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'mapping' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "986a2ed8-e689-4b3e-98e9-b9feba0e830b",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'mapping' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:26\u001b[0m\n\u001b[1;32m     22\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m frontend_context\n\u001b[1;32m     23\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mmapping\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     24\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[0;32m---> 26\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     28\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     29\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     31\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     34\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'mapping' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cc0733d1-d43a-4cb7-850d-daa7080c77da",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'mapping' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:26\u001b[0m\n\u001b[1;32m     22\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m frontend_context\n\u001b[1;32m     23\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mmapping\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     24\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[0;32m---> 26\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     28\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     29\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     31\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     34\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'mapping' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "f28db532-b2fb-42bd-8cae-7320fca7a0d4",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'mapping' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:26\u001b[0m\n\u001b[1;32m     22\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m frontend_context\n\u001b[1;32m     23\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m mapping \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m     24\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[0;32m---> 26\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     28\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     29\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     31\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     34\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'mapping' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "c278988a-5247-4a10-866c-06d15bc3bb39",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'settings_utils' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:27\u001b[0m\n\u001b[1;32m     22\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m frontend_context\n\u001b[1;32m     23\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m mapping \n\u001b[1;32m     24\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     25\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     26\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[0;32m---> 27\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     28\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     29\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     31\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     34\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'settings_utils' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3214b933-9a00-4e9a-b3ee-1899006b6739",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "ename": "NameError",
+     "evalue": "name 'export' is not defined",
+     "output_type": "error",
+     "traceback": [
+      "\u001b[0;31m---------------------------------------------------------------------------\u001b[0m",
+      "\u001b[0;31mNameError\u001b[0m                                 Traceback (most recent call last)",
+      "File \u001b[1;32m/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Cleansing_Projects/pcrime.qmd:5\u001b[0m\n\u001b[1;32m      3\u001b[0m \u001b[39mimport\u001b[39;00m \u001b[39mdatetime\u001b[39;00m \u001b[39mas\u001b[39;00m \u001b[39mdt\u001b[39;00m\n\u001b[1;32m      4\u001b[0m \u001b[39m# from plotnine import *\u001b[39;00m\n\u001b[0;32m----> 5\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39mlets_plot\u001b[39;00m \u001b[39mimport\u001b[39;00m \u001b[39m*\u001b[39m\n\u001b[1;32m      6\u001b[0m LetsPlot\u001b[39m.\u001b[39msetup_html()\n",
+      "File \u001b[0;32m~/Library/Python/3.12/lib/python/site-packages/lets_plot/__init__.py:29\u001b[0m\n\u001b[1;32m     23\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m mapping\n\u001b[1;32m     24\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m \u001b[39mimport\u001b[39;00m settings_utils \n\u001b[1;32m     25\u001b[0m __all__ \u001b[39m=\u001b[39m (plot\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     26\u001b[0m            frontend_context\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     27\u001b[0m            mapping\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     28\u001b[0m            settings_utils\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[0;32m---> 29\u001b[0m            export\u001b[39m.\u001b[39m__all__ \u001b[39m+\u001b[39m\n\u001b[1;32m     30\u001b[0m            [\u001b[39m'\u001b[39m\u001b[39mLetsPlot\u001b[39m\u001b[39m'\u001b[39m])\n\u001b[1;32m     32\u001b[0m \u001b[39mfrom\u001b[39;00m \u001b[39m.\u001b[39;00m\u001b[39mfrontend_context\u001b[39;00m \u001b[39mimport\u001b[39;00m _configuration \u001b[39mas\u001b[39;00m cfg\n\u001b[1;32m     35\u001b[0m \u001b[39mclass\u001b[39;00m \u001b[39mLetsPlot\u001b[39;00m:\n",
+      "\u001b[0;31mNameError\u001b[0m: name 'export' is not defined"
+     ]
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "b4ae2f9e-e626-49c0-84da-e4893a479455",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "\n",
+       "            <div id=\"iUW2vS\"></div>\n",
+       "            <script type=\"text/javascript\" data-lets-plot-script=\"library\">\n",
+       "                if(!window.letsPlotCallQueue) {\n",
+       "                    window.letsPlotCallQueue = [];\n",
+       "                }; \n",
+       "                window.letsPlotCall = function(f) {\n",
+       "                    window.letsPlotCallQueue.push(f);\n",
+       "                };\n",
+       "                (function() {\n",
+       "                    var script = document.createElement(\"script\");\n",
+       "                    script.type = \"text/javascript\";\n",
+       "                    script.src = \"https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.5.1/js-package/distr/lets-plot.min.js\";\n",
+       "                    script.onload = function() {\n",
+       "                        window.letsPlotCall = function(f) {f();};\n",
+       "                        window.letsPlotCallQueue.forEach(function(f) {f();});\n",
+       "                        window.letsPlotCallQueue = [];\n",
+       "                        \n",
+       "                    };\n",
+       "                    script.onerror = function(event) {\n",
+       "                        window.letsPlotCall = function(f) {};    // noop\n",
+       "                        window.letsPlotCallQueue = [];\n",
+       "                        var div = document.createElement(\"div\");\n",
+       "                        div.style.color = 'darkred';\n",
+       "                        div.textContent = 'Error loading Lets-Plot JS';\n",
+       "                        document.getElementById(\"iUW2vS\").appendChild(div);\n",
+       "                    };\n",
+       "                    var e = document.getElementById(\"iUW2vS\");\n",
+       "                    e.appendChild(script);\n",
+       "                })()\n",
+       "            </script>\n",
+       "            "
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cf1e8ecd-f094-4dd0-ad74-1c0a7bc05636",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>Address</th>\n",
+       "      <th>CaseNumber</th>\n",
+       "      <th>CrimeAgainst</th>\n",
+       "      <th>Neighborhood</th>\n",
+       "      <th>OccurDate</th>\n",
+       "      <th>OccurTime</th>\n",
+       "      <th>OffenseCategory</th>\n",
+       "      <th>OffenseType</th>\n",
+       "      <th>OpenDataLat</th>\n",
+       "      <th>OpenDataLon</th>\n",
+       "      <th>OpenDataX</th>\n",
+       "      <th>OpenDataY</th>\n",
+       "      <th>ReportDate</th>\n",
+       "      <th>OffenseCount</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>NaN</td>\n",
+       "      <td>15-X197430</td>\n",
+       "      <td>Person</td>\n",
+       "      <td>Piedmont</td>\n",
+       "      <td>5/12/2015</td>\n",
+       "      <td>1400</td>\n",
+       "      <td>Assault Offenses</td>\n",
+       "      <td>Intimidation</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>5/12/2015</td>\n",
+       "      <td>1</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>NaN</td>\n",
+       "      <td>15-X4282999</td>\n",
+       "      <td>Person</td>\n",
+       "      <td>Buckman West</td>\n",
+       "      <td>5/1/2015</td>\n",
+       "      <td>2143</td>\n",
+       "      <td>Assault Offenses</td>\n",
+       "      <td>Simple Assault</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>5/1/2015</td>\n",
+       "      <td>1</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>NaN</td>\n",
+       "      <td>15-X4283033</td>\n",
+       "      <td>Person</td>\n",
+       "      <td>University Park</td>\n",
+       "      <td>5/1/2015</td>\n",
+       "      <td>1625</td>\n",
+       "      <td>Assault Offenses</td>\n",
+       "      <td>Simple Assault</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>5/1/2015</td>\n",
+       "      <td>1</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>NaN</td>\n",
+       "      <td>15-X4283218</td>\n",
+       "      <td>Person</td>\n",
+       "      <td>Madison South</td>\n",
+       "      <td>5/1/2015</td>\n",
+       "      <td>1820</td>\n",
+       "      <td>Assault Offenses</td>\n",
+       "      <td>Simple Assault</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>5/1/2015</td>\n",
+       "      <td>1</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>NaN</td>\n",
+       "      <td>15-X4283218</td>\n",
+       "      <td>Person</td>\n",
+       "      <td>Madison South</td>\n",
+       "      <td>5/1/2015</td>\n",
+       "      <td>1820</td>\n",
+       "      <td>Kidnapping/Abduction</td>\n",
+       "      <td>Kidnapping/Abduction</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>5/1/2015</td>\n",
+       "      <td>1</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "  Address   CaseNumber CrimeAgainst     Neighborhood  OccurDate  OccurTime  \\\n",
+       "0     NaN   15-X197430       Person         Piedmont  5/12/2015       1400   \n",
+       "1     NaN  15-X4282999       Person     Buckman West   5/1/2015       2143   \n",
+       "2     NaN  15-X4283033       Person  University Park   5/1/2015       1625   \n",
+       "3     NaN  15-X4283218       Person    Madison South   5/1/2015       1820   \n",
+       "4     NaN  15-X4283218       Person    Madison South   5/1/2015       1820   \n",
+       "\n",
+       "        OffenseCategory           OffenseType  OpenDataLat  OpenDataLon  \\\n",
+       "0      Assault Offenses          Intimidation          NaN          NaN   \n",
+       "1      Assault Offenses        Simple Assault          NaN          NaN   \n",
+       "2      Assault Offenses        Simple Assault          NaN          NaN   \n",
+       "3      Assault Offenses        Simple Assault          NaN          NaN   \n",
+       "4  Kidnapping/Abduction  Kidnapping/Abduction          NaN          NaN   \n",
+       "\n",
+       "   OpenDataX  OpenDataY ReportDate  OffenseCount  \n",
+       "0        NaN        NaN  5/12/2015             1  \n",
+       "1        NaN        NaN   5/1/2015             1  \n",
+       "2        NaN        NaN   5/1/2015             1  \n",
+       "3        NaN        NaN   5/1/2015             1  \n",
+       "4        NaN        NaN   5/1/2015             1  "
+      ]
+     },
+     "execution_count": 34,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Load in Data\n",
+    "pcrime_15 = pd.read_csv('CrimeData-2015.csv')\n",
+    "pcrime_16 = pd.read_csv('CrimeData-2016.csv')\n",
+    "pcrime_17 = pd.read_csv('CrimeData-2017.csv')\n",
+    "pcrime_18 = pd.read_csv('CrimeData-2018.csv')\n",
+    "pcrime_19 = pd.read_csv('CrimeData-2019.csv')\n",
+    "pcrime_20 = pd.read_csv('CrimeData-2020.csv')\n",
+    "pcrime_21 = pd.read_csv('CrimeData-2021.csv')\n",
+    "pcrime_22 = pd.read_csv('CrimeData-2022.csv')\n",
+    "pcrime_23 = pd.read_csv('CrimeData-2023.csv')\n",
+    "\n",
+    "# Combine Datasets\n",
+    "pcrime_combined = pd.concat([pcrime_15,pcrime_16,pcrime_17,pcrime_18,pcrime_19,pcrime_20,pcrime_21,pcrime_22,pcrime_23], ignore_index=True)\n",
+    "pcrime_combined.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "a45b1c0f-7b1d-4ed0-b93f-c7b3873f4840",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "Address            44998\n",
+       "CaseNumber             0\n",
+       "CrimeAgainst           0\n",
+       "Neighborhood       17566\n",
+       "OccurDate              0\n",
+       "OccurTime              0\n",
+       "OffenseCategory        0\n",
+       "OffenseType            0\n",
+       "OpenDataLat        56511\n",
+       "OpenDataLon        56511\n",
+       "OpenDataX          56511\n",
+       "OpenDataY          56511\n",
+       "ReportDate             0\n",
+       "OffenseCount           0\n",
+       "dtype: int64"
+      ]
+     },
+     "execution_count": 35,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "pcrime_combined.isna().sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "8e03d651-a943-475f-9cdf-be240ed01f0f",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>CaseNumber</th>\n",
+       "      <th>CrimeAgainst</th>\n",
+       "      <th>Neighborhood</th>\n",
+       "      <th>OccurDate</th>\n",
+       "      <th>OccurTime</th>\n",
+       "      <th>OffenseCategory</th>\n",
+       "      <th>OffenseType</th>\n",
+       "      <th>OpenDataLat</th>\n",
+       "      <th>OpenDataLon</th>\n",
+       "      <th>ReportDate</th>\n",
+       "      <th>OffenseCount</th>\n",
+       "      <th>ReportDiff</th>\n",
+       "      <th>OccurDateTime</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>15-X197430</td>\n",
+       "      <td>Person</td>\n",
+       "      <td>Piedmont</td>\n",
+       "      <td>2015-05-12</td>\n",
+       "      <td>1400</td>\n",
+       "      <td>Assault Offenses</td>\n",
+       "      <td>Intimidation</td>\n",
+       "      <td>45.575321</td>\n",
+       "      <td>-122.669950</td>\n",
+       "      <td>2015-05-12</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>2015-05-12 14:00:00</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>15-X4282999</td>\n",
+       "      <td>Person</td>\n",
+       "      <td>Buckman West</td>\n",
+       "      <td>2015-05-01</td>\n",
+       "      <td>2143</td>\n",
+       "      <td>Assault Offenses</td>\n",
+       "      <td>Simple Assault</td>\n",
+       "      <td>45.517973</td>\n",
+       "      <td>-122.659334</td>\n",
+       "      <td>2015-05-01</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>2015-05-01 21:43:00</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>15-X4283033</td>\n",
+       "      <td>Person</td>\n",
+       "      <td>University Park</td>\n",
+       "      <td>2015-05-01</td>\n",
+       "      <td>1625</td>\n",
+       "      <td>Assault Offenses</td>\n",
+       "      <td>Simple Assault</td>\n",
+       "      <td>45.580393</td>\n",
+       "      <td>-122.727295</td>\n",
+       "      <td>2015-05-01</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>2015-05-01 16:25:00</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>15-X4283218</td>\n",
+       "      <td>Person</td>\n",
+       "      <td>Madison South</td>\n",
+       "      <td>2015-05-01</td>\n",
+       "      <td>1820</td>\n",
+       "      <td>Assault Offenses</td>\n",
+       "      <td>Simple Assault</td>\n",
+       "      <td>45.540839</td>\n",
+       "      <td>-122.578812</td>\n",
+       "      <td>2015-05-01</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>2015-05-01 18:20:00</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>15-X4283218</td>\n",
+       "      <td>Person</td>\n",
+       "      <td>Madison South</td>\n",
+       "      <td>2015-05-01</td>\n",
+       "      <td>1820</td>\n",
+       "      <td>Kidnapping/Abduction</td>\n",
+       "      <td>Kidnapping/Abduction</td>\n",
+       "      <td>45.540839</td>\n",
+       "      <td>-122.578812</td>\n",
+       "      <td>2015-05-01</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>2015-05-01 18:20:00</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>...</th>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "      <td>...</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>531881</th>\n",
+       "      <td>23-225440</td>\n",
+       "      <td>Society</td>\n",
+       "      <td>Sylvan-Highlands</td>\n",
+       "      <td>2023-08-27</td>\n",
+       "      <td>1420</td>\n",
+       "      <td>Weapon Law Violations</td>\n",
+       "      <td>Weapons Law Violations</td>\n",
+       "      <td>45.508945</td>\n",
+       "      <td>-122.731195</td>\n",
+       "      <td>2023-08-27</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>2023-08-27 14:20:00</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>531882</th>\n",
+       "      <td>23-51637</td>\n",
+       "      <td>Property</td>\n",
+       "      <td>Arlington Heights</td>\n",
+       "      <td>2023-02-23</td>\n",
+       "      <td>0330</td>\n",
+       "      <td>Motor Vehicle Theft</td>\n",
+       "      <td>Motor Vehicle Theft</td>\n",
+       "      <td>45.506744</td>\n",
+       "      <td>-122.713355</td>\n",
+       "      <td>2023-02-25</td>\n",
+       "      <td>1</td>\n",
+       "      <td>2</td>\n",
+       "      <td>2023-02-23 03:30:00</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>531883</th>\n",
+       "      <td>23-227984</td>\n",
+       "      <td>Person</td>\n",
+       "      <td>Goose Hollow</td>\n",
+       "      <td>2023-08-30</td>\n",
+       "      <td>0920</td>\n",
+       "      <td>Assault Offenses</td>\n",
+       "      <td>Aggravated Assault</td>\n",
+       "      <td>45.515555</td>\n",
+       "      <td>-122.693709</td>\n",
+       "      <td>2023-08-30</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>2023-08-30 09:20:00</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>531884</th>\n",
+       "      <td>23-40689</td>\n",
+       "      <td>Property</td>\n",
+       "      <td>Forest Park</td>\n",
+       "      <td>2023-02-13</td>\n",
+       "      <td>1130</td>\n",
+       "      <td>Motor Vehicle Theft</td>\n",
+       "      <td>Motor Vehicle Theft</td>\n",
+       "      <td>45.540437</td>\n",
+       "      <td>-122.736728</td>\n",
+       "      <td>2023-02-13</td>\n",
+       "      <td>1</td>\n",
+       "      <td>0</td>\n",
+       "      <td>2023-02-13 11:30:00</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>531885</th>\n",
+       "      <td>23-137815</td>\n",
+       "      <td>Property</td>\n",
+       "      <td>Forest Park</td>\n",
+       "      <td>2023-05-23</td>\n",
+       "      <td>1300</td>\n",
+       "      <td>Larceny Offenses</td>\n",
+       "      <td>Theft From Motor Vehicle</td>\n",
+       "      <td>45.540437</td>\n",
+       "      <td>-122.736728</td>\n",
+       "      <td>2023-05-26</td>\n",
+       "      <td>1</td>\n",
+       "      <td>3</td>\n",
+       "      <td>2023-05-23 13:00:00</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>521247 rows × 13 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "         CaseNumber CrimeAgainst       Neighborhood  OccurDate OccurTime  \\\n",
+       "0        15-X197430       Person           Piedmont 2015-05-12      1400   \n",
+       "1       15-X4282999       Person       Buckman West 2015-05-01      2143   \n",
+       "2       15-X4283033       Person    University Park 2015-05-01      1625   \n",
+       "3       15-X4283218       Person      Madison South 2015-05-01      1820   \n",
+       "4       15-X4283218       Person      Madison South 2015-05-01      1820   \n",
+       "...             ...          ...                ...        ...       ...   \n",
+       "531881    23-225440      Society   Sylvan-Highlands 2023-08-27      1420   \n",
+       "531882     23-51637     Property  Arlington Heights 2023-02-23      0330   \n",
+       "531883    23-227984       Person       Goose Hollow 2023-08-30      0920   \n",
+       "531884     23-40689     Property        Forest Park 2023-02-13      1130   \n",
+       "531885    23-137815     Property        Forest Park 2023-05-23      1300   \n",
+       "\n",
+       "              OffenseCategory               OffenseType  OpenDataLat  \\\n",
+       "0            Assault Offenses              Intimidation    45.575321   \n",
+       "1            Assault Offenses            Simple Assault    45.517973   \n",
+       "2            Assault Offenses            Simple Assault    45.580393   \n",
+       "3            Assault Offenses            Simple Assault    45.540839   \n",
+       "4        Kidnapping/Abduction      Kidnapping/Abduction    45.540839   \n",
+       "...                       ...                       ...          ...   \n",
+       "531881  Weapon Law Violations    Weapons Law Violations    45.508945   \n",
+       "531882    Motor Vehicle Theft       Motor Vehicle Theft    45.506744   \n",
+       "531883       Assault Offenses        Aggravated Assault    45.515555   \n",
+       "531884    Motor Vehicle Theft       Motor Vehicle Theft    45.540437   \n",
+       "531885       Larceny Offenses  Theft From Motor Vehicle    45.540437   \n",
+       "\n",
+       "        OpenDataLon ReportDate  OffenseCount  ReportDiff       OccurDateTime  \n",
+       "0       -122.669950 2015-05-12             1           0 2015-05-12 14:00:00  \n",
+       "1       -122.659334 2015-05-01             1           0 2015-05-01 21:43:00  \n",
+       "2       -122.727295 2015-05-01             1           0 2015-05-01 16:25:00  \n",
+       "3       -122.578812 2015-05-01             1           0 2015-05-01 18:20:00  \n",
+       "4       -122.578812 2015-05-01             1           0 2015-05-01 18:20:00  \n",
+       "...             ...        ...           ...         ...                 ...  \n",
+       "531881  -122.731195 2023-08-27             1           0 2023-08-27 14:20:00  \n",
+       "531882  -122.713355 2023-02-25             1           2 2023-02-23 03:30:00  \n",
+       "531883  -122.693709 2023-08-30             1           0 2023-08-30 09:20:00  \n",
+       "531884  -122.736728 2023-02-13             1           0 2023-02-13 11:30:00  \n",
+       "531885  -122.736728 2023-05-26             1           3 2023-05-23 13:00:00  \n",
+       "\n",
+       "[521247 rows x 13 columns]"
+      ]
+     },
+     "execution_count": 36,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Calculate average Lat/Lon for each neighborhood\n",
+    "neighborhood_means = pcrime_combined.groupby('Neighborhood')[['OpenDataLat','OpenDataLon']].transform('mean')\n",
+    "\n",
+    "# Clean the data\n",
+    "pcrime_cleaned = (\n",
+    "    pcrime_combined\n",
+    "    .drop(columns=['Address', 'OpenDataX', 'OpenDataY'])  # Drop X/Y\n",
+    "    .dropna(subset=['OpenDataLat', 'Neighborhood'], how='all')  # Drop missing lat/lon and Neighborhoods\n",
+    "    .assign(\n",
+    "        OccurDate=pd.to_datetime(pcrime_combined['OccurDate']),  # Convert dates to datetime\n",
+    "        ReportDate=pd.to_datetime(pcrime_combined['ReportDate']),\n",
+    "        ReportDiff=lambda x: (x['ReportDate'] - x['OccurDate']).dt.days,  # Calculate time to report\n",
+    "        OpenDataLat=lambda x: x['OpenDataLat'].fillna(neighborhood_means['OpenDataLat']),  # Fill missing Lat/Lon with average Lat/Lon of given neighborhood\n",
+    "        OpenDataLon=lambda x: x['OpenDataLon'].fillna(neighborhood_means['OpenDataLon']),\n",
+    "        OccurTime=lambda x: x['OccurTime'].astype(str).str.zfill(4),  # Ensure time is in HHMM format\n",
+    "        OccurDateTime=lambda x: pd.to_datetime(\n",
+    "            x['OccurDate'].dt.strftime('%Y-%m-%d') + ' ' + \n",
+    "            x['OccurTime'].str[:2] + ':' + x['OccurTime'].str[2:]\n",
+    "        )  # Combine date and formatted time into datetime\n",
+    "    )\n",
+    "    .loc[lambda x: x['OccurDateTime'].dt.year.between(2015, 2023)]  # Filter rows with years within 2015–2023\n",
+    ")\n",
+    "\n",
+    "pcrime_cleaned"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "3a7087b7-4ef4-4f79-a667-b7bb10d61e13",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "CaseNumber            0\n",
+       "CrimeAgainst          0\n",
+       "Neighborhood       7870\n",
+       "OccurDate             0\n",
+       "OccurTime             0\n",
+       "OffenseCategory       0\n",
+       "OffenseType           0\n",
+       "OpenDataLat           0\n",
+       "OpenDataLon           0\n",
+       "ReportDate            0\n",
+       "OffenseCount          0\n",
+       "ReportDiff            0\n",
+       "OccurDateTime         0\n",
+       "dtype: int64"
+      ]
+     },
+     "execution_count": 37,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "pcrime_cleaned.isna().sum()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "08242dad-c372-4040-818f-8de587ddd1a8",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "<ipython-input-38-a86a4b003fee>:14: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.\n"
+     ]
+    },
+    {
+     "data": {
+      "text/html": [
+       "   <div id=\"LtX0qd\"></div>\n",
+       "   <script type=\"text/javascript\" data-lets-plot-script=\"plot\">\n",
+       "   \n",
+       "   (function() {\n",
+       "   // ----------\n",
+       "   \n",
+       "   const forceImmediateRender = false;\n",
+       "   const responsive = false;\n",
+       "   \n",
+       "   let sizing = {\n",
+       "       width_mode: \"MIN\",\n",
+       "       height_mode: \"SCALED\",\n",
+       "       width: null, \n",
+       "       height: null \n",
+       "   };\n",
+       "   \n",
+       "   const preferredWidth = document.body.dataset.letsPlotPreferredWidth;\n",
+       "   if (preferredWidth !== undefined) {\n",
+       "       sizing = {\n",
+       "           width_mode: 'FIXED',\n",
+       "           height_mode: 'SCALED',\n",
+       "           width: parseFloat(preferredWidth)\n",
+       "       };\n",
+       "   }\n",
+       "   \n",
+       "   const containerDiv = document.getElementById(\"LtX0qd\");\n",
+       "   let fig = null;\n",
+       "   \n",
+       "   function renderPlot() {\n",
+       "       if (fig === null) {\n",
+       "           const plotSpec = {\n",
+       "\"__error_message\":\"Variable not found: 'factor(year)'. Variables in data frame: ['year', 'month', 'count']\"\n",
+       "};\n",
+       "           window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });\n",
+       "       } else {\n",
+       "           fig.updateView({});\n",
+       "       }\n",
+       "   }\n",
+       "   \n",
+       "   const renderImmediately = \n",
+       "       forceImmediateRender || (\n",
+       "           sizing.width_mode === 'FIXED' && \n",
+       "           (sizing.height_mode === 'FIXED' || sizing.height_mode === 'SCALED')\n",
+       "       );\n",
+       "   \n",
+       "   if (renderImmediately) {\n",
+       "       renderPlot();\n",
+       "   }\n",
+       "   \n",
+       "   if (!renderImmediately || responsive) {\n",
+       "       // Set up observer for initial sizing or continuous monitoring\n",
+       "       var observer = new ResizeObserver(function(entries) {\n",
+       "           for (let entry of entries) {\n",
+       "               if (entry.contentBoxSize && \n",
+       "                   entry.contentBoxSize[0].inlineSize > 0) {\n",
+       "                   if (!responsive && observer) {\n",
+       "                       observer.disconnect();\n",
+       "                       observer = null;\n",
+       "                   }\n",
+       "                   renderPlot();\n",
+       "                   if (!responsive) {\n",
+       "                       break;\n",
+       "                   }\n",
+       "               }\n",
+       "           }\n",
+       "       });\n",
+       "       \n",
+       "       observer.observe(containerDiv);\n",
+       "   }\n",
+       "   \n",
+       "   // ----------\n",
+       "   })();\n",
+       "   \n",
+       "   </script>"
+      ],
+      "text/plain": [
+       "<lets_plot.plot.core.PlotSpec at 0x17747e930>"
+      ]
+     },
+     "execution_count": 38,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "month_year = (pcrime_cleaned\n",
+    "    .assign(\n",
+    "        year=pcrime_cleaned['OccurDateTime'].dt.year,\n",
+    "        month=pcrime_cleaned['OccurDateTime'].dt.month) \n",
+    "    .query('year >= 2016')\\\n",
+    "    .groupby(['year', 'month'])\\\n",
+    "    ['OffenseCount'].sum()\\\n",
+    "    .reset_index()\\\n",
+    "    .rename(columns={'OffenseCount': 'count'})\n",
+    ")\n",
+    "\n",
+    "last_month_data = (\n",
+    "    month_year.groupby(\"year\")\n",
+    "    .apply(lambda df: df[df[\"month\"] == df[\"month\"].max()])\n",
+    "    .reset_index(drop=True)\n",
+    ")\n",
+    "\n",
+    "\n",
+    "month_year_fig = (\n",
+    "    ggplot(month_year, aes(x=\"month\", y=\"count\", color=\"factor(year)\", group=\"year\")) +\n",
+    "    geom_smooth() +\n",
+    "    geom_text(data=last_month_data, mapping=aes(label=\"year\", color=\"factor(year)\"), size=8) +  # Equivalent of geom_label_repel\n",
+    "    labs(title=\"Offense Counts by Month and Year\", x=\"Month\", y=\"Offense Count\") +\n",
+    "    theme_minimal() +\n",
+    "    theme(legend_position=\"none\") +\n",
+    "    scale_x_continuous(breaks=range(1, 13))\n",
+    ")\n",
+    "\n",
+    "\n",
+    "month_year_fig\n",
+    "# Year Count\n",
+    "# pcrime_cleaned['OccurDateTime'] = pd.to_datetime(pcrime_cleaned['OccurDateTime'])\n",
+    "\n",
+    "# year_count = pcrime_cleaned.groupby(pcrime_cleaned['OccurDateTime'].dt.year)['OffenseCount'].sum().reset_index()\n",
+    "\n",
+    "# year_count.rename(columns={year_count.columns[0]: 'Year'}, inplace=True)\n",
+    "\n",
+    "# year_count_fig = ggplot(year_count, aes(x='Year', y='OffenseCount')) + \\\n",
+    "#     geom_line(color='#2e6f40', size=1.5) + \\\n",
+    "#     geom_point(color='#2e6f40', size=3) + \\\n",
+    "#     labs(title='Offense Counts by Year', x='Year', y='Offense Count') + \\\n",
+    "#     theme_minimal() + \\\n",
+    "#     theme(\n",
+    "#         plot_title=element_text(size=16, face='bold'),\n",
+    "#         axis_title_x=element_text(size=12, face='bold'),\n",
+    "#         axis_title_y=element_text(size=12, face='bold'),\n",
+    "#         axis_text_x=element_text(size=10, angle=45), \n",
+    "#         axis_text_y=element_text(size=10),\n",
+    "#         panel_grid_minor=element_blank()\n",
+    "#     )\n",
+    "\n",
+    "# year_count_fig"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "71f6830b-0d80-4d19-80bc-f2b5f74d2380",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "<ipython-input-39-aa193199c922>:14: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.\n"
+     ]
+    },
+    {
+     "data": {
+      "text/html": [
+       "   <div id=\"xAKldT\"></div>\n",
+       "   <script type=\"text/javascript\" data-lets-plot-script=\"plot\">\n",
+       "   \n",
+       "   (function() {\n",
+       "   // ----------\n",
+       "   \n",
+       "   const forceImmediateRender = false;\n",
+       "   const responsive = false;\n",
+       "   \n",
+       "   let sizing = {\n",
+       "       width_mode: \"MIN\",\n",
+       "       height_mode: \"SCALED\",\n",
+       "       width: null, \n",
+       "       height: null \n",
+       "   };\n",
+       "   \n",
+       "   const preferredWidth = document.body.dataset.letsPlotPreferredWidth;\n",
+       "   if (preferredWidth !== undefined) {\n",
+       "       sizing = {\n",
+       "           width_mode: 'FIXED',\n",
+       "           height_mode: 'SCALED',\n",
+       "           width: parseFloat(preferredWidth)\n",
+       "       };\n",
+       "   }\n",
+       "   \n",
+       "   const containerDiv = document.getElementById(\"xAKldT\");\n",
+       "   let fig = null;\n",
+       "   \n",
+       "   function renderPlot() {\n",
+       "       if (fig === null) {\n",
+       "           const plotSpec = {\n",
+       "\"__error_message\":\"Variable not found: 'factor(year)'. Variables in data frame: ['year', 'month', 'count']\"\n",
+       "};\n",
+       "           window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });\n",
+       "       } else {\n",
+       "           fig.updateView({});\n",
+       "       }\n",
+       "   }\n",
+       "   \n",
+       "   const renderImmediately = \n",
+       "       forceImmediateRender || (\n",
+       "           sizing.width_mode === 'FIXED' && \n",
+       "           (sizing.height_mode === 'FIXED' || sizing.height_mode === 'SCALED')\n",
+       "       );\n",
+       "   \n",
+       "   if (renderImmediately) {\n",
+       "       renderPlot();\n",
+       "   }\n",
+       "   \n",
+       "   if (!renderImmediately || responsive) {\n",
+       "       // Set up observer for initial sizing or continuous monitoring\n",
+       "       var observer = new ResizeObserver(function(entries) {\n",
+       "           for (let entry of entries) {\n",
+       "               if (entry.contentBoxSize && \n",
+       "                   entry.contentBoxSize[0].inlineSize > 0) {\n",
+       "                   if (!responsive && observer) {\n",
+       "                       observer.disconnect();\n",
+       "                       observer = null;\n",
+       "                   }\n",
+       "                   renderPlot();\n",
+       "                   if (!responsive) {\n",
+       "                       break;\n",
+       "                   }\n",
+       "               }\n",
+       "           }\n",
+       "       });\n",
+       "       \n",
+       "       observer.observe(containerDiv);\n",
+       "   }\n",
+       "   \n",
+       "   // ----------\n",
+       "   })();\n",
+       "   \n",
+       "   </script>"
+      ],
+      "text/plain": [
+       "<lets_plot.plot.core.PlotSpec at 0x177b9dd90>"
+      ]
+     },
+     "execution_count": 39,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "month_year = (pcrime_cleaned\n",
+    "    .assign(\n",
+    "        year=pcrime_cleaned['OccurDateTime'].dt.year,\n",
+    "        month=pcrime_cleaned['OccurDateTime'].dt.month) \n",
+    "    .query('year >= 2016')\\\n",
+    "    .groupby(['year', 'month'])\\\n",
+    "    ['OffenseCount'].sum()\\\n",
+    "    .reset_index()\\\n",
+    "    .rename(columns={'OffenseCount': 'count'})\n",
+    ")\n",
+    "\n",
+    "last_month_data = (\n",
+    "    month_year.groupby(\"year\")\n",
+    "    .apply(lambda df: df[df[\"month\"] == df[\"month\"].max()])\n",
+    "    .reset_index(drop=True)\n",
+    ")\n",
+    "\n",
+    "\n",
+    "month_year_fig = (\n",
+    "    ggplot(month_year, aes(x=\"month\", y=\"count\", color=\"factor(year)\", group=\"year\")) +\n",
+    "    geom_smooth() +\n",
+    "    geom_text(data=last_month_data, mapping=aes(label=\"year\", color=\"factor(year)\"), size=8) +  # Equivalent of geom_label_repel\n",
+    "    labs(title=\"Offense Counts by Month and Year\", x=\"Month\", y=\"Offense Count\") +\n",
+    "    theme_minimal() +\n",
+    "    theme(legend_position=\"none\") +\n",
+    "    scale_x_continuous(breaks=range(1, 13))\n",
+    ")\n",
+    "\n",
+    "\n",
+    "month_year_fig\n",
+    "# Year Count\n",
+    "# pcrime_cleaned['OccurDateTime'] = pd.to_datetime(pcrime_cleaned['OccurDateTime'])\n",
+    "\n",
+    "# year_count = pcrime_cleaned.groupby(pcrime_cleaned['OccurDateTime'].dt.year)['OffenseCount'].sum().reset_index()\n",
+    "\n",
+    "# year_count.rename(columns={year_count.columns[0]: 'Year'}, inplace=True)\n",
+    "\n",
+    "# year_count_fig = ggplot(year_count, aes(x='Year', y='OffenseCount')) + \\\n",
+    "#     geom_line(color='#2e6f40', size=1.5) + \\\n",
+    "#     geom_point(color='#2e6f40', size=3) + \\\n",
+    "#     labs(title='Offense Counts by Year', x='Year', y='Offense Count') + \\\n",
+    "#     theme_minimal() + \\\n",
+    "#     theme(\n",
+    "#         plot_title=element_text(size=16, face='bold'),\n",
+    "#         axis_title_x=element_text(size=12, face='bold'),\n",
+    "#         axis_title_y=element_text(size=12, face='bold'),\n",
+    "#         axis_text_x=element_text(size=10, angle=45), \n",
+    "#         axis_text_y=element_text(size=10),\n",
+    "#         panel_grid_minor=element_blank()\n",
+    "#     )\n",
+    "\n",
+    "# year_count_fig"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "2d0d9def-8079-403b-b695-8f37c52357ce",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "<ipython-input-40-107b1e607f20>:14: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.\n"
+     ]
+    },
+    {
+     "data": {
+      "text/html": [
+       "   <div id=\"ioZ7cK\"></div>\n",
+       "   <script type=\"text/javascript\" data-lets-plot-script=\"plot\">\n",
+       "   \n",
+       "   (function() {\n",
+       "   // ----------\n",
+       "   \n",
+       "   const forceImmediateRender = false;\n",
+       "   const responsive = false;\n",
+       "   \n",
+       "   let sizing = {\n",
+       "       width_mode: \"MIN\",\n",
+       "       height_mode: \"SCALED\",\n",
+       "       width: null, \n",
+       "       height: null \n",
+       "   };\n",
+       "   \n",
+       "   const preferredWidth = document.body.dataset.letsPlotPreferredWidth;\n",
+       "   if (preferredWidth !== undefined) {\n",
+       "       sizing = {\n",
+       "           width_mode: 'FIXED',\n",
+       "           height_mode: 'SCALED',\n",
+       "           width: parseFloat(preferredWidth)\n",
+       "       };\n",
+       "   }\n",
+       "   \n",
+       "   const containerDiv = document.getElementById(\"ioZ7cK\");\n",
+       "   let fig = null;\n",
+       "   \n",
+       "   function renderPlot() {\n",
+       "       if (fig === null) {\n",
+       "           const plotSpec = {\n",
+       "\"__error_message\":\"Variable not found: 'factor(year)'. Variables in data frame: ['year', 'month', 'count']\"\n",
+       "};\n",
+       "           window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });\n",
+       "       } else {\n",
+       "           fig.updateView({});\n",
+       "       }\n",
+       "   }\n",
+       "   \n",
+       "   const renderImmediately = \n",
+       "       forceImmediateRender || (\n",
+       "           sizing.width_mode === 'FIXED' && \n",
+       "           (sizing.height_mode === 'FIXED' || sizing.height_mode === 'SCALED')\n",
+       "       );\n",
+       "   \n",
+       "   if (renderImmediately) {\n",
+       "       renderPlot();\n",
+       "   }\n",
+       "   \n",
+       "   if (!renderImmediately || responsive) {\n",
+       "       // Set up observer for initial sizing or continuous monitoring\n",
+       "       var observer = new ResizeObserver(function(entries) {\n",
+       "           for (let entry of entries) {\n",
+       "               if (entry.contentBoxSize && \n",
+       "                   entry.contentBoxSize[0].inlineSize > 0) {\n",
+       "                   if (!responsive && observer) {\n",
+       "                       observer.disconnect();\n",
+       "                       observer = null;\n",
+       "                   }\n",
+       "                   renderPlot();\n",
+       "                   if (!responsive) {\n",
+       "                       break;\n",
+       "                   }\n",
+       "               }\n",
+       "           }\n",
+       "       });\n",
+       "       \n",
+       "       observer.observe(containerDiv);\n",
+       "   }\n",
+       "   \n",
+       "   // ----------\n",
+       "   })();\n",
+       "   \n",
+       "   </script>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "month_year = (pcrime_cleaned\n",
+    "    .assign(\n",
+    "        year=pcrime_cleaned['OccurDateTime'].dt.year,\n",
+    "        month=pcrime_cleaned['OccurDateTime'].dt.month) \n",
+    "    .query('year >= 2016')\\\n",
+    "    .groupby(['year', 'month'])\\\n",
+    "    ['OffenseCount'].sum()\\\n",
+    "    .reset_index()\\\n",
+    "    .rename(columns={'OffenseCount': 'count'})\n",
+    ")\n",
+    "\n",
+    "last_month_data = (\n",
+    "    month_year.groupby(\"year\")\n",
+    "    .apply(lambda df: df[df[\"month\"] == df[\"month\"].max()])\n",
+    "    .reset_index(drop=True)\n",
+    ")\n",
+    "\n",
+    "\n",
+    "month_year_fig = (\n",
+    "    ggplot(month_year, aes(x=\"month\", y=\"count\", color=\"factor(year)\", group=\"year\")) +\n",
+    "    geom_smooth() +\n",
+    "    geom_text(data=last_month_data, mapping=aes(label=\"year\", color=\"factor(year)\"), size=8) +  # Equivalent of geom_label_repel\n",
+    "    labs(title=\"Offense Counts by Month and Year\", x=\"Month\", y=\"Offense Count\") +\n",
+    "    theme_minimal() +\n",
+    "    theme(legend_position=\"none\") +\n",
+    "    scale_x_continuous(breaks=range(1, 13))\n",
+    ")\n",
+    "\n",
+    "\n",
+    "month_year_fig.show()\n",
+    "# Year Count\n",
+    "# pcrime_cleaned['OccurDateTime'] = pd.to_datetime(pcrime_cleaned['OccurDateTime'])\n",
+    "\n",
+    "# year_count = pcrime_cleaned.groupby(pcrime_cleaned['OccurDateTime'].dt.year)['OffenseCount'].sum().reset_index()\n",
+    "\n",
+    "# year_count.rename(columns={year_count.columns[0]: 'Year'}, inplace=True)\n",
+    "\n",
+    "# year_count_fig = ggplot(year_count, aes(x='Year', y='OffenseCount')) + \\\n",
+    "#     geom_line(color='#2e6f40', size=1.5) + \\\n",
+    "#     geom_point(color='#2e6f40', size=3) + \\\n",
+    "#     labs(title='Offense Counts by Year', x='Year', y='Offense Count') + \\\n",
+    "#     theme_minimal() + \\\n",
+    "#     theme(\n",
+    "#         plot_title=element_text(size=16, face='bold'),\n",
+    "#         axis_title_x=element_text(size=12, face='bold'),\n",
+    "#         axis_title_y=element_text(size=12, face='bold'),\n",
+    "#         axis_text_x=element_text(size=10, angle=45), \n",
+    "#         axis_text_y=element_text(size=10),\n",
+    "#         panel_grid_minor=element_blank()\n",
+    "#     )\n",
+    "\n",
+    "# year_count_fig"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "452b6989-2a63-4c6f-b405-3ceebe9ac781",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "\n",
+       "            <div id=\"idRgac\"></div>\n",
+       "            <script type=\"text/javascript\" data-lets-plot-script=\"library\">\n",
+       "                if(!window.letsPlotCallQueue) {\n",
+       "                    window.letsPlotCallQueue = [];\n",
+       "                }; \n",
+       "                window.letsPlotCall = function(f) {\n",
+       "                    window.letsPlotCallQueue.push(f);\n",
+       "                };\n",
+       "                (function() {\n",
+       "                    var script = document.createElement(\"script\");\n",
+       "                    script.type = \"text/javascript\";\n",
+       "                    script.src = \"https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.5.1/js-package/distr/lets-plot.min.js\";\n",
+       "                    script.onload = function() {\n",
+       "                        window.letsPlotCall = function(f) {f();};\n",
+       "                        window.letsPlotCallQueue.forEach(function(f) {f();});\n",
+       "                        window.letsPlotCallQueue = [];\n",
+       "                        \n",
+       "                    };\n",
+       "                    script.onerror = function(event) {\n",
+       "                        window.letsPlotCall = function(f) {};    // noop\n",
+       "                        window.letsPlotCallQueue = [];\n",
+       "                        var div = document.createElement(\"div\");\n",
+       "                        div.style.color = 'darkred';\n",
+       "                        div.textContent = 'Error loading Lets-Plot JS';\n",
+       "                        document.getElementById(\"idRgac\").appendChild(div);\n",
+       "                    };\n",
+       "                    var e = document.getElementById(\"idRgac\");\n",
+       "                    e.appendChild(script);\n",
+       "                })()\n",
+       "            </script>\n",
+       "            "
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "import datetime as dt\n",
+    "# from plotnine import *\n",
+    "from lets_plot import *\n",
+    "LetsPlot.setup_html()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "7e19b423-7881-4c88-9e2e-2077052bf097",
+   "metadata": {
+    "vscode": {
+     "languageId": "quarto"
+    }
+   },
+   "outputs": [
+    {
+     "name": "stderr",
+     "output_type": "stream",
+     "text": [
+      "<ipython-input-42-107b1e607f20>:14: DeprecationWarning: DataFrameGroupBy.apply operated on the grouping columns. This behavior is deprecated, and in a future version of pandas the grouping columns will be excluded from the operation. Either pass `include_groups=False` to exclude the groupings or explicitly select the grouping columns after groupby to silence this warning.\n"
+     ]
+    },
+    {
+     "data": {
+      "text/html": [
+       "   <div id=\"tHJSpJ\"></div>\n",
+       "   <script type=\"text/javascript\" data-lets-plot-script=\"plot\">\n",
+       "   \n",
+       "   (function() {\n",
+       "   // ----------\n",
+       "   \n",
+       "   const forceImmediateRender = false;\n",
+       "   const responsive = false;\n",
+       "   \n",
+       "   let sizing = {\n",
+       "       width_mode: \"MIN\",\n",
+       "       height_mode: \"SCALED\",\n",
+       "       width: null, \n",
+       "       height: null \n",
+       "   };\n",
+       "   \n",
+       "   const preferredWidth = document.body.dataset.letsPlotPreferredWidth;\n",
+       "   if (preferredWidth !== undefined) {\n",
+       "       sizing = {\n",
+       "           width_mode: 'FIXED',\n",
+       "           height_mode: 'SCALED',\n",
+       "           width: parseFloat(preferredWidth)\n",
+       "       };\n",
+       "   }\n",
+       "   \n",
+       "   const containerDiv = document.getElementById(\"tHJSpJ\");\n",
+       "   let fig = null;\n",
+       "   \n",
+       "   function renderPlot() {\n",
+       "       if (fig === null) {\n",
+       "           const plotSpec = {\n",
+       "\"__error_message\":\"Variable not found: 'factor(year)'. Variables in data frame: ['year', 'month', 'count']\"\n",
+       "};\n",
+       "           window.letsPlotCall(function() { fig = LetsPlot.buildPlotFromProcessedSpecs(plotSpec, containerDiv, sizing); });\n",
+       "       } else {\n",
+       "           fig.updateView({});\n",
+       "       }\n",
+       "   }\n",
+       "   \n",
+       "   const renderImmediately = \n",
+       "       forceImmediateRender || (\n",
+       "           sizing.width_mode === 'FIXED' && \n",
+       "           (sizing.height_mode === 'FIXED' || sizing.height_mode === 'SCALED')\n",
+       "       );\n",
+       "   \n",
+       "   if (renderImmediately) {\n",
+       "       renderPlot();\n",
+       "   }\n",
+       "   \n",
+       "   if (!renderImmediately || responsive) {\n",
+       "       // Set up observer for initial sizing or continuous monitoring\n",
+       "       var observer = new ResizeObserver(function(entries) {\n",
+       "           for (let entry of entries) {\n",
+       "               if (entry.contentBoxSize && \n",
+       "                   entry.contentBoxSize[0].inlineSize > 0) {\n",
+       "                   if (!responsive && observer) {\n",
+       "                       observer.disconnect();\n",
+       "                       observer = null;\n",
+       "                   }\n",
+       "                   renderPlot();\n",
+       "                   if (!responsive) {\n",
+       "                       break;\n",
+       "                   }\n",
+       "               }\n",
+       "           }\n",
+       "       });\n",
+       "       \n",
+       "       observer.observe(containerDiv);\n",
+       "   }\n",
+       "   \n",
+       "   // ----------\n",
+       "   })();\n",
+       "   \n",
+       "   </script>"
+      ]
+     },
+     "metadata": {},
+     "output_type": "display_data"
+    }
+   ],
+   "source": [
+    "month_year = (pcrime_cleaned\n",
+    "    .assign(\n",
+    "        year=pcrime_cleaned['OccurDateTime'].dt.year,\n",
+    "        month=pcrime_cleaned['OccurDateTime'].dt.month) \n",
+    "    .query('year >= 2016')\\\n",
+    "    .groupby(['year', 'month'])\\\n",
+    "    ['OffenseCount'].sum()\\\n",
+    "    .reset_index()\\\n",
+    "    .rename(columns={'OffenseCount': 'count'})\n",
+    ")\n",
+    "\n",
+    "last_month_data = (\n",
+    "    month_year.groupby(\"year\")\n",
+    "    .apply(lambda df: df[df[\"month\"] == df[\"month\"].max()])\n",
+    "    .reset_index(drop=True)\n",
+    ")\n",
+    "\n",
+    "\n",
+    "month_year_fig = (\n",
+    "    ggplot(month_year, aes(x=\"month\", y=\"count\", color=\"factor(year)\", group=\"year\")) +\n",
+    "    geom_smooth() +\n",
+    "    geom_text(data=last_month_data, mapping=aes(label=\"year\", color=\"factor(year)\"), size=8) +  # Equivalent of geom_label_repel\n",
+    "    labs(title=\"Offense Counts by Month and Year\", x=\"Month\", y=\"Offense Count\") +\n",
+    "    theme_minimal() +\n",
+    "    theme(legend_position=\"none\") +\n",
+    "    scale_x_continuous(breaks=range(1, 13))\n",
+    ")\n",
+    "\n",
+    "\n",
+    "month_year_fig.show()\n",
+    "# Year Count\n",
+    "# pcrime_cleaned['OccurDateTime'] = pd.to_datetime(pcrime_cleaned['OccurDateTime'])\n",
+    "\n",
+    "# year_count = pcrime_cleaned.groupby(pcrime_cleaned['OccurDateTime'].dt.year)['OffenseCount'].sum().reset_index()\n",
+    "\n",
+    "# year_count.rename(columns={year_count.columns[0]: 'Year'}, inplace=True)\n",
+    "\n",
+    "# year_count_fig = ggplot(year_count, aes(x='Year', y='OffenseCount')) + \\\n",
+    "#     geom_line(color='#2e6f40', size=1.5) + \\\n",
+    "#     geom_point(color='#2e6f40', size=3) + \\\n",
+    "#     labs(title='Offense Counts by Year', x='Year', y='Offense Count') + \\\n",
+    "#     theme_minimal() + \\\n",
+    "#     theme(\n",
+    "#         plot_title=element_text(size=16, face='bold'),\n",
+    "#         axis_title_x=element_text(size=12, face='bold'),\n",
+    "#         axis_title_y=element_text(size=12, face='bold'),\n",
+    "#         axis_text_x=element_text(size=10, angle=45), \n",
+    "#         axis_text_y=element_text(size=10),\n",
+    "#         panel_grid_minor=element_blank()\n",
+    "#     )\n",
+    "\n",
+    "# year_count_fig"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "name": "python",
+   "version": "3.12.6"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 2
+}
