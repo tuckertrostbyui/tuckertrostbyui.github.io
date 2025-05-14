@@ -723,5 +723,35 @@
     "title": "Tucker Trost",
     "section": "",
     "text": "Phone: (971) 420-5397\nEmail: Tuckertrost16@gmail.com\nLinkedIn: linkedin.com/in/tuckertrost"
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "My Data Science Blog",
+    "section": "",
+    "text": "Starting My Journey in NLP\n\n\n\nDate: May 5th, 2025\nLately I’ve been diving into Natural Language Processing (NLP) for my senior project. I’ve been teaching myself the basics through podcasts, books, and working with Python’s NLTK library.\nIt’s been super cool to see how widely NLP is used. Everything from sentiment analysis to search engines to chatbots. There is so much information to be extracted from text and so much data in the world is text.\nTo help with my learning, I made a quick NLP vocab cheat sheet with some core terms. Figured I’d share in case it could help anyone else.\nExcited to continue learning and sharing my progress as I go!\n\n\n\nNLP CheatSheet",
+    "crumbs": [
+      "Blog"
+    ]
+  },
+  {
+    "objectID": "blog.html#title-2-header",
+    "href": "blog.html#title-2-header",
+    "title": "Blog",
+    "section": "",
+    "text": "My Blog Post Title\n\n\n\nDate: 2025-05-14\nTags: Data Science, Resume, Markdown\nHere is a short summary of the post.\n\n\nMarkDown Basics",
+    "crumbs": [
+      "Blog"
+    ]
+  },
+  {
+    "objectID": "blog.html#natural-language-processing",
+    "href": "blog.html#natural-language-processing",
+    "title": "My Data Science Blog",
+    "section": "",
+    "text": "Starting My Journey in NLP\n\n\n\nDate: May 5th, 2025\nLately I’ve been diving into Natural Language Processing (NLP) for my senior project. I’ve been teaching myself the basics through podcasts, books, and working with Python’s NLTK library.\nIt’s been super cool to see how widely NLP is used. Everything from sentiment analysis to search engines to chatbots. There is so much information to be extracted from text and so much data in the world is text.\nTo help with my learning, I made a quick NLP vocab cheat sheet with some core terms. Figured I’d share in case it could help anyone else.\nExcited to continue learning and sharing my progress as I go!\n\n\n\nNLP CheatSheet",
+    "crumbs": [
+      "Blog"
+    ]
   }
 ]

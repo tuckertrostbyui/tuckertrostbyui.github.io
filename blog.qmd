@@ -1,10 +1,23 @@
 ---
-title: "Blog"
-subtitle: "my data science portfolio"
+title: "My Data Science Blog"
 # use quarto markdown to 
 ---
 
-# Title 1 Header
-## Title 2 Header
+# Blog Posts
+## Natural Language Processing
 
-[MarkDown Basics](https://quarto.org/docs/authoring/markdown-basics.html#links-images)
+::: {.callout-note title="Starting My Journey in NLP"}
+**Date:** May 5th, 2025
+
+Lately I've been diving into Natural Language Processing (NLP) for my senior project. I've been teaching myself the basics through podcasts, books, and working with Python's NLTK library.
+
+It's been super cool to see how widely NLP is used. Everything from sentiment analysis to search engines to chatbots. There is so much information to be extracted from text and so much data in the world is text. 
+
+To help with my learning, I made a quick NLP vocab cheat sheet with some core terms. Figured I'd share in case it could help anyone else.
+
+Excited to continue learning and sharing my progress as I go!
+
+ ![NLP CheatSheet](nlpcheatsheet.jpg)
+:::
+
+
