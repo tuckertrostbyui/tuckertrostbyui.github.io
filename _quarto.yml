@@ -25,8 +25,8 @@ website:
         file: resume.qmd
       - text: "Projects"
         file: cleansing.qmd
-      #- text: "Data Exploration"
-      #  file: exploration.qmd
+      - text: "Blog"
+        file: blog.qmd
       #- text: "Story Telling"
       #  file: story_telling.qmd
       #- text: "SQL"
@@ -86,12 +86,12 @@ website:
         # - text: "Project 5"
         #   file: Cleansing_Projects/project5.qmd
         # - text: "---"
-    # - title: "Data Exploration"
-    #   style: "docked"
-    #   background: light
-    #   contents:
-    #     - text: "Data Exploration"
-    #       file: exploration.qmd
+    - title: "Blog"
+      style: "docked"
+      background: light
+      contents:
+        - text: "Blog"
+          file: blog.qmd
     #     - text: "---"
     #     - text: "Project 1"
     #       file: Exploration_Projects/project1.qmd
