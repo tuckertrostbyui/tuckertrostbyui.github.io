@@ -777,9 +777,53 @@
   {
     "objectID": "Blogs/love_island_nlp.html",
     "href": "Blogs/love_island_nlp.html",
-    "title": "Tucker Trost - Data Science Portfolio",
+    "title": "Love Island NLP",
     "section": "",
-    "text": "Back to top",
+    "text": "Over the past few weeks, I’ve been diving headfirst into the world of Natural Language Processing (NLP), and honestly it’s been kind of mind-blowing. Learning the tools and exploring the endless use cases has completely opened my eyes to just how powerful NLP can be. So much of the world’s data is text, and being able to actually make sense of it and pull meaningful insights? Total game changer.\nOne area I’ve been particularly obsessed with is sentiment analysis, figuring out whether a piece of text sounds positive, neutral, or negative. I started off with the basics, experimenting with built-in datasets from the NLTK library and playing around with the VADER lexicon. But the real magic started happening when I got my hands on pretrained models from Hugging Face, models that are trained on specific types of text like tweets.\nNow here’s where things took a turn. My wife recently got into Love Island USA, a show where a bunch of attractive 20-somethings date each other in a villa in Fiji. I originally watched to be a supportive husband… but I’ll admit it, I got hooked. The drama, the storylines, the unexpected twists, I was all in. And somewhere along the way, after watching my opinion of a contestant totally shift over time, it hit me: what if I could track public sentiment like that?\nThat spark turned into this project—analyzing Reddit discussions of Love Island USA to track how the internet feels about each contestant as the season unfolds.",
+    "crumbs": [
+      "Blog",
+      "Love Island NLP"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html#background",
+    "href": "Blogs/love_island_nlp.html#background",
+    "title": "Love Island NLP",
+    "section": "",
+    "text": "Over the past few weeks, I’ve been diving headfirst into the world of Natural Language Processing (NLP), and honestly it’s been kind of mind-blowing. Learning the tools and exploring the endless use cases has completely opened my eyes to just how powerful NLP can be. So much of the world’s data is text, and being able to actually make sense of it and pull meaningful insights? Total game changer.\nOne area I’ve been particularly obsessed with is sentiment analysis, figuring out whether a piece of text sounds positive, neutral, or negative. I started off with the basics, experimenting with built-in datasets from the NLTK library and playing around with the VADER lexicon. But the real magic started happening when I got my hands on pretrained models from Hugging Face, models that are trained on specific types of text like tweets.\nNow here’s where things took a turn. My wife recently got into Love Island USA, a show where a bunch of attractive 20-somethings date each other in a villa in Fiji. I originally watched to be a supportive husband… but I’ll admit it, I got hooked. The drama, the storylines, the unexpected twists, I was all in. And somewhere along the way, after watching my opinion of a contestant totally shift over time, it hit me: what if I could track public sentiment like that?\nThat spark turned into this project—analyzing Reddit discussions of Love Island USA to track how the internet feels about each contestant as the season unfolds.",
+    "crumbs": [
+      "Blog",
+      "Love Island NLP"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html#grabbing-data",
+    "href": "Blogs/love_island_nlp.html#grabbing-data",
+    "title": "Love Island NLP",
+    "section": "Grabbing Data",
+    "text": "Grabbing Data\nGrabbing data for this was surprisingly simple. There is a strong community following for the show under the subreddit r/loveislandusa. Within this subreddit, there are post-episode discussion threads for each episode. Each episode tends to get around 8k-15k comments, which is plenty for me to run my analysis.\nReddit also makes it very easy to use their data. After signing up for an api key, a simple call to grab all the relevant comments from each episodes discussion thread got me all the data I needed to get going.\n\n\nShow the code\nimport pandas as pd\n\nli_full = pd.read_csv('/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Blogs/li_full.csv')\n\nli_full[['comment','score','created_utc','episode_title']].head()\n\n\n\n\n\n\n\n\n\ncomment\nscore\ncreated_utc\nepisode_title\n\n\n\n\n0\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n1\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n2\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n3\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n4\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion",
+    "crumbs": [
+      "Blog",
+      "Love Island NLP"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html#sentiment-analysis",
+    "href": "Blogs/love_island_nlp.html#sentiment-analysis",
+    "title": "Love Island NLP",
+    "section": "Sentiment Analysis",
+    "text": "Sentiment Analysis\nNow that I had my data, it was time to do some named-entity recognition, to pull the information I neeed. For example, if a comment talkes negatively about the contestant Huda but positivly about Jeramiah, I need to make sure I get the proper sentiment scores for each contestant within that single comment.\nI was also able to use a pretrained model from hugging face that is trained specifically on the casual nature of discussion boards like twitter and reddit. This will work perfectly for our analysis\n\n\nShow the code\nimport re\nimport swifter \nfrom transformers import AutoTokenizer, AutoModelForSequenceClassification\nimport torch\nimport numpy as np\n\n# Initialize islander list\nislanders = ['Chelley','Olandria','Huda','Ace','Nic','Taylor','Jeremiah','Austin','Charlie','Cierra','Hannah','Amaya','Pepe','Jalen','Iris','Yulissa','Belle-A']\n\n# Call Hugginface Model\ntokenizer = AutoTokenizer.from_pretrained(\"cardiffnlp/twitter-roberta-base-sentiment\")\nmodel = AutoModelForSequenceClassification.from_pretrained(\"cardiffnlp/twitter-roberta-base-sentiment\")\n\n\n\n\nShow the code\nimport nltk\nfrom nltk.tokenize import sent_tokenize\nnltk.download('punkt')\n\n# Create Sentiment Function\n# def targeted_sentiment(comment, islanders):\n#     islander_sentiment = {}\n#     for sentence in sent_tokenize(comment):\n#         for name in islanders:\n#             if re.search(rf'\\b{name}\\b', sentence, re.IGNORECASE):\n#                 result = get_sentiment_score(sentence)\n#                 if name not in islander_sentiment:\n#                     islander_sentiment[name] = []\n#                 islander_sentiment[name].append(result['compound'])\n#     return {name: np.mean(scores) for name, scores in islander_sentiment.items()}\n\n\n# Apply to data\n# loveisland['islander_sentiment'] = loveisland['comment'].swifter.apply(lambda x: targeted_sentiment(x,islanders))\n# loveisland.head()\n\n\nTrue\n\n\n\n\nShow the code\n# import ast\n\n# # Step 1: Convert stringified dicts to real dicts\n# loveisland2['islander_sentiment'] = loveisland2['islander_sentiment'].apply(\n#     lambda x: ast.literal_eval(x) if isinstance(x, str) else x\n# )\n\n# # Step 2: Filter out nulls and make sure only dicts are kept\n# loveisland2_clean = loveisland2[\n#     loveisland2['islander_sentiment'].apply(lambda x: isinstance(x, dict) and len(x) &gt; 0)\n# ].copy()\n\n# # Step 3: Convert dict into list of tuples and explode\n# loveisland2_clean['islander_sentiment_items'] = loveisland2_clean['islander_sentiment'].apply(lambda d: list(d.items()))\n# loveisland2_exploded = loveisland2_clean.explode('islander_sentiment_items')\n\n# # Step 4: Split tuple into two new columns\n# loveisland2_exploded[['islander', 'sentiment']] = pd.DataFrame(\n#     loveisland2_exploded['islander_sentiment_items'].tolist(), index=loveisland2_exploded.index\n# )\n\n# # Optional cleanup\n# loveisland2_exploded = loveisland2_exploded.drop(columns=['islander_sentiment_items'])\n\n# loveisland2_exploded.head()\n\n\nAfter running the model on our comments and pulling in some episode airdate data, we wind up with the following dataset.\n\n\nShow the code\nli_full.head()\n\n\n\n\n\n\n\n\n\ncomment\nscore\ncreated_utc\nepisode_post_id\nepisode_title\nislander\nsentiment\nepisode_num\nAirDate\n\n\n\n\n0\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nAce\n-0.292615\n10\n2025-06-12\n\n\n1\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nIris\n-0.292615\n10\n2025-06-12\n\n\n2\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nChelley\n0.021599\n10\n2025-06-12\n\n\n3\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nHuda\n-0.955151\n10\n2025-06-12\n\n\n4\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nJeremiah\n-0.288001\n10\n2025-06-12",
+    "crumbs": [
+      "Blog",
+      "Love Island NLP"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html#try-the-sentiment-dashboard",
+    "href": "Blogs/love_island_nlp.html#try-the-sentiment-dashboard",
+    "title": "Love Island NLP",
+    "section": "Try the Sentiment Dashboard",
+    "text": "Try the Sentiment Dashboard",
     "crumbs": [
       "Blog",
       "Love Island NLP"
