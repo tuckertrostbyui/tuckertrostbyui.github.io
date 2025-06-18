@@ -26,7 +26,7 @@ website:
       - text: "Projects"
         file: cleansing.qmd
       - text: "Blog"
-        file: blog.qmd
+        file: Blogs/blog.qmd
       #- text: "Story Telling"
       #  file: story_telling.qmd
       #- text: "SQL"
@@ -91,10 +91,10 @@ website:
       background: light
       contents:
         - text: "Blog"
-          file: blog.qmd
-    #     - text: "---"
-    #     - text: "Project 1"
-    #       file: Exploration_Projects/project1.qmd
+          file: Blogs/blog.qmd
+        - text: "---"
+        - text: "Love Island NLP"
+          file: Blogs/love_island_nlp.qmd
     #     - text: "---"
     #     - text: "Project 2"
     #       file: Exploration_Projects/project2.qmd
