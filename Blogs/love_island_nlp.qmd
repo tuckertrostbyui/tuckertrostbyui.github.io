@@ -61,7 +61,6 @@ I was also able to use a pretrained model from hugging face that is trained spec
 
 ```{python}
 import re
-import swifter 
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 import numpy as np
