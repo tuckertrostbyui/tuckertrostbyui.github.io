@@ -1,42 +1,70 @@
 [
   {
-    "objectID": "full_stack.html",
-    "href": "full_stack.html",
+    "objectID": "ml.html",
+    "href": "ml.html",
     "title": "about me",
     "section": "",
     "text": "MarkDown Basics"
   },
   {
-    "objectID": "full_stack.html#title-2-header",
-    "href": "full_stack.html#title-2-header",
+    "objectID": "ml.html#title-2-header",
+    "href": "ml.html#title-2-header",
     "title": "about me",
     "section": "",
     "text": "MarkDown Basics"
   },
   {
-    "objectID": "Cleansing_Exploration/project4.html",
-    "href": "Cleansing_Exploration/project4.html",
+    "objectID": "sql.html",
+    "href": "sql.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "sql.html#title-2-header",
+    "href": "sql.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "Machine_Learning/project4.html",
+    "href": "Machine_Learning/project4.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Cleansing_Exploration/project2.html",
-    "href": "Cleansing_Exploration/project2.html",
+    "objectID": "Machine_Learning/project3.html",
+    "href": "Machine_Learning/project3.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Story_Telling/project1.html",
-    "href": "Story_Telling/project1.html",
+    "objectID": "Machine_Learning/project2.html",
+    "href": "Machine_Learning/project2.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Story_Telling/project5.html",
-    "href": "Story_Telling/project5.html",
+    "objectID": "Full_Stack/project5.html",
+    "href": "Full_Stack/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Full_Stack/project1.html",
+    "href": "Full_Stack/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Story_Telling/project4.html",
+    "href": "Story_Telling/project4.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
@@ -49,80 +77,25 @@
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Competition/project4.html",
-    "href": "Competition/project4.html",
+    "objectID": "Story_Telling/project2.html",
+    "href": "Story_Telling/project2.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Competition/project2.html",
-    "href": "Competition/project2.html",
-    "title": "Client Report - [Insert Project Title]",
+    "objectID": "full_stack.html",
+    "href": "full_stack.html",
+    "title": "about me",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "MarkDown Basics"
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "My Data Science Blog",
+    "objectID": "full_stack.html#title-2-header",
+    "href": "full_stack.html#title-2-header",
+    "title": "about me",
     "section": "",
-    "text": "Starting My Journey in NLP\n\n\n\nDate: May 5th, 2025\nLately I’ve been diving into Natural Language Processing (NLP) for my senior project. I’ve been teaching myself the basics through podcasts, books, and working with Python’s NLTK library.\nIt’s been super cool to see how widely NLP is used. Everything from sentiment analysis to search engines to chatbots. There is so much information to be extracted from text and so much data in the world is text.\nTo help with my learning, I made a quick NLP vocab cheat sheet with some core terms. Figured I’d share in case it could help anyone else.\nExcited to continue learning and sharing my progress as I go!\n\n\n\nNLP CheatSheet",
-    "crumbs": [
-      "Blog"
-    ]
-  },
-  {
-    "objectID": "blog.html#natural-language-processing",
-    "href": "blog.html#natural-language-processing",
-    "title": "My Data Science Blog",
-    "section": "",
-    "text": "Starting My Journey in NLP\n\n\n\nDate: May 5th, 2025\nLately I’ve been diving into Natural Language Processing (NLP) for my senior project. I’ve been teaching myself the basics through podcasts, books, and working with Python’s NLTK library.\nIt’s been super cool to see how widely NLP is used. Everything from sentiment analysis to search engines to chatbots. There is so much information to be extracted from text and so much data in the world is text.\nTo help with my learning, I made a quick NLP vocab cheat sheet with some core terms. Figured I’d share in case it could help anyone else.\nExcited to continue learning and sharing my progress as I go!\n\n\n\nNLP CheatSheet",
-    "crumbs": [
-      "Blog"
-    ]
-  },
-  {
-    "objectID": "SQL/project1.html",
-    "href": "SQL/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Full_Stack/project4.html",
-    "href": "Full_Stack/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Full_Stack/project2.html",
-    "href": "Full_Stack/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Machine_Learning/project1.html",
-    "href": "Machine_Learning/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Machine_Learning/project5.html",
-    "href": "Machine_Learning/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Machine_Learning/project3.html",
-    "href": "Machine_Learning/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "MarkDown Basics"
   },
   {
     "objectID": "Cleansing_Projects/project5.html",
@@ -176,51 +149,23 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "about me",
+    "objectID": "Blogs/blog.html",
+    "href": "Blogs/blog.html",
+    "title": "My Data Science Blog",
     "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "index.html#title-2-header",
-    "href": "index.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "story_telling.html",
-    "href": "story_telling.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "story_telling.html#title-2-header",
-    "href": "story_telling.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "cleansing.html",
-    "href": "cleansing.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics",
+    "text": "Starting My Journey in NLP\n\n\n\nDate: May 5th, 2025\nLately I’ve been diving into Natural Language Processing (NLP) for my senior project. I’ve been teaching myself the basics through podcasts, books, and working with Python’s NLTK library.\nIt’s been super cool to see how widely NLP is used. Everything from sentiment analysis to search engines to chatbots. There is so much information to be extracted from text and so much data in the world is text.\nTo help with my learning, I made a quick NLP vocab cheat sheet with some core terms. Figured I’d share in case it could help anyone else.\nExcited to continue learning and sharing my progress as I go!\n\n\n\nNLP CheatSheet",
     "crumbs": [
-      "Projects"
+      "Blog"
     ]
   },
   {
-    "objectID": "cleansing.html#title-2-header",
-    "href": "cleansing.html#title-2-header",
-    "title": "about me",
+    "objectID": "Blogs/blog.html#natural-language-processing",
+    "href": "Blogs/blog.html#natural-language-processing",
+    "title": "My Data Science Blog",
     "section": "",
-    "text": "MarkDown Basics",
+    "text": "Starting My Journey in NLP\n\n\n\nDate: May 5th, 2025\nLately I’ve been diving into Natural Language Processing (NLP) for my senior project. I’ve been teaching myself the basics through podcasts, books, and working with Python’s NLTK library.\nIt’s been super cool to see how widely NLP is used. Everything from sentiment analysis to search engines to chatbots. There is so much information to be extracted from text and so much data in the world is text.\nTo help with my learning, I made a quick NLP vocab cheat sheet with some core terms. Figured I’d share in case it could help anyone else.\nExcited to continue learning and sharing my progress as I go!\n\n\n\nNLP CheatSheet",
     "crumbs": [
-      "Projects"
+      "Blog"
     ]
   },
   {
@@ -238,18 +183,234 @@
     "text": "MarkDown Basics"
   },
   {
-    "objectID": "ml.html",
-    "href": "ml.html",
+    "objectID": "Competition/project5.html",
+    "href": "Competition/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Competition/project1.html",
+    "href": "Competition/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "story_telling.html",
+    "href": "story_telling.html",
     "title": "about me",
     "section": "",
     "text": "MarkDown Basics"
   },
   {
-    "objectID": "ml.html#title-2-header",
-    "href": "ml.html#title-2-header",
+    "objectID": "story_telling.html#title-2-header",
+    "href": "story_telling.html#title-2-header",
     "title": "about me",
     "section": "",
     "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project4.html",
+    "href": "Cleansing_Exploration/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project3.html",
+    "href": "Cleansing_Exploration/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project2.html",
+    "href": "Cleansing_Exploration/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project1.html",
+    "href": "Cleansing_Exploration/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project5.html",
+    "href": "Cleansing_Exploration/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "SQL/project1.html",
+    "href": "SQL/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Competition/project2.html",
+    "href": "Competition/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Competition/project3.html",
+    "href": "Competition/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Competition/project4.html",
+    "href": "Competition/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html",
+    "href": "Blogs/love_island_nlp.html",
+    "title": "Love Island NLP",
+    "section": "",
+    "text": "Over the past few weeks, I’ve been diving headfirst into the world of Natural Language Processing (NLP), and honestly it’s been kind of mind-blowing. Learning the tools and exploring the endless use cases has completely opened my eyes to just how powerful NLP can be. So much of the world’s data is text, and being able to actually make sense of it and pull meaningful insights? Total game changer.\nOne area I’ve been particularly obsessed with is sentiment analysis, figuring out whether a piece of text sounds positive, neutral, or negative. I started off with the basics, experimenting with built-in datasets from the NLTK library and playing around with the VADER lexicon. But the real magic started happening when I got my hands on pretrained models from Hugging Face, models that are trained on specific types of text like tweets.\nNow here’s where things took a turn. My wife recently got into Love Island USA, a show where a bunch of attractive 20-somethings date each other in a villa in Fiji. I originally watched to be a supportive husband… but I’ll admit it, I got hooked. The drama, the storylines, the unexpected twists, I was all in. And somewhere along the way, after watching my opinion of a contestant totally shift over time, it hit me: what if I could track public sentiment like that?\nThat spark turned into this project—analyzing Reddit discussions of Love Island USA to track how the internet feels about each contestant as the season unfolds.",
+    "crumbs": [
+      "Blog",
+      "Love Island NLP"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html#background",
+    "href": "Blogs/love_island_nlp.html#background",
+    "title": "Love Island NLP",
+    "section": "",
+    "text": "Over the past few weeks, I’ve been diving headfirst into the world of Natural Language Processing (NLP), and honestly it’s been kind of mind-blowing. Learning the tools and exploring the endless use cases has completely opened my eyes to just how powerful NLP can be. So much of the world’s data is text, and being able to actually make sense of it and pull meaningful insights? Total game changer.\nOne area I’ve been particularly obsessed with is sentiment analysis, figuring out whether a piece of text sounds positive, neutral, or negative. I started off with the basics, experimenting with built-in datasets from the NLTK library and playing around with the VADER lexicon. But the real magic started happening when I got my hands on pretrained models from Hugging Face, models that are trained on specific types of text like tweets.\nNow here’s where things took a turn. My wife recently got into Love Island USA, a show where a bunch of attractive 20-somethings date each other in a villa in Fiji. I originally watched to be a supportive husband… but I’ll admit it, I got hooked. The drama, the storylines, the unexpected twists, I was all in. And somewhere along the way, after watching my opinion of a contestant totally shift over time, it hit me: what if I could track public sentiment like that?\nThat spark turned into this project—analyzing Reddit discussions of Love Island USA to track how the internet feels about each contestant as the season unfolds.",
+    "crumbs": [
+      "Blog",
+      "Love Island NLP"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html#grabbing-data",
+    "href": "Blogs/love_island_nlp.html#grabbing-data",
+    "title": "Love Island NLP",
+    "section": "Grabbing Data",
+    "text": "Grabbing Data\nGrabbing data for this was surprisingly simple. There is a strong community following for the show under the subreddit r/loveislandusa. Within this subreddit, there are post-episode discussion threads for each episode. Each episode tends to get around 8k-15k comments, which is plenty for me to run my analysis.\nReddit also makes it very easy to use their data. After signing up for an api key, a simple call to grab all the relevant comments from each episodes discussion thread got me all the data I needed to get going.\n\n\nShow the code\nimport pandas as pd\n\nli_full = pd.read_csv('li_full.csv')\n\nli_full[['comment','score','created_utc','episode_title']].head()\n\n\n\n\n\n\n\n\n\ncomment\nscore\ncreated_utc\nepisode_title\n\n\n\n\n0\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n1\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n2\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n3\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n4\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion",
+    "crumbs": [
+      "Blog",
+      "Love Island NLP"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html#sentiment-analysis",
+    "href": "Blogs/love_island_nlp.html#sentiment-analysis",
+    "title": "Love Island NLP",
+    "section": "Sentiment Analysis",
+    "text": "Sentiment Analysis\nNow that I had my data, it was time to do some named-entity recognition, to pull the information I neeed. For example, if a comment talkes negatively about the contestant Huda but positivly about Jeramiah, I need to make sure I get the proper sentiment scores for each contestant within that single comment.\nI was also able to use a pretrained model from hugging face that is trained specifically on the casual nature of discussion boards like twitter and reddit. This will work perfectly for our analysis\n\n\nShow the code\n!pip3 install transformers torch swifter nltk\n\n\n\nCollecting transformers\n\n  Downloading transformers-4.52.4-py3-none-any.whl.metadata (38 kB)\n\nCollecting torch\n\n  Downloading torch-2.7.1-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (29 kB)\n\nCollecting swifter\n\n  Downloading swifter-1.4.0.tar.gz (1.2 MB)\n\n     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/1.2 MB ? eta -:--:--\n\n     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 24.5 MB/s eta 0:00:00\n\n\n  Installing build dependencies ... -\n\b \b\\\n\b \b|\n\b \bdone\n\n  Getting requirements to build wheel ... -\n\b \bdone\n\n  Preparing metadata (pyproject.toml) ... -\n\b \bdone\n\nCollecting nltk\n\n  Downloading nltk-3.9.1-py3-none-any.whl.metadata (2.9 kB)\n\nCollecting filelock (from transformers)\n\n  Downloading filelock-3.18.0-py3-none-any.whl.metadata (2.9 kB)\n\nCollecting huggingface-hub&lt;1.0,&gt;=0.30.0 (from transformers)\n\n  Downloading huggingface_hub-0.33.0-py3-none-any.whl.metadata (14 kB)\n\nRequirement already satisfied: numpy&gt;=1.17 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from transformers) (2.3.0)\n\nRequirement already satisfied: packaging&gt;=20.0 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from transformers) (25.0)\n\nRequirement already satisfied: pyyaml&gt;=5.1 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from transformers) (6.0.2)\n\nCollecting regex!=2019.12.17 (from transformers)\n\n  Downloading regex-2024.11.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (40 kB)\n\nRequirement already satisfied: requests in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from transformers) (2.32.4)\n\nCollecting tokenizers&lt;0.22,&gt;=0.21 (from transformers)\n\n  Downloading tokenizers-0.21.1-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (6.8 kB)\n\nCollecting safetensors&gt;=0.4.3 (from transformers)\n\n  Downloading safetensors-0.5.3-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (3.8 kB)\n\nCollecting tqdm&gt;=4.27 (from transformers)\n\n  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)\n\nCollecting fsspec&gt;=2023.5.0 (from huggingface-hub&lt;1.0,&gt;=0.30.0-&gt;transformers)\n\n  Downloading fsspec-2025.5.1-py3-none-any.whl.metadata (11 kB)\n\nRequirement already satisfied: typing-extensions&gt;=3.7.4.3 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from huggingface-hub&lt;1.0,&gt;=0.30.0-&gt;transformers) (4.14.0)\n\nCollecting hf-xet&lt;2.0.0,&gt;=1.1.2 (from huggingface-hub&lt;1.0,&gt;=0.30.0-&gt;transformers)\n\n  Downloading hf_xet-1.1.4-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (879 bytes)\n\nCollecting sympy&gt;=1.13.3 (from torch)\n\n  Downloading sympy-1.14.0-py3-none-any.whl.metadata (12 kB)\n\nCollecting networkx (from torch)\n\n  Downloading networkx-3.5-py3-none-any.whl.metadata (6.3 kB)\n\nRequirement already satisfied: jinja2 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from torch) (3.1.6)\n\nCollecting nvidia-cuda-nvrtc-cu12==12.6.77 (from torch)\n\n  Downloading nvidia_cuda_nvrtc_cu12-12.6.77-py3-none-manylinux2014_x86_64.whl.metadata (1.5 kB)\n\nCollecting nvidia-cuda-runtime-cu12==12.6.77 (from torch)\n\n  Downloading nvidia_cuda_runtime_cu12-12.6.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.5 kB)\n\nCollecting nvidia-cuda-cupti-cu12==12.6.80 (from torch)\n\n  Downloading nvidia_cuda_cupti_cu12-12.6.80-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.6 kB)\n\nCollecting nvidia-cudnn-cu12==9.5.1.17 (from torch)\n\n  Downloading nvidia_cudnn_cu12-9.5.1.17-py3-none-manylinux_2_28_x86_64.whl.metadata (1.6 kB)\n\nCollecting nvidia-cublas-cu12==12.6.4.1 (from torch)\n\n  Downloading nvidia_cublas_cu12-12.6.4.1-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.5 kB)\n\nCollecting nvidia-cufft-cu12==11.3.0.4 (from torch)\n\n  Downloading nvidia_cufft_cu12-11.3.0.4-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.5 kB)\n\nCollecting nvidia-curand-cu12==10.3.7.77 (from torch)\n\n  Downloading nvidia_curand_cu12-10.3.7.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.5 kB)\n\nCollecting nvidia-cusolver-cu12==11.7.1.2 (from torch)\n\n  Downloading nvidia_cusolver_cu12-11.7.1.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.6 kB)\n\nCollecting nvidia-cusparse-cu12==12.5.4.2 (from torch)\n\n  Downloading nvidia_cusparse_cu12-12.5.4.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.6 kB)\n\nCollecting nvidia-cusparselt-cu12==0.6.3 (from torch)\n\n  Downloading nvidia_cusparselt_cu12-0.6.3-py3-none-manylinux2014_x86_64.whl.metadata (6.8 kB)\n\nCollecting nvidia-nccl-cu12==2.26.2 (from torch)\n\n  Downloading nvidia_nccl_cu12-2.26.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.0 kB)\n\nCollecting nvidia-nvtx-cu12==12.6.77 (from torch)\n\n  Downloading nvidia_nvtx_cu12-12.6.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.6 kB)\n\nCollecting nvidia-nvjitlink-cu12==12.6.85 (from torch)\n\n  Downloading nvidia_nvjitlink_cu12-12.6.85-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.5 kB)\n\nCollecting nvidia-cufile-cu12==1.11.1.6 (from torch)\n\n  Downloading nvidia_cufile_cu12-1.11.1.6-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.5 kB)\n\nCollecting triton==3.3.1 (from torch)\n\n  Downloading triton-3.3.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.5 kB)\n\nRequirement already satisfied: setuptools&gt;=40.8.0 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from triton==3.3.1-&gt;torch) (65.5.0)\n\nRequirement already satisfied: pandas&gt;=1.0.0 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from swifter) (2.3.0)\n\nRequirement already satisfied: psutil&gt;=5.6.6 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from swifter) (7.0.0)\n\nCollecting dask&gt;=2.10.0 (from dask[dataframe]&gt;=2.10.0-&gt;swifter)\n\n  Downloading dask-2025.5.1-py3-none-any.whl.metadata (3.8 kB)\n\nCollecting click (from nltk)\n\n  Downloading click-8.2.1-py3-none-any.whl.metadata (2.5 kB)\n\nRequirement already satisfied: joblib in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from nltk) (1.5.1)\n\nCollecting cloudpickle&gt;=3.0.0 (from dask&gt;=2.10.0-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter)\n\n  Downloading cloudpickle-3.1.1-py3-none-any.whl.metadata (7.1 kB)\n\nCollecting partd&gt;=1.4.0 (from dask&gt;=2.10.0-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter)\n\n  Downloading partd-1.4.2-py3-none-any.whl.metadata (4.6 kB)\n\nCollecting toolz&gt;=0.10.0 (from dask&gt;=2.10.0-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter)\n\n  Downloading toolz-1.0.0-py3-none-any.whl.metadata (5.1 kB)\n\nCollecting importlib_metadata&gt;=4.13.0 (from dask&gt;=2.10.0-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter)\n\n  Downloading importlib_metadata-8.7.0-py3-none-any.whl.metadata (4.8 kB)\n\nCollecting pyarrow&gt;=14.0.1 (from dask[dataframe]&gt;=2.10.0-&gt;swifter)\n\n  Downloading pyarrow-20.0.0-cp311-cp311-manylinux_2_28_x86_64.whl.metadata (3.3 kB)\n\nCollecting zipp&gt;=3.20 (from importlib_metadata&gt;=4.13.0-&gt;dask&gt;=2.10.0-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter)\n\n  Downloading zipp-3.23.0-py3-none-any.whl.metadata (3.6 kB)\n\nRequirement already satisfied: python-dateutil&gt;=2.8.2 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from pandas&gt;=1.0.0-&gt;swifter) (2.9.0.post0)\n\nRequirement already satisfied: pytz&gt;=2020.1 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from pandas&gt;=1.0.0-&gt;swifter) (2025.2)\n\nRequirement already satisfied: tzdata&gt;=2022.7 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from pandas&gt;=1.0.0-&gt;swifter) (2025.2)\n\nCollecting locket (from partd&gt;=1.4.0-&gt;dask&gt;=2.10.0-&gt;dask[dataframe]&gt;=2.10.0-&gt;swifter)\n\n  Downloading locket-1.0.0-py2.py3-none-any.whl.metadata (2.8 kB)\n\nRequirement already satisfied: six&gt;=1.5 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from python-dateutil&gt;=2.8.2-&gt;pandas&gt;=1.0.0-&gt;swifter) (1.17.0)\n\nCollecting mpmath&lt;1.4,&gt;=1.1.0 (from sympy&gt;=1.13.3-&gt;torch)\n\n  Downloading mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)\n\nRequirement already satisfied: MarkupSafe&gt;=2.0 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from jinja2-&gt;torch) (3.0.2)\n\nRequirement already satisfied: charset_normalizer&lt;4,&gt;=2 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from requests-&gt;transformers) (3.4.2)\n\nRequirement already satisfied: idna&lt;4,&gt;=2.5 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from requests-&gt;transformers) (3.10)\n\nRequirement already satisfied: urllib3&lt;3,&gt;=1.21.1 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from requests-&gt;transformers) (2.5.0)\n\nRequirement already satisfied: certifi&gt;=2017.4.17 in /opt/hostedtoolcache/Python/3.11.13/x64/lib/python3.11/site-packages (from requests-&gt;transformers) (2025.6.15)\n\nDownloading transformers-4.52.4-py3-none-any.whl (10.5 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/10.5 MB ? eta -:--:--\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.5/10.5 MB 85.5 MB/s eta 0:00:00\n\nDownloading huggingface_hub-0.33.0-py3-none-any.whl (514 kB)\n\nDownloading hf_xet-1.1.4-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.1 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/3.1 MB ? eta -:--:--\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.1/3.1 MB 153.2 MB/s eta 0:00:00\n\n\nDownloading tokenizers-0.21.1-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.0 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/3.0 MB ? eta -:--:--\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.0/3.0 MB 150.5 MB/s eta 0:00:00\n\nDownloading torch-2.7.1-cp311-cp311-manylinux_2_28_x86_64.whl (821.2 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/821.2 MB ? eta -:--:--\n\n   ━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.4/821.2 MB 148.1 MB/s eta 0:00:06\n\n   ━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 50.3/821.2 MB 124.9 MB/s eta 0:00:07\n\n   ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.2/821.2 MB 106.4 MB/s eta 0:00:08\n\n   ━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 78.4/821.2 MB 97.5 MB/s eta 0:00:08\n\n   ━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 92.5/821.2 MB 92.0 MB/s eta 0:00:08\n\n   ━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 105.9/821.2 MB 87.7 MB/s eta 0:00:09\n\n   ━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 120.3/821.2 MB 85.3 MB/s eta 0:00:09\n\n   ━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 135.3/821.2 MB 84.0 MB/s eta 0:00:09\n\n   ━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 150.5/821.2 MB 83.0 MB/s eta 0:00:09\n\n   ━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 165.7/821.2 MB 82.3 MB/s eta 0:00:08\n\n   ━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 180.9/821.2 MB 81.7 MB/s eta 0:00:08\n\n   ━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 196.6/821.2 MB 81.4 MB/s eta 0:00:08\n\n   ━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 212.3/821.2 MB 81.1 MB/s eta 0:00:08\n\n   ━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 228.3/821.2 MB 80.9 MB/s eta 0:00:08\n\n   ━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 244.3/821.2 MB 80.8 MB/s eta 0:00:08\n\n   ━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━ 260.3/821.2 MB 80.7 MB/s eta 0:00:07\n\n   ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ 276.0/821.2 MB 78.5 MB/s eta 0:00:07\n\n   ━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━ 292.6/821.2 MB 76.6 MB/s eta 0:00:07\n\n   ━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━ 308.8/821.2 MB 75.5 MB/s eta 0:00:07\n\n   ━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━ 325.6/821.2 MB 76.3 MB/s eta 0:00:07\n\n   ━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━ 342.1/821.2 MB 77.0 MB/s eta 0:00:07\n\n   ━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━ 358.6/821.2 MB 78.1 MB/s eta 0:00:06\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 375.4/821.2 MB 79.0 MB/s eta 0:00:06\n\n   ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ 391.9/821.2 MB 79.5 MB/s eta 0:00:06\n\n   ━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━ 408.7/821.2 MB 80.0 MB/s eta 0:00:06\n\n   ━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━ 425.5/821.2 MB 80.5 MB/s eta 0:00:05\n\n   ━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━ 441.7/821.2 MB 80.9 MB/s eta 0:00:05\n\n   ━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━ 458.5/821.2 MB 81.1 MB/s eta 0:00:05\n\n   ━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━ 474.7/821.2 MB 81.4 MB/s eta 0:00:05\n\n   ━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━ 491.5/821.2 MB 81.6 MB/s eta 0:00:05\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━ 508.3/821.2 MB 81.9 MB/s eta 0:00:04\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━ 525.1/821.2 MB 82.1 MB/s eta 0:00:04\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━ 541.9/821.2 MB 82.4 MB/s eta 0:00:04\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━ 559.2/821.2 MB 82.8 MB/s eta 0:00:04\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━ 576.5/821.2 MB 82.9 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━ 593.8/821.2 MB 83.2 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 611.1/821.2 MB 83.4 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━ 628.6/821.2 MB 83.7 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━ 645.7/821.2 MB 83.9 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━ 663.2/821.2 MB 84.1 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━ 680.8/821.2 MB 84.5 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━ 699.1/821.2 MB 84.9 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ 717.2/821.2 MB 85.6 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━ 735.3/821.2 MB 86.1 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 753.4/821.2 MB 86.6 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 771.2/821.2 MB 87.0 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━ 789.6/821.2 MB 87.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺ 807.9/821.2 MB 88.0 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 821.0/821.2 MB 88.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 821.2/821.2 MB 44.2 MB/s eta 0:00:00\n\n\nDownloading nvidia_cublas_cu12-12.6.4.1-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (393.1 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/393.1 MB ? eta -:--:--\n\n   ━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 18.6/393.1 MB 93.2 MB/s eta 0:00:05\n\n   ━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 37.5/393.1 MB 93.5 MB/s eta 0:00:04\n\n   ━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.6/393.1 MB 93.8 MB/s eta 0:00:04\n\n   ━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 75.5/393.1 MB 93.8 MB/s eta 0:00:04\n\n   ━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 94.1/393.1 MB 93.7 MB/s eta 0:00:04\n\n   ━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 112.7/393.1 MB 93.5 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ 131.9/393.1 MB 93.6 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━ 151.0/393.1 MB 93.8 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━ 170.4/393.1 MB 94.2 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ 189.8/393.1 MB 94.4 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━ 209.7/393.1 MB 94.7 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━ 229.4/393.1 MB 94.9 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━ 248.8/393.1 MB 95.0 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━ 268.4/393.1 MB 95.4 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━ 288.6/393.1 MB 95.9 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━ 309.3/393.1 MB 96.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━ 329.0/393.1 MB 96.7 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━ 349.4/393.1 MB 97.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 369.6/393.1 MB 98.1 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 390.1/393.1 MB 98.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 393.0/393.1 MB 98.6 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 393.0/393.1 MB 98.6 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 393.0/393.1 MB 98.6 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 393.0/393.1 MB 98.6 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 393.0/393.1 MB 98.6 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 393.0/393.1 MB 98.6 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 393.0/393.1 MB 98.6 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 393.1/393.1 MB 63.1 MB/s eta 0:00:00\n\nDownloading nvidia_cuda_cupti_cu12-12.6.80-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (8.9 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/8.9 MB ? eta -:--:--\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.9/8.9 MB 76.3 MB/s eta 0:00:00\n\n\nDownloading nvidia_cuda_nvrtc_cu12-12.6.77-py3-none-manylinux2014_x86_64.whl (23.7 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/23.7 MB ? eta -:--:--\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━ 20.2/23.7 MB 100.8 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 23.7/23.7 MB 84.1 MB/s eta 0:00:00\n\n\nDownloading nvidia_cuda_runtime_cu12-12.6.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (897 kB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/897.7 kB ? eta -:--:--\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 897.7/897.7 kB 79.2 MB/s eta 0:00:00\n\nDownloading nvidia_cudnn_cu12-9.5.1.17-py3-none-manylinux_2_28_x86_64.whl (571.0 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/571.0 MB ? eta -:--:--\n\n   ━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 20.7/571.0 MB 103.3 MB/s eta 0:00:06\n\n   ━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 41.7/571.0 MB 103.9 MB/s eta 0:00:06\n\n   ━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 62.9/571.0 MB 104.2 MB/s eta 0:00:05\n\n   ━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 83.9/571.0 MB 104.3 MB/s eta 0:00:05\n\n   ━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 105.4/571.0 MB 104.7 MB/s eta 0:00:05\n\n   ━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 126.1/571.0 MB 104.4 MB/s eta 0:00:05\n\n   ━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 147.3/571.0 MB 104.5 MB/s eta 0:00:05\n\n   ━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━ 169.1/571.0 MB 104.9 MB/s eta 0:00:04\n\n   ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━ 191.1/571.0 MB 105.3 MB/s eta 0:00:04\n\n   ━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━ 212.9/571.0 MB 105.6 MB/s eta 0:00:04\n\n   ━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━ 234.6/571.0 MB 105.8 MB/s eta 0:00:04\n\n   ━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━ 256.4/571.0 MB 106.0 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━ 278.7/571.0 MB 106.6 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━ 300.7/571.0 MB 106.9 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━ 323.2/571.0 MB 107.5 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━ 345.8/571.0 MB 108.2 MB/s eta 0:00:03\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━ 367.3/571.0 MB 108.2 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ 390.1/571.0 MB 109.1 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━ 413.4/571.0 MB 110.0 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━ 437.0/571.0 MB 110.7 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━ 461.1/571.0 MB 111.8 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━ 485.5/571.0 MB 112.9 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━ 510.1/571.0 MB 114.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 535.6/571.0 MB 115.8 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺ 561.5/571.0 MB 117.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 570.9/571.0 MB 118.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 570.9/571.0 MB 118.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 570.9/571.0 MB 118.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 570.9/571.0 MB 118.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 570.9/571.0 MB 118.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 570.9/571.0 MB 118.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 570.9/571.0 MB 118.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 570.9/571.0 MB 118.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 570.9/571.0 MB 118.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 570.9/571.0 MB 118.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 570.9/571.0 MB 118.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 570.9/571.0 MB 118.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 570.9/571.0 MB 118.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 570.9/571.0 MB 118.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 571.0/571.0 MB 51.8 MB/s eta 0:00:00\n\n\nDownloading nvidia_cufft_cu12-11.3.0.4-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (200.2 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/200.2 MB ? eta -:--:--\n\n   ━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 26.5/200.2 MB 131.9 MB/s eta 0:00:02\n\n   ━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.2/200.2 MB 132.6 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━ 80.5/200.2 MB 133.9 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━ 108.5/200.2 MB 134.9 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ 137.6/200.2 MB 136.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━ 167.2/200.2 MB 138.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺ 196.9/200.2 MB 139.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 200.0/200.2 MB 139.6 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 200.2/200.2 MB 111.2 MB/s eta 0:00:00\n\n\nDownloading nvidia_cufile_cu12-1.11.1.6-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.1 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/1.1 MB ? eta -:--:--\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.1/1.1 MB 108.8 MB/s eta 0:00:00\n\n\nDownloading nvidia_curand_cu12-10.3.7.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (56.3 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/56.3 MB ? eta -:--:--\n\n   ━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━ 30.7/56.3 MB 152.7 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 56.1/56.3 MB 154.1 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 56.3/56.3 MB 119.7 MB/s eta 0:00:00\n\nDownloading nvidia_cusolver_cu12-11.7.1.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (158.2 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/158.2 MB ? eta -:--:--\n\n   ━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 31.7/158.2 MB 158.9 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━ 64.2/158.2 MB 160.1 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━ 97.0/158.2 MB 160.8 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━ 130.0/158.2 MB 161.9 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 158.1/158.2 MB 163.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 158.1/158.2 MB 163.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 158.2/158.2 MB 126.5 MB/s eta 0:00:00\n\nDownloading nvidia_cusparse_cu12-12.5.4.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (216.6 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/216.6 MB ? eta -:--:--\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.1/216.6 MB 176.3 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.3/216.6 MB 177.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━ 107.7/216.6 MB 178.8 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━ 145.0/216.6 MB 180.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━ 183.8/216.6 MB 182.7 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 216.5/216.6 MB 184.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 216.5/216.6 MB 184.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 216.5/216.6 MB 184.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 216.6/216.6 MB 132.3 MB/s eta 0:00:00\n\nDownloading nvidia_cusparselt_cu12-0.6.3-py3-none-manylinux2014_x86_64.whl (156.8 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/156.8 MB ? eta -:--:--\n\n   ━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.1/156.8 MB 175.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ 75.5/156.8 MB 187.7 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━ 116.9/156.8 MB 193.8 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 156.8/156.8 MB 195.9 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 156.8/156.8 MB 195.9 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 156.8/156.8 MB 146.1 MB/s eta 0:00:00\n\n\nDownloading nvidia_nccl_cu12-2.26.2-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (201.3 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/201.3 MB ? eta -:--:--\n\n   ━━━━━╸━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 27.8/201.3 MB 138.3 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 57.4/201.3 MB 142.9 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━ 76.3/201.3 MB 127.7 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━ 102.8/201.3 MB 127.7 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━ 124.8/201.3 MB 124.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━ 147.1/201.3 MB 121.8 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━ 169.1/201.3 MB 120.1 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━ 191.9/201.3 MB 119.2 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 201.1/201.3 MB 118.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 201.1/201.3 MB 118.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 201.1/201.3 MB 118.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 201.1/201.3 MB 118.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 201.1/201.3 MB 118.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 201.3/201.3 MB 72.5 MB/s eta 0:00:00\n\nDownloading nvidia_nvjitlink_cu12-12.6.85-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (19.7 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/19.7 MB ? eta -:--:--\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 19.7/19.7 MB 118.0 MB/s eta 0:00:01\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 19.7/19.7 MB 95.6 MB/s eta 0:00:00\n\n\nDownloading nvidia_nvtx_cu12-12.6.77-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89 kB)\n\nDownloading triton-3.3.1-cp311-cp311-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (155.7 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/155.7 MB ? eta -:--:--\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 24.6/155.7 MB 122.4 MB/s eta 0:00:02\n\n   ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ 48.5/155.7 MB 120.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━━━━━ 72.9/155.7 MB 121.0 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━ 98.0/155.7 MB 122.0 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━ 123.5/155.7 MB 122.8 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╺━ 148.9/155.7 MB 123.3 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 155.5/155.7 MB 123.5 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.7/155.7 MB 101.3 MB/s eta 0:00:00\n\n\nDownloading nltk-3.9.1-py3-none-any.whl (1.5 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/1.5 MB ? eta -:--:--\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 101.4 MB/s eta 0:00:00\n\n\nDownloading dask-2025.5.1-py3-none-any.whl (1.5 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/1.5 MB ? eta -:--:--\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 101.2 MB/s eta 0:00:00\n\nDownloading click-8.2.1-py3-none-any.whl (102 kB)\n\nDownloading cloudpickle-3.1.1-py3-none-any.whl (20 kB)\n\nDownloading fsspec-2025.5.1-py3-none-any.whl (199 kB)\n\nDownloading importlib_metadata-8.7.0-py3-none-any.whl (27 kB)\n\nDownloading partd-1.4.2-py3-none-any.whl (18 kB)\n\nDownloading pyarrow-20.0.0-cp311-cp311-manylinux_2_28_x86_64.whl (42.3 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/42.3 MB ? eta -:--:--\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━ 25.7/42.3 MB 128.7 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸ 42.2/42.3 MB 128.9 MB/s eta 0:00:01\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 42.3/42.3 MB 103.7 MB/s eta 0:00:00\n\nDownloading regex-2024.11.6-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (792 kB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/792.7 kB ? eta -:--:--\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 792.7/792.7 kB 87.4 MB/s eta 0:00:00\n\n\nDownloading safetensors-0.5.3-cp38-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (471 kB)\n\nDownloading sympy-1.14.0-py3-none-any.whl (6.3 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/6.3 MB ? eta -:--:--\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 99.9 MB/s eta 0:00:00\n\n\nDownloading mpmath-1.3.0-py3-none-any.whl (536 kB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/536.2 kB ? eta -:--:--\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 72.5 MB/s eta 0:00:00\n\nDownloading toolz-1.0.0-py3-none-any.whl (56 kB)\n\nDownloading tqdm-4.67.1-py3-none-any.whl (78 kB)\n\nDownloading zipp-3.23.0-py3-none-any.whl (10 kB)\n\nDownloading filelock-3.18.0-py3-none-any.whl (16 kB)\n\nDownloading locket-1.0.0-py2.py3-none-any.whl (4.4 kB)\n\nDownloading networkx-3.5-py3-none-any.whl (2.0 MB)\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 0.0/2.0 MB ? eta -:--:--\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 106.0 MB/s eta 0:00:00\n\n\nBuilding wheels for collected packages: swifter\n\n  Building wheel for swifter (pyproject.toml) ... -\n\b \b\\\b \bdone\n\n  Created wheel for swifter: filename=swifter-1.4.0-py3-none-any.whl size=16589 sha256=46d2fc18a0cca687fde063e50bb0dd17dcc985aa313f202704a43c03b3d9404f\n\n  Stored in directory: /home/runner/.cache/pip/wheels/ef/7f/bd/9bed48f078f3ee1fa75e0b29b6e0335ce1cb03a38d3443b3a3\n\nSuccessfully built swifter\n\nInstalling collected packages: nvidia-cusparselt-cu12, mpmath, zipp, triton, tqdm, toolz, sympy, safetensors, regex, pyarrow, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, networkx, locket, hf-xet, fsspec, filelock, cloudpickle, click, partd, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, nltk, importlib_metadata, huggingface-hub, tokenizers, nvidia-cusolver-cu12, dask, transformers, torch, swifter\n\n\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  0/39 [nvidia-cusparselt-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  0/39 [nvidia-cusparselt-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  0/39 [nvidia-cusparselt-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  0/39 [nvidia-cusparselt-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  0/39 [nvidia-cusparselt-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  0/39 [nvidia-cusparselt-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  0/39 [nvidia-cusparselt-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  0/39 [nvidia-cusparselt-cu12]\n\n   ━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  1/39 [mpmath]\n\n   ━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  1/39 [mpmath]\n\n   ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  3/39 [triton]\n\n   ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  3/39 [triton]\n\n   ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  3/39 [triton]\n\n   ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  3/39 [triton]\n\n   ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  3/39 [triton]\n\n   ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  3/39 [triton]\n\n   ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  3/39 [triton]\n\n   ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  3/39 [triton]\n\n   ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  3/39 [triton]\n\n   ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  3/39 [triton]\n\n   ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  3/39 [triton]\n\n   ━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  3/39 [triton]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  6/39 [sympy]\n\n   ━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  9/39 [pyarrow]\n\n   ━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  9/39 [pyarrow]\n\n   ━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  9/39 [pyarrow]\n\n   ━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  9/39 [pyarrow]\n\n   ━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  9/39 [pyarrow]\n\n   ━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  9/39 [pyarrow]\n\n   ━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━  9/39 [pyarrow]\n\n   ━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11/39 [nvidia-nvjitlink-cu12]\n\n   ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12/39 [nvidia-nccl-cu12]\n\n   ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12/39 [nvidia-nccl-cu12]\n\n   ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12/39 [nvidia-nccl-cu12]\n\n   ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12/39 [nvidia-nccl-cu12]\n\n   ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12/39 [nvidia-nccl-cu12]\n\n   ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12/39 [nvidia-nccl-cu12]\n\n   ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12/39 [nvidia-nccl-cu12]\n\n   ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12/39 [nvidia-nccl-cu12]\n\n   ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12/39 [nvidia-nccl-cu12]\n\n   ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12/39 [nvidia-nccl-cu12]\n\n   ━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12/39 [nvidia-nccl-cu12]\n\n   ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ 13/39 [nvidia-curand-cu12]\n\n   ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ 13/39 [nvidia-curand-cu12]\n\n   ━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━━━━ 13/39 [nvidia-curand-cu12]\n\n   ━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━ 16/39 [nvidia-cuda-nvrtc-cu12]\n\n   ━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━━ 16/39 [nvidia-cuda-nvrtc-cu12]\n\n   ━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━━ 17/39 [nvidia-cuda-cupti-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━━ 18/39 [nvidia-cublas-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ 19/39 [networkx]\n\n   ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ 19/39 [networkx]\n\n   ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ 19/39 [networkx]\n\n   ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ 19/39 [networkx]\n\n   ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ 19/39 [networkx]\n\n   ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ 19/39 [networkx]\n\n   ━━━━━━━━━━━━━━━━━━━╺━━━━━━━━━━━━━━━━━━━━ 19/39 [networkx]\n\n   ━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━━━━━━ 22/39 [fsspec]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ 27/39 [nvidia-cusparse-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ 27/39 [nvidia-cusparse-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ 27/39 [nvidia-cusparse-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ 27/39 [nvidia-cusparse-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ 27/39 [nvidia-cusparse-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ 27/39 [nvidia-cusparse-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ 27/39 [nvidia-cusparse-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ 27/39 [nvidia-cusparse-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ 27/39 [nvidia-cusparse-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ 27/39 [nvidia-cusparse-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━━ 27/39 [nvidia-cusparse-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━ 28/39 [nvidia-cufft-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━ 28/39 [nvidia-cufft-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━ 28/39 [nvidia-cufft-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━ 28/39 [nvidia-cufft-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━ 28/39 [nvidia-cufft-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━ 28/39 [nvidia-cufft-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━ 28/39 [nvidia-cufft-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━━ 28/39 [nvidia-cufft-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━━ 29/39 [nvidia-cudnn-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━ 30/39 [nltk]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━ 30/39 [nltk]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━ 30/39 [nltk]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━ 30/39 [nltk]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━━━ 30/39 [nltk]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━━━ 32/39 [huggingface-hub]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ 34/39 [nvidia-cusolver-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ 34/39 [nvidia-cusolver-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ 34/39 [nvidia-cusolver-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ 34/39 [nvidia-cusolver-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ 34/39 [nvidia-cusolver-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ 34/39 [nvidia-cusolver-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ 34/39 [nvidia-cusolver-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ 34/39 [nvidia-cusolver-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━━ 34/39 [nvidia-cusolver-cu12]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━ 35/39 [dask]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━ 35/39 [dask]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━ 35/39 [dask]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━ 35/39 [dask]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━ 35/39 [dask]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━ 35/39 [dask]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━━ 35/39 [dask]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━━ 36/39 [transformers]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━╸━━ 37/39 [torch]\n\n   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39/39 [swifter]\n\n\nSuccessfully installed click-8.2.1 cloudpickle-3.1.1 dask-2025.5.1 filelock-3.18.0 fsspec-2025.5.1 hf-xet-1.1.4 huggingface-hub-0.33.0 importlib_metadata-8.7.0 locket-1.0.0 mpmath-1.3.0 networkx-3.5 nltk-3.9.1 nvidia-cublas-cu12-12.6.4.1 nvidia-cuda-cupti-cu12-12.6.80 nvidia-cuda-nvrtc-cu12-12.6.77 nvidia-cuda-runtime-cu12-12.6.77 nvidia-cudnn-cu12-9.5.1.17 nvidia-cufft-cu12-11.3.0.4 nvidia-cufile-cu12-1.11.1.6 nvidia-curand-cu12-10.3.7.77 nvidia-cusolver-cu12-11.7.1.2 nvidia-cusparse-cu12-12.5.4.2 nvidia-cusparselt-cu12-0.6.3 nvidia-nccl-cu12-2.26.2 nvidia-nvjitlink-cu12-12.6.85 nvidia-nvtx-cu12-12.6.77 partd-1.4.2 pyarrow-20.0.0 regex-2024.11.6 safetensors-0.5.3 swifter-1.4.0 sympy-1.14.0 tokenizers-0.21.1 toolz-1.0.0 torch-2.7.1 tqdm-4.67.1 transformers-4.52.4 triton-3.3.1 zipp-3.23.0\n\n\n\n\n\n\nShow the code\nimport re\nfrom transformers import AutoTokenizer, AutoModelForSequenceClassification\nimport torch\nimport numpy as np\n\n# Initialize islander list\nislanders = ['Chelley','Olandria','Huda','Ace','Nic','Taylor','Jeremiah','Austin','Charlie','Cierra','Hannah','Amaya','Pepe','Jalen','Iris','Yulissa','Belle-A']\n\n# Call Hugginface Model\ntokenizer = AutoTokenizer.from_pretrained(\"cardiffnlp/twitter-roberta-base-sentiment\")\nmodel = AutoModelForSequenceClassification.from_pretrained(\"cardiffnlp/twitter-roberta-base-sentiment\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nShow the code\nimport nltk\nfrom nltk.tokenize import sent_tokenize\nnltk.download('punkt')\n\n# Create Sentiment Function\n# def targeted_sentiment(comment, islanders):\n#     islander_sentiment = {}\n#     for sentence in sent_tokenize(comment):\n#         for name in islanders:\n#             if re.search(rf'\\b{name}\\b', sentence, re.IGNORECASE):\n#                 result = get_sentiment_score(sentence)\n#                 if name not in islander_sentiment:\n#                     islander_sentiment[name] = []\n#                 islander_sentiment[name].append(result['compound'])\n#     return {name: np.mean(scores) for name, scores in islander_sentiment.items()}\n\n\n# Apply to data\n# loveisland['islander_sentiment'] = loveisland['comment'].swifter.apply(lambda x: targeted_sentiment(x,islanders))\n# loveisland.head()\n\n\n\n\n\nTrue\n\n\n\n\nShow the code\n# import ast\n\n# # Step 1: Convert stringified dicts to real dicts\n# loveisland2['islander_sentiment'] = loveisland2['islander_sentiment'].apply(\n#     lambda x: ast.literal_eval(x) if isinstance(x, str) else x\n# )\n\n# # Step 2: Filter out nulls and make sure only dicts are kept\n# loveisland2_clean = loveisland2[\n#     loveisland2['islander_sentiment'].apply(lambda x: isinstance(x, dict) and len(x) &gt; 0)\n# ].copy()\n\n# # Step 3: Convert dict into list of tuples and explode\n# loveisland2_clean['islander_sentiment_items'] = loveisland2_clean['islander_sentiment'].apply(lambda d: list(d.items()))\n# loveisland2_exploded = loveisland2_clean.explode('islander_sentiment_items')\n\n# # Step 4: Split tuple into two new columns\n# loveisland2_exploded[['islander', 'sentiment']] = pd.DataFrame(\n#     loveisland2_exploded['islander_sentiment_items'].tolist(), index=loveisland2_exploded.index\n# )\n\n# # Optional cleanup\n# loveisland2_exploded = loveisland2_exploded.drop(columns=['islander_sentiment_items'])\n\n# loveisland2_exploded.head()\n\n\nAfter running the model on our comments and pulling in some episode airdate data, we wind up with the following dataset.\n\n\nShow the code\nli_full.head()\n\n\n\n\n\n\n\n\n\ncomment\nscore\ncreated_utc\nepisode_post_id\nepisode_title\nislander\nsentiment\nepisode_num\nAirDate\n\n\n\n\n0\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nAce\n-0.292615\n10\n2025-06-12\n\n\n1\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nIris\n-0.292615\n10\n2025-06-12\n\n\n2\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nChelley\n0.021599\n10\n2025-06-12\n\n\n3\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nHuda\n-0.955151\n10\n2025-06-12\n\n\n4\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nJeremiah\n-0.288001\n10\n2025-06-12",
+    "crumbs": [
+      "Blog",
+      "Love Island NLP"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html#try-the-sentiment-dashboard",
+    "href": "Blogs/love_island_nlp.html#try-the-sentiment-dashboard",
+    "title": "Love Island NLP",
+    "section": "Try the Sentiment Dashboard",
+    "text": "Try the Sentiment Dashboard",
+    "crumbs": [
+      "Blog",
+      "Love Island NLP"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html",
+    "href": "Cleansing_Projects/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html",
+    "href": "Cleansing_Projects/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Projects/project4.html",
+    "href": "Cleansing_Projects/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "index.html#title-2-header",
+    "href": "index.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "Story_Telling/project1.html",
+    "href": "Story_Telling/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Story_Telling/project5.html",
+    "href": "Story_Telling/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Full_Stack/project2.html",
+    "href": "Full_Stack/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Full_Stack/project3.html",
+    "href": "Full_Stack/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Full_Stack/project4.html",
+    "href": "Full_Stack/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Machine_Learning/project1.html",
+    "href": "Machine_Learning/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Machine_Learning/project5.html",
+    "href": "Machine_Learning/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "resume.html",
@@ -287,129 +448,23 @@
     "text": "Student Records Retention Compliance Dashboard\nOctober 2024 – Present\n- Developed a Power BI model that identified over 200,000 student records ready for disposal to comply with AACRAO retention guidelines\n- Wrangled and cleaned data from 5 different databases to implement into the Power BI Model\nPortland Crime Forecasting with XGBoost\nApril 2025\n- Trained an XGBoost model to predict daily Portland, Oregon crime counts with an R² score of 0.62\n- Applied feature engineering, hyperparameter tuning, and model evaluation with Python to improve prediction accuracy and reveal crime patterns"
   },
   {
-    "objectID": "Cleansing_Projects/project3.html",
-    "href": "Cleansing_Projects/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Projects/project2.html",
-    "href": "Cleansing_Projects/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Projects/project4.html",
-    "href": "Cleansing_Projects/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Machine_Learning/project2.html",
-    "href": "Machine_Learning/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Machine_Learning/project4.html",
-    "href": "Machine_Learning/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Full_Stack/project3.html",
-    "href": "Full_Stack/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Full_Stack/project5.html",
-    "href": "Full_Stack/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Full_Stack/project1.html",
-    "href": "Full_Stack/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "sql.html",
-    "href": "sql.html",
+    "objectID": "cleansing.html",
+    "href": "cleansing.html",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics"
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Projects"
+    ]
   },
   {
-    "objectID": "sql.html#title-2-header",
-    "href": "sql.html#title-2-header",
+    "objectID": "cleansing.html#title-2-header",
+    "href": "cleansing.html#title-2-header",
     "title": "about me",
     "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "Competition/project3.html",
-    "href": "Competition/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Competition/project5.html",
-    "href": "Competition/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Competition/project1.html",
-    "href": "Competition/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Story_Telling/project2.html",
-    "href": "Story_Telling/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Story_Telling/project4.html",
-    "href": "Story_Telling/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Exploration/project3.html",
-    "href": "Cleansing_Exploration/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Exploration/project5.html",
-    "href": "Cleansing_Exploration/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Exploration/project1.html",
-    "href": "Cleansing_Exploration/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "MarkDown Basics",
+    "crumbs": [
+      "Projects"
+    ]
   }
 ]
