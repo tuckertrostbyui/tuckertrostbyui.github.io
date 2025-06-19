@@ -46,7 +46,7 @@ Reddit also makes it very easy to use their data. After signing up for an api ke
 ```{python}
 import pandas as pd
 
-li_full = pd.read_csv('/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Blogs/li_full.csv')
+li_full = pd.read_csv('li_full.csv')
 
 li_full[['comment','score','created_utc','episode_title']].head()
 ```
