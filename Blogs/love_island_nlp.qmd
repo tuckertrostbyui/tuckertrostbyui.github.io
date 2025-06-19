@@ -58,7 +58,9 @@ Now that I had my data, it was time to do some named-entity recognition, to pull
 
 I was also able to use a pretrained model from hugging face that is trained specifically on the casual nature of discussion boards like twitter and reddit. This will work perfectly for our analysis
 
-
+```{python}
+!pip3 install transformers torch swifter
+```
 ```{python}
 import re
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
