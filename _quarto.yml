@@ -91,7 +91,7 @@ website:
       background: light
       contents:
         - text: "Blog"
-          file: Blogs/blog.qmd
+          file: blog.qmd
         - text: "---"
         - text: "Love Island NLP"
           file: Blogs/love_island_nlp.qmd
