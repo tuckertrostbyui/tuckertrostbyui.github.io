@@ -26,7 +26,7 @@ website:
       - text: "Projects"
         file: cleansing.qmd
       - text: "Blog"
-        file: Blogs/blog.qmd
+        file: blog.qmd
       #- text: "Story Telling"
       #  file: story_telling.qmd
       #- text: "SQL"

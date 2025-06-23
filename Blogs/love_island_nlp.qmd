@@ -38,11 +38,11 @@ That spark turned into this project—analyzing Reddit discussions of Love Islan
 
 ## Grabbing Data
 
-Grabbing data for this was surprisingly simple. There is a strong community following for the show under the subreddit r/loveislandusa. Within this subreddit, there are post-episode discussion threads for each episode. Each episode tends to get around 8k-15k comments, which is plenty for me to run my analysis. 
+Grabbing data for this was simple at first, but got more complex as the amount of data I needed to grab got bigger. There is a strong community following for the show under the subreddit r/loveislandusa. Within this subreddit, there are post-episode discussion threads for each episode. Each episode tends to get around 8k-15k comments, which is plenty for me to run my analysis. 
 
-Reddit also makes it very easy to use their data. After signing up for an api key, a simple call to grab all the relevant comments from each episodes discussion thread got me all the data I needed to get going. 
+After signing up for a Reddit API key, I could set up my API caall and grab the data I needed. However, this took some trial an error as I kept running into 429 Response errors, meaning I was asking reddit for too much data to quick. Luckily, after adding some *$*time.sleep*$* to slow down the requests, I was able to grab all the data I needed.
 
-
+The following is a snippet of the data the api call grabs:
 ```{python}
 import pandas as pd
 
@@ -51,21 +51,114 @@ li_full = pd.read_csv('li_full.csv')
 li_full[['comment','score','created_utc','episode_title']].head()
 ```
 
+## Data Storage and Automation
+
+Since the season is still airing with new episodes almost every day, I needed a way to keep the data up to date with the latest comments. To handle this, I basically reused my original Reddit API setup but added logic to skip any episodes I had already pulled. That way, it only grabs new ones as they come out.
+
+Along the way, I also discovered how efficient parquet files are compared to CSVs. They store the same data in a much more compact format, which is perfect for saving space without losing structure.
+
+With those pieces in place, it was easy to schedule a GitHub workflow to run daily at 4pm MST. That gives fans enough time to react to the previous night’s episode before a new one airs a few hours later.
+
+```{python}
+def update_with_new_episodes(reddit, output_folder="data/season7_comments", max_retries=3):
+    os.makedirs(output_folder, exist_ok=True)
+
+    # Get a set of already-downloaded post IDs from filenames
+    existing_files = {
+        re.search(r'_(\w+)_comments\.parquet$', f).group(1)
+        for f in glob.glob(f"{output_folder}/*_comments.parquet")
+        if re.search(r'_(\w+)_comments\.parquet$', f)
+    }
+
+    # Step 1: Search for new Season 7 posts
+    new_posts = []
+    for post in reddit.subreddit("LoveIslandUSA").search("Season 7 Episode", sort="new", limit=500):
+        if "Post Episode Discussion" in post.title and post.id not in existing_files:
+            new_posts.append({
+                'post_id': post.id,
+                'title': post.title,
+                'created_utc': post.created_utc,
+                'score': post.score,
+                'num_comments': post.num_comments
+            })
+
+    if not new_posts:
+        print("✅ No new episodes to update.")
+        return pd.DataFrame()  
+
+    new_df = pd.DataFrame(new_posts).sort_values("created_utc")
+    all_new_comments = []
+
+    print(f"🆕 Found {len(new_df)} new episodes. Downloading now...")
+
+    for idx, row in new_df.iterrows():
+        post_id = row['post_id']
+        title_safe = row['title'].replace('/', '_').replace(':', '').replace('"', '')
+        filename = f"{output_folder}/{len(existing_files)+idx:02d}_{post_id}_comments.parquet"
+
+        for attempt in range(1, max_retries + 1):
+            try:
+                print(f"\n🔄 Processing: {title_safe} (Attempt {attempt})")
+                submission = reddit.submission(id=post_id)
+                submission.comments.replace_more(limit=None, threshold=5)
+
+                comment_data = [{
+                    'comment': c.body,
+                    'score': c.score,
+                    'created_utc': c.created_utc,
+                    'author': str(c.author),
+                    'episode_post_id': post_id,
+                    'episode_title': row['title']
+                } for c in submission.comments.list()]
+
+                df_episode = pd.DataFrame(comment_data)
+                df_episode.to_parquet(filename, index=False)
+                all_new_comments.append(df_episode)
+
+                print(f"✅ Saved {len(comment_data)} comments for: {title_safe}")
+                time.sleep(3)
+                break
+
+            except Exception as e:
+                print(f"⚠️ Error on attempt {attempt} for {title_safe}: {e}")
+                if "429" in str(e):
+                    print("🛑 Rate limited. Sleeping for 60 seconds...")
+                    time.sleep(60)
+                else:
+                    time.sleep(10)
+
+                if attempt == max_retries:
+                    print(f"❌ Failed all {max_retries} retries for {title_safe}. Skipping.")
+
+    # Combine and return all new data
+    if all_new_comments:
+        master_df = pd.concat(all_new_comments, ignore_index=True)
+        print(f"\n📦 Returning DataFrame with {len(master_df)} new comments.")
+        return master_df
+    else:
+        print("📭 No new comments were successfully downloaded.")
+        return pd.DataFrame()
+
+```
 
 ## Sentiment Analysis
 
-Now that I had my data, it was time to do some named-entity recognition, to pull the information I neeed. For example, if a comment talkes negatively about the contestant Huda but positivly about Jeramiah, I need to make sure I get the proper sentiment scores for each contestant within that single comment. 
+Once I had the data, it was finally time to dive into sentiment analysis. But it wasn’t as simple as just running a basic sentiment function on each comment. I also needed to add some Named Entity Recognition (NER) to make sure I was capturing sentiment directed at specific people. For example, if a comment criticizes Huda but praises Jeremiah, I wanted the model to recognize that and assign the right sentiment to each person, not just a single overall score.
 
-I was also able to use a pretrained model from hugging face that is trained specifically on the casual nature of discussion boards like twitter and reddit. This will work perfectly for our analysis
+After running the sentiment and NER steps, I reshaped the data so that each row represents one comment, one islander mentioned in that comment, and the sentiment expressed toward them.
 
 ```{python}
 !pip3 install transformers torch swifter nltk
 ```
+
 ```{python}
 import re
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 import numpy as np
+import nltk
+from nltk.tokenize import sent_tokenize
+nltk.download('punkt')
 
 # Initialize islander list
 islanders = ['Chelley','Olandria','Huda','Ace','Nic','Taylor','Jeremiah','Austin','Charlie','Cierra','Hannah','Amaya','Pepe','Jalen','Iris','Yulissa','Belle-A']
@@ -74,67 +167,77 @@ islanders = ['Chelley','Olandria','Huda','Ace','Nic','Taylor','Jeremiah','Austin
 tokenizer = AutoTokenizer.from_pretrained("cardiffnlp/twitter-roberta-base-sentiment")
 model = AutoModelForSequenceClassification.from_pretrained("cardiffnlp/twitter-roberta-base-sentiment")
 
+# Sentiment Function
+def get_sentiment_score(text):
+    tokens = tokenizer(text, return_tensors='pt', truncation=True)
+    with torch.no_grad():
+        output = model(**tokens)
+    scores = torch.nn.functional.softmax(output.logits, dim=1)
+    return {
+        'negative': scores[0][0].item(),
+        'neutral': scores[0][1].item(),
+        'positive': scores[0][2].item(),
+        'compound': scores[0][2].item() - scores[0][0].item()
+    }
+
+# Targeted Sentiment Function
+def targeted_sentiment(comment, islanders):
+    islander_sentiment = {}
+    for sentence in sent_tokenize(comment):
+        for name in islanders:
+            if re.search(rf'\b{name}\b', sentence, re.IGNORECASE):
+                result = get_sentiment_score(sentence)
+                if name not in islander_sentiment:
+                    islander_sentiment[name] = []
+                islander_sentiment[name].append(result['compound'])
+    return {name: np.mean(scores) for name, scores in islander_sentiment.items()}
+
+
 ```
 
+For example, if we take the following comment:
+
+*"Huda was completely out of line during that argument, always playing the victim and stirring up drama. Meanwhile, Jeremiah stayed calm, listened respectfully, and brought everyone back down to earth."*
+
+The model will output the following:
 
 ```{python}
-import nltk
-from nltk.tokenize import sent_tokenize
-nltk.download('punkt')
+comment = "Huda was completely out of line during that argument, always playing the victim and stirring up drama. Meanwhile, Jeremiah stayed calm, listened respectfully, and brought everyone back down to earth."
 
-# Create Sentiment Function
-# def targeted_sentiment(comment, islanders):
-#     islander_sentiment = {}
-#     for sentence in sent_tokenize(comment):
-#         for name in islanders:
-#             if re.search(rf'\b{name}\b', sentence, re.IGNORECASE):
-#                 result = get_sentiment_score(sentence)
-#                 if name not in islander_sentiment:
-#                     islander_sentiment[name] = []
-#                 islander_sentiment[name].append(result['compound'])
-#     return {name: np.mean(scores) for name, scores in islander_sentiment.items()}
+print(targeted_sentiment(comment,islanders))
 
-
-# Apply to data
-# loveisland['islander_sentiment'] = loveisland['comment'].swifter.apply(lambda x: targeted_sentiment(x,islanders))
-# loveisland.head()
 ```
 
-
-```{python}
-# import ast
-
-# # Step 1: Convert stringified dicts to real dicts
-# loveisland2['islander_sentiment'] = loveisland2['islander_sentiment'].apply(
-#     lambda x: ast.literal_eval(x) if isinstance(x, str) else x
-# )
-
-# # Step 2: Filter out nulls and make sure only dicts are kept
-# loveisland2_clean = loveisland2[
-#     loveisland2['islander_sentiment'].apply(lambda x: isinstance(x, dict) and len(x) > 0)
-# ].copy()
-
-# # Step 3: Convert dict into list of tuples and explode
-# loveisland2_clean['islander_sentiment_items'] = loveisland2_clean['islander_sentiment'].apply(lambda d: list(d.items()))
-# loveisland2_exploded = loveisland2_clean.explode('islander_sentiment_items')
-
-# # Step 4: Split tuple into two new columns
-# loveisland2_exploded[['islander', 'sentiment']] = pd.DataFrame(
-#     loveisland2_exploded['islander_sentiment_items'].tolist(), index=loveisland2_exploded.index
-# )
-
-# # Optional cleanup
-# loveisland2_exploded = loveisland2_exploded.drop(columns=['islander_sentiment_items'])
-
-# loveisland2_exploded.head()
-```
-
-After running the model on our comments and pulling in some episode airdate data, we wind up with the following dataset.
+I could then apply the function to the enitire dataset and we are good to go!
 
 ```{python}
 li_full.head()
 ```
 
+## Comment Summarization
+
+Another goal for this project was to explore topic modeling and text summarization to give users a quick snapshot of what people are saying about a particular islander. I experimented with BERTopic and a few summarization models from Hugging Face, but I could never get anything that sounded truly coherent, it mostly just felt like a jumbled mashup of comments.
+
+![Failed Model](Failed Summarization Model.png){.center width=600}
+
+That’s when I decided to try out Google’s Gemini API, and it delivered exactly the kind of summaries I had in mind. All I had to do was initialize the API, pass in the comments for a specific islander, and it generated a clean and readable summary of what people were saying. It ended up being a perfect fit for this part of the app.
+
+![Gemini Example](Gemini Example.png){.center width=600}
+
+## Dashboard Development
+
+As the project continues to evolve, I plan to spend more time improving the design and polish of the dashboard. For now, my focus was on getting a fully functioning proof of concept. The current version lets users select an islander to analyze, then displays a few basic metrics along with a line chart showing how the islander’s average sentiment has changed throughout the season. There’s also a button that triggers a summarization of viewer comments using the Gemini API, giving users a quick overview of what people are saying, as mentioned earlier.
+
+![Dashboard V.1](Dashboard V.1.png){.center width=600}
+
+## Key Challenges/Lessons Learned
+
+This has been the most rewarding project I have ever worked on. It has pushed me to learn a great deal about Natural Language Processing and how to apply it in meaningful ways. Being able to extract insights from raw text and share them with users is incredibly valuable, and it is a skill I am excited to keep improving.
+
+One of the biggest lessons I have learned from this project is the importance of organization and automation. In the past, many of my data science projects used static CSV files and manual processes that only worked once. For this project, I wanted to create something dynamic that could update and run independently. I learned how to structure my code so each function fits together cleanly, how to organize my files to make everything easier to maintain, and how to use GitHub workflows to automate updates. These steps helped me build a system that runs on its own and keeps everything up to date.
+
+
 ## Try the Sentiment Dashboard
 
-<iframe src="https://loveislandusa-sentiment.onrender.com" width="100%" height="600" style="border:none;"></iframe>
+<iframe src="https://tuckertrostbyui-loveisland-app.hf.space" width="100%" height="600" style="border:none;"></iframe>
+
