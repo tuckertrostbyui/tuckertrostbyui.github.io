@@ -154,12 +154,19 @@ After running the sentiment and NER steps, I reshaped the data so that each row 
 ```
 
 ```{python}
+#| echo: false
+#| include: false
+
+
+!python3 nltk_setup.py
+
+```
+```{python}
 import re
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 import numpy as np
 import nltk
-nltk.download('punkt')
 from nltk.tokenize import sent_tokenize
 
 
