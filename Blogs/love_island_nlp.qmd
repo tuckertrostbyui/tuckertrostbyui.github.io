@@ -167,6 +167,7 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 import numpy as np
 import nltk
+nltk.download('punkt_tab')
 from nltk.tokenize import sent_tokenize
 
 
