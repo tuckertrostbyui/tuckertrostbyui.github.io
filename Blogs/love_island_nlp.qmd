@@ -148,6 +148,8 @@ Once I had the data, it was finally time to dive into sentiment analysis. But it
 After running the sentiment and NER steps, I reshaped the data so that each row represents one comment, one islander mentioned in that comment, and the sentiment expressed toward them.
 
 ```{python}
+#| echo: false
+#| include: false
 !pip3 install transformers torch swifter nltk
 ```
 
@@ -157,8 +159,9 @@ from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
 import numpy as np
 import nltk
-from nltk.tokenize import sent_tokenize
 nltk.download('punkt')
+from nltk.tokenize import sent_tokenize
+
 
 # Initialize islander list
 islanders = ['Chelley','Olandria','Huda','Ace','Nic','Taylor','Jeremiah','Austin','Charlie','Cierra','Hannah','Amaya','Pepe','Jalen','Iris','Yulissa','Belle-A']
