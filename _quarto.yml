@@ -93,7 +93,7 @@ website:
         - text: "Blog"
           file: blog.qmd
         - text: "---"
-        - text: "Love Island NLP"
+        - text: "Love Island Sentiment Analysis"
           file: Blogs/love_island_nlp.qmd
     #     - text: "---"
     #     - text: "Project 2"

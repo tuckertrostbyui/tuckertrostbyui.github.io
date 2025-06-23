@@ -1,5 +1,5 @@
 ---
-title: "Love Island NLP"
+title: "Love Island Seniment Analysis"
 subtitle: "Using Reddit to track sentiment of Love Island Contestants"
 author: "Tucker Trost"
 format:
@@ -60,6 +60,7 @@ Along the way, I also discovered how efficient parquet files are compared to CSV
 With those pieces in place, it was easy to schedule a GitHub workflow to run daily at 4pm MST. That gives fans enough time to react to the previous night’s episode before a new one airs a few hours later.
 
 ```{python}
+#| code-summary: API Call
 def update_with_new_episodes(reddit, output_folder="data/season7_comments", max_retries=3):
     os.makedirs(output_folder, exist_ok=True)
 
@@ -162,6 +163,7 @@ After running the sentiment and NER steps, I reshaped the data so that each row 
 
 ```
 ```{python}
+#| code-summary: Sentiment Analysis
 import re
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
 import torch
@@ -213,6 +215,7 @@ For example, if we take the following comment:
 The model will output the following:
 
 ```{python}
+#| code-summary: Test Function
 comment = "Huda was completely out of line during that argument, always playing the victim and stirring up drama. Meanwhile, Jeremiah stayed calm, listened respectfully, and brought everyone back down to earth."
 
 print(targeted_sentiment(comment,islanders))
@@ -222,6 +225,7 @@ print(targeted_sentiment(comment,islanders))
 I could then apply the function to the enitire dataset and we are good to go!
 
 ```{python}
+#| code-summary: Data Output
 li_full.head()
 ```
 
@@ -250,5 +254,8 @@ One of the biggest lessons I have learned from this project is the importance of
 
 ## Try the Sentiment Dashboard
 
-<iframe src="https://tuckertrostbyui-loveisland-app.hf.space" width="100%" height="600" style="border:none;"></iframe>
+You can try out the interactive dashboard here:
+
+[👉 Launch Sentiment Dashboard](https://tuckertrostbyui-loveisland-app.hf.space){target=_blank}
+
 
