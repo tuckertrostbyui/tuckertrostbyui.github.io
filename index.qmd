@@ -1,10 +1,44 @@
 ---
-title: "about me"
-subtitle: "my data science portfolio"
-# use quarto markdown to 
+title: "About Me"
+format:
+  html:
+    page-layout: full
+    toc: false
 ---
 
-# Title 1 Header
-## Title 2 Header
+<div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 2rem;">
 
-[MarkDown Basics](https://quarto.org/docs/authoring/markdown-basics.html#links-images)
+<div style="flex: 1; min-width: 250px;">
+  
+# 👋 Hi, I'm Tucker Trost
+
+I'm a data scientist from Portland, Oregon with a passion for making messy data useful. I specialize in data wrangling, visualization, and storytelling using Python, Power BI, and Tableau. Right now, I'm building a dashboard that analyzes Reddit conversations around *Love Island USA* using sentiment analysis and NLP.
+
+</div>
+
+<div style="flex: 0 0 200px; text-align: center;">
+  <img src="pic_of_me.png" alt="Tucker Trost" style="width: 200px; border-radius: 50%; border: 2px solid #ddd;" />
+</div>
+
+</div>
+---
+
+## 🚀 Skills
+
+**Analysis/Visualization**: Python (Pandas, Lets-Plot, plotly, Pyspark), R (ggplot, tidyverse), Power BI (DAX), Tableau  
+**Machine Learning**: Scikit-learn, TensorFlow, Random Forest Classifiers, Neural Networks, XGBoost  
+**Database Management/Design**: MySQL, SQLite, Databricks, DAX Studio, Microsoft SQL Server  
+
+---
+
+## 📂 Featured Projects
+
+- [**Love Island USA Sentiment Analysis (NLP)**](/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Blogs/love_island_nlp.qmd)  
+  A data pipeline combining Reddit APIs and NLP to uncover public opinion trends across Love Island USA contestants.
+
+- [**Portland Crime Forecasting with XGBoost**](Cleansing_Projects/pcrime.qmd)  
+  Machine learning model to forecast daily neighborhood crime levels.
+
+
+
+
