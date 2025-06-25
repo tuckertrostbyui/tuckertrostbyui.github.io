@@ -120,16 +120,23 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "about me",
+    "title": "About Me",
     "section": "",
-    "text": "MarkDown Basics"
+    "text": "I’m a data scientist from Portland, Oregon with a passion for making messy data useful. I specialize in data wrangling, visualization, and storytelling using Python, Power BI, and Tableau. Right now, I’m building a dashboard that analyzes Reddit conversations around Love Island USA using sentiment analysis and NLP."
   },
   {
-    "objectID": "index.html#title-2-header",
-    "href": "index.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
+    "objectID": "index.html#skills",
+    "href": "index.html#skills",
+    "title": "About Me",
+    "section": "🚀 Skills",
+    "text": "🚀 Skills\nAnalysis/Visualization: Python (Pandas, Lets-Plot, plotly, Pyspark), R (ggplot, tidyverse), Power BI (DAX), Tableau\nMachine Learning: Scikit-learn, TensorFlow, Random Forest Classifiers, Neural Networks, XGBoost\nDatabase Management/Design: MySQL, SQLite, Databricks, DAX Studio, Microsoft SQL Server"
+  },
+  {
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
+    "title": "About Me",
+    "section": "📂 Featured Projects",
+    "text": "📂 Featured Projects\n\nLove Island USA Sentiment Analysis (NLP)\nA data pipeline combining Reddit APIs and NLP to uncover public opinion trends across Love Island USA contestants.\nPortland Crime Forecasting with XGBoost\nMachine learning model to forecast daily neighborhood crime levels."
   },
   {
     "objectID": "Cleansing_Projects/project4.html",
