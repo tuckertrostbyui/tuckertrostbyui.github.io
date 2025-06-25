@@ -33,7 +33,7 @@ I'm a data scientist from Portland, Oregon with a passion for making messy data 
 
 ## 📂 Featured Projects
 
-- [**Love Island USA Sentiment Analysis (NLP)**](/Users/tuckertrost/Documents/tuckertrostbyui.github.io/Blogs/love_island_nlp.qmd)  
+- [**Love Island USA Sentiment Analysis (NLP)**](Blogs/love_island_nlp.qmd)  
   A data pipeline combining Reddit APIs and NLP to uncover public opinion trends across Love Island USA contestants.
 
 - [**Portland Crime Forecasting with XGBoost**](Cleansing_Projects/pcrime.qmd)  
