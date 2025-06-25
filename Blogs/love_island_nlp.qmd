@@ -151,7 +151,7 @@ After running the sentiment and NER steps, I reshaped the data so that each row 
 ```{python}
 #| echo: false
 #| include: false
-!pip3 install transformers torch swifter nltk spacy
+!pip3 install transformers torch swifter nltk spacy lxml
 ```
 
 ```{python}
