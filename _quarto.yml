@@ -93,11 +93,11 @@ website:
         - text: "Blog"
           file: blog.qmd
         - text: "---"
-        - text: "Love Island Sentiment Analysis"
+        - text: "Love Island Sentiment Analysis Part 1"
           file: Blogs/love_island_nlp.qmd
-    #     - text: "---"
-    #     - text: "Project 2"
-    #       file: Exploration_Projects/project2.qmd
+        - text: "---"
+        - text: "Love Island Senitment Analysis Part 2"
+          file: Blogs/love_island_nlp_part2.qmd
     #     - text: "---"
     #     - text: "Project 3"
     #       file: Exploration_Projects/project3.qmd

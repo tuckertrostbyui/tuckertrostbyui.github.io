@@ -900,5 +900,47 @@
     "title": "About Me",
     "section": "",
     "text": "📧 Email me at: tuckertrost@example.com"
+  },
+  {
+    "objectID": "Blogs/love_island_nlp_part2.html",
+    "href": "Blogs/love_island_nlp_part2.html",
+    "title": "Love Island Seniment Analysis Part 2",
+    "section": "",
+    "text": "Over the past few weeks, I’ve been building a dashboard that tracks how Reddit feels about each contestant on Love Island USA, episode by episode. In my initial blog post, I shared how I collected the data, ran sentiment analysis, and got everything up and running as a proof of concept.\nThat first version was all about making sure the idea worked. I wasn’t too worried about how it looked or felt to use. Once I got everything automated and functional, I turned my attention to the design. Now the dashboard actually matches the vibe of the show and feels like something fans would want to use. It’s clean, colorful, and way more fun to explore.\n\n\n\n\n\n\nBefore \n\n\nAfter"
+  },
+  {
+    "objectID": "Blogs/love_island_nlp_part2.html#introduction",
+    "href": "Blogs/love_island_nlp_part2.html#introduction",
+    "title": "Love Island Seniment Analysis Part 2",
+    "section": "",
+    "text": "Over the past few weeks, I’ve been building a dashboard that tracks how Reddit feels about each contestant on Love Island USA, episode by episode. In my initial blog post, I shared how I collected the data, ran sentiment analysis, and got everything up and running as a proof of concept.\nThat first version was all about making sure the idea worked. I wasn’t too worried about how it looked or felt to use. Once I got everything automated and functional, I turned my attention to the design. Now the dashboard actually matches the vibe of the show and feels like something fans would want to use. It’s clean, colorful, and way more fun to explore.\n\n\n\n\n\n\nBefore \n\n\nAfter"
+  },
+  {
+    "objectID": "Blogs/love_island_nlp_part2.html#islander-snapshot",
+    "href": "Blogs/love_island_nlp_part2.html#islander-snapshot",
+    "title": "Love Island Seniment Analysis Part 2",
+    "section": "Islander Snapshot",
+    "text": "Islander Snapshot\nOne of the first things I wanted to add to improve the feel of the dashboard was an islander snapshot section. I didn’t just want to show numbers, I wanted people to actually connect with the islanders they were looking at.\nThe snapshot includes each islander’s image, name, age, and hometown, along with their current status on the show. It also shows what episode they entered the villa and, if they were dumped or removed, what episode that happened.\nThe goal was to make the data feel more human. Instead of just looking at a sentiment score, users now get a quick bio that helps them get to know the islander and gives more context to the trends they’re seeing.\n\nIslander Images\nThe main component I needed to create the snapshot was adding images of the islanders. However, because this is my senior project at Brigham Young University - Idaho (very religious), I new that the full body bikini pictures of the contestants probably wouldn’t fly. To help project more align with the standards of the school, I wrote a function that does the following:\n\nScraped official images of each islander\nRemove the background for custom styling later\nCrop the image to just show their upper body above the shoulders\n\n\n\n\n\n\n\nBefore \n\n\nAfter \n\n\n\nCheck out the funtion in my repo here.\n\nImage Storage\nThe first iteration of the function would save the images in folder within my repository, however, it turns out huggingface is not a fan of storing image files in their repos. So I had to come up with another solution.\nLuckily, huggingface is a fan of uploading the images into a huggingface dataset and then just calling the images from their url when needed in the dashboard. Once I figured that out, it unlocked a lot of doors for future data storage issues.\n\n\n\nEntry and Exit Episodes\nThank goodness for Wikipedia because it has been super helpful to grab updated data from Wiki page on Love Island Season 7. I can grab all of the info I need on the islanders for the snapshot. Once I grabbed the data, some simple regex work allowed me to pull the Entered and Exited episodes for each islander and join that with the episode airdate data.\nAfter that, I could easily add a vertical line on the chart of any islander that has been dumped indicating the episode they were dumped. I feel like doing so adds a lot more context to the sentiment scores.\nAdditionally, I made sure to limit the x axis to start on the episode the islander entered. For example, Jalen didn’t enter the villa until episode 8, however, he had comments including his name in the discussions of episode 3, 5 episodes before anyone knew he existed. When I looked at the comment from episode 3, it turns out it was referencing Jalen Hurts, the quarterback for the Philidelphia Eagles."
+  },
+  {
+    "objectID": "Blogs/love_island_nlp_part2.html#dashboard-redesign",
+    "href": "Blogs/love_island_nlp_part2.html#dashboard-redesign",
+    "title": "Love Island Seniment Analysis Part 2",
+    "section": "Dashboard Redesign",
+    "text": "Dashboard Redesign\nThe original dashboard was super basic. It worked, but it didn’t match the tone of the show at all. So I redesigned it to feel more like love island. I added a nice beachy background that I generated with ChatGPT along with colors that matched the branding of the show for my various metrics and containers. I also looked up the font used in the shows logo and tried to replicate the logo the best I could in my title.\nNow I am certainly no web designer, but I think I did a decent job taking my original dashboard and making it feel more the vibe of the show.\nStreamlit does have its limitations though. For example, containers and metrics are not super customizable. In order to add a background color to my metrics and containers, I had to replicate them using markdown and HTML rather than the actual streamlit methods themselves.\nThe bane of my existence, however, was rounding the corners of the line chart. I tried everything I could but just could not figure it out in the time that I wanted to spend on it. I know I can figure it out later but I needed to focus on other parts of the project."
+  },
+  {
+    "objectID": "Blogs/love_island_nlp_part2.html#lessons-learned",
+    "href": "Blogs/love_island_nlp_part2.html#lessons-learned",
+    "title": "Love Island Seniment Analysis Part 2",
+    "section": "Lessons Learned",
+    "text": "Lessons Learned\nThis project taught me way more than just NLP. I learned how important context and presentation are when working with real-world data. Adding things like entry and exit episodes or cleaner images made the dashboard feel more human and less like just numbers on a screen.\nI also ran into real limitations, like not being able to store images directly in the repo. That forced me to get creative with solutions like Hugging Face Datasets, which ended up being a better option anyway.\nFinally, I learned that a little design effort goes a long way. Even though I am not a designer, making the dashboard feel like it belonged in the Love Island world made the whole thing more fun to build and explore."
+  },
+  {
+    "objectID": "Blogs/love_island_nlp_part2.html#try-the-updated-sentiment-dashboard",
+    "href": "Blogs/love_island_nlp_part2.html#try-the-updated-sentiment-dashboard",
+    "title": "Love Island Seniment Analysis Part 2",
+    "section": "Try the Updated Sentiment Dashboard",
+    "text": "Try the Updated Sentiment Dashboard\nYou can try out the interactive dashboard here:\n(NOTE: For best experience, view dashboard on desktop!)\n👉 Launch Sentiment Dashboard"
   }
 ]
