@@ -1,5 +1,82 @@
 [
   {
+    "objectID": "Competition/project3.html",
+    "href": "Competition/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Competition/project4.html",
+    "href": "Competition/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Competition/project2.html",
+    "href": "Competition/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Full_Stack/project5.html",
+    "href": "Full_Stack/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Full_Stack/project1.html",
+    "href": "Full_Stack/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "sql.html",
+    "href": "sql.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "sql.html#title-2-header",
+    "href": "sql.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "Machine_Learning/project5.html",
+    "href": "Machine_Learning/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Machine_Learning/project1.html",
+    "href": "Machine_Learning/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "full_stack.html",
+    "href": "full_stack.html",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
+    "objectID": "full_stack.html#title-2-header",
+    "href": "full_stack.html#title-2-header",
+    "title": "about me",
+    "section": "",
+    "text": "MarkDown Basics"
+  },
+  {
     "objectID": "ml.html",
     "href": "ml.html",
     "title": "about me",
@@ -14,24 +91,62 @@
     "text": "MarkDown Basics"
   },
   {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "My Data Science Blog",
-    "section": "",
-    "text": "Starting My Journey in NLP\n\n\n\nDate: May 5th, 2025\nLately I’ve been diving into Natural Language Processing (NLP) for my senior project. I’ve been teaching myself the basics through podcasts, books, and working with Python’s NLTK library.\nIt’s been super cool to see how widely NLP is used. Everything from sentiment analysis to search engines to chatbots. There is so much information to be extracted from text and so much data in the world is text.\nTo help with my learning, I made a quick NLP vocab cheat sheet with some core terms. Figured I’d share in case it could help anyone else.\nExcited to continue learning and sharing my progress as I go!\n\n\n\nNLP CheatSheet",
+    "objectID": "Cleansing_Projects/pcrime.html#elevator-pitch",
+    "href": "Cleansing_Projects/pcrime.html#elevator-pitch",
+    "title": "Portland Crime Forecasting with XGBoost",
+    "section": "Elevator pitch",
+    "text": "Elevator pitch\nThis project involves cleaning, exploring, and modeling crime data from Portland, Oregon (2015–2023). After addressing missing data and reducing noise, we uncovered key trends in offense types, report times, and their relationship to neighborhood, day, and time. We then developed an XGBoost machine learning model that predicts daily total offense counts by neighborhood, currently achieving an R² score of 0.62. This model could support better resource planning and crime prevention strategies across the city.\n\nData Source\nThe dateset that I am using was accessed directly from Portland Police Bureau’s Open Data initiative; compiled from 2015-2023. This dataset is being used under this license.\n\n\nData Dictionary\nAddress: Address of reported incident at the 100 block level (e.g.: 1111 SW 2nd Ave would be 1100 Block SW 2nd Ave).\nCase Number: The case year and number for the reported incident (YY-######).\nCrime Against: Crime against category (Person, Property, or Society).\nNeighborhood: Neighborhood where incident occurred. If the neighborhood name is missing, the incident occurred outside of the boundaries of the Portland neighborhoods or at a location that could not be assigned to a specific address in the system. (e.g., Portland, near Washington Park, on the streetcar, etc.).\nOccur Date: Date the incident occurred. The exact occur date is sometimes unknown. In most situations, the first possible date the crime could have occurred is used as the occur date. (For example, victims return home from a week-long vacation to find their home burglarized. The burglary could have occurred at any point during the week. The first date of their vacation would be listed as the occur date.)\nOccur Time: Time the incident occurred. The exact occur time is sometimes unknown. In most situations, the first possible time the crime could have occurred is used as the occur time. The time is reported in the 24-hour clock format, with the first two digits representing hour (ranges from 00 to 23) and the second two digits representing minutes (ranges from 00 to 59).\nOffense Category: Category of offense (for example, Assault Offenses).\nOffense Type: Type of offense (for example, Aggravated Assault)Note: The statistic for Homicide Offenses has been updated in the Group A Crimes report to align with the 2019 FBI NIBRS definitions. The statistic for Homicide Offenses includes (09A) Murder & Non-negligent Manslaughter and (09B) Negligent Manslaughter. As of January 1, 2019, the FBI expanded the definition of negligent manslaughter to include traffic fatalities that result in an arrest for driving under the influence, distracted driving, or reckless driving. The change in definition impacts the 2019 homicide offenses statistic and the comparability of 2019 homicide statistics to prior year.\nOpen Data Lat/Lon: Generalized Latitude / Longitude of the reported incident. For offenses that occurred at a specific address, the point is mapped to the block’s midpoint. Offenses that occurred at an intersection is mapped to the intersection centroid.\nOpen Data X/Y: Generalized XY point of the reported incident. For offenses that occurred at a specific address, the point is mapped to the block’s midpoint. Offenses that occurred at an intersection is mapped to the intersection centroid. To protect the identity of victims and other privacy concerns, the points of certain case types are not released. XY points use the Oregon State Plane North (3601), NAD83 HARN, US International Feet coordinate system.\nOffense Count: Number of offenses per incident. Offenses (i.e. this field) are summed for counting purposes.",
     "crumbs": [
-      "Blog"
+      "Projects",
+      "Portland Crime Forecasting with XGBoost"
     ]
   },
   {
-    "objectID": "blog.html#natural-language-processing",
-    "href": "blog.html#natural-language-processing",
-    "title": "My Data Science Blog",
-    "section": "",
-    "text": "Starting My Journey in NLP\n\n\n\nDate: May 5th, 2025\nLately I’ve been diving into Natural Language Processing (NLP) for my senior project. I’ve been teaching myself the basics through podcasts, books, and working with Python’s NLTK library.\nIt’s been super cool to see how widely NLP is used. Everything from sentiment analysis to search engines to chatbots. There is so much information to be extracted from text and so much data in the world is text.\nTo help with my learning, I made a quick NLP vocab cheat sheet with some core terms. Figured I’d share in case it could help anyone else.\nExcited to continue learning and sharing my progress as I go!\n\n\n\nNLP CheatSheet",
+    "objectID": "Cleansing_Projects/pcrime.html#prepare",
+    "href": "Cleansing_Projects/pcrime.html#prepare",
+    "title": "Portland Crime Forecasting with XGBoost",
+    "section": "Prepare",
+    "text": "Prepare\n\n\nRead and format project data\n# Load in Data\npcrime_15 = pd.read_csv('CrimeData-2015.csv')\npcrime_16 = pd.read_csv('CrimeData-2016.csv')\npcrime_17 = pd.read_csv('CrimeData-2017.csv')\npcrime_18 = pd.read_csv('CrimeData-2018.csv')\npcrime_19 = pd.read_csv('CrimeData-2019.csv')\npcrime_20 = pd.read_csv('CrimeData-2020.csv')\npcrime_21 = pd.read_csv('CrimeData-2021.csv')\npcrime_22 = pd.read_csv('CrimeData-2022.csv')\npcrime_23 = pd.read_csv('CrimeData-2023.csv')\n\n# Combine Datasets\npcrime_combined = pd.concat([pcrime_15,pcrime_16,pcrime_17,pcrime_18,pcrime_19,pcrime_20,pcrime_21,pcrime_22,pcrime_23], ignore_index=True)\npcrime_combined.head()\n\n\n\n\n\n\n\n\n\nAddress\nCaseNumber\nCrimeAgainst\nNeighborhood\nOccurDate\nOccurTime\nOffenseCategory\nOffenseType\nOpenDataLat\nOpenDataLon\nOpenDataX\nOpenDataY\nReportDate\nOffenseCount\n\n\n\n\n0\nNaN\n15-X197430\nPerson\nPiedmont\n5/12/2015\n1400\nAssault Offenses\nIntimidation\nNaN\nNaN\nNaN\nNaN\n5/12/2015\n1\n\n\n1\nNaN\n15-X4282999\nPerson\nBuckman West\n5/1/2015\n2143\nAssault Offenses\nSimple Assault\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n2\nNaN\n15-X4283033\nPerson\nUniversity Park\n5/1/2015\n1625\nAssault Offenses\nSimple Assault\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n3\nNaN\n15-X4283218\nPerson\nMadison South\n5/1/2015\n1820\nAssault Offenses\nSimple Assault\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n4\nNaN\n15-X4283218\nPerson\nMadison South\n5/1/2015\n1820\nKidnapping/Abduction\nKidnapping/Abduction\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n\n\n\n\n\n\nWhat is our goal?\nThinking forward to the analysis that I want to perform with this data, I need to understand what I am looking for when it comes to cleaning. I know that I want to focus my analysis on the temporal crime trends across the various neighborhoods of Portland. Based on this understanding, I get a better sense of what aspects of the data need to be cleaned.\n\n\nIdentify Missing Data\npcrime_combined.isna().sum()\n\n\nAddress            44998\nCaseNumber             0\nCrimeAgainst           0\nNeighborhood       17566\nOccurDate              0\nOccurTime              0\nOffenseCategory        0\nOffenseType            0\nOpenDataLat        56511\nOpenDataLon        56511\nOpenDataX          56511\nOpenDataY          56511\nReportDate             0\nOffenseCount           0\ndtype: int64\n\n\n\n\nInitial Observations\n\nA time to report column would be useful\n\nConvert OccurDate and ReportDate to datetime\nCreate a time to report column\n\nOpenDataX/Y don’t seem necessary for our analysis\n\nDrop OpenDataX and OpenDataY columns\n\nAddress column seems to be redundant as most entries are just a general location\n\nDrop Address column\n\nNeighborhood averages can be used to find lat/lon\n\nDrop rows with missing Neighborhood and OpenDataLat\nReplace all rows with neighborhood but missing Lat/Lon data with average Lat/Lon of their neighborhood",
     "crumbs": [
-      "Blog"
+      "Projects",
+      "Portland Crime Forecasting with XGBoost"
     ]
+  },
+  {
+    "objectID": "Cleansing_Projects/pcrime.html#data-cleaning",
+    "href": "Cleansing_Projects/pcrime.html#data-cleaning",
+    "title": "Portland Crime Forecasting with XGBoost",
+    "section": "Data Cleaning",
+    "text": "Data Cleaning\n\n\nCleaning\n# Calculate average Lat/Lon for each neighborhood\nneighborhood_means = pcrime_combined.groupby('Neighborhood')[['OpenDataLat','OpenDataLon']].transform('mean')\n\n# Clean the data\npcrime_cleaned = (\n    pcrime_combined\n    .drop(columns=['Address', 'OpenDataX', 'OpenDataY'])  # Drop X/Y\n    .dropna(subset=['OpenDataLat', 'Neighborhood'], how='all')  # Drop missing lat/lon and Neighborhoods\n    .assign(\n        OccurDate=pd.to_datetime(pcrime_combined['OccurDate']),  # Convert dates to datetime\n        week=lambda x: x.OccurDate.dt.isocalendar().week,\n        year=lambda x: x.OccurDate.dt.year,\n        month=lambda x: x.OccurDate.dt.month,\n        dayofmonth=lambda x: x.OccurDate.dt.day,\n        ReportDate=pd.to_datetime(pcrime_combined['ReportDate']),\n        ReportDiff=lambda x: (x['ReportDate'] - x['OccurDate']).dt.days,  # Calculate time to report\n        OpenDataLat=lambda x: x['OpenDataLat'].fillna(neighborhood_means['OpenDataLat']),  # Fill missing Lat/Lon with average Lat/Lon of given neighborhood\n        OpenDataLon=lambda x: x['OpenDataLon'].fillna(neighborhood_means['OpenDataLon']),\n        OccurTime=lambda x: x['OccurTime'].astype(str).str.zfill(4),  # Ensure time is in HHMM format\n        OccurDateTime=lambda x: pd.to_datetime(\n            x['OccurDate'].dt.strftime('%Y-%m-%d') + ' ' + \n            x['OccurTime'].str[:2] + ':' + x['OccurTime'].str[2:]), # Combine date and formatted time into datetime\n        OccurHour=lambda x: x.OccurDateTime.dt.hour,\n    )\n    .loc[lambda x: x['OccurDateTime'].dt.year.between(2015, 2023)]  # Filter rows with years within 2015–2023\n)\n\npcrime_cleaned\n\n\n\n\n\n\n\n\n\nCaseNumber\nCrimeAgainst\nNeighborhood\nOccurDate\nOccurTime\nOffenseCategory\nOffenseType\nOpenDataLat\nOpenDataLon\nReportDate\nOffenseCount\nweek\nyear\nmonth\ndayofmonth\nReportDiff\nOccurDateTime\nOccurHour\n\n\n\n\n0\n15-X197430\nPerson\nPiedmont\n2015-05-12\n1400\nAssault Offenses\nIntimidation\n45.575321\n-122.669950\n2015-05-12\n1\n20\n2015\n5\n12\n0\n2015-05-12 14:00:00\n14\n\n\n1\n15-X4282999\nPerson\nBuckman West\n2015-05-01\n2143\nAssault Offenses\nSimple Assault\n45.517973\n-122.659334\n2015-05-01\n1\n18\n2015\n5\n1\n0\n2015-05-01 21:43:00\n21\n\n\n2\n15-X4283033\nPerson\nUniversity Park\n2015-05-01\n1625\nAssault Offenses\nSimple Assault\n45.580393\n-122.727295\n2015-05-01\n1\n18\n2015\n5\n1\n0\n2015-05-01 16:25:00\n16\n\n\n3\n15-X4283218\nPerson\nMadison South\n2015-05-01\n1820\nAssault Offenses\nSimple Assault\n45.540839\n-122.578812\n2015-05-01\n1\n18\n2015\n5\n1\n0\n2015-05-01 18:20:00\n18\n\n\n4\n15-X4283218\nPerson\nMadison South\n2015-05-01\n1820\nKidnapping/Abduction\nKidnapping/Abduction\n45.540839\n-122.578812\n2015-05-01\n1\n18\n2015\n5\n1\n0\n2015-05-01 18:20:00\n18\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n531881\n23-225440\nSociety\nSylvan-Highlands\n2023-08-27\n1420\nWeapon Law Violations\nWeapons Law Violations\n45.508945\n-122.731195\n2023-08-27\n1\n34\n2023\n8\n27\n0\n2023-08-27 14:20:00\n14\n\n\n531882\n23-51637\nProperty\nArlington Heights\n2023-02-23\n0330\nMotor Vehicle Theft\nMotor Vehicle Theft\n45.506744\n-122.713355\n2023-02-25\n1\n8\n2023\n2\n23\n2\n2023-02-23 03:30:00\n3\n\n\n531883\n23-227984\nPerson\nGoose Hollow\n2023-08-30\n0920\nAssault Offenses\nAggravated Assault\n45.515555\n-122.693709\n2023-08-30\n1\n35\n2023\n8\n30\n0\n2023-08-30 09:20:00\n9\n\n\n531884\n23-40689\nProperty\nForest Park\n2023-02-13\n1130\nMotor Vehicle Theft\nMotor Vehicle Theft\n45.540437\n-122.736728\n2023-02-13\n1\n7\n2023\n2\n13\n0\n2023-02-13 11:30:00\n11\n\n\n531885\n23-137815\nProperty\nForest Park\n2023-05-23\n1300\nLarceny Offenses\nTheft From Motor Vehicle\n45.540437\n-122.736728\n2023-05-26\n1\n21\n2023\n5\n23\n3\n2023-05-23 13:00:00\n13\n\n\n\n\n521247 rows × 18 columns\n\n\n\n\n\nShow the code\npcrime_cleaned.info()\n\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nIndex: 521247 entries, 0 to 531885\nData columns (total 18 columns):\n #   Column           Non-Null Count   Dtype         \n---  ------           --------------   -----         \n 0   CaseNumber       521247 non-null  object        \n 1   CrimeAgainst     521247 non-null  object        \n 2   Neighborhood     513377 non-null  object        \n 3   OccurDate        521247 non-null  datetime64[ns]\n 4   OccurTime        521247 non-null  object        \n 5   OffenseCategory  521247 non-null  object        \n 6   OffenseType      521247 non-null  object        \n 7   OpenDataLat      521247 non-null  float64       \n 8   OpenDataLon      521247 non-null  float64       \n 9   ReportDate       521247 non-null  datetime64[ns]\n 10  OffenseCount     521247 non-null  int64         \n 11  week             521247 non-null  UInt32        \n 12  year             521247 non-null  int32         \n 13  month            521247 non-null  int32         \n 14  dayofmonth       521247 non-null  int32         \n 15  ReportDiff       521247 non-null  int64         \n 16  OccurDateTime    521247 non-null  datetime64[ns]\n 17  OccurHour        521247 non-null  int32         \ndtypes: UInt32(1), datetime64[ns](3), float64(2), int32(4), int64(2), object(6)\nmemory usage: 66.1+ MB\n\n\nNow we can check and see how we did filling in our missing data.\n\n\nCheck missing data\npcrime_cleaned.isna().sum()\n\n\nCaseNumber            0\nCrimeAgainst          0\nNeighborhood       7870\nOccurDate             0\nOccurTime             0\nOffenseCategory       0\nOffenseType           0\nOpenDataLat           0\nOpenDataLon           0\nReportDate            0\nOffenseCount          0\nweek                  0\nyear                  0\nmonth                 0\ndayofmonth            0\nReportDiff            0\nOccurDateTime         0\nOccurHour             0\ndtype: int64\n\n\n\nFinal Cleaning Thoughts\nWe have now cleaned our data into a useable state for our analysis. We went from many missing rows from in many columns to only 7881 missing rows in the neighborhood column.\nNote: Further cleaning of the missing neighborhood rows could be done using a reverse geocoding API, however, that is beyond the scope of this project",
+    "crumbs": [
+      "Projects",
+      "Portland Crime Forecasting with XGBoost"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/pcrime.html#data-exploration",
+    "href": "Cleansing_Projects/pcrime.html#data-exploration",
+    "title": "Portland Crime Forecasting with XGBoost",
+    "section": "Data Exploration",
+    "text": "Data Exploration\n\nThoughts\n\nTemporal Trends\n\nhour/Day/month/year trends\n\nCrime distributions\n\ncategories/types/crimeagainst\nreportdiff by offense type\n\nNeighborhood\n\ntype/category distributions\nreportdiff by neighborhood\noffense count by neighborhood\n\n\n\nTemporal Trends\n\n\nYear Count\nfrom lets_plot import *\nLetsPlot.setup_html()\nmonth_year = (pcrime_cleaned\n    .assign(\n        year=pcrime_cleaned['OccurDateTime'].dt.year,\n        month=pcrime_cleaned['OccurDateTime'].dt.month) \n    .query('year &gt;= 2019')\\\n    .groupby(['year', 'month'])\\\n    ['OffenseCount'].sum()\\\n    .reset_index()\\\n    .rename(columns={'OffenseCount': 'count'})\n)\n\nlast_month_data = (\n    month_year.groupby(\"year\")\n    .apply(lambda df: df[df[\"month\"] == df[\"month\"].max()])\n    .reset_index(drop=True)\n)\n\nmonth_year[\"year\"] = month_year[\"year\"].astype(str)  # Convert year to string\nlast_month_data[\"year\"] = last_month_data[\"year\"].astype(str)  # Convert for labels\n\nmonth_year_fig = (\n    ggplot(month_year, aes(x=\"month\", y=\"count\", color=\"year\", group=\"year\")) +\n    geom_smooth(method='loess', span=0.5,se=False) +\n    geom_label(data=last_month_data, mapping=aes(y='count',label=\"year\", color=\"year\"),x=12.5, size=7,check_overlap=True)+\n    labs(title=\"Offense Counts by Month and Year\", x=\"Month\", y=\"Offense Count\") +\n    theme_minimal() +\n    theme(legend_position=\"none\") +\n    scale_x_continuous(breaks=list(range(1, 13)))+\n    scale_y_continuous(breaks=[4500,4750,5000,5250,5500,5750,6000,6250,6500]))\n\n\nmonth_year_fig\n\n\n\n            \n            \n            \n\n\n   \n   \n\n\n\nObservations\nThis chart shows that crime levels remained fairly consistent in 2019. In 2020, we see a noticeable drop when the country went into lockdown, followed by a sharp increase as restrictions eased in the summer. Then, in 2021, Portland experienced a significant surge in crime, which remained relatively high until 2023, when it began to stabilize.\n\n\nOther Temporal Counts\n# Month Count\n\nmonth_count = pcrime_cleaned.groupby(pcrime_cleaned['OccurDateTime'].dt.month)['OffenseCount'].sum().reset_index()\n\nmonth_count.rename(columns={month_count.columns[0]: 'Month'}, inplace=True)\n\nmonth_count_fig = ggplot(month_count, aes(x=\"Month\", y=\"OffenseCount\")) + \\\n    geom_line(color='#2e6f40', size=1.5) + \\\n    geom_point(color='#2e6f40', size=3) + \\\n    labs(title='Offense Counts by Month', x='Month', y='Offense Count') + \\\n    scale_x_continuous(breaks=list(range(1, 13))) + \\\n    theme_minimal() + \\\n    theme(\n        plot_title=element_text(size=16, face='bold'),\n        axis_title_x=element_text(size=12, face='bold'),\n        axis_title_y=element_text(size=12, face='bold'),\n        axis_text_x=element_text(size=10), \n        axis_text_y=element_text(size=10),\n        panel_grid_minor=element_blank()\n    )\n\n# Weekday Count\nweekday_count = pcrime_cleaned.groupby(pcrime_cleaned['OccurDateTime'].dt.weekday)['OffenseCount'].sum().reset_index()\n\nweekday_count.rename(columns={weekday_count.columns[0]: 'Weekday'}, inplace=True)\n\nweekday_count_fig = ggplot(weekday_count, aes(x=\"Weekday\", y=\"OffenseCount\")) + \\\n    geom_line(color='#2e6f40', size=1.5) + \\\n    geom_point(color='#2e6f40', size=3) + \\\n    labs(title='Offense Counts by Weekday', x='Weekday', y='Offense Count') + \\\n    theme_minimal() + \\\n    theme(\n        plot_title=element_text(size=16, face='bold'),\n        axis_title_x=element_text(size=12, face='bold'),\n        axis_title_y=element_text(size=12, face='bold'),\n        axis_text_x=element_text(size=10), \n        axis_text_y=element_text(size=10),\n        panel_grid_minor=element_blank()\n    )\n\n# Hour Count\nhour_count = pcrime_cleaned.groupby(pcrime_cleaned['OccurDateTime'].dt.hour)['OffenseCount'].sum().reset_index()\n\nhour_count.rename(columns={hour_count.columns[0]: 'Hour'}, inplace=True)\n\nhour_count_fig = ggplot(hour_count, aes(x=\"Hour\", y=\"OffenseCount\")) + \\\n    geom_line(color='#2e6f40', size=1.5) + \\\n    geom_point(color='#2e6f40', size=3) + \\\n    labs(title='Offense Counts by Hour', x='Hour', y='Offense Count') + \\\n    scale_x_continuous(breaks=list(range(0, 25))) + \\\n    theme_minimal() + \\\n    theme(\n        plot_title=element_text(size=16, face='bold'),\n        axis_title_x=element_text(size=12, face='bold'),\n        axis_title_y=element_text(size=12, face='bold'),\n        axis_text_x=element_text(size=10), \n        axis_text_y=element_text(size=10),\n        panel_grid_minor=element_blank()\n    )\n\n# Create a list of plots to display in a single row\ntemp_plot_list = [\n    month_count_fig,\n    weekday_count_fig,\n    hour_count_fig\n]\n\n# Arrange the plots in a single row\ntemp_plots = gggrid(temp_plot_list, ncol=3) + ggsize(1200, 400)\n\n# Show the combined plot\ntemp_plots\n\n\n   \n   \n\n\n\n\nObservations\nCrime patterns exhibit distinct temporal trends across months, weekdays, and hours. Monthly data shows that crime tends to slow down during the winter months and gradually rises through the summer and into the rest of the year, potentially influenced by seasonal factors such as weather and increased outdoor activity. Looking at weekly patterns, Friday stands out as the day with the highest number of reported offenses, which aligns with the start of the weekend when more people are out, creating more opportunities for crime. Additionally, crime follows a predictable daily cycle, with certain hours experiencing higher offense counts. These trends suggest that external factors like weather, social behavior, and law enforcement presence may play a role in crime fluctuations, warranting further analysis to uncover deeper insights.\n\n\n\nCrime Distribution Trends\n\n\nCrime Against\n# Crime Against Count\ncrime_against = pcrime_cleaned.groupby('CrimeAgainst',as_index=False)['OffenseCount'].sum()\ncrime_against_fig = ggplot(crime_against, aes(x='CrimeAgainst', y='OffenseCount')) + \\\n    geom_bar(stat='identity', fill='#2e6f40', color='black') + \\\n    labs(title='Offense Counts by Crime Type', x='Crime Against', y='Offense Count') + \\\n    theme_minimal() + \\\n    theme(\n        plot_title=element_text(size=16, face='bold'),\n        axis_title_x=element_text(size=12, face='bold'),\n        axis_title_y=element_text(size=12, face='bold'),\n        axis_text_x=element_text(size=10), \n        axis_text_y=element_text(size=10),\n        panel_grid_minor=element_blank()\n    )\n\n# Crime Against Report Time\n\ncrime_against_report_box = (ggplot(pcrime_cleaned,aes(x='ReportDiff',y='CrimeAgainst'))+\n  geom_boxplot(outlier_shape = None,fill='#2e6f40', color='black')+\n  scale_x_log10()+\n  theme_minimal()+\n  labs(title = 'Crime Against Report Time Distribution',x= 'Days to Report',y='Crime Against'))\n\ncrime_against_list = [crime_against_fig,crime_against_report_box]\n\ncrime_against_plots = gggrid(crime_against_list,ncol=2)+ ggsize(1600, 600)\n\ncrime_against_plots\n\n\n   \n   \n\n\n\nObservations\nIt’s evident that crimes against property are much more common than other categories. My initial thought is that property crimes may be more frequent because they’re often easier to commit, both physically and morally. Property doesn’t involve direct harm to individuals, which could make it feel less risky or less severe to potential offenders. The differences in report times are also interesting. All crime against types have a median report time of 1 day, however, crime against person has a larger distribution of report times. This also makes sense because many crimes against a person are very sensitive situations that lead to delayed reporting.\n\n\nCrime Category & Type\n# Crime Category Count\ncrime_cat = pcrime_cleaned.groupby('OffenseCategory',as_index=False)['OffenseCount'].sum().sort_values(by='OffenseCount', ascending=False).head(10)\ncrime_cat_fig = ggplot(crime_cat, aes(x='OffenseCount', y='OffenseCategory')) + \\\n    geom_bar(stat='identity', fill='#2e6f40', color='black') + \\\n    labs(title='Offense Counts by Category', x='Offense COunt', y='Offense Category') + \\\n    theme_minimal() + \\\n    theme(\n        plot_title=element_text(size=16, face='bold'),\n        axis_title_x=element_text(size=12, face='bold'),\n        axis_title_y=element_text(size=12, face='bold'),\n        axis_text_x=element_text(size=10), \n        axis_text_y=element_text(size=10),\n        panel_grid_minor=element_blank()\n    )\n\ncrime_cat_fig\n\n# Crime Type Count\ncrime_type = pcrime_cleaned.groupby('OffenseType',as_index=False)['OffenseCount'].sum().sort_values(by='OffenseCount', ascending=False).head(10)\ncrime_type_fig = ggplot(crime_type, aes(x='OffenseCount', y='OffenseType')) + \\\n    geom_bar(stat='identity', fill='#2e6f40', color='black') + \\\n    labs(title='Offense Counts by Type', x='Offense COunt', y='Offense Type') + \\\n    theme_minimal() + \\\n    theme(\n        plot_title=element_text(size=16, face='bold'),\n        axis_title_x=element_text(size=12, face='bold'),\n        axis_title_y=element_text(size=12, face='bold'),\n        axis_text_x=element_text(size=10), \n        axis_text_y=element_text(size=10),\n        panel_grid_minor=element_blank()\n    )\n\ncrime_type_fig\n\n# Neighborhood Count\nneigh_count = pcrime_cleaned.groupby('Neighborhood',as_index=False)['OffenseCount'].sum().sort_values(by='OffenseCount', ascending=False).head(10)\nneigh_count_fig = ggplot(neigh_count,aes(y=neigh_count[\"Neighborhood\"],x=neigh_count[\"OffenseCount\"]))+ \\\n    geom_bar(stat='identity',fill='#2e6f40', color='black')+ \\\n    labs(title='Offense Count by Neighborhood', x='Offense Count', y='Neighborhood') + \\\n    theme_minimal() + \\\n    theme(\n        plot_title=element_text(size=16, face='bold'),\n        axis_title_x=element_text(size=12, face='bold'),\n        axis_title_y=element_text(size=12, face='bold'),\n        axis_text_x=element_text(size=10), \n        axis_text_y=element_text(size=10),\n        panel_grid_minor=element_blank()\n    )\nneigh_count_fig\n\ncount_list = [crime_cat_fig,crime_type_fig,neigh_count_fig]\n\ncount_plots = gggrid(count_list, ncol=2) + ggsize(1200, 400)\n\ncount_plots\n\n\n   \n   \n\n\n\n\nObservations\nLarceny stands out as the most common offense in Portland, reinforcing the broader trend that property crimes are significantly more prevalent than other crime categories. This may be attributed to the opportunistic nature of larceny—these offenses often require little planning and can happen quickly, unlike more serious crimes that demand time, effort, or emotional involvement. Additionally, neighborhood-level analysis shows that Downtown and Hazelwood experience disproportionately high numbers of reported offenses. While this highlights potential crime hotspots, further context—such as population density, neighborhood size, and visitor traffic—would provide a more accurate understanding of these patterns.",
+    "crumbs": [
+      "Projects",
+      "Portland Crime Forecasting with XGBoost"
+    ]
+  },
+  {
+    "objectID": "Cleansing_Projects/project5.html",
+    "href": "Cleansing_Projects/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Projects/project2.html",
+    "href": "Cleansing_Projects/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
     "objectID": "resume.html",
@@ -69,95 +184,235 @@
     "text": "Student Records Retention Compliance Dashboard\nOctober 2024 – Present\n- Developed a Power BI model that identified over 200,000 student records ready for disposal to comply with AACRAO retention guidelines\n- Wrangled and cleaned data from 5 different databases to implement into the Power BI Model\nPortland Crime Forecasting with XGBoost\nApril 2025\n- Trained an XGBoost model to predict daily Portland, Oregon crime counts with an R² score of 0.62\n- Applied feature engineering, hyperparameter tuning, and model evaluation with Python to improve prediction accuracy and reveal crime patterns"
   },
   {
-    "objectID": "Machine_Learning/project5.html",
-    "href": "Machine_Learning/project5.html",
+    "objectID": "Story_Telling/project3.html",
+    "href": "Story_Telling/project3.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Machine_Learning/project1.html",
-    "href": "Machine_Learning/project1.html",
+    "objectID": "Story_Telling/project4.html",
+    "href": "Story_Telling/project4.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Full_Stack/project4.html",
-    "href": "Full_Stack/project4.html",
+    "objectID": "Story_Telling/project2.html",
+    "href": "Story_Telling/project2.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Full_Stack/project3.html",
-    "href": "Full_Stack/project3.html",
+    "objectID": "Cleansing_Exploration/project5.html",
+    "href": "Cleansing_Exploration/project5.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Full_Stack/project2.html",
-    "href": "Full_Stack/project2.html",
+    "objectID": "Cleansing_Exploration/project1.html",
+    "href": "Cleansing_Exploration/project1.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Story_Telling/project5.html",
-    "href": "Story_Telling/project5.html",
-    "title": "Client Report - [Insert Project Title]",
+    "objectID": "Blogs/love_island_nlp.html",
+    "href": "Blogs/love_island_nlp.html",
+    "title": "Love Island Seniment Analysis",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "Over the past few weeks, I’ve been diving headfirst into the world of Natural Language Processing (NLP), and honestly it’s been kind of mind-blowing. Learning the tools and exploring the endless use cases has completely opened my eyes to just how powerful NLP can be. So much of the world’s data is text, and being able to actually make sense of it and pull meaningful insights? Total game changer.\nOne area I’ve been particularly obsessed with is sentiment analysis, figuring out whether a piece of text sounds positive, neutral, or negative. I started off with the basics, experimenting with built-in datasets from the NLTK library and playing around with the VADER lexicon. But the real magic started happening when I got my hands on pretrained models from Hugging Face, models that are trained on specific types of text like tweets.\nNow here’s where things took a turn. My wife recently got into Love Island USA, a show where a bunch of attractive 20-somethings date each other in a villa in Fiji. I originally watched to be a supportive husband… but I’ll admit it, I got hooked. The drama, the storylines, the unexpected twists, I was all in. And somewhere along the way, after watching my opinion of a contestant totally shift over time, it hit me: what if I could track public sentiment like that?\nThat spark turned into this project—analyzing Reddit discussions of Love Island USA to track how the internet feels about each contestant as the season unfolds.",
+    "crumbs": [
+      "Blog",
+      "Love Island Sentiment Analysis Part 1"
+    ]
   },
   {
-    "objectID": "Story_Telling/project1.html",
-    "href": "Story_Telling/project1.html",
-    "title": "Client Report - [Insert Project Title]",
+    "objectID": "Blogs/love_island_nlp.html#background",
+    "href": "Blogs/love_island_nlp.html#background",
+    "title": "Love Island Seniment Analysis",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "Over the past few weeks, I’ve been diving headfirst into the world of Natural Language Processing (NLP), and honestly it’s been kind of mind-blowing. Learning the tools and exploring the endless use cases has completely opened my eyes to just how powerful NLP can be. So much of the world’s data is text, and being able to actually make sense of it and pull meaningful insights? Total game changer.\nOne area I’ve been particularly obsessed with is sentiment analysis, figuring out whether a piece of text sounds positive, neutral, or negative. I started off with the basics, experimenting with built-in datasets from the NLTK library and playing around with the VADER lexicon. But the real magic started happening when I got my hands on pretrained models from Hugging Face, models that are trained on specific types of text like tweets.\nNow here’s where things took a turn. My wife recently got into Love Island USA, a show where a bunch of attractive 20-somethings date each other in a villa in Fiji. I originally watched to be a supportive husband… but I’ll admit it, I got hooked. The drama, the storylines, the unexpected twists, I was all in. And somewhere along the way, after watching my opinion of a contestant totally shift over time, it hit me: what if I could track public sentiment like that?\nThat spark turned into this project—analyzing Reddit discussions of Love Island USA to track how the internet feels about each contestant as the season unfolds.",
+    "crumbs": [
+      "Blog",
+      "Love Island Sentiment Analysis Part 1"
+    ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "About Me",
+    "objectID": "Blogs/love_island_nlp.html#grabbing-data",
+    "href": "Blogs/love_island_nlp.html#grabbing-data",
+    "title": "Love Island Seniment Analysis",
+    "section": "Grabbing Data",
+    "text": "Grabbing Data\nGrabbing data for this was simple at first, but got more complex as the amount of data I needed to grab got bigger. There is a strong community following for the show under the subreddit r/loveislandusa. Within this subreddit, there are post-episode discussion threads for each episode. Each episode tends to get around 8k-15k comments, which is plenty for me to run my analysis.\nAfter signing up for a Reddit API key, I could set up my API caall and grab the data I needed. However, this took some trial an error as I kept running into 429 Response errors, meaning I was asking reddit for too much data to quick. Luckily, after adding some *time.sleep* to slow down the requests, I was able to grab all the data I needed.\nThe following is a snippet of the data the api call grabs:\n\n\nShow the code\nimport pandas as pd\n\nli_full = pd.read_csv('li_full.csv')\n\nli_full[['comment','score','created_utc','episode_title']].head()\n\n\n\n\n\n\n\n\n\ncomment\nscore\ncreated_utc\nepisode_title\n\n\n\n\n0\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n1\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n2\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n3\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n4\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion",
+    "crumbs": [
+      "Blog",
+      "Love Island Sentiment Analysis Part 1"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html#data-storage-and-automation",
+    "href": "Blogs/love_island_nlp.html#data-storage-and-automation",
+    "title": "Love Island Seniment Analysis",
+    "section": "Data Storage and Automation",
+    "text": "Data Storage and Automation\nSince the season is still airing with new episodes almost every day, I needed a way to keep the data up to date with the latest comments. To handle this, I basically reused my original Reddit API setup but added logic to skip any episodes I had already pulled. That way, it only grabs new ones as they come out.\nAlong the way, I also discovered how efficient parquet files are compared to CSVs. They store the same data in a much more compact format, which is perfect for saving space without losing structure.\nWith those pieces in place, it was easy to schedule a GitHub workflow to run daily at 4pm MST. That gives fans enough time to react to the previous night’s episode before a new one airs a few hours later.\n\n\nAPI Call\ndef update_with_new_episodes(reddit, output_folder=\"data/season7_comments\", max_retries=3):\n    os.makedirs(output_folder, exist_ok=True)\n\n    # Get a set of already-downloaded post IDs from filenames\n    existing_files = {\n        re.search(r'_(\\w+)_comments\\.parquet$', f).group(1)\n        for f in glob.glob(f\"{output_folder}/*_comments.parquet\")\n        if re.search(r'_(\\w+)_comments\\.parquet$', f)\n    }\n\n    # Step 1: Search for new Season 7 posts\n    new_posts = []\n    for post in reddit.subreddit(\"LoveIslandUSA\").search(\"Season 7 Episode\", sort=\"new\", limit=500):\n        if \"Post Episode Discussion\" in post.title and post.id not in existing_files:\n            new_posts.append({\n                'post_id': post.id,\n                'title': post.title,\n                'created_utc': post.created_utc,\n                'score': post.score,\n                'num_comments': post.num_comments\n            })\n\n    if not new_posts:\n        print(\"✅ No new episodes to update.\")\n        return pd.DataFrame()  \n\n    new_df = pd.DataFrame(new_posts).sort_values(\"created_utc\")\n    all_new_comments = []\n\n    print(f\"🆕 Found {len(new_df)} new episodes. Downloading now...\")\n\n    for idx, row in new_df.iterrows():\n        post_id = row['post_id']\n        title_safe = row['title'].replace('/', '_').replace(':', '').replace('\"', '')\n        filename = f\"{output_folder}/{len(existing_files)+idx:02d}_{post_id}_comments.parquet\"\n\n        for attempt in range(1, max_retries + 1):\n            try:\n                print(f\"\\n🔄 Processing: {title_safe} (Attempt {attempt})\")\n                submission = reddit.submission(id=post_id)\n                submission.comments.replace_more(limit=None, threshold=5)\n\n                comment_data = [{\n                    'comment': c.body,\n                    'score': c.score,\n                    'created_utc': c.created_utc,\n                    'author': str(c.author),\n                    'episode_post_id': post_id,\n                    'episode_title': row['title']\n                } for c in submission.comments.list()]\n\n                df_episode = pd.DataFrame(comment_data)\n                df_episode.to_parquet(filename, index=False)\n                all_new_comments.append(df_episode)\n\n                print(f\"✅ Saved {len(comment_data)} comments for: {title_safe}\")\n                time.sleep(3)\n                break\n\n            except Exception as e:\n                print(f\"⚠️ Error on attempt {attempt} for {title_safe}: {e}\")\n                if \"429\" in str(e):\n                    print(\"🛑 Rate limited. Sleeping for 60 seconds...\")\n                    time.sleep(60)\n                else:\n                    time.sleep(10)\n\n                if attempt == max_retries:\n                    print(f\"❌ Failed all {max_retries} retries for {title_safe}. Skipping.\")\n\n    # Combine and return all new data\n    if all_new_comments:\n        master_df = pd.concat(all_new_comments, ignore_index=True)\n        print(f\"\\n📦 Returning DataFrame with {len(master_df)} new comments.\")\n        return master_df\n    else:\n        print(\"📭 No new comments were successfully downloaded.\")\n        return pd.DataFrame()",
+    "crumbs": [
+      "Blog",
+      "Love Island Sentiment Analysis Part 1"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html#sentiment-analysis",
+    "href": "Blogs/love_island_nlp.html#sentiment-analysis",
+    "title": "Love Island Seniment Analysis",
+    "section": "Sentiment Analysis",
+    "text": "Sentiment Analysis\nOnce I had the data, it was finally time to dive into sentiment analysis. But it wasn’t as simple as just running a basic sentiment function on each comment. I also needed to add some Named Entity Recognition (NER) to make sure I was capturing sentiment directed at specific people. For example, if a comment criticizes Huda but praises Jeremiah, I wanted the model to recognize that and assign the right sentiment to each person, not just a single overall score.\nAfter running the sentiment and NER steps, I reshaped the data so that each row represents one comment, one islander mentioned in that comment, and the sentiment expressed toward them.\n\n\nSentiment Analysis\nimport re\nfrom transformers import AutoTokenizer, AutoModelForSequenceClassification\nimport torch\nimport numpy as np\nimport nltk\nnltk.download('punkt_tab')\nfrom nltk.tokenize import sent_tokenize\nimport spacy\n\n\n# Initialize islander list\nislanders = ['Chelley','Olandria','Huda','Ace','Nic','Taylor','Jeremiah','Austin','Charlie','Cierra','Hannah','Amaya','Pepe','Jalen','Iris','Yulissa','Belle-A']\n\n# Call Hugginface Model\ntokenizer = AutoTokenizer.from_pretrained(\"cardiffnlp/twitter-roberta-base-sentiment\")\nmodel = AutoModelForSequenceClassification.from_pretrained(\"cardiffnlp/twitter-roberta-base-sentiment\")\n\n# Sentiment Function\ndef get_sentiment_score(text):\n    tokens = tokenizer(text, return_tensors='pt', truncation=True)\n    with torch.no_grad():\n        output = model(**tokens)\n    scores = torch.nn.functional.softmax(output.logits, dim=1)\n    return {\n        'negative': scores[0][0].item(),\n        'neutral': scores[0][1].item(),\n        'positive': scores[0][2].item(),\n        'compound': scores[0][2].item() - scores[0][0].item()\n    }\n\n# Targeted Sentiment Function\nnlp = spacy.load(\"en_core_web_sm\")\n\ndef targeted_sentiment(comment, islanders):\n    islander_sentiment = {}\n    doc = nlp(comment)\n\n    for sent in doc.sents:\n        sentence_text = sent.text\n        # Split each sentence into smaller chunks by contrastive conjunctions and commas\n        raw_chunks = re.split(r'\\bbut\\b|\\band\\b|,', sentence_text, flags=re.IGNORECASE)\n\n        for chunk in raw_chunks:\n            if len(chunk.strip()) == 0:\n                continue\n            chunk_doc = nlp(chunk)\n            result = get_sentiment_score(chunk)\n            chunk_lower = chunk.lower()\n\n            for name in islanders:\n                if name.lower() in chunk_lower:\n                    if name not in islander_sentiment:\n                        islander_sentiment[name] = []\n                    islander_sentiment[name].append(result[\"compound\"])\n\n    return {name: np.mean(scores) for name, scores in islander_sentiment.items()}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFor example, if we take the following comment:\n“Huda was completely out of line during that argument, always playing the victim and stirring up drama. Meanwhile, Jeremiah stayed calm, listened respectfully, and brought everyone back down to earth.”\nThe model will output the following:\n\n\nTest Function\ncomment = \"Huda was completely out of line during that argument, always playing the victim and stirring up drama. Meanwhile, Jeremiah stayed calm, listened respectfully, and brought everyone back down to earth.\"\n\nprint(targeted_sentiment(comment,islanders))\n\n\n{'Huda': np.float64(-0.8969263397157192), 'Jeremiah': np.float64(0.24101137183606625)}\n\n\nI could then apply the function to the enitire dataset and we are good to go!\n\n\nData Output\nli_full.head()\n\n\n\n\n\n\n\n\n\ncomment\nscore\ncreated_utc\nepisode_post_id\nepisode_title\nislander\nsentiment\nepisode_num\nAirDate\n\n\n\n\n0\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nAce\n-0.292615\n10\n2025-06-12\n\n\n1\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nIris\n-0.292615\n10\n2025-06-12\n\n\n2\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nChelley\n0.021599\n10\n2025-06-12\n\n\n3\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nHuda\n-0.955151\n10\n2025-06-12\n\n\n4\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nJeremiah\n-0.288001\n10\n2025-06-12",
+    "crumbs": [
+      "Blog",
+      "Love Island Sentiment Analysis Part 1"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html#comment-summarization",
+    "href": "Blogs/love_island_nlp.html#comment-summarization",
+    "title": "Love Island Seniment Analysis",
+    "section": "Comment Summarization",
+    "text": "Comment Summarization\nAnother goal for this project was to explore topic modeling and text summarization to give users a quick snapshot of what people are saying about a particular islander. I experimented with BERTopic and a few summarization models from Hugging Face, but I could never get anything that sounded truly coherent, it mostly just felt like a jumbled mashup of comments.\n\n\n\nFailed Model\n\n\nThat’s when I decided to try out Google’s Gemini API, and it delivered exactly the kind of summaries I had in mind. All I had to do was initialize the API, pass in the comments for a specific islander, and it generated a clean and readable summary of what people were saying. It ended up being a perfect fit for this part of the app.\n\n\n\nGemini Example",
+    "crumbs": [
+      "Blog",
+      "Love Island Sentiment Analysis Part 1"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html#dashboard-development",
+    "href": "Blogs/love_island_nlp.html#dashboard-development",
+    "title": "Love Island Seniment Analysis",
+    "section": "Dashboard Development",
+    "text": "Dashboard Development\nAs the project continues to evolve, I plan to spend more time improving the design and polish of the dashboard. For now, my focus was on getting a fully functioning proof of concept. The current version lets users select an islander to analyze, then displays a few basic metrics along with a line chart showing how the islander’s average sentiment has changed throughout the season. There’s also a button that triggers a summarization of viewer comments using the Gemini API, giving users a quick overview of what people are saying, as mentioned earlier.\n\n\n\nDashboard V.1",
+    "crumbs": [
+      "Blog",
+      "Love Island Sentiment Analysis Part 1"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html#key-challengeslessons-learned",
+    "href": "Blogs/love_island_nlp.html#key-challengeslessons-learned",
+    "title": "Love Island Seniment Analysis",
+    "section": "Key Challenges/Lessons Learned",
+    "text": "Key Challenges/Lessons Learned\nThis has been the most rewarding project I have ever worked on. It has pushed me to learn a great deal about Natural Language Processing and how to apply it in meaningful ways. Being able to extract insights from raw text and share them with users is incredibly valuable, and it is a skill I am excited to keep improving.\nOne of the biggest lessons I have learned from this project is the importance of organization and automation. In the past, many of my data science projects used static CSV files and manual processes that only worked once. For this project, I wanted to create something dynamic that could update and run independently. I learned how to structure my code so each function fits together cleanly, how to organize my files to make everything easier to maintain, and how to use GitHub workflows to automate updates. These steps helped me build a system that runs on its own and keeps everything up to date.",
+    "crumbs": [
+      "Blog",
+      "Love Island Sentiment Analysis Part 1"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp.html#try-the-sentiment-dashboard",
+    "href": "Blogs/love_island_nlp.html#try-the-sentiment-dashboard",
+    "title": "Love Island Seniment Analysis",
+    "section": "Try the Sentiment Dashboard",
+    "text": "Try the Sentiment Dashboard\nYou can try out the interactive dashboard here:\n👉 Launch Sentiment Dashboard",
+    "crumbs": [
+      "Blog",
+      "Love Island Sentiment Analysis Part 1"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp_part3.html",
+    "href": "Blogs/love_island_nlp_part3.html",
+    "title": "Love Island Seniment Analysis Part 3",
     "section": "",
-    "text": "I’m a data scientist from Portland, Oregon with a passion for making messy data useful. I specialize in data wrangling, visualization, and storytelling using Python, Power BI, and Tableau. Right now, I’m building a dashboard that analyzes Reddit conversations around Love Island USA using sentiment analysis and NLP."
+    "text": "Last week, I had the chance to present my Love Island Reddit Sentiment project at the Research and Creative Works Conference at BYU-Idaho. It was such a fun and meaningful experience.",
+    "crumbs": [
+      "Blog",
+      "Love Island Senitment Analysis Part 3"
+    ]
   },
   {
-    "objectID": "index.html#skills",
-    "href": "index.html#skills",
-    "title": "About Me",
-    "section": "🚀 Skills",
-    "text": "🚀 Skills\nAnalysis/Visualization: Python (Pandas, Lets-Plot, plotly, Pyspark), R (ggplot, tidyverse), Power BI (DAX), Tableau\nMachine Learning: Scikit-learn, TensorFlow, Random Forest Classifiers, Neural Networks, XGBoost\nDatabase Management/Design: MySQL, SQLite, Databricks, DAX Studio, Microsoft SQL Server"
-  },
-  {
-    "objectID": "index.html#featured-projects",
-    "href": "index.html#featured-projects",
-    "title": "About Me",
-    "section": "📂 Featured Projects",
-    "text": "📂 Featured Projects\n\nLove Island USA Sentiment Analysis (NLP)\nA data pipeline combining Reddit APIs and NLP to uncover public opinion trends across Love Island USA contestants.\nPortland Crime Forecasting with XGBoost\nMachine learning model to forecast daily neighborhood crime levels."
-  },
-  {
-    "objectID": "Cleansing_Projects/project4.html",
-    "href": "Cleansing_Projects/project4.html",
-    "title": "Client Report - [Insert Project Title]",
+    "objectID": "Blogs/love_island_nlp_part3.html#presenting-at-the-research-creative-works-conference",
+    "href": "Blogs/love_island_nlp_part3.html#presenting-at-the-research-creative-works-conference",
+    "title": "Love Island Seniment Analysis Part 3",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "Last week, I had the chance to present my Love Island Reddit Sentiment project at the Research and Creative Works Conference at BYU-Idaho. It was such a fun and meaningful experience.",
+    "crumbs": [
+      "Blog",
+      "Love Island Senitment Analysis Part 3"
+    ]
   },
   {
-    "objectID": "Cleansing_Projects/project3.html",
-    "href": "Cleansing_Projects/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "objectID": "Blogs/love_island_nlp_part3.html#setting-the-scene",
+    "href": "Blogs/love_island_nlp_part3.html#setting-the-scene",
+    "title": "Love Island Seniment Analysis Part 3",
+    "section": "Setting the Scene",
+    "text": "Setting the Scene\nI went all in on the presentation setup. My table was decorated with palm trees and flamingos to match the Love Island vibe, and I had a poster that explained my project. I even used a pool noodle as a pointer to walk people through different parts of the poster as they came by with questions.",
+    "crumbs": [
+      "Blog",
+      "Love Island Senitment Analysis Part 3"
+    ]
   },
   {
-    "objectID": "Cleansing_Projects/project2.html",
-    "href": "Cleansing_Projects/project2.html",
-    "title": "Client Report - [Insert Project Title]",
+    "objectID": "Blogs/love_island_nlp_part3.html#making-data-science-approachable",
+    "href": "Blogs/love_island_nlp_part3.html#making-data-science-approachable",
+    "title": "Love Island Seniment Analysis Part 3",
+    "section": "Making Data Science Approachable",
+    "text": "Making Data Science Approachable\nOne of the best parts of presenting was how approachable the project ended up being. While it’s technically complex behind the scenes, the concept is really easy to grasp for a non-technical audience. Most people know about Love Island and understand the idea of using comments to track how people feel about contestants.\nBecause of that, I was able to have meaningful conversations with people from all backgrounds. I also got the chance to dig deep into the backend of the project with those who had more technical experience, which made for some really rewarding discussions.",
+    "crumbs": [
+      "Blog",
+      "Love Island Senitment Analysis Part 3"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp_part3.html#growing-in-confidence",
+    "href": "Blogs/love_island_nlp_part3.html#growing-in-confidence",
+    "title": "Love Island Seniment Analysis Part 3",
+    "section": "Growing in Confidence",
+    "text": "Growing in Confidence\nThis experience gave me a lot of confidence — not just in my data science skills, but also in my ability to communicate them. I loved getting the chance to talk to people, share something I worked hard on, and watch their faces light up when it all made sense.\nIt also meant a lot to see the projects my classmates were working on. I felt right at home being surrounded by so many smart and curious people who were just as passionate about learning as I am.",
+    "crumbs": [
+      "Blog",
+      "Love Island Senitment Analysis Part 3"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp_part3.html#connecting-skills-to-the-real-world",
+    "href": "Blogs/love_island_nlp_part3.html#connecting-skills-to-the-real-world",
+    "title": "Love Island Seniment Analysis Part 3",
+    "section": "Connecting Skills to the Real World",
+    "text": "Connecting Skills to the Real World\nOne of my favorite questions someone asked me was how I could apply this project to a future job. For example, why would a company like Nike care about what I did?\nIt was such a good question. I got to explain how most data in the world is unstructured text. By using NLP, we can extract meaningful insights from all that text and use them to guide decisions. Nike could use this kind of approach to analyze what people are saying about their products, their athletes, or their brand as a whole. That kind of analysis can help them see what’s working and what could be improved.",
+    "crumbs": [
+      "Blog",
+      "Love Island Senitment Analysis Part 3"
+    ]
+  },
+  {
+    "objectID": "Blogs/love_island_nlp_part3.html#looking-ahead",
+    "href": "Blogs/love_island_nlp_part3.html#looking-ahead",
+    "title": "Love Island Seniment Analysis Part 3",
+    "section": "Looking Ahead",
+    "text": "Looking Ahead\nBeing able to connect the dots between what I built and how it could be used in the real world made me even more excited for the future. I’m really grateful for everyone who has supported me in getting to this point, and I’m so excited for what comes next.",
+    "crumbs": [
+      "Blog",
+      "Love Island Senitment Analysis Part 3"
+    ]
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "My Data Science Blog",
     "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
+    "text": "Starting My Journey in NLP\n\n\n\nDate: May 5th, 2025\nLately I’ve been diving into Natural Language Processing (NLP) for my senior project. I’ve been teaching myself the basics through podcasts, books, and working with Python’s NLTK library.\nIt’s been super cool to see how widely NLP is used. Everything from sentiment analysis to search engines to chatbots. There is so much information to be extracted from text and so much data in the world is text.\nTo help with my learning, I made a quick NLP vocab cheat sheet with some core terms. Figured I’d share in case it could help anyone else.\nExcited to continue learning and sharing my progress as I go!\n\n\n\nNLP CheatSheet",
+    "crumbs": [
+      "Blog"
+    ]
+  },
+  {
+    "objectID": "blog.html#natural-language-processing",
+    "href": "blog.html#natural-language-processing",
+    "title": "My Data Science Blog",
+    "section": "",
+    "text": "Starting My Journey in NLP\n\n\n\nDate: May 5th, 2025\nLately I’ve been diving into Natural Language Processing (NLP) for my senior project. I’ve been teaching myself the basics through podcasts, books, and working with Python’s NLTK library.\nIt’s been super cool to see how widely NLP is used. Everything from sentiment analysis to search engines to chatbots. There is so much information to be extracted from text and so much data in the world is text.\nTo help with my learning, I made a quick NLP vocab cheat sheet with some core terms. Figured I’d share in case it could help anyone else.\nExcited to continue learning and sharing my progress as I go!\n\n\n\nNLP CheatSheet",
+    "crumbs": [
+      "Blog"
+    ]
   },
   {
     "objectID": "Blogs/love_island_nlp_part2.html",
@@ -226,50 +481,15 @@
     ]
   },
   {
-    "objectID": "Competition/project4.html",
-    "href": "Competition/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Competition/project3.html",
-    "href": "Competition/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Competition/project2.html",
-    "href": "Competition/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "SQL/project1.html",
-    "href": "SQL/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Exploration/project5.html",
-    "href": "Cleansing_Exploration/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Cleansing_Exploration/project1.html",
-    "href": "Cleansing_Exploration/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
     "objectID": "Cleansing_Exploration/project2.html",
     "href": "Cleansing_Exploration/project2.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Exploration/project4.html",
+    "href": "Cleansing_Exploration/project4.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
@@ -282,8 +502,15 @@
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Cleansing_Exploration/project4.html",
-    "href": "Cleansing_Exploration/project4.html",
+    "objectID": "Story_Telling/project1.html",
+    "href": "Story_Telling/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Story_Telling/project5.html",
+    "href": "Story_Telling/project5.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
@@ -303,18 +530,46 @@
     "text": "MarkDown Basics"
   },
   {
-    "objectID": "Competition/project1.html",
-    "href": "Competition/project1.html",
+    "objectID": "SQL/project1.html",
+    "href": "SQL/project1.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "Competition/project5.html",
-    "href": "Competition/project5.html",
+    "objectID": "Cleansing_Projects/project4.html",
+    "href": "Cleansing_Projects/project4.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Cleansing_Projects/project3.html",
+    "href": "Cleansing_Projects/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I’m a data scientist from Portland, Oregon with a passion for making messy data useful. I specialize in data wrangling, visualization, and storytelling using Python, Power BI, and Tableau. Right now, I’m building a dashboard that analyzes Reddit conversations around Love Island USA using sentiment analysis and NLP."
+  },
+  {
+    "objectID": "index.html#skills",
+    "href": "index.html#skills",
+    "title": "About Me",
+    "section": "🚀 Skills",
+    "text": "🚀 Skills\nAnalysis/Visualization: Python (Pandas, Lets-Plot, plotly, Pyspark), R (ggplot, tidyverse), Power BI (DAX), Tableau\nMachine Learning: Scikit-learn, TensorFlow, Random Forest Classifiers, Neural Networks, XGBoost\nDatabase Management/Design: MySQL, SQLite, Databricks, DAX Studio, Microsoft SQL Server"
+  },
+  {
+    "objectID": "index.html#featured-projects",
+    "href": "index.html#featured-projects",
+    "title": "About Me",
+    "section": "📂 Featured Projects",
+    "text": "📂 Featured Projects\n\nLove Island USA Sentiment Analysis (NLP)\nA data pipeline combining Reddit APIs and NLP to uncover public opinion trends across Love Island USA contestants.\nPortland Crime Forecasting with XGBoost\nMachine learning model to forecast daily neighborhood crime levels."
   },
   {
     "objectID": "competition.html",
@@ -331,214 +586,8 @@
     "text": "MarkDown Basics"
   },
   {
-    "objectID": "Blogs/love_island_nlp.html",
-    "href": "Blogs/love_island_nlp.html",
-    "title": "Love Island Seniment Analysis",
-    "section": "",
-    "text": "Over the past few weeks, I’ve been diving headfirst into the world of Natural Language Processing (NLP), and honestly it’s been kind of mind-blowing. Learning the tools and exploring the endless use cases has completely opened my eyes to just how powerful NLP can be. So much of the world’s data is text, and being able to actually make sense of it and pull meaningful insights? Total game changer.\nOne area I’ve been particularly obsessed with is sentiment analysis, figuring out whether a piece of text sounds positive, neutral, or negative. I started off with the basics, experimenting with built-in datasets from the NLTK library and playing around with the VADER lexicon. But the real magic started happening when I got my hands on pretrained models from Hugging Face, models that are trained on specific types of text like tweets.\nNow here’s where things took a turn. My wife recently got into Love Island USA, a show where a bunch of attractive 20-somethings date each other in a villa in Fiji. I originally watched to be a supportive husband… but I’ll admit it, I got hooked. The drama, the storylines, the unexpected twists, I was all in. And somewhere along the way, after watching my opinion of a contestant totally shift over time, it hit me: what if I could track public sentiment like that?\nThat spark turned into this project—analyzing Reddit discussions of Love Island USA to track how the internet feels about each contestant as the season unfolds.",
-    "crumbs": [
-      "Blog",
-      "Love Island Sentiment Analysis Part 1"
-    ]
-  },
-  {
-    "objectID": "Blogs/love_island_nlp.html#background",
-    "href": "Blogs/love_island_nlp.html#background",
-    "title": "Love Island Seniment Analysis",
-    "section": "",
-    "text": "Over the past few weeks, I’ve been diving headfirst into the world of Natural Language Processing (NLP), and honestly it’s been kind of mind-blowing. Learning the tools and exploring the endless use cases has completely opened my eyes to just how powerful NLP can be. So much of the world’s data is text, and being able to actually make sense of it and pull meaningful insights? Total game changer.\nOne area I’ve been particularly obsessed with is sentiment analysis, figuring out whether a piece of text sounds positive, neutral, or negative. I started off with the basics, experimenting with built-in datasets from the NLTK library and playing around with the VADER lexicon. But the real magic started happening when I got my hands on pretrained models from Hugging Face, models that are trained on specific types of text like tweets.\nNow here’s where things took a turn. My wife recently got into Love Island USA, a show where a bunch of attractive 20-somethings date each other in a villa in Fiji. I originally watched to be a supportive husband… but I’ll admit it, I got hooked. The drama, the storylines, the unexpected twists, I was all in. And somewhere along the way, after watching my opinion of a contestant totally shift over time, it hit me: what if I could track public sentiment like that?\nThat spark turned into this project—analyzing Reddit discussions of Love Island USA to track how the internet feels about each contestant as the season unfolds.",
-    "crumbs": [
-      "Blog",
-      "Love Island Sentiment Analysis Part 1"
-    ]
-  },
-  {
-    "objectID": "Blogs/love_island_nlp.html#grabbing-data",
-    "href": "Blogs/love_island_nlp.html#grabbing-data",
-    "title": "Love Island Seniment Analysis",
-    "section": "Grabbing Data",
-    "text": "Grabbing Data\nGrabbing data for this was simple at first, but got more complex as the amount of data I needed to grab got bigger. There is a strong community following for the show under the subreddit r/loveislandusa. Within this subreddit, there are post-episode discussion threads for each episode. Each episode tends to get around 8k-15k comments, which is plenty for me to run my analysis.\nAfter signing up for a Reddit API key, I could set up my API caall and grab the data I needed. However, this took some trial an error as I kept running into 429 Response errors, meaning I was asking reddit for too much data to quick. Luckily, after adding some *time.sleep* to slow down the requests, I was able to grab all the data I needed.\nThe following is a snippet of the data the api call grabs:\n\n\nShow the code\nimport pandas as pd\n\nli_full = pd.read_csv('li_full.csv')\n\nli_full[['comment','score','created_utc','episode_title']].head()\n\n\n\n\n\n\n\n\n\ncomment\nscore\ncreated_utc\nepisode_title\n\n\n\n\n0\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n1\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n2\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n3\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion\n\n\n4\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\nSeason 7 - Episode 10 - Post Episode Discussion",
-    "crumbs": [
-      "Blog",
-      "Love Island Sentiment Analysis Part 1"
-    ]
-  },
-  {
-    "objectID": "Blogs/love_island_nlp.html#data-storage-and-automation",
-    "href": "Blogs/love_island_nlp.html#data-storage-and-automation",
-    "title": "Love Island Seniment Analysis",
-    "section": "Data Storage and Automation",
-    "text": "Data Storage and Automation\nSince the season is still airing with new episodes almost every day, I needed a way to keep the data up to date with the latest comments. To handle this, I basically reused my original Reddit API setup but added logic to skip any episodes I had already pulled. That way, it only grabs new ones as they come out.\nAlong the way, I also discovered how efficient parquet files are compared to CSVs. They store the same data in a much more compact format, which is perfect for saving space without losing structure.\nWith those pieces in place, it was easy to schedule a GitHub workflow to run daily at 4pm MST. That gives fans enough time to react to the previous night’s episode before a new one airs a few hours later.\n\n\nAPI Call\ndef update_with_new_episodes(reddit, output_folder=\"data/season7_comments\", max_retries=3):\n    os.makedirs(output_folder, exist_ok=True)\n\n    # Get a set of already-downloaded post IDs from filenames\n    existing_files = {\n        re.search(r'_(\\w+)_comments\\.parquet$', f).group(1)\n        for f in glob.glob(f\"{output_folder}/*_comments.parquet\")\n        if re.search(r'_(\\w+)_comments\\.parquet$', f)\n    }\n\n    # Step 1: Search for new Season 7 posts\n    new_posts = []\n    for post in reddit.subreddit(\"LoveIslandUSA\").search(\"Season 7 Episode\", sort=\"new\", limit=500):\n        if \"Post Episode Discussion\" in post.title and post.id not in existing_files:\n            new_posts.append({\n                'post_id': post.id,\n                'title': post.title,\n                'created_utc': post.created_utc,\n                'score': post.score,\n                'num_comments': post.num_comments\n            })\n\n    if not new_posts:\n        print(\"✅ No new episodes to update.\")\n        return pd.DataFrame()  \n\n    new_df = pd.DataFrame(new_posts).sort_values(\"created_utc\")\n    all_new_comments = []\n\n    print(f\"🆕 Found {len(new_df)} new episodes. Downloading now...\")\n\n    for idx, row in new_df.iterrows():\n        post_id = row['post_id']\n        title_safe = row['title'].replace('/', '_').replace(':', '').replace('\"', '')\n        filename = f\"{output_folder}/{len(existing_files)+idx:02d}_{post_id}_comments.parquet\"\n\n        for attempt in range(1, max_retries + 1):\n            try:\n                print(f\"\\n🔄 Processing: {title_safe} (Attempt {attempt})\")\n                submission = reddit.submission(id=post_id)\n                submission.comments.replace_more(limit=None, threshold=5)\n\n                comment_data = [{\n                    'comment': c.body,\n                    'score': c.score,\n                    'created_utc': c.created_utc,\n                    'author': str(c.author),\n                    'episode_post_id': post_id,\n                    'episode_title': row['title']\n                } for c in submission.comments.list()]\n\n                df_episode = pd.DataFrame(comment_data)\n                df_episode.to_parquet(filename, index=False)\n                all_new_comments.append(df_episode)\n\n                print(f\"✅ Saved {len(comment_data)} comments for: {title_safe}\")\n                time.sleep(3)\n                break\n\n            except Exception as e:\n                print(f\"⚠️ Error on attempt {attempt} for {title_safe}: {e}\")\n                if \"429\" in str(e):\n                    print(\"🛑 Rate limited. Sleeping for 60 seconds...\")\n                    time.sleep(60)\n                else:\n                    time.sleep(10)\n\n                if attempt == max_retries:\n                    print(f\"❌ Failed all {max_retries} retries for {title_safe}. Skipping.\")\n\n    # Combine and return all new data\n    if all_new_comments:\n        master_df = pd.concat(all_new_comments, ignore_index=True)\n        print(f\"\\n📦 Returning DataFrame with {len(master_df)} new comments.\")\n        return master_df\n    else:\n        print(\"📭 No new comments were successfully downloaded.\")\n        return pd.DataFrame()",
-    "crumbs": [
-      "Blog",
-      "Love Island Sentiment Analysis Part 1"
-    ]
-  },
-  {
-    "objectID": "Blogs/love_island_nlp.html#sentiment-analysis",
-    "href": "Blogs/love_island_nlp.html#sentiment-analysis",
-    "title": "Love Island Seniment Analysis",
-    "section": "Sentiment Analysis",
-    "text": "Sentiment Analysis\nOnce I had the data, it was finally time to dive into sentiment analysis. But it wasn’t as simple as just running a basic sentiment function on each comment. I also needed to add some Named Entity Recognition (NER) to make sure I was capturing sentiment directed at specific people. For example, if a comment criticizes Huda but praises Jeremiah, I wanted the model to recognize that and assign the right sentiment to each person, not just a single overall score.\nAfter running the sentiment and NER steps, I reshaped the data so that each row represents one comment, one islander mentioned in that comment, and the sentiment expressed toward them.\n\n\nSentiment Analysis\nimport re\nfrom transformers import AutoTokenizer, AutoModelForSequenceClassification\nimport torch\nimport numpy as np\nimport nltk\nnltk.download('punkt_tab')\nfrom nltk.tokenize import sent_tokenize\nimport spacy\n\n\n# Initialize islander list\nislanders = ['Chelley','Olandria','Huda','Ace','Nic','Taylor','Jeremiah','Austin','Charlie','Cierra','Hannah','Amaya','Pepe','Jalen','Iris','Yulissa','Belle-A']\n\n# Call Hugginface Model\ntokenizer = AutoTokenizer.from_pretrained(\"cardiffnlp/twitter-roberta-base-sentiment\")\nmodel = AutoModelForSequenceClassification.from_pretrained(\"cardiffnlp/twitter-roberta-base-sentiment\")\n\n# Sentiment Function\ndef get_sentiment_score(text):\n    tokens = tokenizer(text, return_tensors='pt', truncation=True)\n    with torch.no_grad():\n        output = model(**tokens)\n    scores = torch.nn.functional.softmax(output.logits, dim=1)\n    return {\n        'negative': scores[0][0].item(),\n        'neutral': scores[0][1].item(),\n        'positive': scores[0][2].item(),\n        'compound': scores[0][2].item() - scores[0][0].item()\n    }\n\n# Targeted Sentiment Function\nnlp = spacy.load(\"en_core_web_sm\")\n\ndef targeted_sentiment(comment, islanders):\n    islander_sentiment = {}\n    doc = nlp(comment)\n\n    for sent in doc.sents:\n        sentence_text = sent.text\n        # Split each sentence into smaller chunks by contrastive conjunctions and commas\n        raw_chunks = re.split(r'\\bbut\\b|\\band\\b|,', sentence_text, flags=re.IGNORECASE)\n\n        for chunk in raw_chunks:\n            if len(chunk.strip()) == 0:\n                continue\n            chunk_doc = nlp(chunk)\n            result = get_sentiment_score(chunk)\n            chunk_lower = chunk.lower()\n\n            for name in islanders:\n                if name.lower() in chunk_lower:\n                    if name not in islander_sentiment:\n                        islander_sentiment[name] = []\n                    islander_sentiment[name].append(result[\"compound\"])\n\n    return {name: np.mean(scores) for name, scores in islander_sentiment.items()}\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFor example, if we take the following comment:\n“Huda was completely out of line during that argument, always playing the victim and stirring up drama. Meanwhile, Jeremiah stayed calm, listened respectfully, and brought everyone back down to earth.”\nThe model will output the following:\n\n\nTest Function\ncomment = \"Huda was completely out of line during that argument, always playing the victim and stirring up drama. Meanwhile, Jeremiah stayed calm, listened respectfully, and brought everyone back down to earth.\"\n\nprint(targeted_sentiment(comment,islanders))\n\n\n\n\n\n{'Huda': np.float64(-0.8969263397157192), 'Jeremiah': np.float64(0.24101137183606625)}\n\n\nI could then apply the function to the enitire dataset and we are good to go!\n\n\nData Output\nli_full.head()\n\n\n\n\n\n\n\n\n\ncomment\nscore\ncreated_utc\nepisode_post_id\nepisode_title\nislander\nsentiment\nepisode_num\nAirDate\n\n\n\n\n0\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nAce\n-0.292615\n10\n2025-06-12\n\n\n1\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nIris\n-0.292615\n10\n2025-06-12\n\n\n2\nyou vote for ace and iris to couple up and he’...\n746\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nChelley\n0.021599\n10\n2025-06-12\n\n\n3\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nHuda\n-0.955151\n10\n2025-06-12\n\n\n4\nHuda is so insanely childish, she 100% gave Je...\n674\n1.749867e+09\n1laxbqf\nSeason 7 - Episode 10 - Post Episode Discussion\nJeremiah\n-0.288001\n10\n2025-06-12",
-    "crumbs": [
-      "Blog",
-      "Love Island Sentiment Analysis Part 1"
-    ]
-  },
-  {
-    "objectID": "Blogs/love_island_nlp.html#comment-summarization",
-    "href": "Blogs/love_island_nlp.html#comment-summarization",
-    "title": "Love Island Seniment Analysis",
-    "section": "Comment Summarization",
-    "text": "Comment Summarization\nAnother goal for this project was to explore topic modeling and text summarization to give users a quick snapshot of what people are saying about a particular islander. I experimented with BERTopic and a few summarization models from Hugging Face, but I could never get anything that sounded truly coherent, it mostly just felt like a jumbled mashup of comments.\n\n\n\nFailed Model\n\n\nThat’s when I decided to try out Google’s Gemini API, and it delivered exactly the kind of summaries I had in mind. All I had to do was initialize the API, pass in the comments for a specific islander, and it generated a clean and readable summary of what people were saying. It ended up being a perfect fit for this part of the app.\n\n\n\nGemini Example",
-    "crumbs": [
-      "Blog",
-      "Love Island Sentiment Analysis Part 1"
-    ]
-  },
-  {
-    "objectID": "Blogs/love_island_nlp.html#dashboard-development",
-    "href": "Blogs/love_island_nlp.html#dashboard-development",
-    "title": "Love Island Seniment Analysis",
-    "section": "Dashboard Development",
-    "text": "Dashboard Development\nAs the project continues to evolve, I plan to spend more time improving the design and polish of the dashboard. For now, my focus was on getting a fully functioning proof of concept. The current version lets users select an islander to analyze, then displays a few basic metrics along with a line chart showing how the islander’s average sentiment has changed throughout the season. There’s also a button that triggers a summarization of viewer comments using the Gemini API, giving users a quick overview of what people are saying, as mentioned earlier.\n\n\n\nDashboard V.1",
-    "crumbs": [
-      "Blog",
-      "Love Island Sentiment Analysis Part 1"
-    ]
-  },
-  {
-    "objectID": "Blogs/love_island_nlp.html#key-challengeslessons-learned",
-    "href": "Blogs/love_island_nlp.html#key-challengeslessons-learned",
-    "title": "Love Island Seniment Analysis",
-    "section": "Key Challenges/Lessons Learned",
-    "text": "Key Challenges/Lessons Learned\nThis has been the most rewarding project I have ever worked on. It has pushed me to learn a great deal about Natural Language Processing and how to apply it in meaningful ways. Being able to extract insights from raw text and share them with users is incredibly valuable, and it is a skill I am excited to keep improving.\nOne of the biggest lessons I have learned from this project is the importance of organization and automation. In the past, many of my data science projects used static CSV files and manual processes that only worked once. For this project, I wanted to create something dynamic that could update and run independently. I learned how to structure my code so each function fits together cleanly, how to organize my files to make everything easier to maintain, and how to use GitHub workflows to automate updates. These steps helped me build a system that runs on its own and keeps everything up to date.",
-    "crumbs": [
-      "Blog",
-      "Love Island Sentiment Analysis Part 1"
-    ]
-  },
-  {
-    "objectID": "Blogs/love_island_nlp.html#try-the-sentiment-dashboard",
-    "href": "Blogs/love_island_nlp.html#try-the-sentiment-dashboard",
-    "title": "Love Island Seniment Analysis",
-    "section": "Try the Sentiment Dashboard",
-    "text": "Try the Sentiment Dashboard\nYou can try out the interactive dashboard here:\n👉 Launch Sentiment Dashboard",
-    "crumbs": [
-      "Blog",
-      "Love Island Sentiment Analysis Part 1"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Projects/pcrime.html#elevator-pitch",
-    "href": "Cleansing_Projects/pcrime.html#elevator-pitch",
-    "title": "Portland Crime Forecasting with XGBoost",
-    "section": "Elevator pitch",
-    "text": "Elevator pitch\nThis project involves cleaning, exploring, and modeling crime data from Portland, Oregon (2015–2023). After addressing missing data and reducing noise, we uncovered key trends in offense types, report times, and their relationship to neighborhood, day, and time. We then developed an XGBoost machine learning model that predicts daily total offense counts by neighborhood, currently achieving an R² score of 0.62. This model could support better resource planning and crime prevention strategies across the city.\n\nData Source\nThe dateset that I am using was accessed directly from Portland Police Bureau’s Open Data initiative; compiled from 2015-2023. This dataset is being used under this license.\n\n\nData Dictionary\nAddress: Address of reported incident at the 100 block level (e.g.: 1111 SW 2nd Ave would be 1100 Block SW 2nd Ave).\nCase Number: The case year and number for the reported incident (YY-######).\nCrime Against: Crime against category (Person, Property, or Society).\nNeighborhood: Neighborhood where incident occurred. If the neighborhood name is missing, the incident occurred outside of the boundaries of the Portland neighborhoods or at a location that could not be assigned to a specific address in the system. (e.g., Portland, near Washington Park, on the streetcar, etc.).\nOccur Date: Date the incident occurred. The exact occur date is sometimes unknown. In most situations, the first possible date the crime could have occurred is used as the occur date. (For example, victims return home from a week-long vacation to find their home burglarized. The burglary could have occurred at any point during the week. The first date of their vacation would be listed as the occur date.)\nOccur Time: Time the incident occurred. The exact occur time is sometimes unknown. In most situations, the first possible time the crime could have occurred is used as the occur time. The time is reported in the 24-hour clock format, with the first two digits representing hour (ranges from 00 to 23) and the second two digits representing minutes (ranges from 00 to 59).\nOffense Category: Category of offense (for example, Assault Offenses).\nOffense Type: Type of offense (for example, Aggravated Assault)Note: The statistic for Homicide Offenses has been updated in the Group A Crimes report to align with the 2019 FBI NIBRS definitions. The statistic for Homicide Offenses includes (09A) Murder & Non-negligent Manslaughter and (09B) Negligent Manslaughter. As of January 1, 2019, the FBI expanded the definition of negligent manslaughter to include traffic fatalities that result in an arrest for driving under the influence, distracted driving, or reckless driving. The change in definition impacts the 2019 homicide offenses statistic and the comparability of 2019 homicide statistics to prior year.\nOpen Data Lat/Lon: Generalized Latitude / Longitude of the reported incident. For offenses that occurred at a specific address, the point is mapped to the block’s midpoint. Offenses that occurred at an intersection is mapped to the intersection centroid.\nOpen Data X/Y: Generalized XY point of the reported incident. For offenses that occurred at a specific address, the point is mapped to the block’s midpoint. Offenses that occurred at an intersection is mapped to the intersection centroid. To protect the identity of victims and other privacy concerns, the points of certain case types are not released. XY points use the Oregon State Plane North (3601), NAD83 HARN, US International Feet coordinate system.\nOffense Count: Number of offenses per incident. Offenses (i.e. this field) are summed for counting purposes.",
-    "crumbs": [
-      "Projects",
-      "Portland Crime Forecasting with XGBoost"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Projects/pcrime.html#prepare",
-    "href": "Cleansing_Projects/pcrime.html#prepare",
-    "title": "Portland Crime Forecasting with XGBoost",
-    "section": "Prepare",
-    "text": "Prepare\n\n\nRead and format project data\n# Load in Data\npcrime_15 = pd.read_csv('CrimeData-2015.csv')\npcrime_16 = pd.read_csv('CrimeData-2016.csv')\npcrime_17 = pd.read_csv('CrimeData-2017.csv')\npcrime_18 = pd.read_csv('CrimeData-2018.csv')\npcrime_19 = pd.read_csv('CrimeData-2019.csv')\npcrime_20 = pd.read_csv('CrimeData-2020.csv')\npcrime_21 = pd.read_csv('CrimeData-2021.csv')\npcrime_22 = pd.read_csv('CrimeData-2022.csv')\npcrime_23 = pd.read_csv('CrimeData-2023.csv')\n\n# Combine Datasets\npcrime_combined = pd.concat([pcrime_15,pcrime_16,pcrime_17,pcrime_18,pcrime_19,pcrime_20,pcrime_21,pcrime_22,pcrime_23], ignore_index=True)\npcrime_combined.head()\n\n\n\n\n\n\n\n\n\nAddress\nCaseNumber\nCrimeAgainst\nNeighborhood\nOccurDate\nOccurTime\nOffenseCategory\nOffenseType\nOpenDataLat\nOpenDataLon\nOpenDataX\nOpenDataY\nReportDate\nOffenseCount\n\n\n\n\n0\nNaN\n15-X197430\nPerson\nPiedmont\n5/12/2015\n1400\nAssault Offenses\nIntimidation\nNaN\nNaN\nNaN\nNaN\n5/12/2015\n1\n\n\n1\nNaN\n15-X4282999\nPerson\nBuckman West\n5/1/2015\n2143\nAssault Offenses\nSimple Assault\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n2\nNaN\n15-X4283033\nPerson\nUniversity Park\n5/1/2015\n1625\nAssault Offenses\nSimple Assault\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n3\nNaN\n15-X4283218\nPerson\nMadison South\n5/1/2015\n1820\nAssault Offenses\nSimple Assault\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n4\nNaN\n15-X4283218\nPerson\nMadison South\n5/1/2015\n1820\nKidnapping/Abduction\nKidnapping/Abduction\nNaN\nNaN\nNaN\nNaN\n5/1/2015\n1\n\n\n\n\n\n\n\n\nWhat is our goal?\nThinking forward to the analysis that I want to perform with this data, I need to understand what I am looking for when it comes to cleaning. I know that I want to focus my analysis on the temporal crime trends across the various neighborhoods of Portland. Based on this understanding, I get a better sense of what aspects of the data need to be cleaned.\n\n\nIdentify Missing Data\npcrime_combined.isna().sum()\n\n\nAddress            44998\nCaseNumber             0\nCrimeAgainst           0\nNeighborhood       17566\nOccurDate              0\nOccurTime              0\nOffenseCategory        0\nOffenseType            0\nOpenDataLat        56511\nOpenDataLon        56511\nOpenDataX          56511\nOpenDataY          56511\nReportDate             0\nOffenseCount           0\ndtype: int64\n\n\n\n\nInitial Observations\n\nA time to report column would be useful\n\nConvert OccurDate and ReportDate to datetime\nCreate a time to report column\n\nOpenDataX/Y don’t seem necessary for our analysis\n\nDrop OpenDataX and OpenDataY columns\n\nAddress column seems to be redundant as most entries are just a general location\n\nDrop Address column\n\nNeighborhood averages can be used to find lat/lon\n\nDrop rows with missing Neighborhood and OpenDataLat\nReplace all rows with neighborhood but missing Lat/Lon data with average Lat/Lon of their neighborhood",
-    "crumbs": [
-      "Projects",
-      "Portland Crime Forecasting with XGBoost"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Projects/pcrime.html#data-cleaning",
-    "href": "Cleansing_Projects/pcrime.html#data-cleaning",
-    "title": "Portland Crime Forecasting with XGBoost",
-    "section": "Data Cleaning",
-    "text": "Data Cleaning\n\n\nCleaning\n# Calculate average Lat/Lon for each neighborhood\nneighborhood_means = pcrime_combined.groupby('Neighborhood')[['OpenDataLat','OpenDataLon']].transform('mean')\n\n# Clean the data\npcrime_cleaned = (\n    pcrime_combined\n    .drop(columns=['Address', 'OpenDataX', 'OpenDataY'])  # Drop X/Y\n    .dropna(subset=['OpenDataLat', 'Neighborhood'], how='all')  # Drop missing lat/lon and Neighborhoods\n    .assign(\n        OccurDate=pd.to_datetime(pcrime_combined['OccurDate']),  # Convert dates to datetime\n        week=lambda x: x.OccurDate.dt.isocalendar().week,\n        year=lambda x: x.OccurDate.dt.year,\n        month=lambda x: x.OccurDate.dt.month,\n        dayofmonth=lambda x: x.OccurDate.dt.day,\n        ReportDate=pd.to_datetime(pcrime_combined['ReportDate']),\n        ReportDiff=lambda x: (x['ReportDate'] - x['OccurDate']).dt.days,  # Calculate time to report\n        OpenDataLat=lambda x: x['OpenDataLat'].fillna(neighborhood_means['OpenDataLat']),  # Fill missing Lat/Lon with average Lat/Lon of given neighborhood\n        OpenDataLon=lambda x: x['OpenDataLon'].fillna(neighborhood_means['OpenDataLon']),\n        OccurTime=lambda x: x['OccurTime'].astype(str).str.zfill(4),  # Ensure time is in HHMM format\n        OccurDateTime=lambda x: pd.to_datetime(\n            x['OccurDate'].dt.strftime('%Y-%m-%d') + ' ' + \n            x['OccurTime'].str[:2] + ':' + x['OccurTime'].str[2:]), # Combine date and formatted time into datetime\n        OccurHour=lambda x: x.OccurDateTime.dt.hour,\n    )\n    .loc[lambda x: x['OccurDateTime'].dt.year.between(2015, 2023)]  # Filter rows with years within 2015–2023\n)\n\npcrime_cleaned\n\n\n\n\n\n\n\n\n\nCaseNumber\nCrimeAgainst\nNeighborhood\nOccurDate\nOccurTime\nOffenseCategory\nOffenseType\nOpenDataLat\nOpenDataLon\nReportDate\nOffenseCount\nweek\nyear\nmonth\ndayofmonth\nReportDiff\nOccurDateTime\nOccurHour\n\n\n\n\n0\n15-X197430\nPerson\nPiedmont\n2015-05-12\n1400\nAssault Offenses\nIntimidation\n45.575321\n-122.669950\n2015-05-12\n1\n20\n2015\n5\n12\n0\n2015-05-12 14:00:00\n14\n\n\n1\n15-X4282999\nPerson\nBuckman West\n2015-05-01\n2143\nAssault Offenses\nSimple Assault\n45.517973\n-122.659334\n2015-05-01\n1\n18\n2015\n5\n1\n0\n2015-05-01 21:43:00\n21\n\n\n2\n15-X4283033\nPerson\nUniversity Park\n2015-05-01\n1625\nAssault Offenses\nSimple Assault\n45.580393\n-122.727295\n2015-05-01\n1\n18\n2015\n5\n1\n0\n2015-05-01 16:25:00\n16\n\n\n3\n15-X4283218\nPerson\nMadison South\n2015-05-01\n1820\nAssault Offenses\nSimple Assault\n45.540839\n-122.578812\n2015-05-01\n1\n18\n2015\n5\n1\n0\n2015-05-01 18:20:00\n18\n\n\n4\n15-X4283218\nPerson\nMadison South\n2015-05-01\n1820\nKidnapping/Abduction\nKidnapping/Abduction\n45.540839\n-122.578812\n2015-05-01\n1\n18\n2015\n5\n1\n0\n2015-05-01 18:20:00\n18\n\n\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n...\n\n\n531881\n23-225440\nSociety\nSylvan-Highlands\n2023-08-27\n1420\nWeapon Law Violations\nWeapons Law Violations\n45.508945\n-122.731195\n2023-08-27\n1\n34\n2023\n8\n27\n0\n2023-08-27 14:20:00\n14\n\n\n531882\n23-51637\nProperty\nArlington Heights\n2023-02-23\n0330\nMotor Vehicle Theft\nMotor Vehicle Theft\n45.506744\n-122.713355\n2023-02-25\n1\n8\n2023\n2\n23\n2\n2023-02-23 03:30:00\n3\n\n\n531883\n23-227984\nPerson\nGoose Hollow\n2023-08-30\n0920\nAssault Offenses\nAggravated Assault\n45.515555\n-122.693709\n2023-08-30\n1\n35\n2023\n8\n30\n0\n2023-08-30 09:20:00\n9\n\n\n531884\n23-40689\nProperty\nForest Park\n2023-02-13\n1130\nMotor Vehicle Theft\nMotor Vehicle Theft\n45.540437\n-122.736728\n2023-02-13\n1\n7\n2023\n2\n13\n0\n2023-02-13 11:30:00\n11\n\n\n531885\n23-137815\nProperty\nForest Park\n2023-05-23\n1300\nLarceny Offenses\nTheft From Motor Vehicle\n45.540437\n-122.736728\n2023-05-26\n1\n21\n2023\n5\n23\n3\n2023-05-23 13:00:00\n13\n\n\n\n\n521247 rows × 18 columns\n\n\n\n\n\nShow the code\npcrime_cleaned.info()\n\n\n&lt;class 'pandas.core.frame.DataFrame'&gt;\nIndex: 521247 entries, 0 to 531885\nData columns (total 18 columns):\n #   Column           Non-Null Count   Dtype         \n---  ------           --------------   -----         \n 0   CaseNumber       521247 non-null  object        \n 1   CrimeAgainst     521247 non-null  object        \n 2   Neighborhood     513377 non-null  object        \n 3   OccurDate        521247 non-null  datetime64[ns]\n 4   OccurTime        521247 non-null  object        \n 5   OffenseCategory  521247 non-null  object        \n 6   OffenseType      521247 non-null  object        \n 7   OpenDataLat      521247 non-null  float64       \n 8   OpenDataLon      521247 non-null  float64       \n 9   ReportDate       521247 non-null  datetime64[ns]\n 10  OffenseCount     521247 non-null  int64         \n 11  week             521247 non-null  UInt32        \n 12  year             521247 non-null  int32         \n 13  month            521247 non-null  int32         \n 14  dayofmonth       521247 non-null  int32         \n 15  ReportDiff       521247 non-null  int64         \n 16  OccurDateTime    521247 non-null  datetime64[ns]\n 17  OccurHour        521247 non-null  int32         \ndtypes: UInt32(1), datetime64[ns](3), float64(2), int32(4), int64(2), object(6)\nmemory usage: 66.1+ MB\n\n\nNow we can check and see how we did filling in our missing data.\n\n\nCheck missing data\npcrime_cleaned.isna().sum()\n\n\nCaseNumber            0\nCrimeAgainst          0\nNeighborhood       7870\nOccurDate             0\nOccurTime             0\nOffenseCategory       0\nOffenseType           0\nOpenDataLat           0\nOpenDataLon           0\nReportDate            0\nOffenseCount          0\nweek                  0\nyear                  0\nmonth                 0\ndayofmonth            0\nReportDiff            0\nOccurDateTime         0\nOccurHour             0\ndtype: int64\n\n\n\nFinal Cleaning Thoughts\nWe have now cleaned our data into a useable state for our analysis. We went from many missing rows from in many columns to only 7881 missing rows in the neighborhood column.\nNote: Further cleaning of the missing neighborhood rows could be done using a reverse geocoding API, however, that is beyond the scope of this project",
-    "crumbs": [
-      "Projects",
-      "Portland Crime Forecasting with XGBoost"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Projects/pcrime.html#data-exploration",
-    "href": "Cleansing_Projects/pcrime.html#data-exploration",
-    "title": "Portland Crime Forecasting with XGBoost",
-    "section": "Data Exploration",
-    "text": "Data Exploration\n\nThoughts\n\nTemporal Trends\n\nhour/Day/month/year trends\n\nCrime distributions\n\ncategories/types/crimeagainst\nreportdiff by offense type\n\nNeighborhood\n\ntype/category distributions\nreportdiff by neighborhood\noffense count by neighborhood\n\n\n\nTemporal Trends\n\n\nYear Count\nfrom lets_plot import *\nLetsPlot.setup_html()\nmonth_year = (pcrime_cleaned\n    .assign(\n        year=pcrime_cleaned['OccurDateTime'].dt.year,\n        month=pcrime_cleaned['OccurDateTime'].dt.month) \n    .query('year &gt;= 2019')\\\n    .groupby(['year', 'month'])\\\n    ['OffenseCount'].sum()\\\n    .reset_index()\\\n    .rename(columns={'OffenseCount': 'count'})\n)\n\nlast_month_data = (\n    month_year.groupby(\"year\")\n    .apply(lambda df: df[df[\"month\"] == df[\"month\"].max()])\n    .reset_index(drop=True)\n)\n\nmonth_year[\"year\"] = month_year[\"year\"].astype(str)  # Convert year to string\nlast_month_data[\"year\"] = last_month_data[\"year\"].astype(str)  # Convert for labels\n\nmonth_year_fig = (\n    ggplot(month_year, aes(x=\"month\", y=\"count\", color=\"year\", group=\"year\")) +\n    geom_smooth(method='loess', span=0.5,se=False) +\n    geom_label(data=last_month_data, mapping=aes(y='count',label=\"year\", color=\"year\"),x=12.5, size=7,check_overlap=True)+\n    labs(title=\"Offense Counts by Month and Year\", x=\"Month\", y=\"Offense Count\") +\n    theme_minimal() +\n    theme(legend_position=\"none\") +\n    scale_x_continuous(breaks=list(range(1, 13)))+\n    scale_y_continuous(breaks=[4500,4750,5000,5250,5500,5750,6000,6250,6500]))\n\n\nmonth_year_fig\n\n\n\n            \n            \n            \n\n\n   \n   \n\n\n\nObservations\nThis chart shows that crime levels remained fairly consistent in 2019. In 2020, we see a noticeable drop when the country went into lockdown, followed by a sharp increase as restrictions eased in the summer. Then, in 2021, Portland experienced a significant surge in crime, which remained relatively high until 2023, when it began to stabilize.\n\n\nOther Temporal Counts\n# Month Count\n\nmonth_count = pcrime_cleaned.groupby(pcrime_cleaned['OccurDateTime'].dt.month)['OffenseCount'].sum().reset_index()\n\nmonth_count.rename(columns={month_count.columns[0]: 'Month'}, inplace=True)\n\nmonth_count_fig = ggplot(month_count, aes(x=\"Month\", y=\"OffenseCount\")) + \\\n    geom_line(color='#2e6f40', size=1.5) + \\\n    geom_point(color='#2e6f40', size=3) + \\\n    labs(title='Offense Counts by Month', x='Month', y='Offense Count') + \\\n    scale_x_continuous(breaks=list(range(1, 13))) + \\\n    theme_minimal() + \\\n    theme(\n        plot_title=element_text(size=16, face='bold'),\n        axis_title_x=element_text(size=12, face='bold'),\n        axis_title_y=element_text(size=12, face='bold'),\n        axis_text_x=element_text(size=10), \n        axis_text_y=element_text(size=10),\n        panel_grid_minor=element_blank()\n    )\n\n# Weekday Count\nweekday_count = pcrime_cleaned.groupby(pcrime_cleaned['OccurDateTime'].dt.weekday)['OffenseCount'].sum().reset_index()\n\nweekday_count.rename(columns={weekday_count.columns[0]: 'Weekday'}, inplace=True)\n\nweekday_count_fig = ggplot(weekday_count, aes(x=\"Weekday\", y=\"OffenseCount\")) + \\\n    geom_line(color='#2e6f40', size=1.5) + \\\n    geom_point(color='#2e6f40', size=3) + \\\n    labs(title='Offense Counts by Weekday', x='Weekday', y='Offense Count') + \\\n    theme_minimal() + \\\n    theme(\n        plot_title=element_text(size=16, face='bold'),\n        axis_title_x=element_text(size=12, face='bold'),\n        axis_title_y=element_text(size=12, face='bold'),\n        axis_text_x=element_text(size=10), \n        axis_text_y=element_text(size=10),\n        panel_grid_minor=element_blank()\n    )\n\n# Hour Count\nhour_count = pcrime_cleaned.groupby(pcrime_cleaned['OccurDateTime'].dt.hour)['OffenseCount'].sum().reset_index()\n\nhour_count.rename(columns={hour_count.columns[0]: 'Hour'}, inplace=True)\n\nhour_count_fig = ggplot(hour_count, aes(x=\"Hour\", y=\"OffenseCount\")) + \\\n    geom_line(color='#2e6f40', size=1.5) + \\\n    geom_point(color='#2e6f40', size=3) + \\\n    labs(title='Offense Counts by Hour', x='Hour', y='Offense Count') + \\\n    scale_x_continuous(breaks=list(range(0, 25))) + \\\n    theme_minimal() + \\\n    theme(\n        plot_title=element_text(size=16, face='bold'),\n        axis_title_x=element_text(size=12, face='bold'),\n        axis_title_y=element_text(size=12, face='bold'),\n        axis_text_x=element_text(size=10), \n        axis_text_y=element_text(size=10),\n        panel_grid_minor=element_blank()\n    )\n\n# Create a list of plots to display in a single row\ntemp_plot_list = [\n    month_count_fig,\n    weekday_count_fig,\n    hour_count_fig\n]\n\n# Arrange the plots in a single row\ntemp_plots = gggrid(temp_plot_list, ncol=3) + ggsize(1200, 400)\n\n# Show the combined plot\ntemp_plots\n\n\n   \n   \n\n\n\n\nObservations\nCrime patterns exhibit distinct temporal trends across months, weekdays, and hours. Monthly data shows that crime tends to slow down during the winter months and gradually rises through the summer and into the rest of the year, potentially influenced by seasonal factors such as weather and increased outdoor activity. Looking at weekly patterns, Friday stands out as the day with the highest number of reported offenses, which aligns with the start of the weekend when more people are out, creating more opportunities for crime. Additionally, crime follows a predictable daily cycle, with certain hours experiencing higher offense counts. These trends suggest that external factors like weather, social behavior, and law enforcement presence may play a role in crime fluctuations, warranting further analysis to uncover deeper insights.\n\n\n\nCrime Distribution Trends\n\n\nCrime Against\n# Crime Against Count\ncrime_against = pcrime_cleaned.groupby('CrimeAgainst',as_index=False)['OffenseCount'].sum()\ncrime_against_fig = ggplot(crime_against, aes(x='CrimeAgainst', y='OffenseCount')) + \\\n    geom_bar(stat='identity', fill='#2e6f40', color='black') + \\\n    labs(title='Offense Counts by Crime Type', x='Crime Against', y='Offense Count') + \\\n    theme_minimal() + \\\n    theme(\n        plot_title=element_text(size=16, face='bold'),\n        axis_title_x=element_text(size=12, face='bold'),\n        axis_title_y=element_text(size=12, face='bold'),\n        axis_text_x=element_text(size=10), \n        axis_text_y=element_text(size=10),\n        panel_grid_minor=element_blank()\n    )\n\n# Crime Against Report Time\n\ncrime_against_report_box = (ggplot(pcrime_cleaned,aes(x='ReportDiff',y='CrimeAgainst'))+\n  geom_boxplot(outlier_shape = None,fill='#2e6f40', color='black')+\n  scale_x_log10()+\n  theme_minimal()+\n  labs(title = 'Crime Against Report Time Distribution',x= 'Days to Report',y='Crime Against'))\n\ncrime_against_list = [crime_against_fig,crime_against_report_box]\n\ncrime_against_plots = gggrid(crime_against_list,ncol=2)+ ggsize(1600, 600)\n\ncrime_against_plots\n\n\n   \n   \n\n\n\nObservations\nIt’s evident that crimes against property are much more common than other categories. My initial thought is that property crimes may be more frequent because they’re often easier to commit, both physically and morally. Property doesn’t involve direct harm to individuals, which could make it feel less risky or less severe to potential offenders. The differences in report times are also interesting. All crime against types have a median report time of 1 day, however, crime against person has a larger distribution of report times. This also makes sense because many crimes against a person are very sensitive situations that lead to delayed reporting.\n\n\nCrime Category & Type\n# Crime Category Count\ncrime_cat = pcrime_cleaned.groupby('OffenseCategory',as_index=False)['OffenseCount'].sum().sort_values(by='OffenseCount', ascending=False).head(10)\ncrime_cat_fig = ggplot(crime_cat, aes(x='OffenseCount', y='OffenseCategory')) + \\\n    geom_bar(stat='identity', fill='#2e6f40', color='black') + \\\n    labs(title='Offense Counts by Category', x='Offense COunt', y='Offense Category') + \\\n    theme_minimal() + \\\n    theme(\n        plot_title=element_text(size=16, face='bold'),\n        axis_title_x=element_text(size=12, face='bold'),\n        axis_title_y=element_text(size=12, face='bold'),\n        axis_text_x=element_text(size=10), \n        axis_text_y=element_text(size=10),\n        panel_grid_minor=element_blank()\n    )\n\ncrime_cat_fig\n\n# Crime Type Count\ncrime_type = pcrime_cleaned.groupby('OffenseType',as_index=False)['OffenseCount'].sum().sort_values(by='OffenseCount', ascending=False).head(10)\ncrime_type_fig = ggplot(crime_type, aes(x='OffenseCount', y='OffenseType')) + \\\n    geom_bar(stat='identity', fill='#2e6f40', color='black') + \\\n    labs(title='Offense Counts by Type', x='Offense COunt', y='Offense Type') + \\\n    theme_minimal() + \\\n    theme(\n        plot_title=element_text(size=16, face='bold'),\n        axis_title_x=element_text(size=12, face='bold'),\n        axis_title_y=element_text(size=12, face='bold'),\n        axis_text_x=element_text(size=10), \n        axis_text_y=element_text(size=10),\n        panel_grid_minor=element_blank()\n    )\n\ncrime_type_fig\n\n# Neighborhood Count\nneigh_count = pcrime_cleaned.groupby('Neighborhood',as_index=False)['OffenseCount'].sum().sort_values(by='OffenseCount', ascending=False).head(10)\nneigh_count_fig = ggplot(neigh_count,aes(y=neigh_count[\"Neighborhood\"],x=neigh_count[\"OffenseCount\"]))+ \\\n    geom_bar(stat='identity',fill='#2e6f40', color='black')+ \\\n    labs(title='Offense Count by Neighborhood', x='Offense Count', y='Neighborhood') + \\\n    theme_minimal() + \\\n    theme(\n        plot_title=element_text(size=16, face='bold'),\n        axis_title_x=element_text(size=12, face='bold'),\n        axis_title_y=element_text(size=12, face='bold'),\n        axis_text_x=element_text(size=10), \n        axis_text_y=element_text(size=10),\n        panel_grid_minor=element_blank()\n    )\nneigh_count_fig\n\ncount_list = [crime_cat_fig,crime_type_fig,neigh_count_fig]\n\ncount_plots = gggrid(count_list, ncol=2) + ggsize(1200, 400)\n\ncount_plots\n\n\n   \n   \n\n\n\n\nObservations\nLarceny stands out as the most common offense in Portland, reinforcing the broader trend that property crimes are significantly more prevalent than other crime categories. This may be attributed to the opportunistic nature of larceny—these offenses often require little planning and can happen quickly, unlike more serious crimes that demand time, effort, or emotional involvement. Additionally, neighborhood-level analysis shows that Downtown and Hazelwood experience disproportionately high numbers of reported offenses. While this highlights potential crime hotspots, further context—such as population density, neighborhood size, and visitor traffic—would provide a more accurate understanding of these patterns.",
-    "crumbs": [
-      "Projects",
-      "Portland Crime Forecasting with XGBoost"
-    ]
-  },
-  {
-    "objectID": "Cleansing_Projects/project5.html",
-    "href": "Cleansing_Projects/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "full_stack.html",
-    "href": "full_stack.html",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "full_stack.html#title-2-header",
-    "href": "full_stack.html#title-2-header",
-    "title": "about me",
-    "section": "",
-    "text": "MarkDown Basics"
-  },
-  {
-    "objectID": "Story_Telling/project2.html",
-    "href": "Story_Telling/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Story_Telling/project3.html",
-    "href": "Story_Telling/project3.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Story_Telling/project4.html",
-    "href": "Story_Telling/project4.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Full_Stack/project1.html",
-    "href": "Full_Stack/project1.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Full_Stack/project5.html",
-    "href": "Full_Stack/project5.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
     "objectID": "Machine_Learning/project2.html",
     "href": "Machine_Learning/project2.html",
-    "title": "Client Report - [Insert Project Title]",
-    "section": "",
-    "text": "Paste in a template\n\n\n\n\n Back to top"
-  },
-  {
-    "objectID": "Machine_Learning/project3.html",
-    "href": "Machine_Learning/project3.html",
     "title": "Client Report - [Insert Project Title]",
     "section": "",
     "text": "Paste in a template\n\n\n\n\n Back to top"
@@ -551,17 +600,45 @@
     "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "sql.html",
-    "href": "sql.html",
-    "title": "about me",
+    "objectID": "Machine_Learning/project3.html",
+    "href": "Machine_Learning/project3.html",
+    "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "MarkDown Basics"
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   },
   {
-    "objectID": "sql.html#title-2-header",
-    "href": "sql.html#title-2-header",
-    "title": "about me",
+    "objectID": "Full_Stack/project2.html",
+    "href": "Full_Stack/project2.html",
+    "title": "Client Report - [Insert Project Title]",
     "section": "",
-    "text": "MarkDown Basics"
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Full_Stack/project4.html",
+    "href": "Full_Stack/project4.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Full_Stack/project3.html",
+    "href": "Full_Stack/project3.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Competition/project1.html",
+    "href": "Competition/project1.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "Competition/project5.html",
+    "href": "Competition/project5.html",
+    "title": "Client Report - [Insert Project Title]",
+    "section": "",
+    "text": "Paste in a template\n\n\n\n\n Back to top"
   }
 ]
