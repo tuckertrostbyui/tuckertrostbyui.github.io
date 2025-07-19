@@ -1,0 +1,68 @@
+---
+title: "Love Island Seniment Analysis Part 3"
+subtitle: "Presenting at the Research & Creative Works Conference"
+author: "Tucker Trost"
+format:
+  html:
+    self-contained: true
+    page-layout: full
+    title-block-banner: true
+    toc: true
+    toc-depth: 3
+    toc-location: body
+    number-sections: false
+    html-math-method: katex
+    code-fold: true
+    code-summary: "Show the code"
+    code-overflow: wrap
+    code-copy: hover
+    code-tools:
+        source: false
+        toggle: true
+        caption: See code
+execute: 
+  warning: false
+    
+---
+
+## Presenting at the Research & Creative Works Conference
+
+Last week, I had the chance to present my Love Island Reddit Sentiment project at the Research and Creative Works Conference at BYU-Idaho. It was such a fun and meaningful experience.
+
+::: {layout-ncol=2}
+
+<div style="text-align: center;">
+<img src="poster_pic.jpg" alt="Poster" width="100%">
+</div>
+
+<div style="text-align: center;">
+<img src="poster_pres.jpeg" alt="Poster Presentation" width="100%">
+</div>
+
+:::
+
+## Setting the Scene
+
+I went all in on the presentation setup. My table was decorated with palm trees and flamingos to match the Love Island vibe, and I had a poster that explained my project. I even used a pool noodle as a pointer to walk people through different parts of the poster as they came by with questions.
+
+## Making Data Science Approachable
+
+One of the best parts of presenting was how approachable the project ended up being. While it’s technically complex behind the scenes, the concept is really easy to grasp for a non-technical audience. Most people know about Love Island and understand the idea of using comments to track how people feel about contestants.
+
+Because of that, I was able to have meaningful conversations with people from all backgrounds. I also got the chance to dig deep into the backend of the project with those who had more technical experience, which made for some really rewarding discussions.
+
+## Growing in Confidence
+
+This experience gave me a lot of confidence — not just in my data science skills, but also in my ability to communicate them. I loved getting the chance to talk to people, share something I worked hard on, and watch their faces light up when it all made sense. 
+
+It also meant a lot to see the projects my classmates were working on. I felt right at home being surrounded by so many smart and curious people who were just as passionate about learning as I am.
+
+## Connecting Skills to the Real World
+
+One of my favorite questions someone asked me was how I could apply this project to a future job. For example, why would a company like Nike care about what I did?
+
+It was such a good question. I got to explain how most data in the world is unstructured text. By using NLP, we can extract meaningful insights from all that text and use them to guide decisions. Nike could use this kind of approach to analyze what people are saying about their products, their athletes, or their brand as a whole. That kind of analysis can help them see what’s working and what could be improved.
+
+## Looking Ahead
+
+Being able to connect the dots between what I built and how it could be used in the real world made me even more excited for the future. I’m really grateful for everyone who has supported me in getting to this point, and I’m so excited for what comes next.

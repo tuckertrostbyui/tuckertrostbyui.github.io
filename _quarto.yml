@@ -98,9 +98,9 @@ website:
         - text: "---"
         - text: "Love Island Senitment Analysis Part 2"
           file: Blogs/love_island_nlp_part2.qmd
-    #     - text: "---"
-    #     - text: "Project 3"
-    #       file: Exploration_Projects/project3.qmd
+        - text: "---"
+        - text: "Love Island Senitment Analysis Part 3"
+          file: Blogs/love_island_nlp_part3.qmd
     #     - text: "---"
     #     - text: "Project 4"
     #       file: Exploration_Projects/project4.qmd
